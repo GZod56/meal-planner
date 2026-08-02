@@ -1,4 +1,4 @@
-const V='mp-v5';
+const V='mp-v6';
 const SHELL=['./','./index.html','./engine.js','./manifest.webmanifest'];
 self.addEventListener('install',e=>{e.waitUntil((async()=>{
   const c=await caches.open(V);

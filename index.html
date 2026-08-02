@@ -265,17 +265,19 @@ const imgFor=r=>r?(PHOTOS[r.id]||r.image||null):null;
 
 const FR={'¼':.25,'½':.5,'¾':.75,'⅓':1/3,'⅔':2/3,'⅕':.2,'⅖':.4,'⅗':.6,'⅘':.8,'⅙':1/6,'⅚':5/6,'⅛':.125,'⅜':.375,'⅝':.625,'⅞':.875};
 const FROUT=[[.125,'⅛'],[.2,'⅕'],[.25,'¼'],[1/3,'⅓'],[.375,'⅜'],[.4,'⅖'],[.5,'½'],[.6,'⅗'],[.625,'⅝'],[2/3,'⅔'],[.75,'¾'],[.8,'⅘'],[.875,'⅞']];
+const WORDN={half:.5,quarter:.25,one:1,two:2,three:3,four:4,six:6,eight:8};
 function parseQty(s){s=s.trim();let m;
   if((m=s.match(/^(\d+)\s+(\d+)\/(\d+)$/)))return +m[1]+(+m[2]/+m[3]);
   if((m=s.match(/^(\d+)\/(\d+)$/)))return +m[1]/+m[2];
   if((m=s.match(/^(\d+(?:\.\d+)?)\s?([¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞])$/)))return +m[1]+FR[m[2]];
   if(FR[s]!==undefined)return FR[s];
+  if(WORDN[s.toLowerCase()]!==undefined)return WORDN[s.toLowerCase()];
   if(/^\d+(?:\.\d+)?$/.test(s))return +s; return null;}
 function fmtQty(x){if(x<=0)return '0';const w=Math.floor(x+1e-6);let f=x-w;
   if(f<.06)return String(w||Math.round(x*100)/100);let best=null,bd=1;
   for(const[v,g]of FROUT){const d=Math.abs(f-v);if(d<bd){bd=d;best=g;}}
   if(bd>.07)return String(Math.round(x*4)/4);return (w?w:'')+best;}
-const QT='(\\d+\\s\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?\\s?[¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]|[¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]|\\d+(?:\\.\\d+)?)';
+const QT='(\\d+\\s\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?\\s?[¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]|[¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]|\\d+(?:\\.\\d+)?|half|quarter|one|two|three|four|six|eight)';
 function scaleIng(line,f){if(f===1)return esc(line);
   const re=new RegExp('^'+QT+'(\\s*[–-]\\s*'+QT+')?');const m=line.match(re);if(!m)return esc(line);
   let out=fmtQty((parseQty(m[1])??0)*f);
@@ -640,27 +642,57 @@ function fire(){const v=chatIn.value;if(!v.trim())return;chatIn.value='';grow();
 /* Detects dry goods & spices named in a direction step and injects the
    scaled amount inline. Silent when the match is ambiguous. */
 
-const MEASURE='(tablespoons?|tbsp|teaspoons?|tsp|cups?|milliliters?|ml|liters?|l|grams?|g|kilograms?|kg|ounces?|oz|pounds?|lbs?|lb|pinch(?:es)?|sticks?)';
-const AMT_LEX=/\b(flours?|cornstarch|corn ?flour|semolina|cornmeal|polenta|panko|bread ?crumbs?|baking powder|baking soda|bicarbonate|yeast|gelatine?|cocoa|sugar|jaggery|salt|msg|monosodium|peppercorns?|pepper|paprika|cumin|coriander|turmeric|cinnamon|cardamom|cloves?|nutmeg|mace|allspice|star anise|anise|fennel|caraway|mustard|fenugreek|methi|asafoetida|hing|garam masala|masala|curry powder|chilli? powder|cayenne|gochugaru|chill?i flakes|pepper flakes|five ?spice|za'?atar|sumac|oregano|thyme|rosemary|sage|basil|marjoram|tarragon|dill|bay lea\w+|sesame seeds?|nigella|ajwain|amchur|saffron|vanilla|sichuan|szechuan|dashi|gochujang|miso|cornflour)\b/i;
-const STRIP=/\b(finely|freshly|coarsely|roughly|thinly|ground|whole|fresh|dried|toasted|granulated|caster|superfine|powdered|confectioners?'?|packed|sifted|heaping|scant|good|quality|plus more.*|to taste|for (?:dusting|frying|garnish|serving).*|or more.*|optional.*|divided.*|room temperature|chopped|minced|crushed|grated)\b/gi;
+const MEASURE='(tablespoons?|tbsp|teaspoons?|tsp|cups?|milliliters?|ml|liters?|l|grams?|g|kilograms?|kg|ounces?|oz|pounds?|lbs?|lb|pinch(?:es)?|sticks?|sprigs?|inch(?:es)?|pieces?|handfuls?|knobs?|cloves?|cans?|packets?|sachets?|bunch(?:es)?|thumbs?|strips?|leaves|blocks?)';
+const AMT_LEX=/\b(flours?|cornstarch|corn ?flour|semolina|cornmeal|polenta|panko|bread ?crumbs?|baking powder|baking soda|bicarbonate|yeast|gelatine?|cocoa|sugars?|jaggery|salt|msg|monosodium|peppercorns?|pepper|paprika|cumin|coriander|turmeric|cinnamon|cardamom|cloves?|nutmeg|mace|allspice|star anise|anise|fennel|caraway|mustard|fenugreek|methi|asafoetida|hing|garam masala|masala|curry powder|chilli? powder|cayenne|gochugaru|chill?i flakes|pepper flakes|five ?spice|za'?atar|sumac|oregano|thyme|rosemary|sage|basil|marjoram|tarragon|dill|bay lea\w+|sesame seeds?|nigella|ajwain|amchur|saffron|vanilla|sichuan|szechuan|dashi|gochujang|miso|cornflour|garlic powder|onion powder|soy sauce|light soy|dark soy|tamari|fish sauce|oyster sauce|hoisin|worcestershire|shaoxing|mirin|black bean sauce|doubanjiang|sriracha|gochu?jang|ketchup|tahini|tomato pur[\u00e9e]+e?|tomato paste|curry paste|aji [a-z]+ paste|chill?i crisp|chill?i oil|sesame oil|vinegar|honey|maple syrup|molasses|treacle|stock|broth|bouillon|coconut milk|coconut cream|heavy cream|double cream|single cream|buttermilk|yogh?urt|butter|milk|parmesan|parmigiano|pecorino|passata)\b/i;
+/* class of a pantry entry, for expanding collective references like "the spice mix" */
+const HERB_RX=/\b(coriander leaves|cilantro|parsley|mint|curry lea\w+|kasuri methi|methi leaves|dill fronds|spring onions?|scallions?|chives|basil leaves|thai basil)\b/i;
+const WHOLE_RX=/\b(sticks?|pods?|peppercorns?|seeds?|star anise|bay lea\w+|whole)\b/i;
+const BAKE_RX=/\b(flours?|cornstarch|cornflour|baking powder|baking soda|bicarbonate|yeast|cocoa|sugars?|semolina|cornmeal|gelatine?)\b/i;
+const SPICE_RX=/\b(paprika|cumin|coriander|turmeric|cinnamon|cardamom|cloves?|nutmeg|mace|allspice|anise|fennel|caraway|mustard|fenugreek|asafoetida|hing|masala|curry powder|chilli? powder|cayenne|gochugaru|chill?i flakes|pepper flakes|five ?spice|za'?atar|sumac|oregano|thyme|rosemary|sage|marjoram|tarragon|bay lea\w+|nigella|ajwain|amchur|saffron|peppercorns?|sichuan|szechuan|garlic powder|onion powder)\b/i;
+const SEASON_RX=/\b(salt|pepper|msg|monosodium)\b/i;
+function entryClass(e){
+  const raw=String(e.raw||'').toLowerCase();
+  if(HERB_RX.test(e.name)||HERB_RX.test(raw)) return 'herb';   /* fresh herbs are prepped, never a "mix" */
+  if(BAKE_RX.test(e.name)) return 'bake';
+  if(SEASON_RX.test(e.name)&&!SPICE_RX.test(e.name)) return 'season';
+  if(SPICE_RX.test(e.name)){
+    const whole=WHOLE_RX.test(raw)||/^(inch|stick|pod|leaf|leaves|sprig)$/.test(e.unit);
+    return whole?'whole':'ground';
+  }
+  return 'other';
+}
+/* collective phrases -> which entry classes they stand for */
+const COLLECTIVE=[
+  [/\bwhole spices?\b/i,                                                    ['whole']],
+  [/\bground spices?\b/i,                                                   ['ground']],
+  [/\b(?:the |all the |remaining |dry )?spice (?:mix|blend|mixture|paste)\b/i,['ground','whole','season']],
+  [/\b(?:masala|spice) mix\b/i,                                             ['ground','whole','season']],
+  [/\b(?:the|remaining|all the|dry) spices\b/i,                             ['ground','whole']],
+  [/\bseasonings?\b/i,                                                      ['season','ground']],
+  [/\bdry ingredients\b/i,                                                  ['bake']],
+];
+const STRIP=/\b(of|about|approx(?:imately)?|level|rounded|generous|large|small|medium|big|finely|freshly|coarsely|roughly|thinly|ground|whole|fresh|dried|toasted|granulated|caster|superfine|powdered|confectioners?'?|packed|sifted|heaping|scant|good|quality|plus more.*|to taste|for (?:dusting|frying|garnish|serving).*|or more.*|optional.*|divided.*|room temperature|chopped|minced|crushed|grated|each)\b/gi;
+
+const RXESC=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
 function amtIndex(r){
   if(r.__amt) return r.__amt;
-  const re=new RegExp('^'+QT+'\\s*'+MEASURE+'\\b\\.?\\s*(.+)$','i');
+  const re=new RegExp('^'+QT+'(?:\\s*(?:to|–|—|-)\\s*'+QT+')?\\s*'+MEASURE+'\\b\\.?\\s*(.+)$','i');
   const entries=[];
   for(const raw of r.ingredients){
     const line=String(raw).replace(/\(([^)]*)\)/g,' ').trim();
     const m=line.match(re); if(!m) continue;
     const qty=parseQty(m[1]); if(qty===null) continue;
-    let unit=m[2].toLowerCase().replace(/s$/,'');
+    const qtyHi=m[2]?parseQty(m[2]):null;
+    let unit=m[3].toLowerCase().replace(/s$/,'');
     if(unit==='tablespoon')unit='tbsp'; if(unit==='teaspoon')unit='tsp';
     if(unit==='gram')unit='g'; if(unit==='kilogram')unit='kg';
     if(unit==='ounce')unit='oz'; if(unit==='pound')unit='lb';
     if(unit==='milliliter')unit='ml'; if(unit==='liter')unit='l';
-    let name=m[3].replace(/,.*$/,'').replace(STRIP,' ').replace(/\s+/g,' ').trim().toLowerCase();
+    let name=m[4].replace(/,.*$/,'').replace(STRIP,' ').replace(/\s+/g,' ').trim().toLowerCase();
     if(!name||!AMT_LEX.test(name)) continue;
     const divided=/\b(divided|plus more)\b/i.test(String(raw));
-    entries.push({qty,unit,name,divided});
+    entries.push({qty,qtyHi,unit,name,divided,raw:String(raw)});
   }
   /* candidate phrases: the cleaned name, and the lexicon head inside it */
   const map=new Map();
@@ -675,16 +707,21 @@ function amtIndex(r){
   for(const [k,set] of map) if(set.size===1) phrases.push([k,[...set][0]]);
   phrases.sort((a,b)=>b[0].length-a[0].length);
   const blob=r.ingredients.join(' | ').toLowerCase();
+  /* an ingredient named in several steps is being used across them: show the
+     amount as a recipe total so a single step can't read as "add all of this" */
+  const dirs=(r.directions||[]).map(d=>String(d).toLowerCase());
+  for(const [k,ei] of phrases){
+    const rx=new RegExp('\\b'+RXESC(k).replace(/ /g,'\\s+')+'\\b','i');
+    if(dirs.filter(d=>rx.test(d)).length>1) entries[ei].multi=true;
+  }
   r.__amt={entries,phrases,blob};
   return r.__amt;
 }
 
-const RXESC=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-
 function annotateStep(text,r,f){
   let src=String(text);
   const idx=(r&&r.ingredients)?amtIndex(r):{entries:[],phrases:[],blob:''};
-  const amts=[];
+  const amts=[]; const usedNames=new Set();
   if(idx.phrases.length){
     const taken=[];const ins=[];
     const qtyNear=new RegExp(QT+'\\s?'+MEASURE+'\\b[^.]{0,14}$','i');
@@ -696,20 +733,51 @@ function annotateStep(text,r,f){
       if(taken.some(([x,y])=>a<y&&b>x)) continue;               /* inside a longer match */
       const before=src.slice(Math.max(0,a-30),a);
       if(qtyNear.test(before)) continue;                        /* step already states it */
+      if(/\b(pinch|sprinkl\w*|dash|drizzle|grating|grind\w*|dusting|handful|splash|few|little|some|remaining|rest of|extra|more)\b[^.]{0,18}$/i.test(before)) continue;
       /* guard: "bell pepper", "garlic cloves", "fennel bulb" — a different ingredient */
       const prev=(before.match(/([A-Za-z'\u2019-]+)\s+$/)||[])[1];
+      /* "fresh coriander" is never the ground spice, whatever the ingredient list says */
+      if(prev&&/^(fresh|chopped|minced|sliced|torn|picked)$/i.test(prev)
+         &&/^(ground|bake)$/.test(entryClass(e))) continue;
       if(prev && !e.name.includes(prev.toLowerCase())
          && idx.blob.includes(prev.toLowerCase()+' '+phrase)) continue;
       const after=(src.slice(b).match(/^\s+([A-Za-z]+)/)||[])[1];
       if(after && !e.name.includes(after.toLowerCase())
          && idx.blob.includes(phrase+' '+after.toLowerCase())) continue;
-      taken.push([a,b]);
-      const v=e.qty*f, u=(v>1&&/^(cup|pinch|stick)$/.test(e.unit))?(e.unit==='pinch'?'pinches':e.unit+'s'):e.unit;
-      amts.push(fmtQty(v)+' '+u+(e.divided?' total, divided':''));
+      taken.push([a,b]); usedNames.add(e.name);
+      const v=e.qty*f, u=(v>1&&/^(cup|pinch|stick|sprig|piece|handful|knob|clove|can|inch)$/.test(e.unit))?(e.unit==='pinch'?'pinches':(e.unit==='inch'?'inches':e.unit+'s')):e.unit;
+      const shown=e.qtyHi!==null&&e.qtyHi!==undefined?fmtQty(v)+'–'+fmtQty(e.qtyHi*f):fmtQty(v);
+      amts.push(shown+' '+u+(e.divided?' total, divided':(e.multi?' total':'')));
       ins.push([b,'\u0001'+String.fromCharCode(0xE000+amts.length-1)+'\u0002']);
     }
     ins.sort((p,q)=>q[0]-p[0]);
     for(const [pos,tok] of ins) src=src.slice(0,pos)+tok+src.slice(pos);
+  }
+  /* collective references: "add the spice mix" enumerates what the mix is */
+  if(idx.entries.length){
+    for(const [rx,classes] of COLLECTIVE){
+      const m=rx.exec(src); if(!m) continue;
+      const named=e=>{const k=(e.name.match(AMT_LEX)||[e.name])[0];
+        return new RegExp('\\b'+RXESC(k).replace(/ /g,'\\s+')+'\\b','i').test(src);};
+      const list=idx.entries.filter(e=>classes.indexOf(entryClass(e))>=0 && !usedNames.has(e.name) && !named(e));
+      if(list.length<2) continue;                 /* one item isn't a "mix" */
+      const seen=new Set(); const parts=[];
+      for(const e of list){
+        if(seen.has(e.name)) continue; seen.add(e.name);
+        const v=e.qty*f;
+        const u=(v>1&&/^(cup|pinch|stick|sprig|piece|handful|knob|clove|can|inch|pod|leaf)$/.test(e.unit))
+          ?(e.unit==='pinch'?'pinches':e.unit==='inch'?'inches':e.unit==='leaf'?'leaves':e.unit+'s')
+          :e.unit;
+        const shown=(e.qtyHi!==null&&e.qtyHi!==undefined)?fmtQty(v)+'\u2013'+fmtQty(e.qtyHi*f):fmtQty(v);
+        parts.push(shown+' '+u+' '+e.name);
+      }
+      if(parts.length<2) continue;
+      amts.push(parts.join(' \u00b7 '));
+      const tok='\u0001'+String.fromCharCode(0xE000+amts.length-1)+'\u0002';
+      const at=m.index+m[0].length;
+      src=src.slice(0,at)+tok+src.slice(at);
+      break;                                      /* one expansion per step */
+    }
   }
   /* scaleStep escapes and highlights the quantities already written in the step.
      The tokens carry no digits, so they survive that pass untouched. */

@@ -182,6 +182,147 @@
   "section": "main"
  },
  {
+  "name": "Aji Amarillo Chicken over White Beans with Aji Verde",
+  "rating": 5,
+  "tags": [
+   "Batch Cook",
+   "Favourites",
+   "Sunday Treats"
+  ],
+  "time": {
+   "prep": "20 mins (plus overnight marinade)",
+   "cook": "50 mins",
+   "total": "70 min"
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude — pollo a la brasa style"
+  },
+  "image": null,
+  "ingredients": [
+   "1 whole chicken, about 4 lb, spatchcocked",
+   "3 tablespoons aji amarillo paste",
+   "3 tablespoons soy sauce",
+   "6 cloves garlic, grated",
+   "1 lime, zest and juice",
+   "1 tablespoon red wine vinegar",
+   "2 teaspoons ground cumin",
+   "2 teaspoons dried oregano",
+   "1 tablespoon paprika",
+   "1 teaspoon black pepper",
+   "1 tablespoon neutral oil, plus salt for the bird",
+   "1 tablespoon huacatay (Peruvian black mint) paste, optional but recommended",
+   "FOR THE BEANS:",
+   "2 cans (15 oz) cannellini or butter beans, drained and rinsed",
+   "4 cloves garlic, sliced",
+   "1 tablespoon olive oil",
+   "1/2-3/4 cup chicken stock, plus extra",
+   "Splash of vinegar, salt",
+   "FOR THE AJI VERDE:",
+   "1 cup cilantro, leaves and tender stems",
+   "1-2 jalapeños, seeded to taste",
+   "1 tablespoon aji amarillo paste",
+   "1 clove garlic",
+   "2-3 tablespoons pasteurized mayonnaise",
+   "1 lime, juiced",
+   "2 tablespoons neutral oil",
+   "Salt"
+  ],
+  "directions": [
+   "Spatchcock the chicken, salt it all over, and coat in the marinade (aji amarillo, soy, garlic, lime, vinegar, cumin, oregano, paprika, pepper, oil, and huacatay if using). Rest uncovered in the fridge overnight for the dry-brine effect and crisper skin; 1 hour minimum.",
+   "Heat the oven to 450°F. Toss the beans with the sliced garlic, olive oil, stock, a splash of vinegar and salt in a roasting pan. Set a wire rack over the pan.",
+   "Lay the chicken skin-up on the rack. Roast 40-50 minutes until the breast reads 165°F and the thigh 175°F and the skin is lacquered. Drop to 425°F if it is browning too fast.",
+   "The beans braise underneath in the rendered fat. Stir once halfway and splash in more stock if they look dry.",
+   "Rest the chicken 10 minutes, tipping the cavity juices over the beans first.",
+   "Blitz all the aji verde ingredients smooth, drizzling the oil in last to emulsify. Loosen with a splash of water to pourable.",
+   "Carve and serve over the beans with aji verde, lime and extra cilantro."
+  ],
+  "notes": [
+   "Huacatay in both the marinade and the sauce is the upgrade that takes this from good to the real thing.",
+   "Deployments: as-cooked Sunday; air-fry the legs at 380°F for 8-10 minutes to re-crisp; shred the rest into an aguadito-style cilantro chicken-and-bean soup.",
+   "Pregnancy: soy plus vinegar stands in for the beer a classic brasa marinade uses. Aji verde is mayo-based — use pasteurized jarred mayo and skip queso fresco unless pasteurized.",
+   "This is the original Bed Method build — legume bed, rendering bird on a rack above it."
+  ],
+  "macros": {
+   "p": 55,
+   "f": 28,
+   "c": 30,
+   "kcal": 592,
+   "per": "serving"
+  },
+  "minutes": 70,
+  "id": "aji-amarillo-chicken-over-white-beans-with-aji-verde",
+  "protein": "Chicken",
+  "archetype": "protein",
+  "under30": false,
+  "batch": true,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": true,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Aji Verde",
+  "rating": 5,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": null,
+   "total": "5 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1 cup cilantro, leaves and tender stems",
+   "1-2 jalapeños, seeded to taste",
+   "1 tablespoon aji amarillo paste",
+   "1 clove garlic",
+   "2-3 tablespoons pasteurized mayonnaise",
+   "1 lime, juiced",
+   "2 tablespoons neutral oil",
+   "Salt"
+  ],
+  "directions": [
+   "Blitz everything except the oil until smooth.",
+   "With the motor running, drizzle in the oil to emulsify.",
+   "Loosen with a splash of water until pourable. Season."
+  ],
+  "notes": [
+   "Pulled out of the Aji Amarillo Chicken so it can be used on its own — it is far too good to only appear once.",
+   "Goes on everything: roast chicken, potatoes, fish tacos, rice bowls, eggs.",
+   "Pregnancy: use pasteurized jarred mayonnaise, and skip the queso fresco some versions add unless it is pasteurized.",
+   "Keeps 4-5 days. It loosens as it sits; stir before serving."
+  ],
+  "macros": null,
+  "minutes": 5,
+  "id": "aji-verde",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
   "name": "Authentic Mapo Tofu (麻婆豆腐)",
   "rating": 4,
   "tags": [
@@ -315,86 +456,6 @@
   "batchable": false,
   "isMain": false,
   "section": "baking"
- },
- {
-  "name": "Bánh Xèo – Crispy Vietnamese Pancakes",
-  "rating": 5,
-  "tags": [
-   "Asian",
-   "Favourites",
-   "Sunday Treats"
-  ],
-  "time": {
-   "prep": null,
-   "cook": null,
-   "total": "30 mins"
-  },
-  "serves": {
-   "text": null,
-   "n": 4
-  },
-  "source": {
-   "url": "https://www.greatbritishchefs.com/recipes/ban-xeo-recipe-vietnamese-pancakes",
-   "name": "greatbritishchefs.com"
-  },
-  "image": "https://media-cdn2.greatbritishchefs.com/media/334nd55m/img69374.whqc_768x512q80fpt620fpl519.jpg",
-  "ingredients": [
-   "PANCAKE BATTER (MAKES 12 LARGE PANCAKES)",
-   "225g of rice flour",
-   "70g of cornflour",
-   "200ml of coconut milk",
-   "750ml of warm water",
-   "3g of salt",
-   "15g of sugar",
-   "1 tsp turmeric powder",
-   "6 spring onions, finely chopped",
-   "DIPPING SAUCE",
-   "40ml of lime juice, (about 1 and a half medium limes)",
-   "100g of rock sugar, crushed",
-   "40ml of fish sauce",
-   "80ml of water",
-   "25g of garlic, finely chopped",
-   "12g of red chillies, finely sliced",
-   "FILLING",
-   "400g of pork belly, sliced",
-   "1l chicken stock",
-   "400g of king prawns",
-   "2 chayote, cut into jullienne",
-   "50g of beansprouts",
-   "2 carrots, cut into jullienne",
-   "1 tsp oil",
-   "TO SERVE:",
-   "2 baby gem lettuces, leaves separated and washed",
-   "1/2 cucumber, sliced",
-   "1 bunch of coriander",
-   "1 bunch of mint"
-  ],
-  "directions": [
-   "Start by making the dipping sauce. Place the lime juice, crushed rock sugar, fish sauce and water in a small saucepan and bring to medium heat to dissolve the sugar. As soon as the sugar has melted, turn off heat and leave on the side to cool down. When completely cooled down, add the garlic and chillies and mix well. Can be stored for up to 5 days in the fridge",
-   "To make the pancake batter, combine all the ingredients except the spring onions and whisk to a smooth batter. Add the chopped spring onions and place in the fridge for an hour to chill",
-   "On a medium heat, poach the pork belly in chicken stock for 15 minutes. Drain, allow to cool, then slice into little rectangles. Set aside until ready to use",
-   "Poach the prawns in the chicken stock for about 3 minutes until just cooked. Cool, then devein, cut in half and set aside until ready to use",
-   "Heat the oil in a medium non-stick frying pan over a high heat",
-   "Add a few slices of pork belly and some pieces of prawn then pour in a ladle of the pancake batter, angling the pan to let the batter cover the whole pan in a thin layer",
-   "Add a small handful of the vegetable fillings then lower the heat and put the lid on for 2 and a half minutes",
-   "Remove the lid and maintain the low heat for a further 3 and a half minutes until the pancake has that signature golden yellow colour and starts to crisp up",
-   "Fold in half and eat whist still hot (if you're making a few at a time, keep warm under the grill)",
-   "The true Vietnamese way of eating the pancakes is wrapped up in lettuce leaves with plenty of fresh herbs and cucumber and dipped in the sweet and sour chilli dipping sauce"
-  ],
-  "notes": [],
-  "macros": null,
-  "minutes": 30,
-  "id": "banh-xeo-crispy-vietnamese-pancakes",
-  "protein": "Veg",
-  "archetype": "complete",
-  "under30": true,
-  "batch": false,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "se_asian",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
  },
  {
   "name": "Barmbrack",
@@ -580,6 +641,75 @@
   "batchable": false,
   "isMain": false,
   "section": "baking"
+ },
+ {
+  "name": "Bed Method — Master Template (Protein Over Grain, Bean or Veg)",
+  "rating": 5,
+  "tags": [
+   "Batch Cook",
+   "Favourites",
+   "Templates",
+   "Traybakes"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": "50 mins",
+   "total": "65 min"
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "A rendering protein: whole bird spatchcocked, or bone-in skin-on thighs",
+   "THE BED — pick one:",
+   "GRAIN: orzo, rice, freekeh, pearl couscous, barley — absorbs, so the liquid ratio is strict",
+   "LEGUME: cannellini, butter beans, chickpeas, lentils — neutral and forgiving",
+   "VEGETABLE: cabbage wedges, leeks, fennel, potatoes, squash — releases water, so cut the liquid",
+   "Aromatics for the bed: sliced garlic, onion or shallot, a dried chili, a hard herb",
+   "Hot stock, quantity set by the bed (see directions)",
+   "Fat: olive oil or the rendered fat itself",
+   "Acid to finish: lemon, vinegar or preserved lemon",
+   "Something green to fold in off heat: spinach, chard, herbs",
+   "Something sharp to serve alongside: pickles, a herb sauce, yogurt"
+  ],
+  "directions": [
+   "Pick the bed, and let it set the liquid. Grain is the strict one — roughly 2.5 to 3 parts hot stock to 1 part dry grain by weight, toasted first in fat for 2 minutes. Legumes need only enough to come halfway up: about 1/2 to 3/4 cup stock per two drained cans. Vegetables need least of all — they release their own water, so cut whatever you would otherwise use by around a third.",
+   "Dry-brine the protein. Salt it, sit it uncovered in the fridge overnight if you can, an hour at minimum, and temper it before it goes in.",
+   "Set the geometry. Protein on a rack, bed in a pan directly beneath. Grain goes in only for the last 20-25 minutes or it turns to porridge; legumes and hard vegetables can take the whole cook. Grain wants high heat (450°F) and a short window; legumes are happier at 400-425°F for longer.",
+   "Skin never goes under liquid or under a lid. Either nestle the protein so the skin stays proud, or spike to 425°F for the last 10 minutes, or return it skin-up uncovered at the end. Boneless thighs: skip the rack, nestle directly on the bed, accept about 70% of the crisp.",
+   "Finish the bed off-heat — greens fold in on residual heat, then acid, herbs and cheese. Pour in the resting juices.",
+   "Serve with the bright thing. A combined pan cannot make crunch, freshness or acid; it all has to come from outside."
+  ],
+  "notes": [
+   "Combine protein and bed whenever the protein renders. Keep them separate when the protein is lean (cod, breast, tenderloin, shrimp — nothing drips), when cook times diverge hard, or when the veg is wet enough to steam the protein (mushrooms, zucchini).",
+   "Two components, not three pans: the rendered pan, plus one sharp thing.",
+   "Best for batch weeks: the legume bed. Beans improve on day two — they keep drinking the fat and the sauce tightens. Grain degrades, cabbage goes slack. Put a three-deployment build on beans; save grain versions for standalone dinners.",
+   "Kenji's transferable trick: reserve half the marinade uncontaminated, chop the cooked protein, return it to the pan with that reserved marinade and its juices. A second hit of raw aromatic on cooked meat. Works on any combination here.",
+   "Flavour axes: Hainanese (jasmine, schmaltz, ginger-scallion oil) · Peruvian (couscous, ají amarillo, cilantro crema) · Puttanesca (orzo, anchovy, capers, olives) · Persian (basmati, saffron, barberries, dill) · Chipotle-adobo (rice, black beans, cotija) · Spanish (bomba, saffron, piquillo, aioli) · South Indian (basmati, curry leaf, coconut, tamarind) · Jerk (rice and peas, allspice, scotch bonnet) · Dashi-soy (short grain, shiitake, shichimi) · Berbere (barley, red lentils, herbed yogurt) · Levantine (freekeh, chickpeas, pomegranate molasses) · Mushroom-miso (barley, porcini, leeks).",
+   "Convert to one-pan: Hainanese, chipotle, Spanish, South Indian, jerk and dashi all go straight across, with liquid cut by about 25% since a covered pan loses less. Orzo builds stay uncovered and get stirred like risotto. Persian and berbere stay on the rack — tahdig needs the crust, barley needs 50 minutes.",
+   "Macro-clean picks (~80/40/120): chipotle-adobo and berbere. Grain plus legume plus dark meat gets there without engineering.",
+   "In the library already: Crispy Braised Chicken Thighs with Cabbage and Bacon, Roast Chicken with Oregano and Butter Beans, Dutch Oven Chicken with Pancetta Leeks and White Beans, Greek Roast Chicken over Orzo, Aji Amarillo Chicken over White Beans — all the same family.",
+   "Pregnancy: no wine or sherry in the pan — stock plus vinegar. Confirm feta and parm are pasteurized. Dark meat to 175-180°F, breast to 165°F."
+  ],
+  "macros": null,
+  "minutes": 65,
+  "id": "bed-method-master-template-protein-over-grain-bean-or-veg",
+  "protein": "Chicken",
+  "archetype": "protein",
+  "under30": false,
+  "batch": true,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": true,
+  "isMain": false,
+  "section": "main"
  },
  {
   "name": "Beef Bourguignon",
@@ -774,6 +904,75 @@
   "batchable": true,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "id": "blueberry-almond-lemon-cake",
+  "name": "Blueberry, Almond and Lemon Cake",
+  "rating": 0,
+  "tags": [
+   "Dessert",
+   "Baking",
+   "Untested"
+  ],
+  "time": {
+   "prep": "20 mins",
+   "cook": "70 mins",
+   "total": "1 hr 30 mins"
+  },
+  "serves": {
+   "text": "Serves 8",
+   "n": 8
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1018821-blueberry-almond-and-lemon-cake",
+   "name": "NYT Cooking — Yotam Ottolenghi"
+  },
+  "image": null,
+  "ingredients": [
+   "1/2 cup (1 stick) plus 3 tbsp (150g) unsalted butter, room temp, plus extra for greasing",
+   "1 scant cup (190g) granulated or superfine sugar",
+   "1 tsp lemon zest, plus 1 tbsp lemon juice (more as needed)",
+   "1 tsp vanilla extract",
+   "3 large eggs, beaten",
+   "2/3 cup all-purpose flour",
+   "1 1/4 tsp baking powder",
+   "1/8 tsp salt",
+   "1 cup almond flour",
+   "1 1/2 cups fresh blueberries",
+   "2/3 cup powdered sugar (for icing)"
+  ],
+  "directions": [
+   "Heat oven to 375°F/200°C. Grease a 9- or 8-inch loaf pan, line with a parchment sling and butter the paper.",
+   "Beat butter, sugar, lemon zest and vanilla on high with the paddle 3–4 minutes until light. Lower to medium and add eggs in three additions, scraping down the bowl (batter may look split — it comes back).",
+   "Whisk together AP flour, baking powder, salt and almond flour. On low, add to the batter in three additions, mixing just until no white specks remain.",
+   "Fold in about 3/4 of the blueberries by hand. Scrape into the pan and level.",
+   "Bake 15 minutes, then scatter the remaining blueberries over the top. Bake another 15–20 minutes until golden but not yet set, then cover loosely with foil and bake a further 25–30 minutes (less for a 9-inch, more for an 8-inch) until a knife in the center comes out clean.",
+   "Cool in the pan 10 minutes, then lift out onto a rack to cool completely.",
+   "Make the icing: whisk powdered sugar with 1 tbsp lemon juice until smooth, adding a little more juice as needed to a thick but pourable icing. Pour over the cooled cake and spread. Let set ~30 minutes before slicing."
+  ],
+  "notes": [
+   "Pregnancy: fully baked — no concerns.",
+   "Top NYT/Ottolenghi tips: keep frozen blueberries frozen until the moment they go in (don't defrost) and expect a longer bake; layering batter and berries helps them not sink. The icing usually needs more than 1 tbsp lemon juice — add gradually. Almond flour gives a lovely chewy crust; greasing the pan and dusting with a little almond flour enhances it. A pinch of cardamom or a swap to lime is a nice variation."
+  ],
+  "macros": {
+   "kcal": null,
+   "p": 6,
+   "f": 18,
+   "c": 30
+  },
+  "minutes": 90,
+  "protein": "Veg",
+  "archetype": "dessert",
+  "cuisine": "other",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "batchable": false,
+  "isMain": false,
+  "make_ahead": [],
+  "lead_h": 0,
+  "section": "baking"
  },
  {
   "name": "Bolognese Sauce",
@@ -1214,6 +1413,86 @@
   "favourite": true,
   "avoid": false,
   "cuisine": "other",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Bánh Xèo – Crispy Vietnamese Pancakes",
+  "rating": 5,
+  "tags": [
+   "Asian",
+   "Favourites",
+   "Sunday Treats"
+  ],
+  "time": {
+   "prep": null,
+   "cook": null,
+   "total": "30 mins"
+  },
+  "serves": {
+   "text": null,
+   "n": 4
+  },
+  "source": {
+   "url": "https://www.greatbritishchefs.com/recipes/ban-xeo-recipe-vietnamese-pancakes",
+   "name": "greatbritishchefs.com"
+  },
+  "image": "https://media-cdn2.greatbritishchefs.com/media/334nd55m/img69374.whqc_768x512q80fpt620fpl519.jpg",
+  "ingredients": [
+   "PANCAKE BATTER (MAKES 12 LARGE PANCAKES)",
+   "225g of rice flour",
+   "70g of cornflour",
+   "200ml of coconut milk",
+   "750ml of warm water",
+   "3g of salt",
+   "15g of sugar",
+   "1 tsp turmeric powder",
+   "6 spring onions, finely chopped",
+   "DIPPING SAUCE",
+   "40ml of lime juice, (about 1 and a half medium limes)",
+   "100g of rock sugar, crushed",
+   "40ml of fish sauce",
+   "80ml of water",
+   "25g of garlic, finely chopped",
+   "12g of red chillies, finely sliced",
+   "FILLING",
+   "400g of pork belly, sliced",
+   "1l chicken stock",
+   "400g of king prawns",
+   "2 chayote, cut into jullienne",
+   "50g of beansprouts",
+   "2 carrots, cut into jullienne",
+   "1 tsp oil",
+   "TO SERVE:",
+   "2 baby gem lettuces, leaves separated and washed",
+   "1/2 cucumber, sliced",
+   "1 bunch of coriander",
+   "1 bunch of mint"
+  ],
+  "directions": [
+   "Start by making the dipping sauce. Place the lime juice, crushed rock sugar, fish sauce and water in a small saucepan and bring to medium heat to dissolve the sugar. As soon as the sugar has melted, turn off heat and leave on the side to cool down. When completely cooled down, add the garlic and chillies and mix well. Can be stored for up to 5 days in the fridge",
+   "To make the pancake batter, combine all the ingredients except the spring onions and whisk to a smooth batter. Add the chopped spring onions and place in the fridge for an hour to chill",
+   "On a medium heat, poach the pork belly in chicken stock for 15 minutes. Drain, allow to cool, then slice into little rectangles. Set aside until ready to use",
+   "Poach the prawns in the chicken stock for about 3 minutes until just cooked. Cool, then devein, cut in half and set aside until ready to use",
+   "Heat the oil in a medium non-stick frying pan over a high heat",
+   "Add a few slices of pork belly and some pieces of prawn then pour in a ladle of the pancake batter, angling the pan to let the batter cover the whole pan in a thin layer",
+   "Add a small handful of the vegetable fillings then lower the heat and put the lid on for 2 and a half minutes",
+   "Remove the lid and maintain the low heat for a further 3 and a half minutes until the pancake has that signature golden yellow colour and starts to crisp up",
+   "Fold in half and eat whist still hot (if you're making a few at a time, keep warm under the grill)",
+   "The true Vietnamese way of eating the pancakes is wrapped up in lettuce leaves with plenty of fresh herbs and cucumber and dipped in the sweet and sour chilli dipping sauce"
+  ],
+  "notes": [],
+  "macros": null,
+  "minutes": 30,
+  "id": "banh-xeo-crispy-vietnamese-pancakes",
+  "protein": "Veg",
+  "archetype": "complete",
+  "under30": true,
+  "batch": false,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "se_asian",
   "batchable": false,
   "isMain": true,
   "section": "main"
@@ -2128,6 +2407,83 @@
   "section": "main"
  },
  {
+  "id": "chicken-fricassee-french-stew",
+  "name": "Chicken Fricassée (French creamy chicken stew)",
+  "rating": 0,
+  "tags": [
+   "Chicken",
+   "French",
+   "Stew",
+   "Batch Cook",
+   "Untested"
+  ],
+  "time": {
+   "prep": "20 mins",
+   "cook": "50 mins",
+   "total": "1 hr 10 mins"
+  },
+  "serves": {
+   "text": "Serves 4–6",
+   "n": 4
+  },
+  "source": {
+   "url": "https://www.recipetineats.com/chicken-fricassee-quick-french-chicken-stew/",
+   "name": "RecipeTin Eats — Nagi / chef JB"
+  },
+  "image": null,
+  "ingredients": [
+   "4 chicken drumsticks (~150g each), skin-on bone-in",
+   "4 chicken thighs (~250g each), skin-on bone-in",
+   "1 tsp cooking/kosher salt",
+   "1/2 tsp black pepper",
+   "4 tbsp (60g) unsalted butter",
+   "300g white mushrooms, halved (or quartered if large)",
+   "2 medium brown onions, sliced 1/2 in wide",
+   "2 garlic cloves, finely minced",
+   "1 bay leaf",
+   "3 thyme sprigs (or 1/2 tsp dried)",
+   "3 tbsp plain flour",
+   "1/2 cup chicken stock + 2 tsp white wine vinegar (replaces 1/2 cup white wine — pregnancy swap)",
+   "3 cups chicken stock, low-sodium (homemade if you have it)",
+   "1/4 tsp salt + 1/4 tsp black pepper",
+   "2 tbsp chopped parsley",
+   "2/3 cup heavy cream"
+  ],
+  "directions": [
+   "Pat chicken dry and season with 1 tsp salt and 1/2 tsp pepper.",
+   "Melt butter over medium-high in a large lidded skillet or Dutch oven. Brown thighs skin-side down 4–5 minutes until golden, flip 1 minute, remove. Brown drumsticks on 3 sides, ~2 minutes each; remove.",
+   "In the browned butter, add mushrooms, onion, bay and thyme. Cook ~5 minutes until mushrooms are lightly golden (they won't deep-brown). Add garlic, stir 30 seconds, then flour and cook 1 minute.",
+   "Add the stock-and-vinegar wine substitute plus the 3 cups stock, 1/4 tsp salt and 1/4 tsp pepper. Stir, scraping up the fond.",
+   "Return chicken skin-side up. Bring to a gentle simmer, cover and cook 10 minutes. Uncover and simmer 20 minutes more to reduce to a thin gravy; chicken should reach 75°C/167°F.",
+   "Remove chicken. Stir in cream and bring back to a simmer; taste and adjust salt. Return chicken, off the heat, sprinkle with parsley and serve."
+  ],
+  "notes": [
+   "Pregnancy: original uses 1/2 cup white wine — replaced with stock + white wine vinegar. Chicken cooked fully to temp; cream is pasteurized and fine.",
+   "Batch/transform: doubles cleanly and reheats beautifully. As-cooked over mash night 1; reheat gently night 2; night 3 shred the meat and fold into the sauce with orzo for a one-pot, or into a pie.",
+   "Top RecipeTin comments: add orzo (or penne) at the 15-min uncovered mark to make it a true one-pot (add a splash more stock). Cooking in a wok lets you sear all the chicken in one go and stir the cream in without removing it. Slow-cooker: sear, then everything (incl. cream) on low 6 hours.",
+   "Veg is thin here — serve with garlicky sautéed spinach or a big green salad with dijon vinaigrette. Mash closes the carb gap toward target."
+  ],
+  "macros": {
+   "kcal": 792,
+   "p": 43,
+   "f": 55,
+   "c": 20
+  },
+  "minutes": 50,
+  "protein": "Chicken",
+  "archetype": "stew",
+  "cuisine": "french",
+  "under30": false,
+  "batch": true,
+  "favourite": false,
+  "avoid": false,
+  "batchable": true,
+  "isMain": true,
+  "make_ahead": [],
+  "lead_h": 0,
+  "section": "main"
+ },
+ {
   "name": "Chicken Noodle Soup",
   "rating": 5,
   "tags": [
@@ -2360,6 +2716,195 @@
   "section": "main"
  },
  {
+  "name": "Chilean Sea Bass with Lemon-Caper Beurre Blanc",
+  "rating": 0,
+  "tags": [
+   "Fish",
+   "Untested",
+   "Weekend Lunch"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "15 mins",
+   "total": "25 min"
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "2 Chilean sea bass fillets, 6-7 oz each",
+   "1 tablespoon olive oil, plus a drizzle for the veg",
+   "1 small shallot, finely minced",
+   "1/3 cup fish or chicken stock",
+   "1 tablespoon white wine vinegar",
+   "1 tablespoon lemon juice, plus zest to finish",
+   "4 tablespoons cold butter, cubed",
+   "1 teaspoon capers, chopped",
+   "1 cup cherry tomatoes, halved",
+   "3 cups baby spinach",
+   "2 cloves garlic, thinly sliced",
+   "Salt and black pepper"
+  ],
+  "directions": [
+   "Sear the fish: pat dry and season. Heat the olive oil in a stainless pan over medium-high. Sear the first side 4-5 minutes until deep gold, flip, drop to medium, and cook 3-5 minutes more depending on thickness until just opaque through with no translucent centre. Rest, tented.",
+   "Blister the tomatoes: same pan, drizzle more oil if needed, add the garlic and cherry tomatoes over medium-high and cook 3-4 minutes until they collapse slightly. Salt and set aside.",
+   "Wilt the spinach: same pan, toss the spinach 1 minute just until wilted, with a squeeze of lemon.",
+   "Beurre blanc: in a small saucepan, simmer the shallot with the stock and vinegar until reduced by half, 2-3 minutes. Off heat, whisk in the cold butter a few cubes at a time, letting each melt before adding more. Do not let it reboil or it will split. Stir in the lemon juice and capers, then season.",
+   "Plate the spinach, sit the fish on top, spoon the tomatoes around and the beurre blanc over. Finish with lemon zest."
+  ],
+  "notes": [
+   "Untested — awaiting a cook to confirm.",
+   "Runs fat-heavy by design: sea bass is rich and the sauce is mounted butter. That is the point of the dish, but it is not a macro-clean night.",
+   "Pregnancy: stock plus white wine vinegar replaces the wine in a classic beurre blanc. Chilean sea bass is a moderate-mercury fish — keep it occasional rather than weekly.",
+   "Green beans work in place of the spinach if that is what is open."
+  ],
+  "macros": {
+   "p": 42,
+   "f": 38,
+   "c": 8,
+   "kcal": 542,
+   "per": "serving"
+  },
+  "minutes": 25,
+  "id": "chilean-sea-bass-with-lemon-caper-beurre-blanc",
+  "protein": "Fish",
+  "archetype": "protein",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "french",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Chili Crisp",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "25 mins",
+   "cook": null,
+   "total": "25 min"
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1 1/2 cups neutral oil",
+   "1 head garlic, thinly sliced",
+   "4 shallots, thinly sliced",
+   "3 inches ginger, julienned",
+   "2 star anise",
+   "1 cinnamon stick",
+   "1/2 cup coarse Sichuan chili flakes or gochugaru",
+   "2 tablespoons fermented black beans, rinsed and roughly chopped",
+   "2 tablespoons roasted peanuts, crushed",
+   "1 tablespoon sesame seeds",
+   "1 teaspoon Sichuan peppercorns, ground",
+   "2 teaspoons sugar",
+   "2 teaspoons kosher salt",
+   "1 teaspoon MSG (optional but it belongs here)"
+  ],
+  "directions": [
+   "Combine the oil, garlic, shallots, ginger, star anise and cinnamon in a saucepan. Bring to a bare simmer over medium-low.",
+   "Cook 20-25 minutes, stirring occasionally, until the shallots and garlic are deep gold and the bubbling has almost stopped. Pull them a shade before they look done — they keep darkening off heat.",
+   "Meanwhile combine the chili flakes, black beans, peanuts, sesame, ground peppercorns, sugar, salt and MSG in a heatproof bowl.",
+   "Fish out the star anise and cinnamon. Pour the hot oil and solids over the chili mixture — it will foam up hard.",
+   "Cool completely before jarring. It tastes better the next day and much better after a week."
+  ],
+  "notes": [
+   "Everything comes down to frying the aromatics slowly. Rushing it gives you burnt garlic in red oil.",
+   "Keeps a month refrigerated, longer if the solids stay under the oil.",
+   "On noodles, dumplings, eggs, rice, cucumber salad, roast vegetables, or stirred into mayo.",
+   "Heat is set by the chili, not the quantity — gochugaru is mild and fruity, Sichuan facing-heaven chilies are hotter."
+  ],
+  "macros": null,
+  "minutes": 25,
+  "id": "chili-crisp",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "chinese",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
+  "name": "Chimichurri",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": null,
+   "total": "10 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1 cup flat-leaf parsley, finely chopped",
+   "2 tablespoons fresh oregano, chopped (or 2 teaspoons dried)",
+   "4 cloves garlic, very finely minced",
+   "1 small shallot, finely minced",
+   "1 teaspoon red pepper flakes",
+   "3 tablespoons red wine vinegar",
+   "1/2 cup extra-virgin olive oil",
+   "1 teaspoon kosher salt",
+   "Black pepper"
+  ],
+  "directions": [
+   "Put the shallot, garlic, vinegar and salt in a bowl and leave 10 minutes. The acid takes the raw edge off the alliums — do not skip this.",
+   "Stir in the parsley, oregano and chili flakes.",
+   "Pour in the olive oil and stir. Do not blend it — chimichurri is chopped, not emulsified, and a blender turns it into bitter green sludge.",
+   "Rest at least 20 minutes before serving. Better after two hours."
+  ],
+  "notes": [
+   "Chop by hand. This is the whole difference between good chimichurri and the food-processor version.",
+   "Keeps a week in the fridge under a film of oil. The colour dulls after day two; the flavour improves.",
+   "Beyond steak: spoon over roast chicken, grilled fish, blistered green beans, or a fried egg. Excellent as the 'sharp thing' on a Bed Method build.",
+   "Pregnancy-safe as written — vinegar, not wine."
+  ],
+  "macros": null,
+  "minutes": 10,
+  "id": "chimichurri",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
   "name": "Chinese Black Pepper Beef",
   "rating": 0,
   "tags": [
@@ -2495,6 +3040,80 @@
   "avoid": false,
   "cuisine": "chinese",
   "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Chipotle Beef Tacos",
+  "rating": 5,
+  "tags": [
+   "Batch Cook",
+   "Favourites",
+   "Freezable",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "25 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "4 (8-10 tacos)",
+   "n": 4
+  },
+  "source": {
+   "url": null,
+   "name": "Vik's recipe"
+  },
+  "image": null,
+  "ingredients": [
+   "1½ lb ground beef (85/15)",
+   "1 tbsp neutral oil",
+   "1 onion, diced",
+   "1 red bell pepper, diced",
+   "3 garlic cloves, minced",
+   "2 tsp ground cumin",
+   "1 tsp smoked paprika",
+   "1 tsp dried oregano",
+   "½ tsp chili powder",
+   "¾ cup beef stock",
+   "2–3 chipotles in adobo, minced, plus 1–2 tbsp adobo sauce",
+   "2 tbsp tomato paste",
+   "Salt and black pepper",
+   "To serve: Mission Carb Balance soft taco tortillas, diced white onion, cilantro, lime, queso fresco (pasteurized), pickled jalapeños or salsa"
+  ],
+  "directions": [
+   "Brown the beef hard in oil, breaking it up; season and set aside, leaving the fat.",
+   "Sweat the onion and bell pepper in the same pan until soft, 5–6 minutes.",
+   "Add garlic, cumin, smoked paprika, oregano and chili powder; bloom 60 seconds.",
+   "Add stock, minced chipotles with adobo, and tomato paste, scraping up the fond.",
+   "Return the beef and simmer 8–10 minutes until thick and glossy. Adjust salt, finish with a squeeze of lime.",
+   "Serve in warmed Carb Balance tortillas with onion, cilantro, lime and toppings."
+  ],
+  "notes": [
+   "Tested — household 5-star. Batch at 2x; freezes well up to 3 months.",
+   "Later-in-week deployments: taco salad or burrito bowls over rice and black beans.",
+   "Pregnancy: fine as written — just confirm queso fresco/cotija is pasteurized (most US supermarket versions are).",
+   "Macros per serving with 2 Carb Balance tortillas ≈ 500 kcal / 46P / 29F / 46C (~16g net carb). Filling alone ≈ 360 kcal / 34P / 22F / 8C."
+  ],
+  "macros": {
+   "p": 46,
+   "f": 29,
+   "c": 46,
+   "kcal": 500,
+   "per": "serving"
+  },
+  "minutes": 35,
+  "id": "chipotle-beef-tacos",
+  "restored": true,
+  "protein": "Beef",
+  "archetype": "complete",
+  "under30": false,
+  "batch": true,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "mexican",
+  "batchable": true,
   "isMain": true,
   "section": "main"
  },
@@ -2671,6 +3290,147 @@
   "batchable": false,
   "isMain": false,
   "section": "baking"
+ },
+ {
+  "name": "Coconut Fish and Tomato Bake",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Weeknights",
+   "Traybakes"
+  ],
+  "time": {
+   "prep": "15 mins (+15–30 marinate)",
+   "cook": "20 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1021291-coconut-fish-and-tomato-bake",
+   "name": "Yewande Komolafe — NYT Cooking"
+  },
+  "image": null,
+  "ingredients": [
+   "¾ cup unsweetened coconut milk",
+   "1 (1-inch) piece fresh ginger, finely grated",
+   "1 garlic clove, finely grated",
+   "½ tsp ground turmeric",
+   "½ tsp red-pepper flakes",
+   "1 tbsp honey",
+   "Kosher salt",
+   "2 limes",
+   "½ cup chopped cilantro, divided",
+   "4 (6 oz) fish fillets — cod, halibut, snapper, haddock or salmon, skin on or off",
+   "2 pints cherry or grape tomatoes, halved",
+   "3 tbsp olive oil, divided"
+  ],
+  "directions": [
+   "Whisk the coconut milk with ginger, garlic, turmeric, red-pepper flakes, honey and 1 tsp salt. Zest and juice 1 lime straight in, and stir through half the cilantro.",
+   "Turn the fish through the marinade to coat and refrigerate 15–30 minutes. Heat the oven to 425°F.",
+   "Spread the halved tomatoes in a glass or ceramic baking dish, toss with 2 tbsp oil, salt and pepper, and give them a ~10 minute head start in the oven.",
+   "Nestle the fish into the center, spoon the remaining marinade over, and drizzle with the last tbsp of oil. Roast 8–10 minutes until the surface turns opaque.",
+   "Switch to the broiler and cook 5–6 minutes more until the fish is cooked fully through and the tomatoes are browning in spots.",
+   "Plate with the pan sauce poured over, the remaining cilantro, and wedges of the second lime."
+  ],
+  "notes": [
+   "House note: cut the tomatoes in half.",
+   "Use a glass/ceramic dish rather than a sheet pan — the coconut-lime sauce stays put instead of thinning and scorching under the broiler.",
+   "Give the tomatoes a ~10 minute head start so the fish does not overcook.",
+   "Serve over rice or with crusty bread for the sauce; round out with a quick green.",
+   "Pregnancy: cook the fish fully through — the broiler finish handles it. Cod, halibut, salmon all safe; skip tuna/swordfish. Honey is fine."
+  ],
+  "macros": null,
+  "minutes": 45,
+  "id": "coconut-fish-and-tomato-bake",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "traybake",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Coconut Sea Bass Curry",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Seafood",
+   "Weeknights",
+   "Curry"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": "20 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Vik's recipe"
+  },
+  "image": null,
+  "ingredients": [
+   "1 lb sea bass or cod, cut into large chunks (frozen works well — thaw slowly and pat very dry)",
+   "½ tsp ground turmeric, plus ¼ tsp for the fish",
+   "1 tbsp neutral oil",
+   "1 tsp black mustard seeds",
+   "10 curry leaves (optional but transformative)",
+   "1 onion, finely sliced",
+   "3 garlic cloves, minced",
+   "1-inch piece ginger, grated",
+   "1 tsp Kashmiri chili powder",
+   "2 tsp ground coriander",
+   "1 tomato, chopped (or ½ cup canned)",
+   "1 (14 oz) can coconut milk",
+   "1 tsp tamarind paste or juice of ½ lime",
+   "Salt",
+   "Cilantro, to finish",
+   "Steamed rice, to serve"
+  ],
+  "directions": [
+   "Toss the fish with ¼ tsp turmeric and a pinch of salt; set aside.",
+   "Heat the oil and pop the mustard seeds; add the curry leaves for 10 seconds, then the onion. Cook until golden at the edges, 6–7 minutes.",
+   "Add garlic and ginger for a minute, then the turmeric, chili powder and coriander; bloom 30 seconds.",
+   "Add the tomato and cook down 2–3 minutes, then pour in the coconut milk. Simmer 5 minutes to a loose curry.",
+   "Slide in the fish and poach gently 6–8 minutes until fully opaque through — do not stir hard or it will break.",
+   "Finish with tamarind or lime and salt to taste. Cilantro over; serve with rice."
+  ],
+  "notes": [
+   "Built for frozen fish — wet, sauced preparations are where frozen fillets shine; the crispy-skin limitation does not apply here.",
+   "Sea bass, cod and halibut all work; anything that holds in large flakes.",
+   "Pregnancy: sea bass and cod are low-mercury; fish poached fully through."
+  ],
+  "macros": {
+   "p": 44,
+   "f": 38,
+   "c": 16,
+   "kcal": null,
+   "per": "serving"
+  },
+  "minutes": 35,
+  "id": "coconut-sea-bass-curry",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "curry",
+  "under30": false,
+  "batch": true,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": true,
+  "isMain": true,
+  "section": "main"
  },
  {
   "name": "Coconut- And Ají Amarillo–Braised Chicken",
@@ -3722,6 +4482,81 @@
   "section": "main"
  },
  {
+  "name": "Dutch Oven Chicken with Pancetta, Leeks and White Beans",
+  "rating": 5,
+  "tags": [
+   "Batch Cook",
+   "Favourites",
+   "Sunday Treats"
+  ],
+  "time": {
+   "prep": "20 mins",
+   "cook": "1 hr",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": null,
+   "name": "Vik's recipe"
+  },
+  "image": null,
+  "ingredients": [
+   "1 whole chicken, spatchcocked (4½–5½ lb)",
+   "5 oz pancetta, lardons or cubed",
+   "3 medium leeks, white and light green only, sliced into rounds",
+   "4 garlic cloves, sliced",
+   "1 tsp fresh thyme (or ½ tsp dried)",
+   "2 (14 oz) cans cannellini or butter beans, drained and rinsed",
+   "1¼ cups chicken stock",
+   "1 tbsp white wine vinegar",
+   "1 tsp Dijon mustard",
+   "5 oz cavolo nero or kale, stems stripped",
+   "Small handful flat-leaf parsley, roughly chopped",
+   "Lemon juice, to taste",
+   "Good olive oil",
+   "Salt and black pepper"
+  ],
+  "directions": [
+   "Season the chicken generously and dry the skin well. Sear skin-side down in the Dutch oven until deep golden, about 8 minutes; flip for 2 minutes more, then remove.",
+   "Render the pancetta in the same pot until the fat runs and the edges crisp.",
+   "Sweat the leeks and garlic in the pancetta fat with the thyme, 5–7 minutes. Season.",
+   "Stir in the beans, stock, vinegar and Dijon. Rest the chicken on top, skin up.",
+   "Roast uncovered at 450°F for 15 minutes, then drop to 400°F for 25–35 minutes until the thigh reads 165°F. Stir the beans at the halfway point, adding a splash of stock if they look dry.",
+   "Rest the chicken on a board, tipping any cavity juices back over the beans. Fold the cavolo nero into the hot beans to wilt.",
+   "Finish the beans with parsley, lemon juice and a thread of olive oil. Carve the chicken over the top."
+  ],
+  "notes": [
+   "Confirmed household favourite — anchor batch dish.",
+   "The Dijon is a keeper (approved June 2026).",
+   "Reheats excellently — the beans drink up the juices overnight and improve.",
+   "Cavolo nero holds better than curly kale if there will be leftovers.",
+   "Pregnancy: fine as written — pancetta is cooked through in the render. Pasteurized parmesan grated at the table is a nice addition."
+  ],
+  "macros": {
+   "p": 62,
+   "f": 38,
+   "c": 32,
+   "kcal": null,
+   "per": "serving"
+  },
+  "minutes": 80,
+  "id": "dutch-oven-chicken-with-pancetta-leeks-and-white-beans",
+  "restored": true,
+  "protein": "Chicken",
+  "archetype": "stew",
+  "under30": false,
+  "batch": true,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": true,
+  "isMain": true,
+  "section": "main"
+ },
+ {
   "name": "Easy One-Pot Chicken Tinga (Spicy Mexican Shredded Chicken)",
   "rating": 4,
   "tags": [
@@ -3894,6 +4729,79 @@
   "favourite": true,
   "avoid": false,
   "cuisine": "mexican",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Fish in Acqua Pazza",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Seafood",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "25 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Vik's recipe — Neapolitan classic"
+  },
+  "image": null,
+  "ingredients": [
+   "2 white fish fillets, skin on (branzino, sea bass or cod), 6–8 oz each, patted very dry",
+   "2 tbsp olive oil",
+   "2 shallots, thinly sliced",
+   "3 garlic cloves, sliced",
+   "1 pint cherry tomatoes",
+   "Pinch of chili flakes",
+   "¾ cup fish or chicken stock",
+   "1 tsp white wine vinegar",
+   "3 cups baby spinach",
+   "2 tbsp cold butter",
+   "½ lemon",
+   "Handful parsley, chopped",
+   "Crusty bread, to serve",
+   "Salt and black pepper"
+  ],
+  "directions": [
+   "Salt the fish. Sear skin-side down in the oil in a stainless pan over medium-high, pressing flat, until the skin releases and crisps, 3–4 minutes. Remove, skin up.",
+   "Soften the shallots and garlic in the same pan, 2–3 minutes. Add the tomatoes and chili flakes; cook until they blister and start to burst, helping a few along with the spoon.",
+   "Pour in the stock and vinegar and simmer 3–4 minutes into a loose, brothy sauce — it should stay brothy, not reduce down.",
+   "Return the fish flesh-side down, keeping the skin clear of the liquid, and poach gently 4–6 minutes until fully opaque through.",
+   "Wilt the spinach into the broth around the fish. Off the heat, swirl in the cold butter and a squeeze of lemon.",
+   "Shower with parsley and serve in shallow bowls with crusty bread for the broth."
+  ],
+  "notes": [
+   "Acqua pazza is brothy and rustic by design — built for mopping with bread, not plating dry.",
+   "Skin stays crisp only if it sits above the liquid: sear hard skin-down first, then finish flesh-side down.",
+   "Spinach is the pick over arugula here — milder in the broth and more folate. A handful of arugula off-heat works if you want more bite.",
+   "Pregnancy: wine → stock + splash of vinegar, fish fully cooked through."
+  ],
+  "macros": {
+   "p": 45,
+   "f": 30,
+   "c": 14,
+   "kcal": null,
+   "per": "serving"
+  },
+  "minutes": 35,
+  "id": "fish-in-acqua-pazza",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "protein",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
   "batchable": false,
   "isMain": true,
   "section": "main"
@@ -4133,6 +5041,61 @@
   "section": "main"
  },
  {
+  "name": "Garlic Bread",
+  "rating": 0,
+  "tags": [
+   "Side"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "12 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 4–6",
+   "n": 4
+  },
+  "source": {
+   "url": null,
+   "name": "Adapted — NYT Cooking"
+  },
+  "image": null,
+  "ingredients": [
+   "1 baguette or Italian loaf, split lengthwise",
+   "6 tbsp unsalted butter",
+   "2 tbsp olive oil",
+   "4 garlic cloves, finely grated",
+   "¼ tsp red-pepper flakes (optional)",
+   "½ cup finely grated parmesan (pasteurized)",
+   "¼ cup chopped flat-leaf parsley",
+   "Flaky salt"
+  ],
+  "directions": [
+   "Heat the oven to 425°F. Warm the butter, oil and garlic gently in a small pan until fragrant, about 2 minutes — do not brown.",
+   "Brush the cut sides generously with the garlic butter and season with salt.",
+   "Bake cut-side up on a sheet pan 8–10 minutes until golden at the edges.",
+   "Scatter the parmesan over and bake 2 minutes more to melt. Finish with parsley and chili flakes; slice on the bias."
+  ],
+  "notes": [
+   "Pairs as a set with the skillet chicken or the salmon dishes to mop up sauce.",
+   "Pregnancy: parmesan is pasteurized — fine."
+  ],
+  "macros": null,
+  "minutes": 22,
+  "id": "garlic-bread",
+  "restored": true,
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": false,
+  "isMain": false,
+  "section": "main"
+ },
+ {
   "name": "Garlicky Chicken with Lemon-Anchovy Sauce",
   "rating": 0,
   "tags": [
@@ -4264,6 +5227,60 @@
   "section": "main"
  },
  {
+  "name": "Ginger-Scallion Oil",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": null,
+   "total": "10 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1 bunch scallions, very thinly sliced, white and green",
+   "3 inches ginger, peeled and finely grated or minced",
+   "3/4 cup neutral oil",
+   "1 teaspoon kosher salt",
+   "1 teaspoon light soy sauce",
+   "1/2 teaspoon sugar"
+  ],
+  "directions": [
+   "Put the scallions, ginger and salt in a heatproof bowl.",
+   "Heat the oil until it shimmers and just begins to smoke, about 350°F.",
+   "Pour it straight over the aromatics — it should sizzle hard. Stand back.",
+   "Stir, let it cool, then fold in the soy and sugar."
+  ],
+  "notes": [
+   "The Hainanese axis of the Bed Method in a jar. Also the fastest way to make plain rice and poached chicken taste deliberate.",
+   "Grate the ginger rather than mincing if you want it to melt into the oil rather than sit in it.",
+   "Keeps two weeks refrigerated. The green fades but the flavour holds.",
+   "On steamed fish, noodles, eggs, roast chicken, or stirred through rice."
+  ],
+  "macros": null,
+  "minutes": 10,
+  "id": "ginger-scallion-oil",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "chinese",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
   "name": "Goan Prawn Curry",
   "rating": 0,
   "tags": [
@@ -4325,6 +5342,62 @@
   "batchable": true,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "name": "Gochujang Sauce (Yangnyeom)",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": null,
+   "total": "5 min"
+  },
+  "serves": {
+   "text": "Serves: 3",
+   "n": 3
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1/4 cup gochujang",
+   "2 tablespoons soy sauce",
+   "2 tablespoons rice vinegar",
+   "2 tablespoons honey or corn syrup",
+   "1 tablespoon gochugaru",
+   "4 cloves garlic, grated",
+   "1 tablespoon toasted sesame oil",
+   "1 teaspoon grated ginger",
+   "1 tablespoon toasted sesame seeds"
+  ],
+  "directions": [
+   "Whisk everything together except the sesame seeds.",
+   "For a glaze, simmer 2-3 minutes until it coats a spoon. For a dressing, use as is.",
+   "Stir in the sesame seeds at the end."
+  ],
+  "notes": [
+   "The base for buldak, Korean fried chicken, tteokbokki, and a good stir-through for udon.",
+   "Thin with a splash of water or stock to turn it into a noodle sauce.",
+   "Keeps two weeks refrigerated.",
+   "Pregnancy-safe as written. If glazing wings or chicken, brush on in the last 5 minutes so the sugar does not burn."
+  ],
+  "macros": null,
+  "minutes": 5,
+  "id": "gochujang-sauce-yangnyeom",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "korean",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
  },
  {
   "name": "Gordon Ramsay's Scrambled Eggs and Smoked Salmon Croissants",
@@ -4440,6 +5513,83 @@
   "avoid": false,
   "cuisine": "italian",
   "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Greek Roast Chicken over Orzo",
+  "rating": 5,
+  "tags": [
+   "Batch Cook",
+   "Favourites",
+   "Traybakes"
+  ],
+  "time": {
+   "prep": "20 mins",
+   "cook": "50 mins",
+   "total": "70 min"
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1 whole chicken, 3.5-4.5 lb, spatchcocked",
+   "4 teaspoons kosher salt (Diamond Crystal; halve if Morton)",
+   "4 tablespoons olive oil",
+   "3 teaspoons dried oregano",
+   "2 lemons",
+   "1 teaspoon black pepper, coarsely ground",
+   "FOR THE ORZO:",
+   "250 g orzo",
+   "4 cloves garlic, thinly sliced",
+   "1/2 teaspoon red pepper flakes",
+   "700 ml chicken stock, hot",
+   "300 g cherry tomatoes",
+   "150 g baby spinach",
+   "150 g feta, pasteurized, in a block",
+   "3 tablespoons fresh dill, chopped",
+   "FOR THE SIDE:",
+   "300 g green beans, trimmed"
+  ],
+  "directions": [
+   "Spatchcock the bird and flatten it hard with the heel of your hand. Rub all over with the salt, including under the skin. Sit uncovered on a rack in the fridge overnight. Backbone into the stockpot. Temper at room temperature 40 minutes before roasting.",
+   "Heat the oven to 450°F with two racks. Rub the bird with olive oil, lemon zest, oregano and pepper. No additional salt if dry-brined. Keep raw garlic off the skin — it will burn.",
+   "Roast the chicken skin-up on a rack over a rimmed sheet, 40-45 minutes, until the breast reads 165°F.",
+   "Orzo pan: in a 9x13, combine olive oil, sliced garlic, oregano and chili flakes. Toast the orzo 2 minutes, then add hot stock and cherry tomatoes. Slide onto the rack directly beneath the chicken for the last 22 minutes so the drippings fall into it. Under-salt — the brined drippings and feta both bring salt.",
+   "Off heat, fold the spinach through (it wilts on residual heat), then lemon juice, dill and crumbled feta. Broil 2 minutes to blister the feta. Pour in the resting juices.",
+   "Green beans stay separate for contrast: dry-fry in the wok until puckered and blistered, then garlic, chili and a squeeze of lemon.",
+   "Carve the bird over the orzo."
+  ],
+  "notes": [
+   "Template, not a fixed recipe — the move is a grain pan beneath the roasting bird catching the drippings. Swap the flavour axis freely.",
+   "Scaling to two birds: season the second neutrally (salt, pepper, garlic only) so the meat redeploys anywhere. The orzo carries the flavour, not the chicken.",
+   "Deployments: as-cooked Sunday; air-fry the legs and thighs at 380°F for 8-10 minutes to re-crisp the skin; carcass stock into a lemony chicken-and-orzo soup with spinach and dill. Skip classic avgolemono while pregnancy rules are active — whisk Greek yogurt with lemon and a ladle of hot broth, stirred in off heat.",
+   "Dry-brined skin browns faster. Watch colour alongside temperature, not the clock.",
+   "Pregnancy: confirm the feta is pasteurized. Breast to 165°F throughout."
+  ],
+  "macros": {
+   "p": 52,
+   "f": 30,
+   "c": 55,
+   "kcal": 698,
+   "per": "serving"
+  },
+  "minutes": 70,
+  "id": "greek-roast-chicken-over-orzo",
+  "protein": "Chicken",
+  "archetype": "traybake",
+  "under30": false,
+  "batch": true,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": true,
   "isMain": true,
   "section": "main"
  },
@@ -4578,6 +5728,78 @@
   "batchable": false,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "id": "grilled-beef-galbi",
+  "name": "Grilled Beef Galbi (Korean-Style Marinated Short Ribs)",
+  "section": "main",
+  "isMain": true,
+  "archetype": "protein",
+  "cuisine": "korean",
+  "protein": "Beef",
+  "serves": {
+   "n": 4,
+   "text": "4 servings"
+  },
+  "minutes": 40,
+  "time": {
+   "prep": "20 mins",
+   "cook": "20 mins",
+   "total": "40 mins active + 4–6 h marinade"
+  },
+  "under30": false,
+  "batchable": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "rating": 0,
+  "tags": [
+   "Untested"
+  ],
+  "macros": {
+   "p": 46,
+   "f": 44,
+   "c": 19,
+   "kcal": 656,
+   "per": "serving"
+  },
+  "source": {
+   "name": "seriouseats.com",
+   "url": "https://www.seriouseats.com/grilled-beef-galbi-korean-style-marinated-short-ribs"
+  },
+  "ingredients": [
+   "3 pounds (1.4kg) flanken-cut beef short ribs, about 1/2-inch thick",
+   "1 medium onion (200g), cut into 1-inch pieces",
+   "1 Asian pear (170g), peeled and cut into 1-inch pieces",
+   "5 garlic cloves (25g)",
+   "1-inch piece (14g) fresh ginger, peeled",
+   "1 cup (240ml) soy sauce",
+   "1/2 cup (120ml) orange juice",
+   "1/4 cup (50g) packed brown sugar",
+   "2 tablespoons (30ml) rice vinegar",
+   "1 tablespoon (6g) freshly ground black pepper",
+   "4 scallions (80g), thinly sliced",
+   "2 tablespoons (30ml) toasted sesame oil",
+   "2 tablespoons (12g) toasted sesame seeds, lightly crushed",
+   "To serve: ssamjang, lettuce and perilla leaves, steamed white rice, kimchi, cucumber salad"
+  ],
+  "directions": [
+   "Rinse the ribs under cold water to wash off bone fragments, then drain and pat dry.",
+   "Blend the onion, pear, garlic, ginger, soy sauce, orange juice, brown sugar, rice vinegar and black pepper to a smooth puree.",
+   "Stir the scallions, sesame oil and sesame seeds into the puree by hand — blending them in dulls the aroma.",
+   "Pour the marinade over the ribs in a bag or dish, turn to coat, and refrigerate 4–6 hours. Do not go overnight: the orange juice is acidic enough to turn the surface mealy past about 6 hours.",
+   "Pull the ribs out 30 minutes before cooking. Lift each piece clear of the marinade and scrape off the solids — pear and onion pulp burn before the meat browns. Discard the marinade.",
+   "Heat a dry cast iron or carbon steel pan over medium-high. Cook in batches, 2–3 minutes per side, until deeply caramelized and cooked through with no pink remaining. Wipe the pan between batches; the sugar in the marinade builds fast and turns acrid.",
+   "Broiler alternative: arrange on a rack over a foil-lined sheet, broil on high 3–4 minutes per side, watching closely from minute two.",
+   "Rest 5 minutes, scatter with extra scallion and sesame seeds, and serve with ssam, rice, kimchi and cucumber."
+  ],
+  "notes": [
+   "Orange juice replaces the water in the original marinade. It brings acidity and sugar the water didn't, so the ribs brown faster and taste rounder — but cap the marinade at 6 hours or the texture suffers.",
+   "PREGNANCY: the original calls for 2 tbsp mirin, swapped here for rice vinegar. The orange juice covers the sweetness mirin would have added. Cook the ribs fully through — thin flanken cut gets there in 2–3 minutes a side regardless.",
+   "No grill needed. Cast iron over medium-high beats the broiler for crust; the broiler is easier for cooking all 3 lb at once.",
+   "Fat-heavy for a macro night: roughly 46P/44F/19C per serving before sides. Adding rice pushes carbs to target but fat still overshoots — treat this as a flexible day rather than one of the clean two.",
+   "Ssamjang, kimchi and a quick cucumber salad (smashed cucumber, rice vinegar, sesame oil, gochugaru) are the standard spread. Commercially produced refrigerated kimchi is fine during pregnancy."
+  ]
  },
  {
   "name": "Halal Cart-Style Chicken and Rice with White Sauce",
@@ -5648,6 +6870,73 @@
   "section": "sauce"
  },
  {
+  "name": "Marry Me Salmon",
+  "rating": 5,
+  "tags": [
+   "Favourites",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "20 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Adapted — Marry Me Salmon"
+  },
+  "image": null,
+  "ingredients": [
+   "2 salmon fillets (7–8 oz each), patted dry",
+   "Salt and black pepper",
+   "1 tbsp olive oil",
+   "3 garlic cloves, minced",
+   "½ cup oil-packed sun-dried tomatoes, drained and chopped",
+   "⅓ cup chicken stock",
+   "¾ cup heavy cream (pasteurized)",
+   "½ cup finely grated parmesan (pasteurized)",
+   "½ tsp chili flakes",
+   "1 tsp dried oregano",
+   "Handful basil leaves, torn",
+   "Lemon wedge"
+  ],
+  "directions": [
+   "Season the salmon. Sear in oil over medium-high, skin-side down, 4 minutes; flip for 2 minutes. Remove to a plate.",
+   "Drop the heat. Cook the garlic and sun-dried tomatoes in the same pan for 1 minute.",
+   "Add the stock and scrape up the fond, then stir in the cream, parmesan, chili flakes and oregano. Simmer 2–3 minutes until it coats a spoon.",
+   "Return the salmon and spoon sauce over. Simmer gently until the fish is fully opaque through — no translucent center.",
+   "Off the heat, scatter the basil and add a small squeeze of lemon. Serve over orzo or rice to catch the sauce."
+  ],
+  "notes": [
+   "Pregnancy: cream and parmesan are pasteurized — fine. Cook the salmon fully through.",
+   "The sauce wants a carb underneath — lemon orzo is the house pairing."
+  ],
+  "macros": {
+   "p": 48,
+   "f": 50,
+   "c": 8,
+   "kcal": null,
+   "per": "serving"
+  },
+  "minutes": 30,
+  "id": "marry-me-salmon",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "protein",
+  "under30": true,
+  "batch": false,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
   "name": "Masala Chai",
   "rating": 5,
   "tags": [
@@ -5723,6 +7012,77 @@
   "cuisine": "indian",
   "batchable": false,
   "isMain": false,
+  "section": "main"
+ },
+ {
+  "name": "Messinn-Style Seared Cod over White Beans",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Seafood",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "20 mins",
+   "cook": "20 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Vik's recipe (after Messinn, Reykjavík)"
+  },
+  "image": null,
+  "ingredients": [
+   "2 cod or halibut fillets (8 oz each)",
+   "Kosher salt, for a quick dry-brine",
+   "1 tbsp olive oil",
+   "3 tbsp butter, divided",
+   "2 garlic cloves, sliced",
+   "3 sprigs thyme",
+   "1 (14 oz) can butter or cannellini beans, drained and rinsed",
+   "1 cup cherry tomatoes",
+   "3 cups kale or spinach, stems stripped",
+   "½ cup chicken stock",
+   "1 lemon",
+   "Handful parsley, chopped",
+   "Black pepper"
+  ],
+  "directions": [
+   "Dry-brine the cod: salt the fillets and rest uncovered in the fridge 15 minutes, then pat completely dry — this is the Messinn move for a clean sear on cod.",
+   "Sear the fish in oil in an oven-safe skillet over medium-high, 3 minutes on the presentation side, then remove.",
+   "Melt 2 tbsp of the butter in the pan with the garlic and thyme. Add the tomatoes and cook 2 minutes until starting to burst.",
+   "Stir in the beans and stock, then wilt the greens through. Season.",
+   "Rest the cod on top, seared side up, and finish at 425°F for 6–8 minutes until it flakes fully through.",
+   "Off the heat, melt the last knob of butter with a hard squeeze of lemon and spoon over the fish. Parsley over everything; serve from the pan."
+  ],
+  "notes": [
+   "Maps directly onto the chicken-over-butter-beans-and-kale pattern — same skillet, fish-speed timeline.",
+   "A clean macro night as written: roughly 75P / 30F / 45C per portion.",
+   "Pregnancy: fish fully cooked through; nothing else to adjust."
+  ],
+  "macros": {
+   "p": 75,
+   "f": 30,
+   "c": 45,
+   "kcal": null,
+   "per": "serving"
+  },
+  "minutes": 40,
+  "id": "messinn-style-seared-cod-over-white-beans",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "protein",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": false,
+  "isMain": true,
   "section": "main"
  },
  {
@@ -6335,6 +7695,61 @@
   "section": "main"
  },
  {
+  "name": "Nước Chấm",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": null,
+   "total": "5 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1/4 cup fish sauce",
+   "1/4 cup sugar",
+   "1/2 cup warm water",
+   "3 tablespoons lime juice, from about 2 limes",
+   "3 cloves garlic, finely minced",
+   "1-2 bird's eye chilies, thinly sliced",
+   "1 tablespoon rice vinegar (optional, for a rounder acid)"
+  ],
+  "directions": [
+   "Dissolve the sugar in the warm water completely.",
+   "Stir in the fish sauce and lime juice.",
+   "Add the garlic and chili last, so they float rather than sink.",
+   "Taste and adjust: it should read sweet first, then salty, then sharp, with the heat arriving late."
+  ],
+  "notes": [
+   "The single most useful sauce for the Vietnamese half of the library — bun cha, bún gà bowls, spring rolls, grilled pork, any rice-noodle bowl.",
+   "Mince the garlic finely enough and it floats. Crushed garlic sinks and the last spoonful is brutal.",
+   "Keeps two weeks refrigerated, though the garlic sharpens over time. Halve the garlic if making a big batch to keep.",
+   "Ratio to remember: 1 fish sauce : 1 sugar : 2 water : just under 1 lime. Everything else is adjustment."
+  ],
+  "macros": null,
+  "minutes": 5,
+  "id": "n-c-ch-m",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "se_asian",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
   "name": "Olive Oil Cake",
   "rating": 0,
   "tags": [
@@ -6457,6 +7872,82 @@
   "batchable": false,
   "isMain": false,
   "section": "baking"
+ },
+ {
+  "id": "one-pot-smoky-fish-tomato-olives-couscous",
+  "name": "One-Pot Smoky Fish with Tomato, Olives and Couscous",
+  "rating": 0,
+  "tags": [
+   "Fish",
+   "One-Pot",
+   "Weeknights",
+   "Mediterranean",
+   "Untested"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "25 mins",
+   "total": "35 mins"
+  },
+  "serves": {
+   "text": "Serves 4",
+   "n": 4
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1021160-one-pot-smoky-fish-with-tomato-olives-and-couscous",
+   "name": "NYT Cooking — Sarah Copeland"
+  },
+  "image": null,
+  "ingredients": [
+   "1/4 cup olive oil, plus more for serving",
+   "3/4 cup jarred roasted red peppers, roughly chopped (or 1 fresh red bell pepper, diced)",
+   "1 medium yellow onion, thinly sliced",
+   "4 (6-oz) skinless mild white fish fillets — cod, fluke or halibut (pregnancy-safe, low-mercury)",
+   "Kosher salt and black pepper",
+   "1 1/2 tablespoons minced garlic (about 3 large cloves)",
+   "1 tablespoon chopped anchovies (about 4 fillets)",
+   "1 teaspoon smoked paprika",
+   "Pinch of ground cayenne",
+   "1/3 cup chicken stock + 2 tsp sherry vinegar (replaces 1/3 cup dry white wine — pregnancy swap)",
+   "1 1/2 cups chicken stock, preferably low-sodium",
+   "1 (14-oz) can crushed tomatoes",
+   "1/2 cup black or Kalamata olives",
+   "2 tablespoons chopped fresh parsley, plus more for serving",
+   "3/4 cup pearl couscous",
+   "2 teaspoons sherry vinegar or red wine vinegar"
+  ],
+  "directions": [
+   "In a large (12-inch) skillet with a tight-fitting lid, heat the olive oil over medium. If using fresh bell pepper, add it with the onion and cook 8–10 minutes until tender and lightly browned. If using jarred roasted peppers, cook the onion alone first until soft, then add the peppers with the garlic step.",
+   "Add the garlic, anchovies, smoked paprika and cayenne (plus roasted peppers if using) and cook 1 minute until fragrant.",
+   "Add the stock-and-vinegar wine substitute and stir to scrape up any browned bits. Once it has almost evaporated, add the 1 1/2 cups chicken stock, crushed tomatoes, olives, parsley, 1 tsp salt and 1/2 tsp black pepper. Bring to a boil over medium-high.",
+   "Add the couscous, stir, then nestle in the fish fillets, wiggling them to submerge. Reduce heat to low, cover and simmer 6–8 minutes until the fish is opaque and flakes easily.",
+   "Carefully transfer the fish to a plate. Simmer the couscous uncovered, stirring occasionally, about 5 minutes until tender and the sauce has reduced slightly.",
+   "Off the heat, stir in the 2 tsp vinegar. Gently return the fish to warm through, keeping the fillets intact. Finish with parsley and a drizzle of olive oil."
+  ],
+  "notes": [
+   "Pregnancy: original calls for 1/3 cup dry white wine — replaced with stock + sherry vinegar. Cod/halibut/fluke are low-mercury and safe.",
+   "Top NYT comment (the 'bland' fix): double the garlic and anchovies, use a whole jar of piquillo/roasted peppers, a heaping tbsp of smoked paprika, and a cup of oil-cured black olives. Best tweak — add ~2 cups halved cherry tomatoes near the end for sweetness and acid; several reviewers say don't make it without them.",
+   "To close carbs toward the 120g target, bump couscous to 1 cup and serve with warm flatbread. A lemony arugula salad on the side cuts the smoky richness."
+  ],
+  "macros": {
+   "kcal": null,
+   "p": 38,
+   "f": 16,
+   "c": 30
+  },
+  "minutes": 35,
+  "protein": "Fish",
+  "archetype": "complete",
+  "cuisine": "greek_med",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "batchable": false,
+  "isMain": true,
+  "make_ahead": [],
+  "lead_h": 0,
+  "section": "main"
  },
  {
   "name": "Orange Cake",
@@ -6794,6 +8285,80 @@
   "section": "main"
  },
  {
+  "name": "Pan-Seared Branzino with Crispy Potatoes, Confit Tomatoes and Olives",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Seafood",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "20 mins",
+   "cook": "35 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Vik's recipe (after Byron Talbott)"
+  },
+  "image": null,
+  "ingredients": [
+   "2 branzino fillets (or Chilean sea bass), skin on, patted very dry",
+   "12 oz baby potatoes, halved",
+   "6 oz green beans, trimmed",
+   "1 cup cherry tomatoes",
+   "3 garlic cloves (2 smashed, 1 sliced)",
+   "4 sprigs thyme",
+   "⅓ cup + 2 tbsp olive oil",
+   "⅓ cup Castelvetrano or Niçoise olives, torn",
+   "½ cup chicken or fish stock",
+   "1 tsp white wine vinegar",
+   "3 tbsp cold butter, cubed, plus 1 tbsp for basting",
+   "1 lemon (2 rounds for the pan, the rest for juice)",
+   "Handful arugula (optional, to finish)",
+   "Flaky salt and black pepper"
+  ],
+  "directions": [
+   "Confit the tomatoes: barely simmer the cherry tomatoes with ⅓ cup olive oil, the smashed garlic and 2 thyme sprigs over low heat until burst and jammy, 12–15 minutes. Set aside in their oil.",
+   "Crisp the potatoes: parboil the halved potatoes 8 minutes, drain and dry, then fry cut-side down in 2 tbsp oil until deeply golden. Season; keep the pan.",
+   "Sear the fish: in a separate hot pan, lay the fillets in skin-side down, pressing flat for the first 30 seconds. Cook undisturbed 3–4 minutes until the skin releases and crisps.",
+   "Drop the heat to medium. Add 1 tbsp butter, the sliced garlic, remaining thyme and lemon rounds; tilt the pan and baste 1–2 minutes. Flip for a final 30–60 seconds (branzino) until just opaque through. Rest off heat, skin up.",
+   "Toss the green beans through the potato pan for 2–3 minutes to warm and lightly char.",
+   "Sauce: pour off any burnt bits from the fish pan, add the stock and scrape up the fond; simmer 2 minutes. Off the heat, add the vinegar and a squeeze of lemon, whisk in the cold butter, then stir in the confit tomatoes (with their oil) and olives.",
+   "Plate potatoes and beans as the base, fish on top skin-up, sauce spooned generously over and around. Thyme leaves, flaky salt, and a scatter of raw arugula if using."
+  ],
+  "notes": [
+   "Chilean sea bass runs thicker and richer — after the baste, finish it in a 400°F oven for 5–6 minutes rather than flipping in the pan.",
+   "Pregnancy: wine is replaced with stock + a splash of vinegar off heat; fish fully opaque through. Branzino and sea bass are both low-mercury.",
+   "Macros land ~42P / 48F / 62C as written — size fillets up to 10–12 oz and add an extra potato to close the gap on a target night.",
+   "Arugula raw on top is the pick over wilted spinach — a fresh, peppery counterpoint to the cooked components."
+  ],
+  "macros": {
+   "p": 42,
+   "f": 48,
+   "c": 62,
+   "kcal": null,
+   "per": "serving"
+  },
+  "minutes": 55,
+  "id": "pan-seared-branzino-with-crispy-potatoes-confit-tomatoes-and-olives",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "protein",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
   "name": "Parsi eggs",
   "rating": 5,
   "tags": [
@@ -6846,6 +8411,63 @@
   "batchable": false,
   "isMain": false,
   "section": "main"
+ },
+ {
+  "name": "Peanut-Lime Dressing",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": null,
+   "total": "5 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1/3 cup natural peanut butter",
+   "2 tablespoons soy sauce",
+   "2 tablespoons lime juice",
+   "1 tablespoon rice vinegar",
+   "1 tablespoon honey or palm sugar",
+   "2 cloves garlic, grated",
+   "1 teaspoon grated ginger",
+   "1 teaspoon toasted sesame oil",
+   "1/2 teaspoon chili flakes or a squeeze of sriracha",
+   "3-5 tablespoons warm water"
+  ],
+  "directions": [
+   "Whisk everything except the water into a stiff paste.",
+   "Add the warm water a tablespoon at a time until it ribbons off the whisk. Thicker for dipping, looser for dressing.",
+   "Taste: it wants more lime than feels right."
+  ],
+  "notes": [
+   "Consolidates the peanut dressings currently buried inside the Dumpling and Smashed Cucumber Salad and the Spring Roll Salad.",
+   "For dipping, keep it thick. For a noodle or slaw dressing, thin it to pouring consistency.",
+   "Keeps a week. It stiffens cold — loosen with warm water, not more oil.",
+   "Fish sauce in place of half the soy makes it Vietnamese rather than generic."
+  ],
+  "macros": null,
+  "minutes": 5,
+  "id": "peanut-lime-dressing",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "se_asian",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
  },
  {
   "name": "Penne Alla Vodka",
@@ -7549,6 +9171,70 @@
   "section": "main"
  },
  {
+  "name": "Protein Dutch Baby",
+  "rating": 5,
+  "tags": [
+   "Breakfast",
+   "Favourites"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "25 mins",
+   "total": "35 min"
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "NYT Cooking, adapted"
+  },
+  "image": null,
+  "ingredients": [
+   "3 large eggs, plus 1 egg white, at room temperature",
+   "1/3 cup all-purpose flour",
+   "2 scoops protein powder",
+   "2/3 cup whole milk, at room temperature",
+   "Pinch of nutmeg",
+   "4 tablespoons butter",
+   "Sugar only if the protein powder is unsweetened"
+  ],
+  "directions": [
+   "Take the eggs and milk out a full hour ahead. Room temperature is the whole trick — it is what makes it puff.",
+   "Heat the oven to 425°F with a 10-inch skillet inside.",
+   "Blend the eggs, egg white, flour, protein powder, milk and nutmeg until completely smooth.",
+   "Melt the butter in the hot skillet, swirl to coat, and pour the batter straight in.",
+   "Bake 20 minutes at 425°F, then drop to 300°F for 5 minutes more.",
+   "Serve immediately — it starts collapsing the moment it leaves the oven."
+  ],
+  "notes": [
+   "Rated 10/10. The protein version puffs less than the original and comes out more custardy — that is expected, not a fault.",
+   "Skip the sugar in the base if the protein powder is already sweetened.",
+   "Room-temperature eggs and milk are non-negotiable. Cold batter is the single most common reason a Dutch baby fails to climb.",
+   "Pregnancy: fully set through the centre before serving — no wet custard."
+  ],
+  "macros": {
+   "p": 40,
+   "f": 28,
+   "c": 22,
+   "kcal": 500,
+   "per": "serving"
+  },
+  "minutes": 35,
+  "id": "protein-dutch-baby",
+  "protein": "Eggs",
+  "archetype": "breakfast",
+  "under30": false,
+  "batch": false,
+  "favourite": true,
+  "avoid": false,
+  "cuisine": "american",
+  "batchable": false,
+  "isMain": false,
+  "section": "main"
+ },
+ {
   "name": "Quick and Easy Creamy Mushroom Soup",
   "rating": 0,
   "tags": [
@@ -7671,6 +9357,62 @@
   "batchable": true,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "name": "Quick Pickled Red Onions",
+  "rating": 5,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": null,
+   "total": "10 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "2 red onions, thinly sliced",
+   "1 cup red wine vinegar or apple cider vinegar",
+   "1 cup water",
+   "1 tablespoon sugar",
+   "1 1/2 teaspoons kosher salt",
+   "1 teaspoon black peppercorns",
+   "2 bay leaves",
+   "1 clove garlic, smashed (optional)"
+  ],
+  "directions": [
+   "Pack the sliced onion into a jar.",
+   "Warm the vinegar, water, sugar and salt until dissolved — it does not need to boil.",
+   "Add the peppercorns, bay and garlic to the jar, pour the hot brine over, and press the onions under.",
+   "Usable in 30 minutes, properly good after a few hours."
+  ],
+  "notes": [
+   "The default Sunday prep item — 10 minutes on Sunday and every dish that week gets an acid finish for free.",
+   "On tacos, rice bowls, sandwiches, salads, traybakes, and anything from the Bed Method that needs a sharp thing.",
+   "Keeps three weeks refrigerated.",
+   "Same brine works for cucumber, radish, carrot or shallot."
+  ],
+  "macros": null,
+  "minutes": 10,
+  "id": "quick-pickled-red-onions",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "other",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
  },
  {
   "name": "Ranch Dressing",
@@ -8126,6 +9868,63 @@
   "section": "main"
  },
  {
+  "name": "Romesco",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": null,
+   "total": "15 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "2 roasted red peppers, jarred, drained",
+   "1/2 cup blanched almonds, toasted",
+   "1 slice country bread, torn and fried in olive oil",
+   "2 cloves garlic",
+   "1 tablespoon sherry vinegar or red wine vinegar",
+   "1 teaspoon smoked paprika",
+   "1/2 teaspoon kosher salt",
+   "1/3 cup extra-virgin olive oil",
+   "1 tablespoon tomato paste"
+  ],
+  "directions": [
+   "Toast the almonds until fragrant and fry the bread in olive oil until golden. Both matter more than they look like they should.",
+   "Blitz the peppers, almonds, bread, garlic, vinegar, paprika, tomato paste and salt to a coarse paste.",
+   "With the motor running, stream in the olive oil until it thickens.",
+   "Taste and push the vinegar — it should be brighter than feels right straight from the blender."
+  ],
+  "notes": [
+   "Keep it slightly coarse. A completely smooth romesco loses the point.",
+   "On grilled or roast chicken, white fish, blistered green beans, charred leeks, potatoes, or as a sandwich spread.",
+   "Sherry vinegar is the traditional acid and is not alcoholic — it is fine during pregnancy.",
+   "Keeps a week refrigerated and freezes well in an ice cube tray."
+  ],
+  "macros": null,
+  "minutes": 15,
+  "id": "romesco",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
   "name": "Sage & Brown Butter Chicken",
   "rating": 0,
   "tags": [
@@ -8194,6 +9993,134 @@
   "batchable": true,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "name": "Salade Niçoise",
+  "rating": 0,
+  "tags": [
+   "Untested"
+  ],
+  "time": {
+   "prep": "25 minutes",
+   "cook": null,
+   "total": "40 min"
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Adapted — classic salade niçoise"
+  },
+  "image": null,
+  "ingredients": [
+   "For the salad:",
+   "2 good oil-packed tuna fillets (~5–7 oz total) — or 2 salmon fillets, see notes",
+   "4 large eggs",
+   "8 oz haricots verts / green beans, trimmed",
+   "12 oz small waxy potatoes (Yukon Gold or new potatoes)",
+   "2 cups cherry tomatoes, halved (or 2 ripe tomatoes in wedges)",
+   "⅓ cup Niçoise or Kalamata olives",
+   "4 oil-packed anchovy fillets (optional, plus more to garnish)",
+   "1 small shallot, thinly sliced",
+   "2 tablespoons capers, drained",
+   "Boston / Bibb lettuce leaves to line (optional)",
+   "Flaky salt and black pepper",
+   "For the vinaigrette:",
+   "1 small shallot, minced",
+   "1 tablespoon Dijon mustard",
+   "2 tablespoons red wine vinegar",
+   "1 anchovy fillet, mashed (optional)",
+   "1 small garlic clove, grated",
+   "½ cup extra-virgin olive oil"
+  ],
+  "directions": [
+   "Vinaigrette: whisk shallot, Dijon, red wine vinegar, mashed anchovy and garlic, then stream in the olive oil. Season with salt and pepper and set aside.",
+   "Eggs: hard-boil fully — 10 minutes in boiling water, then straight into an ice bath. Peel and quarter. (No jammy yolks while pregnant.)",
+   "Potatoes: start in cold salted water, boil until tender, 12–15 minutes. Drain and, while still warm, toss with a spoonful of the vinaigrette so they drink it in.",
+   "Green beans: blanch in salted boiling water 3–4 minutes until crisp-tender, shock in ice water, drain and pat dry.",
+   "Fish: if using oil-packed tuna, drain and break into large chunks. If using salmon, pat dry and sear skin-side down in a little olive oil ~3–4 min, flip 2–3 min, cook fully through (no translucent centre while pregnant), then flake into big pieces.",
+   "Assemble: line a platter with lettuce if using, then arrange potatoes, beans, tomatoes, eggs, fish, olives, anchovies and shallot in composed sections rather than tossing. Scatter capers, drizzle the remaining vinaigrette, finish with flaky salt and pepper."
+  ],
+  "notes": [
+   "Pregnancy: hard-boil the eggs fully — no soft/jammy yolk. The vinaigrette is egg-free, so it is fine. For the fish, use canned light/skipjack tuna (lower mercury, limited) or go with salmon; skip albacore and tuna steak.",
+   "Salmon swap (recommended right now): seared or poached salmon turns this into a higher-omega-3, fully pregnancy-safe version and eats beautifully here.",
+   "Macro hit: bump the fish to 7–8 oz portions to land ~80g protein; the potatoes carry the carbs. The vinaigrette is the main fat lever — dress lighter for a cleaner day.",
+   "Make-ahead: eggs, potatoes, beans and vinaigrette all hold 2–3 days — assemble cold. Strong Sunday-prep component or weekend lunch.",
+   "Serving: crusty bread alongside, or skip it to keep carbs lean."
+  ],
+  "macros": null,
+  "minutes": 40,
+  "id": "salade-nicoise",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "salad",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "french",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Salsa Verde (Caper and Anchovy)",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": null,
+   "total": "10 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1 cup flat-leaf parsley, finely chopped",
+   "2 tablespoons capers, rinsed and chopped",
+   "4 anchovy fillets, finely chopped",
+   "1 clove garlic, very finely minced",
+   "1 tablespoon red wine vinegar",
+   "1 teaspoon Dijon mustard",
+   "1/2 cup extra-virgin olive oil",
+   "2 tablespoons mint or basil, chopped (optional)",
+   "Black pepper"
+  ],
+  "directions": [
+   "Chop the parsley, capers, anchovy and garlic together on the board until they start to become one thing.",
+   "Scrape into a bowl and stir in the vinegar and mustard.",
+   "Pour in the olive oil and stir. Season with pepper — the anchovy and capers bring the salt.",
+   "Rest 15 minutes before serving."
+  ],
+  "notes": [
+   "The Italian one, not the Mexican one. Chopped, oily, sharp.",
+   "Built for fish and lamb, but it is also what rescues a plain roast chicken or boiled potatoes.",
+   "Anchovies are low-mercury and fine during pregnancy. The saltiness means you should taste before adding any.",
+   "Keeps 4-5 days under a film of oil."
+  ],
+  "macros": null,
+  "minutes": 10,
+  "id": "salsa-verde-caper-and-anchovy",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "italian",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
  },
  {
   "name": "Salt and Pepper Mushrooms",
@@ -8853,6 +10780,69 @@
   "avoid": false,
   "cuisine": "greek_med",
   "batchable": true,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Sheet-Pan Salmon Niçoise",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": "30 mins",
+   "total": null
+  },
+  "serves": {
+   "text": "Serves: 2",
+   "n": 2
+  },
+  "source": {
+   "url": null,
+   "name": "Vik's recipe"
+  },
+  "image": null,
+  "ingredients": [
+   "2 salmon fillets (7–8 oz each)",
+   "12 oz small waxy potatoes, halved",
+   "8 oz haricots verts / green beans, trimmed",
+   "1½ cups cherry tomatoes",
+   "⅓ cup Niçoise or Kalamata olives",
+   "2 tbsp capers, drained",
+   "Olive oil, salt and black pepper",
+   "2 eggs, hard-boiled (optional)",
+   "For the vinaigrette: 1 small shallot minced, 1 tbsp Dijon, 2 tbsp red wine vinegar, 1 small garlic clove grated, ⅓ cup extra-virgin olive oil"
+  ],
+  "directions": [
+   "Heat the oven to 425°F. Toss the potatoes with oil, salt and pepper; roast cut-side down on a sheet pan for 20 minutes.",
+   "Push the potatoes aside. Add the beans and tomatoes tossed in a little oil, and lay the salmon in the center, skin-side down. Season everything.",
+   "Roast 12–14 minutes until the salmon is fully cooked through — opaque to the center. Scatter olives and capers over for the last 2 minutes to warm.",
+   "Whisk the vinaigrette. Plate the warm salad and spoon the vinaigrette over generously; add halved hard-boiled eggs if using."
+  ],
+  "notes": [
+   "The warm, weeknight sibling of the composed Salade Niçoise — ~45 minutes total, most of it hands-off.",
+   "Strong omega-3 and folate dish (haricots verts). Pregnancy: salmon fully cooked; eggs hard-boiled only."
+  ],
+  "macros": {
+   "p": 52,
+   "f": 42,
+   "c": 38,
+   "kcal": null,
+   "per": "serving"
+  },
+  "minutes": 45,
+  "id": "sheet-pan-salmon-nicoise",
+  "restored": true,
+  "protein": "Fish",
+  "archetype": "traybake",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "french",
+  "batchable": false,
   "isMain": true,
   "section": "main"
  },
@@ -10050,6 +12040,59 @@
   "section": "main"
  },
  {
+  "name": "Tahini-Lemon Sauce",
+  "rating": 0,
+  "tags": [
+   "Sauces"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": null,
+   "total": "5 min"
+  },
+  "serves": {
+   "text": "Serves: 1",
+   "n": 1
+  },
+  "source": {
+   "url": null,
+   "name": "Vik & Claude"
+  },
+  "image": null,
+  "ingredients": [
+   "1/2 cup tahini, well stirred",
+   "1/4 cup lemon juice, from about 2 lemons",
+   "2 cloves garlic, grated",
+   "1/2 teaspoon kosher salt",
+   "1/3-1/2 cup ice water",
+   "1/2 teaspoon ground cumin (optional)"
+  ],
+  "directions": [
+   "Whisk the tahini, lemon juice, garlic and salt together. It will seize and go stiff and grainy — this is supposed to happen.",
+   "Add the ice water a tablespoon at a time, whisking, until it loosens into a smooth pourable cream.",
+   "Season, and add the cumin if using."
+  ],
+  "notes": [
+   "The seizing stage panics people. Keep whisking and adding water; it always comes back.",
+   "Ice water rather than tap — it whips paler and thicker.",
+   "On roast chicken, traybakes, chickpeas, cauliflower, falafel, or as the sharp thing on a Levantine Bed Method build.",
+   "Keeps a week. It thickens in the fridge; loosen with more water."
+  ],
+  "macros": null,
+  "minutes": 5,
+  "id": "tahini-lemon-sauce",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
   "name": "Taverna Salad",
   "rating": 0,
   "tags": [
@@ -11152,1976 +13195,5 @@
   "batchable": true,
   "isMain": false,
   "section": "main"
- },
- {
-  "name": "Chipotle Beef Tacos",
-  "rating": 5,
-  "tags": [
-   "Batch Cook",
-   "Favourites",
-   "Freezable",
-   "Weeknights"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": "25 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "4 (8-10 tacos)",
-   "n": 4
-  },
-  "source": {
-   "url": null,
-   "name": "Vik's recipe"
-  },
-  "image": null,
-  "ingredients": [
-   "1½ lb ground beef (85/15)",
-   "1 tbsp neutral oil",
-   "1 onion, diced",
-   "1 red bell pepper, diced",
-   "3 garlic cloves, minced",
-   "2 tsp ground cumin",
-   "1 tsp smoked paprika",
-   "1 tsp dried oregano",
-   "½ tsp chili powder",
-   "¾ cup beef stock",
-   "2–3 chipotles in adobo, minced, plus 1–2 tbsp adobo sauce",
-   "2 tbsp tomato paste",
-   "Salt and black pepper",
-   "To serve: Mission Carb Balance soft taco tortillas, diced white onion, cilantro, lime, queso fresco (pasteurized), pickled jalapeños or salsa"
-  ],
-  "directions": [
-   "Brown the beef hard in oil, breaking it up; season and set aside, leaving the fat.",
-   "Sweat the onion and bell pepper in the same pan until soft, 5–6 minutes.",
-   "Add garlic, cumin, smoked paprika, oregano and chili powder; bloom 60 seconds.",
-   "Add stock, minced chipotles with adobo, and tomato paste, scraping up the fond.",
-   "Return the beef and simmer 8–10 minutes until thick and glossy. Adjust salt, finish with a squeeze of lime.",
-   "Serve in warmed Carb Balance tortillas with onion, cilantro, lime and toppings."
-  ],
-  "notes": [
-   "Tested — household 5-star. Batch at 2x; freezes well up to 3 months.",
-   "Later-in-week deployments: taco salad or burrito bowls over rice and black beans.",
-   "Pregnancy: fine as written — just confirm queso fresco/cotija is pasteurized (most US supermarket versions are).",
-   "Macros per serving with 2 Carb Balance tortillas ≈ 500 kcal / 46P / 29F / 46C (~16g net carb). Filling alone ≈ 360 kcal / 34P / 22F / 8C."
-  ],
-  "macros": {
-   "p": 46,
-   "f": 29,
-   "c": 46,
-   "kcal": 500,
-   "per": "serving"
-  },
-  "minutes": 35,
-  "id": "chipotle-beef-tacos",
-  "restored": true,
-  "protein": "Beef",
-  "archetype": "complete",
-  "under30": false,
-  "batch": true,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "mexican",
-  "batchable": true,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Dutch Oven Chicken with Pancetta, Leeks and White Beans",
-  "rating": 5,
-  "tags": [
-   "Batch Cook",
-   "Favourites",
-   "Sunday Treats"
-  ],
-  "time": {
-   "prep": "20 mins",
-   "cook": "1 hr",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 4",
-   "n": 4
-  },
-  "source": {
-   "url": null,
-   "name": "Vik's recipe"
-  },
-  "image": null,
-  "ingredients": [
-   "1 whole chicken, spatchcocked (4½–5½ lb)",
-   "5 oz pancetta, lardons or cubed",
-   "3 medium leeks, white and light green only, sliced into rounds",
-   "4 garlic cloves, sliced",
-   "1 tsp fresh thyme (or ½ tsp dried)",
-   "2 (14 oz) cans cannellini or butter beans, drained and rinsed",
-   "1¼ cups chicken stock",
-   "1 tbsp white wine vinegar",
-   "1 tsp Dijon mustard",
-   "5 oz cavolo nero or kale, stems stripped",
-   "Small handful flat-leaf parsley, roughly chopped",
-   "Lemon juice, to taste",
-   "Good olive oil",
-   "Salt and black pepper"
-  ],
-  "directions": [
-   "Season the chicken generously and dry the skin well. Sear skin-side down in the Dutch oven until deep golden, about 8 minutes; flip for 2 minutes more, then remove.",
-   "Render the pancetta in the same pot until the fat runs and the edges crisp.",
-   "Sweat the leeks and garlic in the pancetta fat with the thyme, 5–7 minutes. Season.",
-   "Stir in the beans, stock, vinegar and Dijon. Rest the chicken on top, skin up.",
-   "Roast uncovered at 450°F for 15 minutes, then drop to 400°F for 25–35 minutes until the thigh reads 165°F. Stir the beans at the halfway point, adding a splash of stock if they look dry.",
-   "Rest the chicken on a board, tipping any cavity juices back over the beans. Fold the cavolo nero into the hot beans to wilt.",
-   "Finish the beans with parsley, lemon juice and a thread of olive oil. Carve the chicken over the top."
-  ],
-  "notes": [
-   "Confirmed household favourite — anchor batch dish.",
-   "The Dijon is a keeper (approved June 2026).",
-   "Reheats excellently — the beans drink up the juices overnight and improve.",
-   "Cavolo nero holds better than curly kale if there will be leftovers.",
-   "Pregnancy: fine as written — pancetta is cooked through in the render. Pasteurized parmesan grated at the table is a nice addition."
-  ],
-  "macros": {
-   "p": 62,
-   "f": 38,
-   "c": 32,
-   "kcal": null,
-   "per": "serving"
-  },
-  "minutes": 80,
-  "id": "dutch-oven-chicken-with-pancetta-leeks-and-white-beans",
-  "restored": true,
-  "protein": "Chicken",
-  "archetype": "stew",
-  "under30": false,
-  "batch": true,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": true,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Marry Me Salmon",
-  "rating": 5,
-  "tags": [
-   "Favourites",
-   "Weeknights"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": "20 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Adapted — Marry Me Salmon"
-  },
-  "image": null,
-  "ingredients": [
-   "2 salmon fillets (7–8 oz each), patted dry",
-   "Salt and black pepper",
-   "1 tbsp olive oil",
-   "3 garlic cloves, minced",
-   "½ cup oil-packed sun-dried tomatoes, drained and chopped",
-   "⅓ cup chicken stock",
-   "¾ cup heavy cream (pasteurized)",
-   "½ cup finely grated parmesan (pasteurized)",
-   "½ tsp chili flakes",
-   "1 tsp dried oregano",
-   "Handful basil leaves, torn",
-   "Lemon wedge"
-  ],
-  "directions": [
-   "Season the salmon. Sear in oil over medium-high, skin-side down, 4 minutes; flip for 2 minutes. Remove to a plate.",
-   "Drop the heat. Cook the garlic and sun-dried tomatoes in the same pan for 1 minute.",
-   "Add the stock and scrape up the fond, then stir in the cream, parmesan, chili flakes and oregano. Simmer 2–3 minutes until it coats a spoon.",
-   "Return the salmon and spoon sauce over. Simmer gently until the fish is fully opaque through — no translucent center.",
-   "Off the heat, scatter the basil and add a small squeeze of lemon. Serve over orzo or rice to catch the sauce."
-  ],
-  "notes": [
-   "Pregnancy: cream and parmesan are pasteurized — fine. Cook the salmon fully through.",
-   "The sauce wants a carb underneath — lemon orzo is the house pairing."
-  ],
-  "macros": {
-   "p": 48,
-   "f": 50,
-   "c": 8,
-   "kcal": null,
-   "per": "serving"
-  },
-  "minutes": 30,
-  "id": "marry-me-salmon",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "protein",
-  "under30": true,
-  "batch": false,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Salade Niçoise",
-  "rating": 0,
-  "tags": [
-   "Untested"
-  ],
-  "time": {
-   "prep": "25 minutes",
-   "cook": null,
-   "total": "40 min"
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Adapted — classic salade niçoise"
-  },
-  "image": null,
-  "ingredients": [
-   "For the salad:",
-   "2 good oil-packed tuna fillets (~5–7 oz total) — or 2 salmon fillets, see notes",
-   "4 large eggs",
-   "8 oz haricots verts / green beans, trimmed",
-   "12 oz small waxy potatoes (Yukon Gold or new potatoes)",
-   "2 cups cherry tomatoes, halved (or 2 ripe tomatoes in wedges)",
-   "⅓ cup Niçoise or Kalamata olives",
-   "4 oil-packed anchovy fillets (optional, plus more to garnish)",
-   "1 small shallot, thinly sliced",
-   "2 tablespoons capers, drained",
-   "Boston / Bibb lettuce leaves to line (optional)",
-   "Flaky salt and black pepper",
-   "For the vinaigrette:",
-   "1 small shallot, minced",
-   "1 tablespoon Dijon mustard",
-   "2 tablespoons red wine vinegar",
-   "1 anchovy fillet, mashed (optional)",
-   "1 small garlic clove, grated",
-   "½ cup extra-virgin olive oil"
-  ],
-  "directions": [
-   "Vinaigrette: whisk shallot, Dijon, red wine vinegar, mashed anchovy and garlic, then stream in the olive oil. Season with salt and pepper and set aside.",
-   "Eggs: hard-boil fully — 10 minutes in boiling water, then straight into an ice bath. Peel and quarter. (No jammy yolks while pregnant.)",
-   "Potatoes: start in cold salted water, boil until tender, 12–15 minutes. Drain and, while still warm, toss with a spoonful of the vinaigrette so they drink it in.",
-   "Green beans: blanch in salted boiling water 3–4 minutes until crisp-tender, shock in ice water, drain and pat dry.",
-   "Fish: if using oil-packed tuna, drain and break into large chunks. If using salmon, pat dry and sear skin-side down in a little olive oil ~3–4 min, flip 2–3 min, cook fully through (no translucent centre while pregnant), then flake into big pieces.",
-   "Assemble: line a platter with lettuce if using, then arrange potatoes, beans, tomatoes, eggs, fish, olives, anchovies and shallot in composed sections rather than tossing. Scatter capers, drizzle the remaining vinaigrette, finish with flaky salt and pepper."
-  ],
-  "notes": [
-   "Pregnancy: hard-boil the eggs fully — no soft/jammy yolk. The vinaigrette is egg-free, so it is fine. For the fish, use canned light/skipjack tuna (lower mercury, limited) or go with salmon; skip albacore and tuna steak.",
-   "Salmon swap (recommended right now): seared or poached salmon turns this into a higher-omega-3, fully pregnancy-safe version and eats beautifully here.",
-   "Macro hit: bump the fish to 7–8 oz portions to land ~80g protein; the potatoes carry the carbs. The vinaigrette is the main fat lever — dress lighter for a cleaner day.",
-   "Make-ahead: eggs, potatoes, beans and vinaigrette all hold 2–3 days — assemble cold. Strong Sunday-prep component or weekend lunch.",
-   "Serving: crusty bread alongside, or skip it to keep carbs lean."
-  ],
-  "macros": null,
-  "minutes": 40,
-  "id": "salade-nicoise",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "salad",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "french",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Sheet-Pan Salmon Niçoise",
-  "rating": 0,
-  "tags": [
-   "Untested",
-   "Weeknights"
-  ],
-  "time": {
-   "prep": "15 mins",
-   "cook": "30 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Vik's recipe"
-  },
-  "image": null,
-  "ingredients": [
-   "2 salmon fillets (7–8 oz each)",
-   "12 oz small waxy potatoes, halved",
-   "8 oz haricots verts / green beans, trimmed",
-   "1½ cups cherry tomatoes",
-   "⅓ cup Niçoise or Kalamata olives",
-   "2 tbsp capers, drained",
-   "Olive oil, salt and black pepper",
-   "2 eggs, hard-boiled (optional)",
-   "For the vinaigrette: 1 small shallot minced, 1 tbsp Dijon, 2 tbsp red wine vinegar, 1 small garlic clove grated, ⅓ cup extra-virgin olive oil"
-  ],
-  "directions": [
-   "Heat the oven to 425°F. Toss the potatoes with oil, salt and pepper; roast cut-side down on a sheet pan for 20 minutes.",
-   "Push the potatoes aside. Add the beans and tomatoes tossed in a little oil, and lay the salmon in the center, skin-side down. Season everything.",
-   "Roast 12–14 minutes until the salmon is fully cooked through — opaque to the center. Scatter olives and capers over for the last 2 minutes to warm.",
-   "Whisk the vinaigrette. Plate the warm salad and spoon the vinaigrette over generously; add halved hard-boiled eggs if using."
-  ],
-  "notes": [
-   "The warm, weeknight sibling of the composed Salade Niçoise — ~45 minutes total, most of it hands-off.",
-   "Strong omega-3 and folate dish (haricots verts). Pregnancy: salmon fully cooked; eggs hard-boiled only."
-  ],
-  "macros": {
-   "p": 52,
-   "f": 42,
-   "c": 38,
-   "kcal": null,
-   "per": "serving"
-  },
-  "minutes": 45,
-  "id": "sheet-pan-salmon-nicoise",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "traybake",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "french",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Coconut Fish and Tomato Bake",
-  "rating": 0,
-  "tags": [
-   "Untested",
-   "Weeknights",
-   "Traybakes"
-  ],
-  "time": {
-   "prep": "15 mins (+15–30 marinate)",
-   "cook": "20 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 4",
-   "n": 4
-  },
-  "source": {
-   "url": "https://cooking.nytimes.com/recipes/1021291-coconut-fish-and-tomato-bake",
-   "name": "Yewande Komolafe — NYT Cooking"
-  },
-  "image": null,
-  "ingredients": [
-   "¾ cup unsweetened coconut milk",
-   "1 (1-inch) piece fresh ginger, finely grated",
-   "1 garlic clove, finely grated",
-   "½ tsp ground turmeric",
-   "½ tsp red-pepper flakes",
-   "1 tbsp honey",
-   "Kosher salt",
-   "2 limes",
-   "½ cup chopped cilantro, divided",
-   "4 (6 oz) fish fillets — cod, halibut, snapper, haddock or salmon, skin on or off",
-   "2 pints cherry or grape tomatoes, halved",
-   "3 tbsp olive oil, divided"
-  ],
-  "directions": [
-   "Whisk the coconut milk with ginger, garlic, turmeric, red-pepper flakes, honey and 1 tsp salt. Zest and juice 1 lime straight in, and stir through half the cilantro.",
-   "Turn the fish through the marinade to coat and refrigerate 15–30 minutes. Heat the oven to 425°F.",
-   "Spread the halved tomatoes in a glass or ceramic baking dish, toss with 2 tbsp oil, salt and pepper, and give them a ~10 minute head start in the oven.",
-   "Nestle the fish into the center, spoon the remaining marinade over, and drizzle with the last tbsp of oil. Roast 8–10 minutes until the surface turns opaque.",
-   "Switch to the broiler and cook 5–6 minutes more until the fish is cooked fully through and the tomatoes are browning in spots.",
-   "Plate with the pan sauce poured over, the remaining cilantro, and wedges of the second lime."
-  ],
-  "notes": [
-   "House note: cut the tomatoes in half.",
-   "Use a glass/ceramic dish rather than a sheet pan — the coconut-lime sauce stays put instead of thinning and scorching under the broiler.",
-   "Give the tomatoes a ~10 minute head start so the fish does not overcook.",
-   "Serve over rice or with crusty bread for the sauce; round out with a quick green.",
-   "Pregnancy: cook the fish fully through — the broiler finish handles it. Cod, halibut, salmon all safe; skip tuna/swordfish. Honey is fine."
-  ],
-  "macros": null,
-  "minutes": 45,
-  "id": "coconut-fish-and-tomato-bake",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "traybake",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Garlic Bread",
-  "rating": 0,
-  "tags": [
-   "Side"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": "12 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 4–6",
-   "n": 4
-  },
-  "source": {
-   "url": null,
-   "name": "Adapted — NYT Cooking"
-  },
-  "image": null,
-  "ingredients": [
-   "1 baguette or Italian loaf, split lengthwise",
-   "6 tbsp unsalted butter",
-   "2 tbsp olive oil",
-   "4 garlic cloves, finely grated",
-   "¼ tsp red-pepper flakes (optional)",
-   "½ cup finely grated parmesan (pasteurized)",
-   "¼ cup chopped flat-leaf parsley",
-   "Flaky salt"
-  ],
-  "directions": [
-   "Heat the oven to 425°F. Warm the butter, oil and garlic gently in a small pan until fragrant, about 2 minutes — do not brown.",
-   "Brush the cut sides generously with the garlic butter and season with salt.",
-   "Bake cut-side up on a sheet pan 8–10 minutes until golden at the edges.",
-   "Scatter the parmesan over and bake 2 minutes more to melt. Finish with parsley and chili flakes; slice on the bias."
-  ],
-  "notes": [
-   "Pairs as a set with the skillet chicken or the salmon dishes to mop up sauce.",
-   "Pregnancy: parmesan is pasteurized — fine."
-  ],
-  "macros": null,
-  "minutes": 22,
-  "id": "garlic-bread",
-  "restored": true,
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": false,
-  "isMain": false,
-  "section": "main"
- },
- {
-  "name": "Pan-Seared Branzino with Crispy Potatoes, Confit Tomatoes and Olives",
-  "rating": 0,
-  "tags": [
-   "Untested",
-   "Seafood",
-   "Weeknights"
-  ],
-  "time": {
-   "prep": "20 mins",
-   "cook": "35 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Vik's recipe (after Byron Talbott)"
-  },
-  "image": null,
-  "ingredients": [
-   "2 branzino fillets (or Chilean sea bass), skin on, patted very dry",
-   "12 oz baby potatoes, halved",
-   "6 oz green beans, trimmed",
-   "1 cup cherry tomatoes",
-   "3 garlic cloves (2 smashed, 1 sliced)",
-   "4 sprigs thyme",
-   "⅓ cup + 2 tbsp olive oil",
-   "⅓ cup Castelvetrano or Niçoise olives, torn",
-   "½ cup chicken or fish stock",
-   "1 tsp white wine vinegar",
-   "3 tbsp cold butter, cubed, plus 1 tbsp for basting",
-   "1 lemon (2 rounds for the pan, the rest for juice)",
-   "Handful arugula (optional, to finish)",
-   "Flaky salt and black pepper"
-  ],
-  "directions": [
-   "Confit the tomatoes: barely simmer the cherry tomatoes with ⅓ cup olive oil, the smashed garlic and 2 thyme sprigs over low heat until burst and jammy, 12–15 minutes. Set aside in their oil.",
-   "Crisp the potatoes: parboil the halved potatoes 8 minutes, drain and dry, then fry cut-side down in 2 tbsp oil until deeply golden. Season; keep the pan.",
-   "Sear the fish: in a separate hot pan, lay the fillets in skin-side down, pressing flat for the first 30 seconds. Cook undisturbed 3–4 minutes until the skin releases and crisps.",
-   "Drop the heat to medium. Add 1 tbsp butter, the sliced garlic, remaining thyme and lemon rounds; tilt the pan and baste 1–2 minutes. Flip for a final 30–60 seconds (branzino) until just opaque through. Rest off heat, skin up.",
-   "Toss the green beans through the potato pan for 2–3 minutes to warm and lightly char.",
-   "Sauce: pour off any burnt bits from the fish pan, add the stock and scrape up the fond; simmer 2 minutes. Off the heat, add the vinegar and a squeeze of lemon, whisk in the cold butter, then stir in the confit tomatoes (with their oil) and olives.",
-   "Plate potatoes and beans as the base, fish on top skin-up, sauce spooned generously over and around. Thyme leaves, flaky salt, and a scatter of raw arugula if using."
-  ],
-  "notes": [
-   "Chilean sea bass runs thicker and richer — after the baste, finish it in a 400°F oven for 5–6 minutes rather than flipping in the pan.",
-   "Pregnancy: wine is replaced with stock + a splash of vinegar off heat; fish fully opaque through. Branzino and sea bass are both low-mercury.",
-   "Macros land ~42P / 48F / 62C as written — size fillets up to 10–12 oz and add an extra potato to close the gap on a target night.",
-   "Arugula raw on top is the pick over wilted spinach — a fresh, peppery counterpoint to the cooked components."
-  ],
-  "macros": {
-   "p": 42,
-   "f": 48,
-   "c": 62,
-   "kcal": null,
-   "per": "serving"
-  },
-  "minutes": 55,
-  "id": "pan-seared-branzino-with-crispy-potatoes-confit-tomatoes-and-olives",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "protein",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "greek_med",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Fish in Acqua Pazza",
-  "rating": 0,
-  "tags": [
-   "Untested",
-   "Seafood",
-   "Weeknights"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": "25 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Vik's recipe — Neapolitan classic"
-  },
-  "image": null,
-  "ingredients": [
-   "2 white fish fillets, skin on (branzino, sea bass or cod), 6–8 oz each, patted very dry",
-   "2 tbsp olive oil",
-   "2 shallots, thinly sliced",
-   "3 garlic cloves, sliced",
-   "1 pint cherry tomatoes",
-   "Pinch of chili flakes",
-   "¾ cup fish or chicken stock",
-   "1 tsp white wine vinegar",
-   "3 cups baby spinach",
-   "2 tbsp cold butter",
-   "½ lemon",
-   "Handful parsley, chopped",
-   "Crusty bread, to serve",
-   "Salt and black pepper"
-  ],
-  "directions": [
-   "Salt the fish. Sear skin-side down in the oil in a stainless pan over medium-high, pressing flat, until the skin releases and crisps, 3–4 minutes. Remove, skin up.",
-   "Soften the shallots and garlic in the same pan, 2–3 minutes. Add the tomatoes and chili flakes; cook until they blister and start to burst, helping a few along with the spoon.",
-   "Pour in the stock and vinegar and simmer 3–4 minutes into a loose, brothy sauce — it should stay brothy, not reduce down.",
-   "Return the fish flesh-side down, keeping the skin clear of the liquid, and poach gently 4–6 minutes until fully opaque through.",
-   "Wilt the spinach into the broth around the fish. Off the heat, swirl in the cold butter and a squeeze of lemon.",
-   "Shower with parsley and serve in shallow bowls with crusty bread for the broth."
-  ],
-  "notes": [
-   "Acqua pazza is brothy and rustic by design — built for mopping with bread, not plating dry.",
-   "Skin stays crisp only if it sits above the liquid: sear hard skin-down first, then finish flesh-side down.",
-   "Spinach is the pick over arugula here — milder in the broth and more folate. A handful of arugula off-heat works if you want more bite.",
-   "Pregnancy: wine → stock + splash of vinegar, fish fully cooked through."
-  ],
-  "macros": {
-   "p": 45,
-   "f": 30,
-   "c": 14,
-   "kcal": null,
-   "per": "serving"
-  },
-  "minutes": 35,
-  "id": "fish-in-acqua-pazza",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "protein",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "greek_med",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Messinn-Style Seared Cod over White Beans",
-  "rating": 0,
-  "tags": [
-   "Untested",
-   "Seafood",
-   "Weeknights"
-  ],
-  "time": {
-   "prep": "20 mins",
-   "cook": "20 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Vik's recipe (after Messinn, Reykjavík)"
-  },
-  "image": null,
-  "ingredients": [
-   "2 cod or halibut fillets (8 oz each)",
-   "Kosher salt, for a quick dry-brine",
-   "1 tbsp olive oil",
-   "3 tbsp butter, divided",
-   "2 garlic cloves, sliced",
-   "3 sprigs thyme",
-   "1 (14 oz) can butter or cannellini beans, drained and rinsed",
-   "1 cup cherry tomatoes",
-   "3 cups kale or spinach, stems stripped",
-   "½ cup chicken stock",
-   "1 lemon",
-   "Handful parsley, chopped",
-   "Black pepper"
-  ],
-  "directions": [
-   "Dry-brine the cod: salt the fillets and rest uncovered in the fridge 15 minutes, then pat completely dry — this is the Messinn move for a clean sear on cod.",
-   "Sear the fish in oil in an oven-safe skillet over medium-high, 3 minutes on the presentation side, then remove.",
-   "Melt 2 tbsp of the butter in the pan with the garlic and thyme. Add the tomatoes and cook 2 minutes until starting to burst.",
-   "Stir in the beans and stock, then wilt the greens through. Season.",
-   "Rest the cod on top, seared side up, and finish at 425°F for 6–8 minutes until it flakes fully through.",
-   "Off the heat, melt the last knob of butter with a hard squeeze of lemon and spoon over the fish. Parsley over everything; serve from the pan."
-  ],
-  "notes": [
-   "Maps directly onto the chicken-over-butter-beans-and-kale pattern — same skillet, fish-speed timeline.",
-   "A clean macro night as written: roughly 75P / 30F / 45C per portion.",
-   "Pregnancy: fish fully cooked through; nothing else to adjust."
-  ],
-  "macros": {
-   "p": 75,
-   "f": 30,
-   "c": 45,
-   "kcal": null,
-   "per": "serving"
-  },
-  "minutes": 40,
-  "id": "messinn-style-seared-cod-over-white-beans",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "protein",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "greek_med",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Coconut Sea Bass Curry",
-  "rating": 0,
-  "tags": [
-   "Untested",
-   "Seafood",
-   "Weeknights",
-   "Curry"
-  ],
-  "time": {
-   "prep": "15 mins",
-   "cook": "20 mins",
-   "total": null
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Vik's recipe"
-  },
-  "image": null,
-  "ingredients": [
-   "1 lb sea bass or cod, cut into large chunks (frozen works well — thaw slowly and pat very dry)",
-   "½ tsp ground turmeric, plus ¼ tsp for the fish",
-   "1 tbsp neutral oil",
-   "1 tsp black mustard seeds",
-   "10 curry leaves (optional but transformative)",
-   "1 onion, finely sliced",
-   "3 garlic cloves, minced",
-   "1-inch piece ginger, grated",
-   "1 tsp Kashmiri chili powder",
-   "2 tsp ground coriander",
-   "1 tomato, chopped (or ½ cup canned)",
-   "1 (14 oz) can coconut milk",
-   "1 tsp tamarind paste or juice of ½ lime",
-   "Salt",
-   "Cilantro, to finish",
-   "Steamed rice, to serve"
-  ],
-  "directions": [
-   "Toss the fish with ¼ tsp turmeric and a pinch of salt; set aside.",
-   "Heat the oil and pop the mustard seeds; add the curry leaves for 10 seconds, then the onion. Cook until golden at the edges, 6–7 minutes.",
-   "Add garlic and ginger for a minute, then the turmeric, chili powder and coriander; bloom 30 seconds.",
-   "Add the tomato and cook down 2–3 minutes, then pour in the coconut milk. Simmer 5 minutes to a loose curry.",
-   "Slide in the fish and poach gently 6–8 minutes until fully opaque through — do not stir hard or it will break.",
-   "Finish with tamarind or lime and salt to taste. Cilantro over; serve with rice."
-  ],
-  "notes": [
-   "Built for frozen fish — wet, sauced preparations are where frozen fillets shine; the crispy-skin limitation does not apply here.",
-   "Sea bass, cod and halibut all work; anything that holds in large flakes.",
-   "Pregnancy: sea bass and cod are low-mercury; fish poached fully through."
-  ],
-  "macros": {
-   "p": 44,
-   "f": 38,
-   "c": 16,
-   "kcal": null,
-   "per": "serving"
-  },
-  "minutes": 35,
-  "id": "coconut-sea-bass-curry",
-  "restored": true,
-  "protein": "Fish",
-  "archetype": "curry",
-  "under30": false,
-  "batch": true,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": true,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "id": "one-pot-smoky-fish-tomato-olives-couscous",
-  "name": "One-Pot Smoky Fish with Tomato, Olives and Couscous",
-  "rating": 0,
-  "tags": [
-   "Fish",
-   "One-Pot",
-   "Weeknights",
-   "Mediterranean",
-   "Untested"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": "25 mins",
-   "total": "35 mins"
-  },
-  "serves": {
-   "text": "Serves 4",
-   "n": 4
-  },
-  "source": {
-   "url": "https://cooking.nytimes.com/recipes/1021160-one-pot-smoky-fish-with-tomato-olives-and-couscous",
-   "name": "NYT Cooking — Sarah Copeland"
-  },
-  "image": null,
-  "ingredients": [
-   "1/4 cup olive oil, plus more for serving",
-   "3/4 cup jarred roasted red peppers, roughly chopped (or 1 fresh red bell pepper, diced)",
-   "1 medium yellow onion, thinly sliced",
-   "4 (6-oz) skinless mild white fish fillets — cod, fluke or halibut (pregnancy-safe, low-mercury)",
-   "Kosher salt and black pepper",
-   "1 1/2 tablespoons minced garlic (about 3 large cloves)",
-   "1 tablespoon chopped anchovies (about 4 fillets)",
-   "1 teaspoon smoked paprika",
-   "Pinch of ground cayenne",
-   "1/3 cup chicken stock + 2 tsp sherry vinegar (replaces 1/3 cup dry white wine — pregnancy swap)",
-   "1 1/2 cups chicken stock, preferably low-sodium",
-   "1 (14-oz) can crushed tomatoes",
-   "1/2 cup black or Kalamata olives",
-   "2 tablespoons chopped fresh parsley, plus more for serving",
-   "3/4 cup pearl couscous",
-   "2 teaspoons sherry vinegar or red wine vinegar"
-  ],
-  "directions": [
-   "In a large (12-inch) skillet with a tight-fitting lid, heat the olive oil over medium. If using fresh bell pepper, add it with the onion and cook 8–10 minutes until tender and lightly browned. If using jarred roasted peppers, cook the onion alone first until soft, then add the peppers with the garlic step.",
-   "Add the garlic, anchovies, smoked paprika and cayenne (plus roasted peppers if using) and cook 1 minute until fragrant.",
-   "Add the stock-and-vinegar wine substitute and stir to scrape up any browned bits. Once it has almost evaporated, add the 1 1/2 cups chicken stock, crushed tomatoes, olives, parsley, 1 tsp salt and 1/2 tsp black pepper. Bring to a boil over medium-high.",
-   "Add the couscous, stir, then nestle in the fish fillets, wiggling them to submerge. Reduce heat to low, cover and simmer 6–8 minutes until the fish is opaque and flakes easily.",
-   "Carefully transfer the fish to a plate. Simmer the couscous uncovered, stirring occasionally, about 5 minutes until tender and the sauce has reduced slightly.",
-   "Off the heat, stir in the 2 tsp vinegar. Gently return the fish to warm through, keeping the fillets intact. Finish with parsley and a drizzle of olive oil."
-  ],
-  "notes": [
-   "Pregnancy: original calls for 1/3 cup dry white wine — replaced with stock + sherry vinegar. Cod/halibut/fluke are low-mercury and safe.",
-   "Top NYT comment (the 'bland' fix): double the garlic and anchovies, use a whole jar of piquillo/roasted peppers, a heaping tbsp of smoked paprika, and a cup of oil-cured black olives. Best tweak — add ~2 cups halved cherry tomatoes near the end for sweetness and acid; several reviewers say don't make it without them.",
-   "To close carbs toward the 120g target, bump couscous to 1 cup and serve with warm flatbread. A lemony arugula salad on the side cuts the smoky richness."
-  ],
-  "macros": {
-   "kcal": null,
-   "p": 38,
-   "f": 16,
-   "c": 30
-  },
-  "minutes": 35,
-  "protein": "Fish",
-  "archetype": "complete",
-  "cuisine": "greek_med",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "batchable": false,
-  "isMain": true,
-  "make_ahead": [],
-  "lead_h": 0,
-  "section": "main"
- },
- {
-  "id": "chicken-fricassee-french-stew",
-  "name": "Chicken Fricassée (French creamy chicken stew)",
-  "rating": 0,
-  "tags": [
-   "Chicken",
-   "French",
-   "Stew",
-   "Batch Cook",
-   "Untested"
-  ],
-  "time": {
-   "prep": "20 mins",
-   "cook": "50 mins",
-   "total": "1 hr 10 mins"
-  },
-  "serves": {
-   "text": "Serves 4–6",
-   "n": 4
-  },
-  "source": {
-   "url": "https://www.recipetineats.com/chicken-fricassee-quick-french-chicken-stew/",
-   "name": "RecipeTin Eats — Nagi / chef JB"
-  },
-  "image": null,
-  "ingredients": [
-   "4 chicken drumsticks (~150g each), skin-on bone-in",
-   "4 chicken thighs (~250g each), skin-on bone-in",
-   "1 tsp cooking/kosher salt",
-   "1/2 tsp black pepper",
-   "4 tbsp (60g) unsalted butter",
-   "300g white mushrooms, halved (or quartered if large)",
-   "2 medium brown onions, sliced 1/2 in wide",
-   "2 garlic cloves, finely minced",
-   "1 bay leaf",
-   "3 thyme sprigs (or 1/2 tsp dried)",
-   "3 tbsp plain flour",
-   "1/2 cup chicken stock + 2 tsp white wine vinegar (replaces 1/2 cup white wine — pregnancy swap)",
-   "3 cups chicken stock, low-sodium (homemade if you have it)",
-   "1/4 tsp salt + 1/4 tsp black pepper",
-   "2 tbsp chopped parsley",
-   "2/3 cup heavy cream"
-  ],
-  "directions": [
-   "Pat chicken dry and season with 1 tsp salt and 1/2 tsp pepper.",
-   "Melt butter over medium-high in a large lidded skillet or Dutch oven. Brown thighs skin-side down 4–5 minutes until golden, flip 1 minute, remove. Brown drumsticks on 3 sides, ~2 minutes each; remove.",
-   "In the browned butter, add mushrooms, onion, bay and thyme. Cook ~5 minutes until mushrooms are lightly golden (they won't deep-brown). Add garlic, stir 30 seconds, then flour and cook 1 minute.",
-   "Add the stock-and-vinegar wine substitute plus the 3 cups stock, 1/4 tsp salt and 1/4 tsp pepper. Stir, scraping up the fond.",
-   "Return chicken skin-side up. Bring to a gentle simmer, cover and cook 10 minutes. Uncover and simmer 20 minutes more to reduce to a thin gravy; chicken should reach 75°C/167°F.",
-   "Remove chicken. Stir in cream and bring back to a simmer; taste and adjust salt. Return chicken, off the heat, sprinkle with parsley and serve."
-  ],
-  "notes": [
-   "Pregnancy: original uses 1/2 cup white wine — replaced with stock + white wine vinegar. Chicken cooked fully to temp; cream is pasteurized and fine.",
-   "Batch/transform: doubles cleanly and reheats beautifully. As-cooked over mash night 1; reheat gently night 2; night 3 shred the meat and fold into the sauce with orzo for a one-pot, or into a pie.",
-   "Top RecipeTin comments: add orzo (or penne) at the 15-min uncovered mark to make it a true one-pot (add a splash more stock). Cooking in a wok lets you sear all the chicken in one go and stir the cream in without removing it. Slow-cooker: sear, then everything (incl. cream) on low 6 hours.",
-   "Veg is thin here — serve with garlicky sautéed spinach or a big green salad with dijon vinaigrette. Mash closes the carb gap toward target."
-  ],
-  "macros": {
-   "kcal": 792,
-   "p": 43,
-   "f": 55,
-   "c": 20
-  },
-  "minutes": 50,
-  "protein": "Chicken",
-  "archetype": "stew",
-  "cuisine": "french",
-  "under30": false,
-  "batch": true,
-  "favourite": false,
-  "avoid": false,
-  "batchable": true,
-  "isMain": true,
-  "make_ahead": [],
-  "lead_h": 0,
-  "section": "main"
- },
- {
-  "id": "blueberry-almond-lemon-cake",
-  "name": "Blueberry, Almond and Lemon Cake",
-  "rating": 0,
-  "tags": [
-   "Dessert",
-   "Baking",
-   "Untested"
-  ],
-  "time": {
-   "prep": "20 mins",
-   "cook": "70 mins",
-   "total": "1 hr 30 mins"
-  },
-  "serves": {
-   "text": "Serves 8",
-   "n": 8
-  },
-  "source": {
-   "url": "https://cooking.nytimes.com/recipes/1018821-blueberry-almond-and-lemon-cake",
-   "name": "NYT Cooking — Yotam Ottolenghi"
-  },
-  "image": null,
-  "ingredients": [
-   "1/2 cup (1 stick) plus 3 tbsp (150g) unsalted butter, room temp, plus extra for greasing",
-   "1 scant cup (190g) granulated or superfine sugar",
-   "1 tsp lemon zest, plus 1 tbsp lemon juice (more as needed)",
-   "1 tsp vanilla extract",
-   "3 large eggs, beaten",
-   "2/3 cup all-purpose flour",
-   "1 1/4 tsp baking powder",
-   "1/8 tsp salt",
-   "1 cup almond flour",
-   "1 1/2 cups fresh blueberries",
-   "2/3 cup powdered sugar (for icing)"
-  ],
-  "directions": [
-   "Heat oven to 375°F/200°C. Grease a 9- or 8-inch loaf pan, line with a parchment sling and butter the paper.",
-   "Beat butter, sugar, lemon zest and vanilla on high with the paddle 3–4 minutes until light. Lower to medium and add eggs in three additions, scraping down the bowl (batter may look split — it comes back).",
-   "Whisk together AP flour, baking powder, salt and almond flour. On low, add to the batter in three additions, mixing just until no white specks remain.",
-   "Fold in about 3/4 of the blueberries by hand. Scrape into the pan and level.",
-   "Bake 15 minutes, then scatter the remaining blueberries over the top. Bake another 15–20 minutes until golden but not yet set, then cover loosely with foil and bake a further 25–30 minutes (less for a 9-inch, more for an 8-inch) until a knife in the center comes out clean.",
-   "Cool in the pan 10 minutes, then lift out onto a rack to cool completely.",
-   "Make the icing: whisk powdered sugar with 1 tbsp lemon juice until smooth, adding a little more juice as needed to a thick but pourable icing. Pour over the cooled cake and spread. Let set ~30 minutes before slicing."
-  ],
-  "notes": [
-   "Pregnancy: fully baked — no concerns.",
-   "Top NYT/Ottolenghi tips: keep frozen blueberries frozen until the moment they go in (don't defrost) and expect a longer bake; layering batter and berries helps them not sink. The icing usually needs more than 1 tbsp lemon juice — add gradually. Almond flour gives a lovely chewy crust; greasing the pan and dusting with a little almond flour enhances it. A pinch of cardamom or a swap to lime is a nice variation."
-  ],
-  "macros": {
-   "kcal": null,
-   "p": 6,
-   "f": 18,
-   "c": 30
-  },
-  "minutes": 90,
-  "protein": "Veg",
-  "archetype": "dessert",
-  "cuisine": "other",
-  "under30": false,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "batchable": false,
-  "isMain": false,
-  "make_ahead": [],
-  "lead_h": 0,
-  "section": "baking"
- },
- {
-  "name": "Protein Dutch Baby",
-  "rating": 5,
-  "tags": [
-   "Breakfast",
-   "Favourites"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": "25 mins",
-   "total": "35 min"
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "NYT Cooking, adapted"
-  },
-  "image": null,
-  "ingredients": [
-   "3 large eggs, plus 1 egg white, at room temperature",
-   "1/3 cup all-purpose flour",
-   "2 scoops protein powder",
-   "2/3 cup whole milk, at room temperature",
-   "Pinch of nutmeg",
-   "4 tablespoons butter",
-   "Sugar only if the protein powder is unsweetened"
-  ],
-  "directions": [
-   "Take the eggs and milk out a full hour ahead. Room temperature is the whole trick — it is what makes it puff.",
-   "Heat the oven to 425°F with a 10-inch skillet inside.",
-   "Blend the eggs, egg white, flour, protein powder, milk and nutmeg until completely smooth.",
-   "Melt the butter in the hot skillet, swirl to coat, and pour the batter straight in.",
-   "Bake 20 minutes at 425°F, then drop to 300°F for 5 minutes more.",
-   "Serve immediately — it starts collapsing the moment it leaves the oven."
-  ],
-  "notes": [
-   "Rated 10/10. The protein version puffs less than the original and comes out more custardy — that is expected, not a fault.",
-   "Skip the sugar in the base if the protein powder is already sweetened.",
-   "Room-temperature eggs and milk are non-negotiable. Cold batter is the single most common reason a Dutch baby fails to climb.",
-   "Pregnancy: fully set through the centre before serving — no wet custard."
-  ],
-  "macros": {
-   "p": 40,
-   "f": 28,
-   "c": 22,
-   "kcal": 500,
-   "per": "serving"
-  },
-  "minutes": 35,
-  "id": "protein-dutch-baby",
-  "protein": "Eggs",
-  "archetype": "breakfast",
-  "under30": false,
-  "batch": false,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "american",
-  "batchable": false,
-  "isMain": false,
-  "section": "main"
- },
- {
-  "name": "Aji Amarillo Chicken over White Beans with Aji Verde",
-  "rating": 5,
-  "tags": [
-   "Batch Cook",
-   "Favourites",
-   "Sunday Treats"
-  ],
-  "time": {
-   "prep": "20 mins (plus overnight marinade)",
-   "cook": "50 mins",
-   "total": "70 min"
-  },
-  "serves": {
-   "text": "Serves: 4",
-   "n": 4
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude — pollo a la brasa style"
-  },
-  "image": null,
-  "ingredients": [
-   "1 whole chicken, about 4 lb, spatchcocked",
-   "3 tablespoons aji amarillo paste",
-   "3 tablespoons soy sauce",
-   "6 cloves garlic, grated",
-   "1 lime, zest and juice",
-   "1 tablespoon red wine vinegar",
-   "2 teaspoons ground cumin",
-   "2 teaspoons dried oregano",
-   "1 tablespoon paprika",
-   "1 teaspoon black pepper",
-   "1 tablespoon neutral oil, plus salt for the bird",
-   "1 tablespoon huacatay (Peruvian black mint) paste, optional but recommended",
-   "FOR THE BEANS:",
-   "2 cans (15 oz) cannellini or butter beans, drained and rinsed",
-   "4 cloves garlic, sliced",
-   "1 tablespoon olive oil",
-   "1/2-3/4 cup chicken stock, plus extra",
-   "Splash of vinegar, salt",
-   "FOR THE AJI VERDE:",
-   "1 cup cilantro, leaves and tender stems",
-   "1-2 jalapeños, seeded to taste",
-   "1 tablespoon aji amarillo paste",
-   "1 clove garlic",
-   "2-3 tablespoons pasteurized mayonnaise",
-   "1 lime, juiced",
-   "2 tablespoons neutral oil",
-   "Salt"
-  ],
-  "directions": [
-   "Spatchcock the chicken, salt it all over, and coat in the marinade (aji amarillo, soy, garlic, lime, vinegar, cumin, oregano, paprika, pepper, oil, and huacatay if using). Rest uncovered in the fridge overnight for the dry-brine effect and crisper skin; 1 hour minimum.",
-   "Heat the oven to 450°F. Toss the beans with the sliced garlic, olive oil, stock, a splash of vinegar and salt in a roasting pan. Set a wire rack over the pan.",
-   "Lay the chicken skin-up on the rack. Roast 40-50 minutes until the breast reads 165°F and the thigh 175°F and the skin is lacquered. Drop to 425°F if it is browning too fast.",
-   "The beans braise underneath in the rendered fat. Stir once halfway and splash in more stock if they look dry.",
-   "Rest the chicken 10 minutes, tipping the cavity juices over the beans first.",
-   "Blitz all the aji verde ingredients smooth, drizzling the oil in last to emulsify. Loosen with a splash of water to pourable.",
-   "Carve and serve over the beans with aji verde, lime and extra cilantro."
-  ],
-  "notes": [
-   "Huacatay in both the marinade and the sauce is the upgrade that takes this from good to the real thing.",
-   "Deployments: as-cooked Sunday; air-fry the legs at 380°F for 8-10 minutes to re-crisp; shred the rest into an aguadito-style cilantro chicken-and-bean soup.",
-   "Pregnancy: soy plus vinegar stands in for the beer a classic brasa marinade uses. Aji verde is mayo-based — use pasteurized jarred mayo and skip queso fresco unless pasteurized.",
-   "This is the original Bed Method build — legume bed, rendering bird on a rack above it."
-  ],
-  "macros": {
-   "p": 55,
-   "f": 28,
-   "c": 30,
-   "kcal": 592,
-   "per": "serving"
-  },
-  "minutes": 70,
-  "id": "aji-amarillo-chicken-over-white-beans-with-aji-verde",
-  "protein": "Chicken",
-  "archetype": "protein",
-  "under30": false,
-  "batch": true,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": true,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Chilean Sea Bass with Lemon-Caper Beurre Blanc",
-  "rating": 0,
-  "tags": [
-   "Fish",
-   "Untested",
-   "Weekend Lunch"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": "15 mins",
-   "total": "25 min"
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "2 Chilean sea bass fillets, 6-7 oz each",
-   "1 tablespoon olive oil, plus a drizzle for the veg",
-   "1 small shallot, finely minced",
-   "1/3 cup fish or chicken stock",
-   "1 tablespoon white wine vinegar",
-   "1 tablespoon lemon juice, plus zest to finish",
-   "4 tablespoons cold butter, cubed",
-   "1 teaspoon capers, chopped",
-   "1 cup cherry tomatoes, halved",
-   "3 cups baby spinach",
-   "2 cloves garlic, thinly sliced",
-   "Salt and black pepper"
-  ],
-  "directions": [
-   "Sear the fish: pat dry and season. Heat the olive oil in a stainless pan over medium-high. Sear the first side 4-5 minutes until deep gold, flip, drop to medium, and cook 3-5 minutes more depending on thickness until just opaque through with no translucent centre. Rest, tented.",
-   "Blister the tomatoes: same pan, drizzle more oil if needed, add the garlic and cherry tomatoes over medium-high and cook 3-4 minutes until they collapse slightly. Salt and set aside.",
-   "Wilt the spinach: same pan, toss the spinach 1 minute just until wilted, with a squeeze of lemon.",
-   "Beurre blanc: in a small saucepan, simmer the shallot with the stock and vinegar until reduced by half, 2-3 minutes. Off heat, whisk in the cold butter a few cubes at a time, letting each melt before adding more. Do not let it reboil or it will split. Stir in the lemon juice and capers, then season.",
-   "Plate the spinach, sit the fish on top, spoon the tomatoes around and the beurre blanc over. Finish with lemon zest."
-  ],
-  "notes": [
-   "Untested — awaiting a cook to confirm.",
-   "Runs fat-heavy by design: sea bass is rich and the sauce is mounted butter. That is the point of the dish, but it is not a macro-clean night.",
-   "Pregnancy: stock plus white wine vinegar replaces the wine in a classic beurre blanc. Chilean sea bass is a moderate-mercury fish — keep it occasional rather than weekly.",
-   "Green beans work in place of the spinach if that is what is open."
-  ],
-  "macros": {
-   "p": 42,
-   "f": 38,
-   "c": 8,
-   "kcal": 542,
-   "per": "serving"
-  },
-  "minutes": 25,
-  "id": "chilean-sea-bass-with-lemon-caper-beurre-blanc",
-  "protein": "Fish",
-  "archetype": "protein",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "french",
-  "batchable": false,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Greek Roast Chicken over Orzo",
-  "rating": 5,
-  "tags": [
-   "Batch Cook",
-   "Favourites",
-   "Traybakes"
-  ],
-  "time": {
-   "prep": "20 mins",
-   "cook": "50 mins",
-   "total": "70 min"
-  },
-  "serves": {
-   "text": "Serves: 4",
-   "n": 4
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1 whole chicken, 3.5-4.5 lb, spatchcocked",
-   "4 teaspoons kosher salt (Diamond Crystal; halve if Morton)",
-   "4 tablespoons olive oil",
-   "3 teaspoons dried oregano",
-   "2 lemons",
-   "1 teaspoon black pepper, coarsely ground",
-   "FOR THE ORZO:",
-   "250 g orzo",
-   "4 cloves garlic, thinly sliced",
-   "1/2 teaspoon red pepper flakes",
-   "700 ml chicken stock, hot",
-   "300 g cherry tomatoes",
-   "150 g baby spinach",
-   "150 g feta, pasteurized, in a block",
-   "3 tablespoons fresh dill, chopped",
-   "FOR THE SIDE:",
-   "300 g green beans, trimmed"
-  ],
-  "directions": [
-   "Spatchcock the bird and flatten it hard with the heel of your hand. Rub all over with the salt, including under the skin. Sit uncovered on a rack in the fridge overnight. Backbone into the stockpot. Temper at room temperature 40 minutes before roasting.",
-   "Heat the oven to 450°F with two racks. Rub the bird with olive oil, lemon zest, oregano and pepper. No additional salt if dry-brined. Keep raw garlic off the skin — it will burn.",
-   "Roast the chicken skin-up on a rack over a rimmed sheet, 40-45 minutes, until the breast reads 165°F.",
-   "Orzo pan: in a 9x13, combine olive oil, sliced garlic, oregano and chili flakes. Toast the orzo 2 minutes, then add hot stock and cherry tomatoes. Slide onto the rack directly beneath the chicken for the last 22 minutes so the drippings fall into it. Under-salt — the brined drippings and feta both bring salt.",
-   "Off heat, fold the spinach through (it wilts on residual heat), then lemon juice, dill and crumbled feta. Broil 2 minutes to blister the feta. Pour in the resting juices.",
-   "Green beans stay separate for contrast: dry-fry in the wok until puckered and blistered, then garlic, chili and a squeeze of lemon.",
-   "Carve the bird over the orzo."
-  ],
-  "notes": [
-   "Template, not a fixed recipe — the move is a grain pan beneath the roasting bird catching the drippings. Swap the flavour axis freely.",
-   "Scaling to two birds: season the second neutrally (salt, pepper, garlic only) so the meat redeploys anywhere. The orzo carries the flavour, not the chicken.",
-   "Deployments: as-cooked Sunday; air-fry the legs and thighs at 380°F for 8-10 minutes to re-crisp the skin; carcass stock into a lemony chicken-and-orzo soup with spinach and dill. Skip classic avgolemono while pregnancy rules are active — whisk Greek yogurt with lemon and a ladle of hot broth, stirred in off heat.",
-   "Dry-brined skin browns faster. Watch colour alongside temperature, not the clock.",
-   "Pregnancy: confirm the feta is pasteurized. Breast to 165°F throughout."
-  ],
-  "macros": {
-   "p": 52,
-   "f": 30,
-   "c": 55,
-   "kcal": 698,
-   "per": "serving"
-  },
-  "minutes": 70,
-  "id": "greek-roast-chicken-over-orzo",
-  "protein": "Chicken",
-  "archetype": "traybake",
-  "under30": false,
-  "batch": true,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "greek_med",
-  "batchable": true,
-  "isMain": true,
-  "section": "main"
- },
- {
-  "name": "Bed Method — Master Template (Protein Over Grain, Bean or Veg)",
-  "rating": 5,
-  "tags": [
-   "Batch Cook",
-   "Favourites",
-   "Templates",
-   "Traybakes"
-  ],
-  "time": {
-   "prep": "15 mins",
-   "cook": "50 mins",
-   "total": "65 min"
-  },
-  "serves": {
-   "text": "Serves: 4",
-   "n": 4
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "A rendering protein: whole bird spatchcocked, or bone-in skin-on thighs",
-   "THE BED — pick one:",
-   "GRAIN: orzo, rice, freekeh, pearl couscous, barley — absorbs, so the liquid ratio is strict",
-   "LEGUME: cannellini, butter beans, chickpeas, lentils — neutral and forgiving",
-   "VEGETABLE: cabbage wedges, leeks, fennel, potatoes, squash — releases water, so cut the liquid",
-   "Aromatics for the bed: sliced garlic, onion or shallot, a dried chili, a hard herb",
-   "Hot stock, quantity set by the bed (see directions)",
-   "Fat: olive oil or the rendered fat itself",
-   "Acid to finish: lemon, vinegar or preserved lemon",
-   "Something green to fold in off heat: spinach, chard, herbs",
-   "Something sharp to serve alongside: pickles, a herb sauce, yogurt"
-  ],
-  "directions": [
-   "Pick the bed, and let it set the liquid. Grain is the strict one — roughly 2.5 to 3 parts hot stock to 1 part dry grain by weight, toasted first in fat for 2 minutes. Legumes need only enough to come halfway up: about 1/2 to 3/4 cup stock per two drained cans. Vegetables need least of all — they release their own water, so cut whatever you would otherwise use by around a third.",
-   "Dry-brine the protein. Salt it, sit it uncovered in the fridge overnight if you can, an hour at minimum, and temper it before it goes in.",
-   "Set the geometry. Protein on a rack, bed in a pan directly beneath. Grain goes in only for the last 20-25 minutes or it turns to porridge; legumes and hard vegetables can take the whole cook. Grain wants high heat (450°F) and a short window; legumes are happier at 400-425°F for longer.",
-   "Skin never goes under liquid or under a lid. Either nestle the protein so the skin stays proud, or spike to 425°F for the last 10 minutes, or return it skin-up uncovered at the end. Boneless thighs: skip the rack, nestle directly on the bed, accept about 70% of the crisp.",
-   "Finish the bed off-heat — greens fold in on residual heat, then acid, herbs and cheese. Pour in the resting juices.",
-   "Serve with the bright thing. A combined pan cannot make crunch, freshness or acid; it all has to come from outside."
-  ],
-  "notes": [
-   "Combine protein and bed whenever the protein renders. Keep them separate when the protein is lean (cod, breast, tenderloin, shrimp — nothing drips), when cook times diverge hard, or when the veg is wet enough to steam the protein (mushrooms, zucchini).",
-   "Two components, not three pans: the rendered pan, plus one sharp thing.",
-   "Best for batch weeks: the legume bed. Beans improve on day two — they keep drinking the fat and the sauce tightens. Grain degrades, cabbage goes slack. Put a three-deployment build on beans; save grain versions for standalone dinners.",
-   "Kenji's transferable trick: reserve half the marinade uncontaminated, chop the cooked protein, return it to the pan with that reserved marinade and its juices. A second hit of raw aromatic on cooked meat. Works on any combination here.",
-   "Flavour axes: Hainanese (jasmine, schmaltz, ginger-scallion oil) · Peruvian (couscous, ají amarillo, cilantro crema) · Puttanesca (orzo, anchovy, capers, olives) · Persian (basmati, saffron, barberries, dill) · Chipotle-adobo (rice, black beans, cotija) · Spanish (bomba, saffron, piquillo, aioli) · South Indian (basmati, curry leaf, coconut, tamarind) · Jerk (rice and peas, allspice, scotch bonnet) · Dashi-soy (short grain, shiitake, shichimi) · Berbere (barley, red lentils, herbed yogurt) · Levantine (freekeh, chickpeas, pomegranate molasses) · Mushroom-miso (barley, porcini, leeks).",
-   "Convert to one-pan: Hainanese, chipotle, Spanish, South Indian, jerk and dashi all go straight across, with liquid cut by about 25% since a covered pan loses less. Orzo builds stay uncovered and get stirred like risotto. Persian and berbere stay on the rack — tahdig needs the crust, barley needs 50 minutes.",
-   "Macro-clean picks (~80/40/120): chipotle-adobo and berbere. Grain plus legume plus dark meat gets there without engineering.",
-   "In the library already: Crispy Braised Chicken Thighs with Cabbage and Bacon, Roast Chicken with Oregano and Butter Beans, Dutch Oven Chicken with Pancetta Leeks and White Beans, Greek Roast Chicken over Orzo, Aji Amarillo Chicken over White Beans — all the same family.",
-   "Pregnancy: no wine or sherry in the pan — stock plus vinegar. Confirm feta and parm are pasteurized. Dark meat to 175-180°F, breast to 165°F."
-  ],
-  "macros": null,
-  "minutes": 65,
-  "id": "bed-method-master-template-protein-over-grain-bean-or-veg",
-  "protein": "Chicken",
-  "archetype": "protein",
-  "under30": false,
-  "batch": true,
-  "favourite": true,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": true,
-  "isMain": false,
-  "section": "main"
- },
- {
-  "name": "Chimichurri",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": null,
-   "total": "10 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1 cup flat-leaf parsley, finely chopped",
-   "2 tablespoons fresh oregano, chopped (or 2 teaspoons dried)",
-   "4 cloves garlic, very finely minced",
-   "1 small shallot, finely minced",
-   "1 teaspoon red pepper flakes",
-   "3 tablespoons red wine vinegar",
-   "1/2 cup extra-virgin olive oil",
-   "1 teaspoon kosher salt",
-   "Black pepper"
-  ],
-  "directions": [
-   "Put the shallot, garlic, vinegar and salt in a bowl and leave 10 minutes. The acid takes the raw edge off the alliums — do not skip this.",
-   "Stir in the parsley, oregano and chili flakes.",
-   "Pour in the olive oil and stir. Do not blend it — chimichurri is chopped, not emulsified, and a blender turns it into bitter green sludge.",
-   "Rest at least 20 minutes before serving. Better after two hours."
-  ],
-  "notes": [
-   "Chop by hand. This is the whole difference between good chimichurri and the food-processor version.",
-   "Keeps a week in the fridge under a film of oil. The colour dulls after day two; the flavour improves.",
-   "Beyond steak: spoon over roast chicken, grilled fish, blistered green beans, or a fried egg. Excellent as the 'sharp thing' on a Bed Method build.",
-   "Pregnancy-safe as written — vinegar, not wine."
-  ],
-  "macros": null,
-  "minutes": 10,
-  "id": "chimichurri",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Aji Verde",
-  "rating": 5,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "5 mins",
-   "cook": null,
-   "total": "5 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1 cup cilantro, leaves and tender stems",
-   "1-2 jalapeños, seeded to taste",
-   "1 tablespoon aji amarillo paste",
-   "1 clove garlic",
-   "2-3 tablespoons pasteurized mayonnaise",
-   "1 lime, juiced",
-   "2 tablespoons neutral oil",
-   "Salt"
-  ],
-  "directions": [
-   "Blitz everything except the oil until smooth.",
-   "With the motor running, drizzle in the oil to emulsify.",
-   "Loosen with a splash of water until pourable. Season."
-  ],
-  "notes": [
-   "Pulled out of the Aji Amarillo Chicken so it can be used on its own — it is far too good to only appear once.",
-   "Goes on everything: roast chicken, potatoes, fish tacos, rice bowls, eggs.",
-   "Pregnancy: use pasteurized jarred mayonnaise, and skip the queso fresco some versions add unless it is pasteurized.",
-   "Keeps 4-5 days. It loosens as it sits; stir before serving."
-  ],
-  "macros": null,
-  "minutes": 5,
-  "id": "aji-verde",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Nước Chấm",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "5 mins",
-   "cook": null,
-   "total": "5 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1/4 cup fish sauce",
-   "1/4 cup sugar",
-   "1/2 cup warm water",
-   "3 tablespoons lime juice, from about 2 limes",
-   "3 cloves garlic, finely minced",
-   "1-2 bird's eye chilies, thinly sliced",
-   "1 tablespoon rice vinegar (optional, for a rounder acid)"
-  ],
-  "directions": [
-   "Dissolve the sugar in the warm water completely.",
-   "Stir in the fish sauce and lime juice.",
-   "Add the garlic and chili last, so they float rather than sink.",
-   "Taste and adjust: it should read sweet first, then salty, then sharp, with the heat arriving late."
-  ],
-  "notes": [
-   "The single most useful sauce for the Vietnamese half of the library — bun cha, bún gà bowls, spring rolls, grilled pork, any rice-noodle bowl.",
-   "Mince the garlic finely enough and it floats. Crushed garlic sinks and the last spoonful is brutal.",
-   "Keeps two weeks refrigerated, though the garlic sharpens over time. Halve the garlic if making a big batch to keep.",
-   "Ratio to remember: 1 fish sauce : 1 sugar : 2 water : just under 1 lime. Everything else is adjustment."
-  ],
-  "macros": null,
-  "minutes": 5,
-  "id": "n-c-ch-m",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "se_asian",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Ginger-Scallion Oil",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": null,
-   "total": "10 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1 bunch scallions, very thinly sliced, white and green",
-   "3 inches ginger, peeled and finely grated or minced",
-   "3/4 cup neutral oil",
-   "1 teaspoon kosher salt",
-   "1 teaspoon light soy sauce",
-   "1/2 teaspoon sugar"
-  ],
-  "directions": [
-   "Put the scallions, ginger and salt in a heatproof bowl.",
-   "Heat the oil until it shimmers and just begins to smoke, about 350°F.",
-   "Pour it straight over the aromatics — it should sizzle hard. Stand back.",
-   "Stir, let it cool, then fold in the soy and sugar."
-  ],
-  "notes": [
-   "The Hainanese axis of the Bed Method in a jar. Also the fastest way to make plain rice and poached chicken taste deliberate.",
-   "Grate the ginger rather than mincing if you want it to melt into the oil rather than sit in it.",
-   "Keeps two weeks refrigerated. The green fades but the flavour holds.",
-   "On steamed fish, noodles, eggs, roast chicken, or stirred through rice."
-  ],
-  "macros": null,
-  "minutes": 10,
-  "id": "ginger-scallion-oil",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "chinese",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Chili Crisp",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "25 mins",
-   "cook": null,
-   "total": "25 min"
-  },
-  "serves": {
-   "text": "Serves: 2",
-   "n": 2
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1 1/2 cups neutral oil",
-   "1 head garlic, thinly sliced",
-   "4 shallots, thinly sliced",
-   "3 inches ginger, julienned",
-   "2 star anise",
-   "1 cinnamon stick",
-   "1/2 cup coarse Sichuan chili flakes or gochugaru",
-   "2 tablespoons fermented black beans, rinsed and roughly chopped",
-   "2 tablespoons roasted peanuts, crushed",
-   "1 tablespoon sesame seeds",
-   "1 teaspoon Sichuan peppercorns, ground",
-   "2 teaspoons sugar",
-   "2 teaspoons kosher salt",
-   "1 teaspoon MSG (optional but it belongs here)"
-  ],
-  "directions": [
-   "Combine the oil, garlic, shallots, ginger, star anise and cinnamon in a saucepan. Bring to a bare simmer over medium-low.",
-   "Cook 20-25 minutes, stirring occasionally, until the shallots and garlic are deep gold and the bubbling has almost stopped. Pull them a shade before they look done — they keep darkening off heat.",
-   "Meanwhile combine the chili flakes, black beans, peanuts, sesame, ground peppercorns, sugar, salt and MSG in a heatproof bowl.",
-   "Fish out the star anise and cinnamon. Pour the hot oil and solids over the chili mixture — it will foam up hard.",
-   "Cool completely before jarring. It tastes better the next day and much better after a week."
-  ],
-  "notes": [
-   "Everything comes down to frying the aromatics slowly. Rushing it gives you burnt garlic in red oil.",
-   "Keeps a month refrigerated, longer if the solids stay under the oil.",
-   "On noodles, dumplings, eggs, rice, cucumber salad, roast vegetables, or stirred into mayo.",
-   "Heat is set by the chili, not the quantity — gochugaru is mild and fruity, Sichuan facing-heaven chilies are hotter."
-  ],
-  "macros": null,
-  "minutes": 25,
-  "id": "chili-crisp",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "chinese",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Gochujang Sauce (Yangnyeom)",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "5 mins",
-   "cook": null,
-   "total": "5 min"
-  },
-  "serves": {
-   "text": "Serves: 3",
-   "n": 3
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1/4 cup gochujang",
-   "2 tablespoons soy sauce",
-   "2 tablespoons rice vinegar",
-   "2 tablespoons honey or corn syrup",
-   "1 tablespoon gochugaru",
-   "4 cloves garlic, grated",
-   "1 tablespoon toasted sesame oil",
-   "1 teaspoon grated ginger",
-   "1 tablespoon toasted sesame seeds"
-  ],
-  "directions": [
-   "Whisk everything together except the sesame seeds.",
-   "For a glaze, simmer 2-3 minutes until it coats a spoon. For a dressing, use as is.",
-   "Stir in the sesame seeds at the end."
-  ],
-  "notes": [
-   "The base for buldak, Korean fried chicken, tteokbokki, and a good stir-through for udon.",
-   "Thin with a splash of water or stock to turn it into a noodle sauce.",
-   "Keeps two weeks refrigerated.",
-   "Pregnancy-safe as written. If glazing wings or chicken, brush on in the last 5 minutes so the sugar does not burn."
-  ],
-  "macros": null,
-  "minutes": 5,
-  "id": "gochujang-sauce-yangnyeom",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "korean",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Tahini-Lemon Sauce",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "5 mins",
-   "cook": null,
-   "total": "5 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1/2 cup tahini, well stirred",
-   "1/4 cup lemon juice, from about 2 lemons",
-   "2 cloves garlic, grated",
-   "1/2 teaspoon kosher salt",
-   "1/3-1/2 cup ice water",
-   "1/2 teaspoon ground cumin (optional)"
-  ],
-  "directions": [
-   "Whisk the tahini, lemon juice, garlic and salt together. It will seize and go stiff and grainy — this is supposed to happen.",
-   "Add the ice water a tablespoon at a time, whisking, until it loosens into a smooth pourable cream.",
-   "Season, and add the cumin if using."
-  ],
-  "notes": [
-   "The seizing stage panics people. Keep whisking and adding water; it always comes back.",
-   "Ice water rather than tap — it whips paler and thicker.",
-   "On roast chicken, traybakes, chickpeas, cauliflower, falafel, or as the sharp thing on a Levantine Bed Method build.",
-   "Keeps a week. It thickens in the fridge; loosen with more water."
-  ],
-  "macros": null,
-  "minutes": 5,
-  "id": "tahini-lemon-sauce",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "greek_med",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Salsa Verde (Caper and Anchovy)",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": null,
-   "total": "10 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1 cup flat-leaf parsley, finely chopped",
-   "2 tablespoons capers, rinsed and chopped",
-   "4 anchovy fillets, finely chopped",
-   "1 clove garlic, very finely minced",
-   "1 tablespoon red wine vinegar",
-   "1 teaspoon Dijon mustard",
-   "1/2 cup extra-virgin olive oil",
-   "2 tablespoons mint or basil, chopped (optional)",
-   "Black pepper"
-  ],
-  "directions": [
-   "Chop the parsley, capers, anchovy and garlic together on the board until they start to become one thing.",
-   "Scrape into a bowl and stir in the vinegar and mustard.",
-   "Pour in the olive oil and stir. Season with pepper — the anchovy and capers bring the salt.",
-   "Rest 15 minutes before serving."
-  ],
-  "notes": [
-   "The Italian one, not the Mexican one. Chopped, oily, sharp.",
-   "Built for fish and lamb, but it is also what rescues a plain roast chicken or boiled potatoes.",
-   "Anchovies are low-mercury and fine during pregnancy. The saltiness means you should taste before adding any.",
-   "Keeps 4-5 days under a film of oil."
-  ],
-  "macros": null,
-  "minutes": 10,
-  "id": "salsa-verde-caper-and-anchovy",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "italian",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Romesco",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "15 mins",
-   "cook": null,
-   "total": "15 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "2 roasted red peppers, jarred, drained",
-   "1/2 cup blanched almonds, toasted",
-   "1 slice country bread, torn and fried in olive oil",
-   "2 cloves garlic",
-   "1 tablespoon sherry vinegar or red wine vinegar",
-   "1 teaspoon smoked paprika",
-   "1/2 teaspoon kosher salt",
-   "1/3 cup extra-virgin olive oil",
-   "1 tablespoon tomato paste"
-  ],
-  "directions": [
-   "Toast the almonds until fragrant and fry the bread in olive oil until golden. Both matter more than they look like they should.",
-   "Blitz the peppers, almonds, bread, garlic, vinegar, paprika, tomato paste and salt to a coarse paste.",
-   "With the motor running, stream in the olive oil until it thickens.",
-   "Taste and push the vinegar — it should be brighter than feels right straight from the blender."
-  ],
-  "notes": [
-   "Keep it slightly coarse. A completely smooth romesco loses the point.",
-   "On grilled or roast chicken, white fish, blistered green beans, charred leeks, potatoes, or as a sandwich spread.",
-   "Sherry vinegar is the traditional acid and is not alcoholic — it is fine during pregnancy.",
-   "Keeps a week refrigerated and freezes well in an ice cube tray."
-  ],
-  "macros": null,
-  "minutes": 15,
-  "id": "romesco",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "greek_med",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Peanut-Lime Dressing",
-  "rating": 0,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "5 mins",
-   "cook": null,
-   "total": "5 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "1/3 cup natural peanut butter",
-   "2 tablespoons soy sauce",
-   "2 tablespoons lime juice",
-   "1 tablespoon rice vinegar",
-   "1 tablespoon honey or palm sugar",
-   "2 cloves garlic, grated",
-   "1 teaspoon grated ginger",
-   "1 teaspoon toasted sesame oil",
-   "1/2 teaspoon chili flakes or a squeeze of sriracha",
-   "3-5 tablespoons warm water"
-  ],
-  "directions": [
-   "Whisk everything except the water into a stiff paste.",
-   "Add the warm water a tablespoon at a time until it ribbons off the whisk. Thicker for dipping, looser for dressing.",
-   "Taste: it wants more lime than feels right."
-  ],
-  "notes": [
-   "Consolidates the peanut dressings currently buried inside the Dumpling and Smashed Cucumber Salad and the Spring Roll Salad.",
-   "For dipping, keep it thick. For a noodle or slaw dressing, thin it to pouring consistency.",
-   "Keeps a week. It stiffens cold — loosen with warm water, not more oil.",
-   "Fish sauce in place of half the soy makes it Vietnamese rather than generic."
-  ],
-  "macros": null,
-  "minutes": 5,
-  "id": "peanut-lime-dressing",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "se_asian",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
- },
- {
-  "name": "Quick Pickled Red Onions",
-  "rating": 5,
-  "tags": [
-   "Sauces"
-  ],
-  "time": {
-   "prep": "10 mins",
-   "cook": null,
-   "total": "10 min"
-  },
-  "serves": {
-   "text": "Serves: 1",
-   "n": 1
-  },
-  "source": {
-   "url": null,
-   "name": "Vik & Claude"
-  },
-  "image": null,
-  "ingredients": [
-   "2 red onions, thinly sliced",
-   "1 cup red wine vinegar or apple cider vinegar",
-   "1 cup water",
-   "1 tablespoon sugar",
-   "1 1/2 teaspoons kosher salt",
-   "1 teaspoon black peppercorns",
-   "2 bay leaves",
-   "1 clove garlic, smashed (optional)"
-  ],
-  "directions": [
-   "Pack the sliced onion into a jar.",
-   "Warm the vinegar, water, sugar and salt until dissolved — it does not need to boil.",
-   "Add the peppercorns, bay and garlic to the jar, pour the hot brine over, and press the onions under.",
-   "Usable in 30 minutes, properly good after a few hours."
-  ],
-  "notes": [
-   "The default Sunday prep item — 10 minutes on Sunday and every dish that week gets an acid finish for free.",
-   "On tacos, rice bowls, sandwiches, salads, traybakes, and anything from the Bed Method that needs a sharp thing.",
-   "Keeps three weeks refrigerated.",
-   "Same brine works for cucumber, radish, carrot or shallot."
-  ],
-  "macros": null,
-  "minutes": 10,
-  "id": "quick-pickled-red-onions",
-  "protein": "Veg",
-  "archetype": "side",
-  "under30": true,
-  "batch": false,
-  "favourite": false,
-  "avoid": false,
-  "cuisine": "other",
-  "batchable": false,
-  "isMain": false,
-  "section": "sauce"
  }
 ]

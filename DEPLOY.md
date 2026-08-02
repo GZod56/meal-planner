@@ -1,15 +1,13 @@
 # Meal Planner — deploy
 
-Netlify → your site → **Deploys** tab → drag the **unzipped `meal_planner_app` folder**
-onto the drop zone. Not the zip, not the folder's contents — the folder itself.
+Netlify is linked to `github.com/GZod56/meal-planner` (branch `main`).
+Any push to `main` triggers a rebuild automatically — no drag-and-drop, no CLI.
 
-After it says Published, check: `<your-site>/recipes.json` should return JSON.
-If it 404s, the files landed a level deep — redeploy.
+Build settings: no build command, publish directory `.`, functions from `netlify.toml`.
+`ANTHROPIC_API_KEY` lives in Netlify env vars, not in this repo.
 
-Cache key is `mp-v5`. `recipes.json`, `index.html` and `engine.js` are now fetched
-network-first, so a stale cache can no longer hide a good deploy.
+`recipes.json` is the single canonical library. The app fetches it network-first,
+so recipe edits land on the next load without a cache bust.
 
-If the library fails to load the app now says so on screen, with the URL it tried,
-and unregisters its own service worker so the next reload starts clean.
-
-`ANTHROPIC_API_KEY` lives in Netlify env vars, not in this folder.
+Bump `V` in `sw.js` whenever `index.html` or `engine.js` changes, so an old cached
+shell can't run against new data. Current key: `mp-v6`.
