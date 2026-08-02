@@ -12096,6 +12096,86 @@
   "section": "sauce"
  },
  {
+  "id": "tarka-dal",
+  "name": "Tarka Dal",
+  "section": "main",
+  "isMain": true,
+  "archetype": "curry",
+  "cuisine": "indian",
+  "protein": "Veg",
+  "serves": {
+   "n": 4,
+   "text": "4 servings"
+  },
+  "minutes": 45,
+  "time": {
+   "prep": "10 mins",
+   "cook": "35 mins",
+   "total": "45 mins"
+  },
+  "under30": false,
+  "batchable": true,
+  "batch": true,
+  "favourite": false,
+  "avoid": false,
+  "rating": 0,
+  "tags": [
+   "Batch Cook",
+   "Freezable",
+   "Healthy",
+   "Untested",
+   "Veggie"
+  ],
+  "macros": {
+   "p": 15,
+   "f": 12,
+   "c": 42,
+   "kcal": 340,
+   "per": "serving"
+  },
+  "source": {
+   "name": "house recipe",
+   "url": null
+  },
+  "ingredients": [
+   "1 1/2 cups (300g) red lentils (masoor dal), rinsed until the water runs clear",
+   "5 cups (1.2L) water",
+   "1 teaspoon turmeric",
+   "1 1/2 teaspoons salt, plus more to taste",
+   "3 tablespoons ghee",
+   "1 teaspoon cumin seeds",
+   "1/2 teaspoon black mustard seeds",
+   "2 dried red chillies",
+   "1 medium onion, finely diced",
+   "5 garlic cloves, thinly sliced",
+   "1-inch piece ginger, finely chopped",
+   "2 medium tomatoes, chopped",
+   "1 teaspoon ground coriander",
+   "1/2 teaspoon chilli powder",
+   "1/2 teaspoon garam masala",
+   "1 teaspoon kasuri methi, crushed between the palms",
+   "Juice of 1/2 lemon",
+   "Coriander leaves, to finish"
+  ],
+  "directions": [
+   "Bring the lentils, water and turmeric to a boil, skimming the froth that rises in the first few minutes. Drop to a simmer, partially cover, and cook 20–25 minutes until the lentils have collapsed completely. Add the salt only now — earlier and the skins stay firm.",
+   "Whisk hard for a few seconds to break the dal down. Loosen with hot water to a pourable, single-cream consistency; it thickens considerably as it sits and again in the freezer.",
+   "Make the tarka: heat the ghee in a small pan over medium until it shimmers. Add the cumin seeds, mustard seeds and dried chillies and wait for the mustard to pop, about 30 seconds.",
+   "Add the onion and cook 6–8 minutes to a proper golden brown. This is where the depth comes from — pale onions make flat dal.",
+   "Add the garlic and ginger, cook 1 minute until the raw edge is gone, then the tomatoes, ground coriander and chilli powder. Cook 5 minutes until the tomatoes break down and the fat separates and pools at the edges.",
+   "Pour the tarka into the dal, scraping the pan clean. Simmer together 5 minutes.",
+   "Off the heat, stir in the garam masala, kasuri methi and lemon juice. Taste for salt — dal takes more than you expect. Finish with coriander leaves.",
+   "To freeze: cool completely, portion flat in bags, freeze up to 3 months. Reheat from frozen in a pan with a splash of water, whisking as it loosens."
+  ],
+  "notes": [
+   "Freezer-bank staple. At 3x this makes 12 servings — enough for two dinners, a lunch and three portions banked.",
+   "Iron and fiber dense, which is the point both in pregnancy and postpartum. Vitamin C helps non-heme iron absorb, so the lemon at the end is doing real work, not just brightening.",
+   "Salt after the lentils collapse, never before.",
+   "A second small tarka poured over just before serving is the restaurant trick — worth it when serving as-cooked, skip for the freezer portions.",
+   "Reheated dal wants thinning and re-seasoning; it dulls in the fridge. Lemon and salt bring it straight back."
+  ]
+ },
+ {
   "name": "Taverna Salad",
   "rating": 0,
   "tags": [
