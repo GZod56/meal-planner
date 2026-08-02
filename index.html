@@ -68,7 +68,7 @@ input,textarea{font:inherit; border-radius:0}
 .lib-item .dish{font-size:15.5px; font-weight:460}
 .lib-item .min{font-size:12px; color:var(--soft); font-variant-numeric:lining-nums; white-space:nowrap}
 #tabs{position:fixed; left:0; right:0; bottom:0; background:var(--paper); border-top:1px solid var(--hair); display:flex; justify-content:space-around; align-items:center; padding:11px 12px calc(11px + env(safe-area-inset-bottom)); z-index:40}
-#tabs button{font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; font-weight:600; color:var(--soft); padding:2px 2px 6px; position:relative}
+#tabs button{font-size:10px; letter-spacing:.13em; text-transform:uppercase; font-weight:600; color:var(--soft); padding:2px 2px 6px; position:relative}
 #tabs button.on{color:var(--ink)}
 #tabs button.on:not(.chef)::after{content:''; position:absolute; left:50%; bottom:0; width:4px; height:4px; border-radius:50%; background:var(--ox); transform:translateX(-50%)}
 #tabs .chef{width:48px; height:48px; border:1px solid var(--ink); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--ink); margin-top:-20px; padding:0; background:var(--paper); flex:none}
@@ -224,6 +224,7 @@ input,textarea{font:inherit; border-radius:0}
       <path d="M6.2 13.2V19.4c0 .55.45 1 1 1h9.6c.55 0 1-.45 1-1v-6.2"></path>
       <path d="M9.4 13.4v3.1M12 13.4v3.1M14.6 13.4v3.1"></path></svg>
   </button>
+  <button data-tab="fz">Freezer</button>
   <button data-tab="prep">Prep</button>
   <button data-tab="shopping">Shop</button>
 </nav>
@@ -448,7 +449,9 @@ function viewChat(){
 function renderChat(){if(tab!=='chef')return;$('#view').innerHTML=viewChat();
   const w=$('#chatWrap');if(w)window.scrollTo(0,document.body.scrollHeight);}
 function render(){
-  $('#view').innerHTML = tab==='week'?viewWeek():tab==='library'?viewLibrary():tab==='prep'?viewPrep():tab==='chef'?viewChat():viewShopping();
+  $('#view').innerHTML = tab==='week'?viewWeek():tab==='library'?viewLibrary():tab==='fz'?viewFreezer():tab==='prep'?viewPrep():tab==='chef'?viewChat():viewShopping();
+  const fzb=document.querySelector('#tabs button[data-tab="fz"]');
+  if(fzb) fzb.hidden=!freezerLive();
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
   $('#chatbar').hidden = tab!=='chef';
   if(tab==='library'){const q=$('#q');q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList();});}
@@ -594,7 +597,7 @@ document.body.addEventListener('click',e=>{
       target_p:+$('#su_p').value||80,target_f:+$('#su_f').value||40,target_c:+$('#su_c').value||120,
       jess_extra:+$('#su_j').value||28,batch_scale:+$('#su_b').value||2};lsSet(K.setup,n);}
     $('#sheet').classList.remove('open');render();return;}
-  const t=e.target.closest('[data-open],[data-swap],[data-swapdish],[data-swapx],[data-prep],[data-shop],[data-sheet],[data-chip],[data-sec],[data-regen]');
+  const t=e.target.closest('[data-open],[data-swap],[data-swapdish],[data-swapx],[data-prep],[data-fz],[data-shop],[data-sheet],[data-chip],[data-sec],[data-regen]');
   if(!t)return;
   if(t.dataset.open){openRecipe(t.dataset.open);return;}
   if(t.dataset.sec){filt.sec=t.dataset.sec;window.scrollTo(0,0);renderLibList();return;}
@@ -602,6 +605,7 @@ document.body.addEventListener('click',e=>{
   if(t.dataset.swapdish){openDishSwap(t.dataset.swapdish);return;}
   if(t.dataset.swapx!==undefined){swapTransform();return;}
   if(t.dataset.prep!==undefined){const d=lsGet(K.prep(PLAN.week),{});d[t.dataset.prep]=!d[t.dataset.prep];lsSet(K.prep(PLAN.week),d);t.classList.toggle('on');return;}
+  if(t.dataset.fz!==undefined){const d=lsGet('mp.freezer',{});d[t.dataset.fz]=!d[t.dataset.fz];lsSet('mp.freezer',d);t.classList.toggle('on');render();return;}
   if(t.dataset.shop!==undefined){const d=lsGet(K.shop(PLAN.week),{});d[t.dataset.shop]=!d[t.dataset.shop];lsSet(K.shop(PLAN.week),d);t.classList.toggle('on');return;}
   if(t.dataset.regen!==undefined){openMenu();setTimeout(renderRegen,0);return;}
   if(t.dataset.sheet==='menu'){openMenu();return;}
@@ -637,6 +641,74 @@ function fire(){const v=chatIn.value;if(!v.trim())return;chatIn.value='';grow();
   render();
   if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 })();
+
+
+/* ===================== POSTPARTUM FREEZER BANK =====================
+   TEMPORARY SECTION — DELETE ON 1 JANUARY 2027.
+   Remove: FREEZER_EXPIRY, FREEZER, viewFreezer(), the [data-fz] handler,
+   the 'fz' branch in render(), and the Freezer button in #tabs.
+   The tab hides itself automatically after the expiry date, so a missed
+   cleanup degrades quietly rather than leaving a stale section on screen. */
+const FREEZER_EXPIRY = new Date('2027-01-01T00:00:00');
+const freezerLive = () => new Date() < FREEZER_EXPIRY;
+const FREEZER = [
+  ['Meals', 'Big pot, portioned, frozen flat. Most are better reheated anyway.', [
+    ["Shepherd's pie",'freeze unbaked in foil trays'],
+    ['The best chili ever',''],
+    ['Chipotle beef tacos','filling only'],
+    ['Beef bourguignon','stock + red wine vinegar, no wine'],
+    ['Chicken cacciatore',''],
+    ['Homestyle chicken curry',''],
+    ['Tarka dal','highest volume — the daily driver'],
+    ['Miyeok-guk','iodine — the single highest-value item here'],
+    ['Creole jambalaya','leave the shrimp out, add fresh on reheat'],
+    ['Chicken biryani','laborious, so good freezer value'],
+    ['Bolognese',''],
+    ['Spinach & ricotta rotolo','freeze unbaked'],
+    ['Coriander chutney','ice cube tray'],
+  ]],
+  ['Hand pies', 'Filling thick to the point of paste, cold, diced small, no free liquid.', [
+    ['Chicken pot pie','chicken, leek, mushroom, bacon, cream sauce'],
+    ['Potato, cheese & onion','potato, mature cheddar, onion'],
+    ['Spinach, feta & dill','spinach, feta, dill, spring onion'],
+    ['Chorizo & potato','chorizo, potato, onion, egg'],
+    ['Butter chicken','chicken, tomato, cream, garam masala'],
+    ['Mexican chicken','chicken, cheddar, jalapeño, tomato'],
+    ['Chicken curry bake','chicken, curry sauce, potato, peas'],
+  ]],
+  ['Egg bites', '', [
+    ['Bacon & gruyère',''],['Spinach & feta',''],['Chorizo & manchego',''],
+    ['Mushroom & thyme',''],['Red pepper & cheddar',''],['Broccoli & cheddar',''],
+  ]],
+  ['Breakfast burritos', '', [
+    ['Chorizo, potato & egg',''],['Bacon, egg & cheddar',''],['Black bean & sweet potato',''],
+    ['Green chile & cheese',''],['Masala scramble',''],
+  ]],
+  ['Undecided', 'Raised but never confirmed — decide or drop.', [
+    ['Carnitas','shreds into tacos, bowls, eggs; freezes better than almost anything'],
+    ['Chicken tinga','same deployment logic, lighter than the beef'],
+    ['Enchiladas','freeze unbaked'],
+    ['Japanese curry sauce','freeze the sauce, fry a cutlet whenever'],
+  ]],
+];
+function viewFreezer(){
+  const done=lsGet('mp.freezer',{});
+  const all=FREEZER.filter(s=>s[0]!=='Undecided').reduce((n,s)=>n+s[2].length,0);
+  const hit=FREEZER.filter(s=>s[0]!=='Undecided')
+    .reduce((n,s)=>n+s[2].filter(x=>done[s[0]+'|'+x[0]]).length,0);
+  const wk=Math.max(0,Math.ceil((new Date('2026-09-01')-new Date())/6048e5));
+  let h=`<div class="mast"><div class="wk">Freezer</div><div class="sub">${hit}/${all} banked · ${wk} week${wk===1?'':'s'} to Sept 1</div><button class="dots" data-sheet="menu">···</button></div>`;
+  for(const [title,blurb,items] of FREEZER){
+    h+=`<div class="section"><span class="label">${esc(title)}</span>`;
+    if(blurb) h+=`<div class="empty" style="margin:-2px 0 6px">${esc(blurb)}</div>`;
+    h+=items.map(([name,note])=>{
+      const k=title+'|'+name;
+      return `<button class="check-row ${done[k]?'on':''}" data-fz="${esc(k)}"><span class="ck"></span><span class="t">${esc(name)}${note?` <span class="sk">— ${esc(note)}</span>`:''}</span></button>`;
+    }).join('')+'</div>';
+  }
+  h+=`<div class="section"><span class="label">Housekeeping</span><div class="empty">Temporary section — delete after 1 January 2027. It hides itself on that date.</div></div>`;
+  return h;
+}
 
 /* ================= inline ingredient amounts in steps ================= */
 /* Detects dry goods & spices named in a direction step and injects the
