@@ -5750,11 +5750,13 @@
   "under30": false,
   "batchable": false,
   "batch": false,
-  "favourite": false,
+  "favourite": true,
   "avoid": false,
-  "rating": 0,
+  "rating": 5,
   "tags": [
-   "Untested"
+   "Asian",
+   "Dinner Party",
+   "Favourites"
   ],
   "macros": {
    "p": 46,
@@ -5798,7 +5800,8 @@
    "PREGNANCY: the original calls for 2 tbsp mirin, swapped here for rice vinegar. The orange juice covers the sweetness mirin would have added. Cook the ribs fully through — thin flanken cut gets there in 2–3 minutes a side regardless.",
    "No grill needed. Cast iron over medium-high beats the broiler for crust; the broiler is easier for cooking all 3 lb at once.",
    "Fat-heavy for a macro night: roughly 46P/44F/19C per serving before sides. Adding rice pushes carbs to target but fat still overshoots — treat this as a flexible day rather than one of the clean two.",
-   "Ssamjang, kimchi and a quick cucumber salad (smashed cucumber, rice vinegar, sesame oil, gochugaru) are the standard spread. Commercially produced refrigerated kimchi is fine during pregnancy."
+   "Ssamjang, kimchi and a quick cucumber salad (smashed cucumber, rice vinegar, sesame oil, gochugaru) are the standard spread. Commercially produced refrigerated kimchi is fine during pregnancy.",
+   "Vik's verdict: absolute favourite. The orange juice version is the house standard — don't revert to water."
   ]
  },
  {
