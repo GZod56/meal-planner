@@ -1053,7 +1053,7 @@
   },
   "source": {
    "url": "https://www.instagram.com/karancooks/reel/C2W0jUhIpor/",
-   "name": "Karan Cooks"
+   "name": "IG"
   },
   "image": null,
   "ingredients": [
@@ -2854,13 +2854,13 @@
    "Sauces"
   ],
   "time": {
-   "prep": "10 mins",
+   "prep": "15 mins",
    "cook": null,
-   "total": "10 min"
+   "total": "15 min"
   },
   "serves": {
-   "text": "Serves: 1",
-   "n": 1
+   "text": "Makes about 1½ cups",
+   "n": 10
   },
   "source": {
    "url": null,
@@ -2868,30 +2868,42 @@
   },
   "image": null,
   "ingredients": [
-   "1 cup flat-leaf parsley, finely chopped",
-   "2 tablespoons fresh oregano, chopped (or 2 teaspoons dried)",
+   "1½ cups flat-leaf parsley, finely chopped",
+   "1 tbsp dried oregano (or 2 tbsp fresh, chopped)",
+   "2 tsp red pepper flakes",
+   "2 tbsp hot water",
    "4 cloves garlic, very finely minced",
-   "1 small shallot, finely minced",
-   "1 teaspoon red pepper flakes",
-   "3 tablespoons red wine vinegar",
-   "1/2 cup extra-virgin olive oil",
-   "1 teaspoon kosher salt",
+   "1 small shallot, finely diced",
+   "2 Fresno peppers, finely diced",
+   "¼ cup red wine vinegar",
+   "1 tsp kosher salt, plus more to taste",
+   "¾ cup extra-virgin olive oil",
    "Black pepper"
   ],
   "directions": [
-   "Put the shallot, garlic, vinegar and salt in a bowl and leave 10 minutes. The acid takes the raw edge off the alliums — do not skip this.",
-   "Stir in the parsley, oregano and chili flakes.",
+   "Put the dried oregano and red pepper flakes in a jar with the hot water and leave 5 minutes to steep.",
+   "In a separate bowl, combine the garlic, shallot, Fresnos, vinegar and salt. Leave 10 minutes — the acid takes the raw edge off the alliums. Do not skip this.",
+   "Stir in the parsley and the steeped oregano mixture, water and all.",
    "Pour in the olive oil and stir. Do not blend it — chimichurri is chopped, not emulsified, and a blender turns it into bitter green sludge.",
-   "Rest at least 20 minutes before serving. Better after two hours."
+   "Taste and salt harder than feels right; there is a lot of oil to carry. Rest at least 20 minutes before serving, better after two hours."
   ],
   "notes": [
+   "Two steps do the work here and both are easy to skip. Steeping the dried oregano and chilli flakes in hot water rehydrates them and pulls out flavour the oil alone won't reach. Macerating the alliums in vinegar and salt first kills the raw garlic burn.",
    "Chop by hand. This is the whole difference between good chimichurri and the food-processor version.",
+   "Fresnos are a real upgrade on chilli flakes alone: fruity heat plus flecks of red. Deseed them if you want it milder.",
+   "Oil to vinegar sits at 3:1. If it ever reads flat, push the vinegar up rather than adding more salt.",
    "Keeps a week in the fridge under a film of oil. The colour dulls after day two; the flavour improves.",
-   "Beyond steak: spoon over roast chicken, grilled fish, blistered green beans, or a fried egg. Excellent as the 'sharp thing' on a Bed Method build.",
-   "Pregnancy-safe as written — vinegar, not wine."
+   "Beyond steak: spoon over roast chicken, grilled fish, blistered green beans, or a fried egg. Excellent as the sharp thing on a Bed Method build.",
+   "Pregnancy-safe as written — red wine vinegar, not wine. Wash the parsley well."
   ],
-  "macros": null,
-  "minutes": 10,
+  "macros": {
+   "p": 0,
+   "f": 13,
+   "c": 1,
+   "kcal": 125,
+   "per": "2 tbsp"
+  },
+  "minutes": 15,
   "id": "chimichurri",
   "protein": "Veg",
   "archetype": "side",
@@ -4388,7 +4400,7 @@
   },
   "source": {
    "url": "https://www.instagram.com/karancooks/reel/DDC1gNBt8ro/",
-   "name": "Karan Cooks"
+   "name": "IG"
   },
   "image": null,
   "ingredients": [
@@ -5299,7 +5311,7 @@
   },
   "source": {
    "url": "https://www.instagram.com/karancooks/reel/DAY2NBqIoIj/",
-   "name": "Karan Cooks"
+   "name": "IG"
   },
   "image": null,
   "ingredients": [
@@ -9433,8 +9445,8 @@
    "n": 4
   },
   "source": {
-   "url": null,
-   "name": null
+   "url": "https://barefeetinthekitchen.com/homemade-ranch-salad-dressing/",
+   "name": "barefeetinthekitchen.com"
   },
   "image": null,
   "ingredients": [
@@ -9451,7 +9463,11 @@
   "directions": [
    "Whisk Mayo, sour cream and buttermilkAdd seasoningsAdd lemon juice"
   ],
-  "notes": [],
+  "notes": [
+   "Our version is the Barefeet ratios doubled, with fresh herbs and MSG in place of dried. Original is 1/2 cup each mayo/sour cream/buttermilk with 3/4 tsp dried dill, 1/2 tsp each dried parsley and chives.",
+   "White vinegar swaps 1:1 for the lemon juice.",
+   "For a thicker dip rather than a pourable dressing, cut the buttermilk by a third."
+  ],
   "macros": null,
   "time_estimated": true,
   "minutes": 33,
@@ -10129,6 +10145,7 @@
   "name": "Salt and Pepper Mushrooms",
   "rating": 4,
   "tags": [
+   "Sides",
    "Sunday Treats"
   ],
   "time": {
@@ -10142,7 +10159,7 @@
   },
   "source": {
    "url": "https://www.instagram.com/p/C6DYzBOvVPX/",
-   "name": "instagram.com"
+   "name": "IG"
   },
   "image": null,
   "ingredients": [
@@ -10167,15 +10184,15 @@
   "minutes": 37,
   "id": "salt-and-pepper-mushrooms",
   "protein": "Veg",
-  "archetype": "protein",
+  "archetype": "side",
   "under30": false,
   "batch": false,
   "favourite": false,
   "avoid": false,
   "cuisine": "chinese",
   "batchable": false,
-  "isMain": true,
-  "section": "main"
+  "isMain": false,
+  "section": "side"
  },
  {
   "name": "Salt And Pepper Ribs",
@@ -11246,6 +11263,7 @@
    "Asian",
    "Favourites",
    "Jessica",
+   "Sides",
    "Veggie"
   ],
   "time": {
@@ -11298,15 +11316,15 @@
   "minutes": 35,
   "id": "smashed-cucumber-salad",
   "protein": "Veg",
-  "archetype": "salad",
+  "archetype": "side",
   "under30": false,
   "batch": false,
   "favourite": true,
   "avoid": false,
   "cuisine": "other",
   "batchable": false,
-  "isMain": true,
-  "section": "main"
+  "isMain": false,
+  "section": "side"
  },
  {
   "name": "Sole Meunière",
@@ -13278,5 +13296,1058 @@
   "batchable": true,
   "isMain": false,
   "section": "main"
+ },
+ {
+  "name": "Easy Greek-Style Lemon Potatoes",
+  "rating": 0,
+  "tags": [
+   "Sides",
+   "Untested",
+   "Veg Sides",
+   "Veggie"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "60 mins",
+   "total": "1 hr 10 min"
+  },
+  "serves": {
+   "text": "Serves 4 as a side",
+   "n": 4
+  },
+  "source": {
+   "url": null,
+   "name": "Taverna standard / house version"
+  },
+  "image": null,
+  "ingredients": [
+   "2 lb Yukon Gold or russet potatoes, peeled, cut into thick wedges",
+   "⅓ cup olive oil",
+   "⅔ cup chicken or vegetable stock",
+   "⅓ cup lemon juice (from 2–3 lemons), divided",
+   "Zest of 1 lemon",
+   "5–6 garlic cloves, smashed",
+   "1 tbsp dried oregano",
+   "1 tbsp kosher salt",
+   "Black pepper",
+   "1 tsp Dijon or yellow mustard (optional, helps the pan juices emulsify)",
+   "Flaky salt and chopped parsley or fresh oregano, to finish"
+  ],
+  "directions": [
+   "Oven to 425°F. Put the wedges in a roasting pan or 9x13 dish in one layer, not crowded.",
+   "Combine the oil, stock, half the lemon juice, zest, garlic, oregano, salt, pepper and mustard. Pour over and toss with your hands.",
+   "Roast 40 minutes, turning once at the halfway point. The potatoes should be tender and drinking the liquid.",
+   "Add the remaining lemon juice, raise the oven to 450°F and roast 15–20 minutes more, until the liquid has cooked down to oil and the edges are browned and crisp.",
+   "Rest 5 minutes, then spoon the pan juices back over. Finish with flaky salt and herbs."
+  ],
+  "notes": [
+   "Two things separate these from ordinary roast potatoes: the stock goes in at the start so the potatoes absorb flavour all the way through, and half the lemon is held back until the last 20 minutes so it still tastes of lemon rather than steaming away.",
+   "Use starchy potatoes, not waxy — they absorb the braising liquid far better.",
+   "Leftovers re-crisp beautifully in the air fryer at 400°F for 5–6 minutes.",
+   "Pregnancy: fine as written.",
+   "Goes with roast chicken, lamb chops, souvlaki, or the Dirty Meunière cod."
+  ],
+  "macros": {
+   "p": 4,
+   "f": 18,
+   "c": 40,
+   "kcal": 340,
+   "per": "serving"
+  },
+  "minutes": 70,
+  "id": "greek-lemon-potatoes",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": false,
+  "isMain": false,
+  "section": "side"
+ },
+ {
+  "name": "Cod with Pan Sauce: Dirty Meunière",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Fish",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "15 mins",
+   "total": "25 min"
+  },
+  "serves": {
+   "text": "Serves 2",
+   "n": 2
+  },
+  "source": {
+   "url": "https://www.tiktok.com/@eatlikeanadult/video/7500142132263521558",
+   "name": "Eat Like an Adult (@eatlikeanadult)"
+  },
+  "image": null,
+  "ingredients": [
+   "2 thick cod loin portions, about 6 oz each",
+   "Salt",
+   "1 tbsp neutral oil",
+   "3 tbsp butter",
+   "3 anchovy fillets, chopped",
+   "1 tbsp capers, plus 1 tbsp of their brine",
+   "1 garlic clove, minced",
+   "4–6 lemon segments, pith and membrane removed",
+   "2 tsp lemon juice",
+   "2 tbsp chopped parsley",
+   "Black pepper"
+  ],
+  "directions": [
+   "Salt the cod 15 minutes ahead, then blot it thoroughly dry. Wet fish will not colour.",
+   "Oil in the pan over medium heat. Lay the fish presentation-side down and leave it alone. It will stick at first and release once it has browned.",
+   "Once it has real colour, 4–5 minutes, turn it and give it another minute or two, basting with half the butter.",
+   "Lift the fish out onto a warm plate. Add the remaining butter and let it brown.",
+   "Add the anchovies, capers, caper brine, garlic, lemon segments and lemon juice. Cook about a minute, crushing the anchovies so they melt into the butter.",
+   "Add the parsley, another 30 seconds, then grind in pepper. It will not need salt.",
+   "Spoon over the fish and serve immediately."
+  ],
+  "notes": [
+   "The original is done with skin-on sea bass. Cod loin is thicker and flakier, so run the heat slightly higher and give the first side longer; handle it with two spatulas.",
+   "The 'dirty' is the anchovy and caper brine — they dissolve into the brown butter and give it a savoury, murky depth a classic meunière doesn't have.",
+   "Lemon segments rather than juice alone: they hold their shape and burst as you eat.",
+   "Pregnancy: cod is low mercury. Cook to opaque and flaking throughout, around 145°F.",
+   "Serve with Greek lemon potatoes or crushed new potatoes, plus wilted spinach or blistered green beans."
+  ],
+  "macros": {
+   "p": 45,
+   "f": 26,
+   "c": 3,
+   "kcal": 430,
+   "per": "serving"
+  },
+  "minutes": 25,
+  "id": "cod-dirty-meuniere",
+  "protein": "Fish",
+  "archetype": "protein",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "french",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Hot Honey Ranch",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Sauces"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": null,
+   "total": "5 min"
+  },
+  "serves": {
+   "text": "Makes about ¾ cup",
+   "n": 6
+  },
+  "source": {
+   "url": "https://www.instagram.com/meatlicious/",
+   "name": "IG"
+  },
+  "image": null,
+  "ingredients": [
+   "3 tbsp mayonnaise",
+   "3 tbsp sour cream",
+   "2 tbsp hot honey",
+   "1 tbsp chili oil (the oil only, not the sediment)",
+   "1–2 tbsp hot sauce",
+   "1–2 tbsp ranch seasoning",
+   "2–3 tsp finely chopped fresh dill",
+   "1 tsp garlic powder",
+   "Juice of ½ lemon",
+   "Salt, to taste"
+  ],
+  "directions": [
+   "Whisk the mayonnaise, sour cream, hot honey, chili oil and hot sauce until smooth.",
+   "Stir in the ranch seasoning, garlic powder, dill, lemon juice and salt.",
+   "Taste and adjust — more honey for sweetness, more hot sauce for heat, more lemon for lift.",
+   "Chill at least 30 minutes before serving."
+  ],
+  "notes": [
+   "This is the creator's revised version. His original viral one is sour-cream-only and much sweeter: 1 cup sour cream, ⅔ cup hot honey, 2 tbsp garlic chili oil, 4 tbsp ranch seasoning, 4 tbsp dill, 2 tsp chilli flakes. The mayo/sour cream split here is better balanced.",
+   "Noticeably better on day two. Keeps about a week.",
+   "Pregnancy: fine — commercial mayo and sour cream are pasteurised.",
+   "Pairs with the oyster mushroom wings, the air fryer popcorn chicken, roast potatoes, and as a burger sauce."
+  ],
+  "macros": {
+   "p": 1,
+   "f": 11,
+   "c": 8,
+   "kcal": 130,
+   "per": "2 tbsp"
+  },
+  "minutes": 5,
+  "id": "hot-honey-ranch",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "american",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
+  "name": "Chick-fil-A Honey Mustard",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Sauces"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": null,
+   "total": "5 min"
+  },
+  "serves": {
+   "text": "Makes about 2 cups",
+   "n": 16
+  },
+  "source": {
+   "url": "https://www.instagram.com/meatlicious/",
+   "name": "IG"
+  },
+  "image": null,
+  "ingredients": [
+   "1 cup mayonnaise",
+   "4 tbsp honey",
+   "2 tbsp yellow mustard",
+   "4 tsp Dijon mustard",
+   "6 tbsp brown sugar",
+   "4 tsp lemon juice"
+  ],
+  "directions": [
+   "Put everything in a jar and mix thoroughly until completely smooth and the sugar has dissolved.",
+   "Chill before serving. It is noticeably better made a day ahead."
+  ],
+  "notes": [
+   "Start with half the brown sugar. Six tablespoons on top of four of honey is very sweet even by copycat standards — you can always stir more in, and the Dijon and lemon are what stop it tasting like a dessert.",
+   "Halve the whole thing unless you are feeding a crowd; two cups is a lot of dipping sauce.",
+   "For the darker, smokier restaurant 'Chick-fil-A Sauce' rather than the honey mustard, whisk 2 tbsp of tomato-based BBQ sauce into a half batch.",
+   "Pregnancy: fine — commercial mayonnaise is pasteurised.",
+   "Built for the CFA-style popcorn chicken."
+  ],
+  "macros": {
+   "p": 0,
+   "f": 11,
+   "c": 9,
+   "kcal": 135,
+   "per": "2 tbsp"
+  },
+  "minutes": 5,
+  "id": "chick-fil-a-honey-mustard",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "american",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
+  "name": "Loaded Masala Beans on Toast",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Weeknights",
+   "Lunches",
+   "Indian",
+   "Veggie"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "20 mins",
+   "total": "30 min"
+  },
+  "serves": {
+   "text": "Serves 2",
+   "n": 2
+  },
+  "source": {
+   "url": "https://www.mob.co.uk/recipes/loaded-masala-beans-eggs-on-toast",
+   "name": "Karan Gokani (@karancooks) via Mob"
+  },
+  "image": null,
+  "ingredients": [
+   "1 onion, finely chopped",
+   "1–2 green chillies, finely chopped",
+   "2 tbsp neutral oil",
+   "1 tsp black mustard seeds",
+   "1 tbsp garlic paste",
+   "1 tbsp ginger paste",
+   "10–12 curry leaves",
+   "2 tsp Madras curry powder",
+   "1 tsp ground coriander",
+   "½ tsp ground turmeric",
+   "1 tsp Kashmiri chilli powder",
+   "½ tsp salt",
+   "2 x 400g tins baked beans",
+   "4 thick slices sourdough",
+   "Butter, generously",
+   "3 oz sharp cheddar, grated",
+   "4 eggs",
+   "TARKA: 2 tbsp butter, 1 tsp mustard seeds, 8 curry leaves finely chopped, ½ tsp Kashmiri chilli powder",
+   "TO SERVE: fresh coriander, sliced green chilli"
+  ],
+  "directions": [
+   "Oil over medium heat, mustard seeds in until they crackle. Add the onion and cook until soft and translucent.",
+   "Garlic paste, ginger paste, curry leaves and green chilli. Two or three minutes until fragrant.",
+   "Stir in the curry powder, ground coriander, turmeric, chilli powder and salt. Cook one to two minutes to bloom the spices.",
+   "Tip in the beans, stir to combine and simmer 5–7 minutes. Adjust seasoning.",
+   "Meanwhile toast the sourdough, butter it heavily and pile the grated cheddar on top so it melts.",
+   "Fry the eggs in butter, covered, until the whites are fully set and the yolks are cooked through.",
+   "For the tarka: melt the butter, crackle the mustard seeds, add the chopped curry leaves and chilli powder, a few seconds until fragrant, then off the heat.",
+   "Build: cheesy toast, a heavy spoonful of beans, an egg on top, tarka drizzled over, coriander and green chilli to finish."
+  ],
+  "notes": [
+   "Mob paywalls the quantities — these are calibrated for two generous portions. Adjust freely.",
+   "US tinned baked beans (Bush's and similar) are molasses-sweet and will fight the spices. Use British-style Heinz beans if you can find them, or build your own base: a tin of drained haricot or cannellini beans plus half a tin of passata and a pinch of sugar.",
+   "Pregnancy: this is the one thing to change. Karan serves the eggs sunny-side up and runny — fry them covered until the yolk is set through, or poach hard. The cheddar is pasteurised and fine.",
+   "A commenter on the original flags the cheese quantity as heavy and the dish as very rich. Scale the cheddar back if you want it lighter; the tarka is doing most of the work.",
+   "To push the protein up: fold a tin of chickpeas into the beans, or serve two eggs a head."
+  ],
+  "macros": {
+   "p": 34,
+   "f": 36,
+   "c": 82,
+   "kcal": 830,
+   "per": "serving"
+  },
+  "minutes": 30,
+  "id": "loaded-masala-beans",
+  "protein": "Eggs",
+  "archetype": "complete",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "indian",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Crispy Oyster Mushroom Wings",
+  "rating": 0,
+  "tags": [
+   "Sides",
+   "Untested",
+   "Veg Sides",
+   "Veggie"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": "25 mins",
+   "total": "40 min"
+  },
+  "serves": {
+   "text": "Serves 2–3 as a side or snack",
+   "n": 3
+  },
+  "source": {
+   "url": "https://www.instagram.com/alfiecooks/",
+   "name": "IG"
+  },
+  "image": null,
+  "ingredients": [
+   "14 oz oyster mushrooms, torn into wing-sized clusters",
+   "⅔ cup milk (dairy or plant)",
+   "1 tbsp lemon juice or vinegar",
+   "¾ cup plain flour",
+   "⅓ cup cornflour/cornstarch",
+   "1 tsp garlic powder",
+   "1 tsp onion powder",
+   "1 tsp smoked paprika",
+   "½ tsp baking powder",
+   "1 tsp salt",
+   "½ tsp black pepper",
+   "Neutral oil for shallow frying, or spray oil for the air fryer",
+   "BUFFALO TOSS: ¼ cup hot sauce (Frank's), 3 tbsp melted butter, 1 tsp honey"
+  ],
+  "directions": [
+   "Do not wash the mushrooms — wipe them with a damp cloth. Tear into clusters, keeping the stem base intact so each piece holds together.",
+   "Stir the lemon juice into the milk and leave 5 minutes to thicken.",
+   "Whisk the flour, cornflour, garlic powder, onion powder, paprika, baking powder, salt and pepper.",
+   "Dip each cluster in the milk, then press firmly into the dry mix. For a craggier crust, go back through the milk and dredge a second time.",
+   "Rest the coated pieces 5 minutes so the flour hydrates and stops shedding.",
+   "Shallow fry in 1 inch of oil at 350°F, 3–4 minutes a side, or air fry at 390°F for 12–14 minutes, flipping and spraying halfway.",
+   "Warm the hot sauce, butter and honey together. Toss the wings in it at the last possible second and serve immediately."
+  ],
+  "notes": [
+   "Reconstructed from the reel — paste the caption in if you want it exact and I'll correct the entry.",
+   "Wet mushrooms are the failure mode. Any surface water turns the coating to paste.",
+   "Toss in sauce immediately before serving. They go soft within a few minutes of being sauced.",
+   "Air fryer is the right call in this kitchen — no pot of oil, and re-crisps leftovers at 390°F for 4 minutes.",
+   "Same chassis as the popcorn chicken entries: swap the buffalo toss for a salt-and-pepper finish (fried chilli, spring onion, white pepper) or a Chicken 65 tempering.",
+   "Serve with the hot honey ranch. Pregnancy: fine as written."
+  ],
+  "macros": {
+   "p": 8,
+   "f": 22,
+   "c": 35,
+   "kcal": 370,
+   "per": "serving"
+  },
+  "minutes": 40,
+  "id": "crispy-oyster-mushroom-wings",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "american",
+  "batchable": false,
+  "isMain": false,
+  "section": "side"
+ },
+ {
+  "name": "Beurre Monté",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Sauces"
+  ],
+  "time": {
+   "prep": "2 mins",
+   "cook": "8 mins",
+   "total": "10 min"
+  },
+  "serves": {
+   "text": "Makes about 1 cup",
+   "n": 8
+  },
+  "source": {
+   "url": null,
+   "name": "Classic technique"
+  },
+  "image": null,
+  "ingredients": [
+   "2 tbsp water",
+   "8 oz (2 sticks) cold unsalted butter, cut into ½ inch cubes",
+   "Salt"
+  ],
+  "directions": [
+   "Bring the water to a simmer in a small saucepan, then drop the heat to low.",
+   "Whisk in the butter two or three cubes at a time, waiting for each addition to disappear before adding the next.",
+   "Keep the pan between 160°F and 190°F throughout. Never let it boil.",
+   "Season lightly. Hold warm until needed."
+  ],
+  "notes": [
+   "This is an emulsion, not melted butter. The small amount of water suspends the milk solids and butterfat together, which is why it stays glossy and creamy instead of splitting into oil and sludge.",
+   "Temperature is the whole game: above about 190°F it breaks, below 130°F it sets solid. A low burner and a thermometer, or the sous vide bath at 175°F.",
+   "If it breaks, start again with a fresh splash of simmering water and whisk the broken sauce back in slowly, like rebuilding a mayonnaise.",
+   "Ratio is roughly 1 part water to 8–10 parts butter. Scale down freely — 1 tbsp water to one stick.",
+   "Uses: poaching shrimp, scallops or lobster; holding sous vide proteins warm and glossy after the bag; basting a steak or a chicken breast in the last minutes; finishing vegetables; gently reheating already-cooked fish without overcooking it.",
+   "Turn it into a pan sauce by whisking in lemon, capers, herbs, or a spoon of the roasting juices at the end.",
+   "Pregnancy: fine — all US supermarket butter is pasteurised."
+  ],
+  "macros": {
+   "p": 0,
+   "f": 23,
+   "c": 0,
+   "kcal": 205,
+   "per": "2 tbsp"
+  },
+  "minutes": 10,
+  "id": "beurre-monte",
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "french",
+  "batchable": false,
+  "isMain": false,
+  "section": "sauce"
+ },
+ {
+  "section": "main",
+  "rating": 0,
+  "tags": [
+   "Asian",
+   "Untested",
+   "Weeknights"
+  ],
+  "source": {
+   "url": null,
+   "name": "House"
+  },
+  "time": {
+   "prep": "25 mins",
+   "cook": "13 mins",
+   "total": "40 min"
+  },
+  "minutes": 40,
+  "serves": {
+   "text": "4",
+   "n": 4
+  },
+  "macros": {
+   "p": 45,
+   "f": 30,
+   "c": 20,
+   "kcal": 530,
+   "per": "serving"
+  },
+  "ingredients": [
+   "2 lb boneless skinless chicken thighs, cut into 1 to 1.25 inch cubes",
+   "MARINADE:",
+   "2 tbsp light soy sauce",
+   "1 egg white",
+   "1 tsp white pepper",
+   "1 tsp grated ginger",
+   "COATING:",
+   "3/4 cup cornflour/cornstarch",
+   "3 tbsp plain flour",
+   "1 tsp Chinese five spice",
+   "1 tsp baking powder",
+   "3 tbsp neutral oil, for tossing",
+   "AROMATICS:",
+   "1 red onion, thinly sliced",
+   "1 green pepper, sliced",
+   "2 red chillies, sliced",
+   "4 garlic cloves, roughly chopped",
+   "4 spring onions, sliced",
+   "1 tbsp neutral oil",
+   "SEASONING MIX:",
+   "1 tsp fine sea salt",
+   "1 tsp white pepper",
+   "1 tsp Chinese five spice",
+   "1/2 tsp crushed Sichuan peppercorn",
+   "1/2 tsp sugar",
+   "1/4 tsp MSG"
+  ],
+  "directions": [
+   "Marinate the thigh cubes 20 minutes. Scrape excess marinade off before coating — wet marinade trapped under dry starch turns gummy in convection heat.",
+   "Whisk the coating ingredients. Toss chicken to coat, pressing the starch on. Rest 10 minutes on a rack so the starch hydrates. Dry flour patches are the main failure mode of air-fried chicken; this step is not optional.",
+   "Toss the coated pieces in a bowl with 3 tbsp oil. Tossing beats spraying — spray always misses spots.",
+   "Air fry 400F, single layer with gaps, 11-13 minutes, shaking at 6. Work in batches rather than crowding.",
+   "Toss the aromatics with 1 tbsp oil and a pinch of salt, spread thin on a tray, and roast them for the last 5 minutes alongside. This mimics wok-fried aromatics without the oil.",
+   "Combine the hot chicken, hot aromatics and spring onions in a large dry bowl. Sprinkle the seasoning mix over and toss. Serve immediately."
+  ],
+  "notes": [
+   "Chassis shared with Chicken 65 — same fry base, different marinade and post-fry toss. One session can split two ways.",
+   "Thigh only. Breast dries out over 12 minutes at 400F.",
+   "Seasoning mix is lifted from the Salt and Pepper Ribs entry."
+  ],
+  "image": null,
+  "protein": "Chicken",
+  "cuisine": "chinese",
+  "archetype": "protein",
+  "isMain": true,
+  "batch": false,
+  "batchable": false,
+  "under30": false,
+  "favourite": false,
+  "avoid": false,
+  "id": "salt-and-pepper-chicken-nuggets",
+  "name": "Salt and Pepper Air Fryer Chicken Nuggets"
+ },
+ {
+  "section": "baking",
+  "rating": 0,
+  "tags": [
+   "Baking",
+   "Untested"
+  ],
+  "source": {
+   "url": "https://www.ricardocuisine.com/en/recipes/7866-lemon-poppy-seed-loaf-the-best",
+   "name": "ricardocuisine.com"
+  },
+  "time": {
+   "prep": "25 min",
+   "cook": "1 h",
+   "total": "1 h 25 min"
+  },
+  "minutes": 85,
+  "serves": {
+   "text": "10 servings",
+   "n": 10
+  },
+  "macros": null,
+  "ingredients": [
+   "LOAF:",
+   "1 3/4 cups (265 g) all-purpose flour",
+   "1 tbsp poppy seeds",
+   "2 tsp baking powder",
+   "1/2 cup (115 g) unsalted butter, softened",
+   "1 1/4 cups (265 g) sugar",
+   "Zest of 3 lemons, finely grated",
+   "3 eggs",
+   "1/2 cup (125 ml) lemon juice",
+   "1/4 cup (60 ml) milk",
+   "GLAZE:",
+   "1 cup (130 g) icing sugar",
+   "2 tbsp (30 ml) lemon juice"
+  ],
+  "directions": [
+   "Oven to 350F, rack in the middle. Butter a 4x10 inch loaf pan and line with parchment, leaving an overhang on two sides.",
+   "Whisk flour, poppy seeds and baking powder together.",
+   "Cream butter, sugar and lemon zest until light. Beat in the eggs until smooth.",
+   "Add the dry mix in alternating additions with the lemon juice and milk. Scrape into the pan.",
+   "Bake about 1 hour, until a skewer comes out clean. Cool completely on a rack before turning out — this loaf tears if unmoulded warm.",
+   "Whisk the icing sugar and lemon juice smooth, and drizzle over the cooled loaf."
+  ],
+  "notes": [
+   "Poppy seeds are oily and go rancid. If you cannot remember when you bought them, replace them.",
+   "Rub the zest into the sugar with your fingers before creaming — pulls far more oil out of the zest.",
+   "Eggs are fully baked and the glaze is sugar and juice only. Pregnancy-safe as written."
+  ],
+  "image": "https://images.ricardocuisine.com/services/recipes/pavot-portrait.jpg",
+  "protein": "Veg",
+  "cuisine": "other",
+  "archetype": "dessert",
+  "isMain": false,
+  "batch": false,
+  "batchable": false,
+  "under30": false,
+  "favourite": false,
+  "avoid": false,
+  "id": "lemon-poppy-seed-loaf",
+  "name": "Lemon Poppy Seed Loaf"
+ },
+ {
+  "section": "side",
+  "rating": 0,
+  "tags": [
+   "Asian",
+   "Sides",
+   "Untested",
+   "Veggie"
+  ],
+  "source": {
+   "url": null,
+   "name": "House, after Roy Choi"
+  },
+  "time": {
+   "prep": "15 mins",
+   "cook": null,
+   "total": "15 min"
+  },
+  "minutes": 15,
+  "serves": {
+   "text": "6 as a side",
+   "n": 6
+  },
+  "macros": {
+   "p": 2,
+   "f": 6,
+   "c": 9,
+   "kcal": 100,
+   "per": "serving"
+  },
+  "ingredients": [
+   "1/2 head green or napa cabbage, finely shredded",
+   "2 romaine hearts, shredded",
+   "1/2 red onion, very thinly sliced",
+   "1 cup coriander/cilantro leaves",
+   "4 spring onions, sliced on the bias",
+   "DRESSING:",
+   "3 tbsp rice vinegar",
+   "2 tbsp lime juice",
+   "2 tbsp light soy sauce",
+   "1 tbsp gochujang",
+   "1 tbsp toasted sesame oil",
+   "1 tbsp neutral oil",
+   "2 tsp sugar",
+   "1 garlic clove, grated",
+   "1 tbsp toasted sesame seeds"
+  ],
+  "directions": [
+   "Whisk the dressing until the gochujang is fully dissolved.",
+   "Combine the shredded veg, onion, coriander and spring onion in a large bowl.",
+   "Dress at the very last moment and toss hard. Romaine collapses within minutes of being dressed."
+  ],
+  "notes": [
+   "The standard partner for LA Galbi and the air fryer gochujang thighs, with white rice and kimchi.",
+   "Dressing keeps a week in a jar. Shred the cabbage on Sunday and hold it dry.",
+   "Romaine is a recurring Costco/Instacart gap — buy at regular grocery."
+  ],
+  "image": null,
+  "protein": "Veg",
+  "cuisine": "korean",
+  "archetype": "side",
+  "isMain": false,
+  "batch": false,
+  "batchable": false,
+  "under30": true,
+  "favourite": false,
+  "avoid": false,
+  "id": "kogi-truck-slaw",
+  "name": "Kogi Truck Slaw",
+  "make_ahead": true
+ },
+ {
+  "section": "side",
+  "rating": 0,
+  "tags": [
+   "Asian",
+   "Sides",
+   "Untested",
+   "Veggie"
+  ],
+  "source": {
+   "url": null,
+   "name": "House"
+  },
+  "time": {
+   "prep": "20 mins",
+   "cook": null,
+   "total": "20 min"
+  },
+  "minutes": 20,
+  "serves": {
+   "text": "4 to 6 as a side",
+   "n": 4
+  },
+  "macros": {
+   "p": 2,
+   "f": 3,
+   "c": 8,
+   "kcal": 65,
+   "per": "serving"
+  },
+  "ingredients": [
+   "2 lb Persian or Kirby cucumbers",
+   "1 tsp kosher salt",
+   "1.5 tbsp gochugaru",
+   "1 tbsp rice vinegar",
+   "2 tsp sugar",
+   "2 tsp fish sauce (or 1 tbsp light soy)",
+   "1 tsp toasted sesame oil",
+   "2 garlic cloves, grated",
+   "2 spring onions, sliced",
+   "1 tbsp toasted sesame seeds"
+  ],
+  "directions": [
+   "Slice the cucumbers 1/4 inch thick on a slight angle, or smash and tear them.",
+   "Toss with the salt and leave 15 minutes in a colander. Drain and press out the liquid — skipping this gives a watery dressing every time.",
+   "Whisk everything else together, toss through, and rest 10 minutes before serving."
+  ],
+  "notes": [
+   "This is the cucumber we serve with LA Galbi — not the RecipeTin smashed cucumber salad, which is the Chinese sesame/soy/ginger version.",
+   "Persian cucumbers are a Costco/Instacart gap; buy at regular grocery.",
+   "Best within a few hours. It weeps if held overnight."
+  ],
+  "image": null,
+  "protein": "Veg",
+  "cuisine": "korean",
+  "archetype": "side",
+  "isMain": false,
+  "batch": false,
+  "batchable": false,
+  "under30": true,
+  "favourite": false,
+  "avoid": false,
+  "id": "oi-muchim-korean-cucumber-salad",
+  "name": "Oi Muchim (Korean Cucumber Salad)"
+ },
+ {
+  "section": "main",
+  "rating": 0,
+  "tags": [
+   "Lunches",
+   "Untested",
+   "Veggie",
+   "Weeknights"
+  ],
+  "source": {
+   "url": "https://www.instagram.com/reel/DXhcVJzjh4q/",
+   "name": "IG"
+  },
+  "time": {
+   "prep": "15 mins",
+   "cook": "30 mins",
+   "total": "45 min"
+  },
+  "minutes": 45,
+  "serves": {
+   "text": "4 to 6",
+   "n": 4
+  },
+  "macros": {
+   "p": 24,
+   "f": 42,
+   "c": 78,
+   "kcal": 810,
+   "per": "serving"
+  },
+  "ingredients": [
+   "1 lb shellbows or medium shells",
+   "1.5 lb mixed mushrooms (cremini, oyster, shiitake), torn not sliced",
+   "3 tbsp butter",
+   "2 tbsp olive oil",
+   "4 shallots or 1 onion, finely diced",
+   "6 garlic cloves, sliced",
+   "1/2 cup oil-packed sun-dried tomatoes, sliced",
+   "1 tbsp tomato paste",
+   "1 tsp chilli flakes",
+   "1 tsp dried oregano",
+   "1 cup chicken or vegetable stock",
+   "1 1/2 cups heavy cream",
+   "1 cup finely grated parmesan, plus more to finish",
+   "Large handful basil, torn",
+   "Salt and black pepper"
+  ],
+  "directions": [
+   "Mushrooms first, and give them the full treatment: lid on over medium-high to collapse them, then lid off to drive every drop of water out, then add the butter and oil and leave them undisturbed to crust. Salt and aromatics only at the end. No stock at the steaming stage — dissolved solids block browning.",
+   "Remove the mushrooms. Soften the shallots in the same pan, add garlic, chilli flakes, oregano, and the sun-dried tomatoes.",
+   "Add the tomato paste and fry it out 2 minutes until it darkens and goes sticky.",
+   "Deglaze with the stock, reduce by half, then add the cream and simmer to coat-a-spoon thickness.",
+   "Cook the pasta one minute short. Add it to the sauce with the mushrooms, a ladle of pasta water and the parmesan. Toss hard off the heat until glossy.",
+   "Basil, more parmesan, plenty of black pepper."
+  ],
+  "notes": [
+   "Marry-me template applied to mushrooms: sun-dried tomato, cream, parmesan, chilli. Confirmed against the reel.",
+   "Protein is thin at ~24g. On a macro day add a pound of shredded chicken thigh or a tin of cannellini, or serve alongside the gochujang thighs.",
+   "PREGNANCY: check the parmesan is pasteurized, or use a domestic pasteurized parm rather than imported Parmigiano-Reggiano."
+  ],
+  "image": null,
+  "protein": "Veg",
+  "cuisine": "italian",
+  "archetype": "complete",
+  "isMain": true,
+  "batch": false,
+  "batchable": true,
+  "under30": false,
+  "favourite": false,
+  "avoid": false,
+  "id": "marry-me-mushroom-shellbows",
+  "name": "Marry Me Mushroom Shellbows"
+ },
+ {
+  "section": "main",
+  "rating": 0,
+  "tags": [
+   "Asian",
+   "Batch Cook",
+   "Lunches",
+   "Untested",
+   "Weeknights"
+  ],
+  "source": {
+   "url": null,
+   "name": "House"
+  },
+  "time": {
+   "prep": "10 mins",
+   "cook": "20 mins",
+   "total": "30 min"
+  },
+  "minutes": 30,
+  "serves": {
+   "text": "4",
+   "n": 4
+  },
+  "macros": {
+   "p": 45,
+   "f": 20,
+   "c": 12,
+   "kcal": 420,
+   "per": "serving"
+  },
+  "ingredients": [
+   "2 lb boneless skinless chicken thighs",
+   "3 tbsp gochujang",
+   "2 tbsp light soy sauce",
+   "2 tbsp honey",
+   "1 tbsp rice vinegar",
+   "1 tbsp toasted sesame oil",
+   "4 garlic cloves, grated",
+   "1 tbsp grated ginger",
+   "1 tsp gochugaru",
+   "Toasted sesame seeds and sliced spring onion, to finish"
+  ],
+  "directions": [
+   "Whisk the marinade. Reserve a third of it in a separate bowl as glaze — this is the whole trick, since gochujang plus honey will scorch long before the thighs are cooked if it all goes on at the start.",
+   "Marinate the thighs 30 minutes, or up to 4 hours.",
+   "Air fry at 380F for 16-18 minutes, flipping at 10. Not 400F — the sugar burns.",
+   "Brush the reserved glaze on for the last 4 minutes, then bump to 400F for 2 minutes to char the edges.",
+   "Pull at 175F internal, not 165F. Thighs are better with the extra collagen breakdown.",
+   "Rest 5 minutes, slice, finish with sesame and spring onion."
+  ],
+  "notes": [
+   "Serve with white rice, kogi truck slaw and kimchi.",
+   "Reheats and transforms well — bibimbap bowls, or shredded into rice with a fried egg (fully cooked while pregnancy mode is on).",
+   "Cross-reference the gochujang-sauce-yangnyeom entry if you want a saucier version."
+  ],
+  "image": null,
+  "protein": "Chicken",
+  "cuisine": "korean",
+  "archetype": "protein",
+  "isMain": true,
+  "batch": true,
+  "batchable": true,
+  "under30": true,
+  "favourite": false,
+  "avoid": false,
+  "id": "air-fryer-gochujang-chicken-thighs",
+  "name": "Air Fryer Gochujang Chicken Thighs"
+ },
+ {
+  "section": "main",
+  "rating": 0,
+  "tags": [
+   "Batch Cook",
+   "Freezable",
+   "Lunches",
+   "Untested"
+  ],
+  "source": {
+   "url": null,
+   "name": "After Matthew Ryle"
+  },
+  "time": {
+   "prep": "40 mins",
+   "cook": "3 h 30 mins",
+   "total": "4 h"
+  },
+  "minutes": 240,
+  "serves": {
+   "text": "6",
+   "n": 6
+  },
+  "macros": {
+   "p": 42,
+   "f": 45,
+   "c": 40,
+   "kcal": 740,
+   "per": "serving"
+  },
+  "ingredients": [
+   "BRAISE:",
+   "3 lb boneless short rib",
+   "1 large onion, diced",
+   "2 carrots, diced",
+   "2 celery sticks, diced",
+   "6 garlic cloves",
+   "2 tbsp tomato paste",
+   "4 thyme sprigs",
+   "2 bay leaves",
+   "1 litre beef stock",
+   "1 tbsp balsamic vinegar",
+   "1 tsp pomegranate molasses",
+   "Neutral oil, salt, pepper",
+   "PUREE:",
+   "2.5 lb Yukon Gold or Agria potatoes",
+   "200 g butter, cold and cubed",
+   "150 ml whole milk, warm",
+   "Grated nutmeg",
+   "Salt",
+   "TOP:",
+   "100 g grated comte or gruyere",
+   "1/2 cup panko"
+  ],
+  "directions": [
+   "Season the short rib hard and brown it properly on all sides. Set aside.",
+   "Soften the onion, carrot and celery in the fat. Add garlic, then the tomato paste and fry it out until it darkens.",
+   "Return the beef, add stock, balsamic, pomegranate molasses, thyme and bay. Cover and braise at 300F for 3 hours until it shreds under no pressure.",
+   "Lift the beef, shred it, and reduce the braising liquid hard until it barely coats. Fold the meat back through — it should be moist, not soupy, or it will bleed into the potato.",
+   "Boil the potatoes whole and skin-on, peel while hot, and rice them. Beat in the cold butter a cube at a time, then the warm milk. Nutmeg and salt.",
+   "Beef into a dish, purée piped or spread over, comte and panko on top.",
+   "Bake at 400F for 25-30 minutes until the top is deep brown and the edges bubble. Rest 10 minutes."
+  ],
+  "notes": [
+   "PREGNANCY: the classic version braises in red wine. Swapped here for beef stock plus balsamic and pomegranate molasses to replace the tannic depth. Alcohol genuinely persists in a long braise, so this is a real substitution rather than a precaution.",
+   "Strong freezer-bank candidate — assemble unbaked, freeze, and bake from frozen at 375F for about 75 minutes. Effectively a French shepherds pie.",
+   "Boneless short rib over chuck: more intramuscular fat, better shred."
+  ],
+  "image": null,
+  "protein": "Beef",
+  "cuisine": "french",
+  "archetype": "complete",
+  "isMain": true,
+  "batch": true,
+  "batchable": true,
+  "under30": false,
+  "favourite": false,
+  "avoid": false,
+  "id": "hachis-parmentier-short-rib",
+  "name": "Hachis Parmentier (Short Rib)"
+ },
+ {
+  "section": "side",
+  "rating": 0,
+  "tags": [
+   "Sides",
+   "Untested",
+   "Veggie"
+  ],
+  "source": {
+   "url": "https://kellyscleankitchen.com/2025/04/10/red-wine-mushrooms/",
+   "name": "kellyscleankitchen.com"
+  },
+  "time": {
+   "prep": "10 mins",
+   "cook": "25 mins",
+   "total": "35 min"
+  },
+  "minutes": 45,
+  "serves": {
+   "text": "4 as a side",
+   "n": 4
+  },
+  "macros": {
+   "p": 4,
+   "f": 14,
+   "c": 7,
+   "kcal": 175,
+   "per": "serving"
+  },
+  "ingredients": [
+   "2 tbsp olive oil",
+   "8 oz whole cremini mushrooms, stems removed",
+   "8 oz smaller mushrooms (beech, oyster, shiitake)",
+   "6 garlic cloves, minced",
+   "1 cup dry red wine",
+   "2-3 tbsp butter, to finish",
+   "Minced parsley",
+   "Salt and pepper"
+  ],
+  "directions": [
+   "Olive oil in a wide stainless pan over medium. Add the whole caps and cook about 5 minutes, until roughly half done.",
+   "Add the smaller mushrooms and cook another 5 minutes until golden and seared. Only now season with salt — salting early pulls the water out and steams them.",
+   "Garlic for 2 minutes, then deglaze with the wine and bring to a simmer.",
+   "Reduce until almost dry, kill the heat, and swirl in the cold butter to emulsify.",
+   "Season, parsley, serve."
+  ],
+  "notes": [
+   "PREGNANCY: this is a braise, not a glaze — the alcohol genuinely persists even reduced to near-dry. Until further notice use an alcohol-free red, or 3/4 cup beef stock plus 1 tbsp balsamic and 1 tsp pomegranate molasses.",
+   "The stated 35 minutes is optimistic; commenters and the browning stage both say closer to 45.",
+   "Same principle as the steakhouse mushroom method: collapse, evaporate fully, then brown undisturbed. Never introduce liquid before the crust forms."
+  ],
+  "image": null,
+  "protein": "Veg",
+  "cuisine": "french",
+  "archetype": "side",
+  "isMain": false,
+  "batch": false,
+  "batchable": false,
+  "under30": false,
+  "favourite": false,
+  "avoid": false,
+  "id": "red-wine-braised-mushrooms",
+  "name": "Red Wine Braised Mushrooms"
  }
 ]
