@@ -14349,5 +14349,82 @@
   "avoid": false,
   "id": "red-wine-braised-mushrooms",
   "name": "Red Wine Braised Mushrooms"
+ },
+ {
+  "name": "Miyeok-Guk (Korean Seaweed Soup)",
+  "rating": 0,
+  "tags": [
+   "Asian",
+   "Batch Cook",
+   "Freezable",
+   "Postpartum",
+   "Soups",
+   "Untested"
+  ],
+  "time": {
+   "prep": "20 mins",
+   "cook": "1 h 10 mins",
+   "total": "1 h 30 min"
+  },
+  "serves": {
+   "text": "Serves 6",
+   "n": 6
+  },
+  "source": {
+   "url": null,
+   "name": "House — Maangchi x Serious Eats, bone broth base"
+  },
+  "image": null,
+  "ingredients": [
+   "1½ oz (45 g) dried miyeok, soup grade (guk-yong miyeok)",
+   "1½ lb boneless short rib, cut into ¾ inch cubes",
+   "2 tbsp toasted sesame oil, divided",
+   "6 garlic cloves, minced, divided",
+   "3 tbsp guk-ganjang (Korean soup soy sauce), divided",
+   "1 tbsp fish sauce",
+   "8 cups beef bone broth",
+   "1 inch piece ginger, peeled, left whole",
+   "½ white onion, left in one piece",
+   "Kosher salt and white pepper"
+  ],
+  "directions": [
+   "Soak the miyeok in cold water 15–20 minutes, no longer — past that the flavour leaches into the soaking water. Rinse, squeeze dry, and cut into 2 inch lengths.",
+   "Toss the beef with 1 tbsp sesame oil, half the garlic and 1 tbsp guk-ganjang. Leave 15 minutes.",
+   "Sear the beef in the dry pot over medium-high until it loses its raw colour.",
+   "Add the drained miyeok, the remaining sesame oil and the remaining garlic. Sizzle 4–5 minutes, stirring, until the seaweed turns deep green and slick and the pot smells nutty. This is the step people rush and it is the difference between a broth that tastes of seaweed and one that tastes like water with seaweed in it.",
+   "Pour in the bone broth. Add the whole ginger and the onion half. Bring to a boil, skim the scum, then cover and simmer gently — 45–60 minutes for short rib.",
+   "Fish out and discard the ginger and onion.",
+   "Season with the remaining 2 tbsp guk-ganjang, the fish sauce, then salt and white pepper to taste. Simmer 10 minutes more.",
+   "Rest at least an hour before eating. It is better the next day and better again after that."
+  ],
+  "notes": [
+   "THE HYBRID: Maangchi's structure and Serious Eats' seasoning, on bone broth. From Maangchi comes the long sizzle of the seaweed and the fish sauce as a second umami axis; from Serious Eats comes guk-ganjang as the primary seasoning and the ginger-and-onion aromatics dropped in whole and pulled out. Bone broth replaces the Serious Eats step of simmering brisket into stock for four hours — the body is already there, so the cook collapses to about 90 minutes and the beef's job changes from making the broth to being good meat in it.",
+   "BEEF CUTS, RANKED. 1) Boneless short rib — agreed, best option. Most intramuscular fat and collagen of the three, shreds into silky strands, forgiving if you overshoot, and the rendered fat gives the broth the slick surface that reads as restorative. Since the bone broth is already supplying gelatin, you want the cut that contributes fat and texture rather than body. 2) Chuck — agreed as second, but buy chuck flap, chuck roll or top blade rather than a whole chuck roast, which carries heavy connective seams that never fully break down in 60 minutes. Cheaper, beefier, slightly leaner, and the broth stays cleaner. The better everyday pick if the short rib version reads too rich. 3) Cross-cut beef shank (sadae) — not brisket. Enormous collagen, deeply beefy, and a genuinely traditional Korean choice. Wants 90 minutes rather than 60, and the lean muscle bundles will go stringy if pushed past that.",
+   "ON BRISKET: you are right to skip it, but for a reason worth knowing. The traditional cut is yangji, which is the point/deckle end — fatty. What is reliably available at Costco is the flat, which is the lean end, and it goes stringy and dry in a soup. The classic recipes are not wrong; the American cut availability is the problem. Chadolbaegi (thin-sliced brisket plate) is a different animal entirely and makes a good 20 minute weeknight version.",
+   "Guk-ganjang is saltier, lighter in colour and funkier than regular soy, and keeping the broth pale is part of the point. If you substitute light soy, expect a darker soup and add salt separately rather than more soy.",
+   "FREEZER BANK: highest-value dish on the list. Iodine from the miyeok, heme iron from the beef, one-handed to eat, and it freezes cleanly — portion into single servings, leave headspace, reheats from frozen in a covered pan.",
+   "Iodine is the reason it tops the postpartum list, but the Korean tradition of three bowls a day for a month is a lot of sustained iodine while breastfeeding, which can affect infant thyroid function. Rotate it through the week rather than eating it daily.",
+   "Serve with short-grain rice and kimchi. Tip the rice straight into the bowl for guk-bap.",
+   "Pregnancy-safe as written: no alcohol, no raw egg, beef fully cooked."
+  ],
+  "macros": {
+   "p": 30,
+   "f": 24,
+   "c": 4,
+   "kcal": 355,
+   "per": "serving, soup only"
+  },
+  "minutes": 90,
+  "id": "miyeok-guk",
+  "protein": "Beef",
+  "archetype": "soup",
+  "under30": false,
+  "batch": true,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "korean",
+  "batchable": true,
+  "isMain": true,
+  "section": "main"
  }
 ]
