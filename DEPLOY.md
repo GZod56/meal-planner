@@ -55,8 +55,9 @@ wait locally. If both devices change the same item, the app asks which
 version to keep. Photos are stored individually. Keys and passwords remain
 on the server; sign-in uses a signed HttpOnly cookie valid for 30 days.
 
-Netlify function rate limits are configured per IP and domain: sign-in,
-recipe import, and chat each allow 10 requests per minute; sync allows 300.
+The account supports two Netlify rate-limit rules. Sign-in and chat each
+allow 10 requests per minute per IP and domain. Import and sync require
+household sign-in and bound payload sizes, without additional edge rate limits.
 Chat also bounds input size and caps model output at 2,400 tokens. These
 request limits are not a monetary spending cap.
 
