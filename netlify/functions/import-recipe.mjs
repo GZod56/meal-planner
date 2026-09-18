@@ -10,4 +10,4 @@ export default async req=>{
    return json({recipe:extractRecipe(page.html,page.url)});
  }catch(e){return json({error:e.message||'Could not import this recipe.'},400);}
 };
-export const config={path:'/.netlify/functions/import-recipe',rateLimit:{windowLimit:10,windowSize:60,aggregateBy:['ip','domain']}};
+export const config={path:'/.netlify/functions/import-recipe'};

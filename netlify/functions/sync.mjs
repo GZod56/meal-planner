@@ -25,4 +25,4 @@ export function makeHandler(storeFactory=()=>getStore({name:'meal-planner-househ
  };
 }
 export default makeHandler();
-export const config={path:'/.netlify/functions/sync',rateLimit:{windowLimit:300,windowSize:60,aggregateBy:['ip','domain']}};
+export const config={path:'/.netlify/functions/sync'};
