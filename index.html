@@ -203,28 +203,24 @@ input,textarea{font:inherit; border-radius:0}
 .sec i{font-style:normal; font-size:10.5px; color:var(--hair-dot); margin-left:5px;
   font-variant-numeric:lining-nums}
 .secs+.chips{margin-top:13px}
+.library-tools{flex-wrap:wrap;gap:14px 22px;margin-top:18px}
+.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field select{width:100%;font:inherit;padding:9px;background:var(--paper);color:var(--ink);border:1px solid var(--hair)}
+.field input[type="checkbox"]{width:auto;margin-right:8px}
+.sheet-inner p[role="alert"]{color:var(--ox);font-size:14px}
 </style>
 </head>
 <body>
-<main id="view"><div class="mast"><div class="wk">Week of Jul 27</div><div class="sub">no plan yet</div>
-    <button class="dots" data-sheet="menu">···</button></div>
-    <div class="gen-hero"><div class="big">Plan the week</div>
-    <p>One batch across three nights, two dinners, a weekend lunch — built from your library.</p>
-    <div style="max-width:420px;margin:22px auto 0;text-align:left">
-      <span class="label">Use up first (optional)</span>
-      <textarea class="inv" id="invBox" placeholder="e.g. half a cabbage, cilantro, 2 chicken thighs, leftover coconut milk"></textarea>
-      <div class="inv-note">Dishes using these get pulled toward the top.</div></div>
-    <button class="gen-btn primary" data-gen="main">Generate week</button></div></main>
+<main id="view"><div class="mast"><div class="wk">Library</div><div class="sub">Loading recipes…</div></div></main>
 <nav id="tabs" aria-label="Sections">
-  <button data-tab="week" class="on">Week</button>
-  <button data-tab="library">Library</button>
-  <button data-tab="chef" class="chef" aria-label="Ask the kitchen assistant">
+  <button data-tab="library" class="on">Library</button>
+  <button data-tab="week">Week</button>
+  <button data-tab="chef" class="chef" aria-label="Ask ChatGPT kitchen assistant">
     <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
       <path d="M6.2 13.2C4.3 12.7 3 11.1 3 9.2 3 7 4.9 5.2 7.2 5.2c.35 0 .69.04 1.02.12C8.9 3.6 10.32 2.6 12 2.6s3.1 1 3.76 2.72c.33-.08.67-.12 1.02-.12C19.1 5.2 21 7 21 9.2c0 1.9-1.3 3.5-3.2 4"></path>
       <path d="M6.2 13.2V19.4c0 .55.45 1 1 1h9.6c.55 0 1-.45 1-1v-6.2"></path>
       <path d="M9.4 13.4v3.1M12 13.4v3.1M14.6 13.4v3.1"></path></svg>
   </button>
-  <button data-tab="fz">Freezer</button>
   <button data-tab="prep">Prep</button>
   <button data-tab="shopping">Shop</button>
 </nav>
@@ -236,12 +232,25 @@ input,textarea{font:inherit; border-radius:0}
 <div id="sheet"></div>
 <input type="file" id="photoIn" accept="image/*" hidden="">
 <input type="file" id="photoImportIn" accept="application/json" hidden="">
+<script src="./shopping.js"></script>
+<script src="./sync.js"></script>
+<script src="./recipes-ui.js"></script>
 <script src="./engine.js"></script>
 <script>
 
 'use strict';
-let RECIPES=[], PLAN=null, BYID={}, PHOTOS={};
-let tab='week';
+let RECIPES=[], BASE_RECIPES=[], PLAN=null, BYID={}, PHOTOS={};
+let DELETED=new Set();
+const DELETED_KEY='mp.deletedRecipes';
+function refreshLibrary(){RECIPES=Object.values(BYID).filter(r=>!DELETED.has(r.id));}
+function setRecipeDeleted(id,deleted){
+  const next=new Set(DELETED);
+  if(deleted)next.add(id);else next.delete(id);
+  try{localStorage.setItem(DELETED_KEY,JSON.stringify([...next]));Household.track(DELETED_KEY);}
+  catch(err){alert('Could not save this change. Free up browser storage and try again.');return false;}
+  DELETED=next;refreshLibrary();return true;
+}
+let tab='library';
 let filt={q:'', sec:'main', u30:false, batch:false, fav:false};
 const SECTIONS=[['main','Mains'],['side','Sides'],['sauce','Sauces'],['baking','Baking']];
 const secOf=r=>r.section||'main';
@@ -251,8 +260,9 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const K={ plan:'mp.plan', hist:'mp.history', setup:'mp.setup', sides:w=>'mp.sides::'+w, prep:w=>'mp.prep::'+w, shop:w=>'mp.shop::'+w };
 const lsGet=(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d;}catch(e){return d;}};
-const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
-const SETUP_DEFAULT={ target_p:80, target_f:40, target_c:120, jess_extra:28, batch_scale:2, household:'Vik & Jessica' };
+const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));Household.track(k);return true;}catch(e){return false;}};
+const lsRemove=k=>{localStorage.removeItem(k);Household.track(k);};
+const SETUP_DEFAULT={ target_p:80, target_f:40, target_c:120, batch_scale:2, household:'Vik & Jessica' };
 const setup=()=>({...SETUP_DEFAULT, ...lsGet(K.setup,{})});
 
 let idb=null;
@@ -261,7 +271,12 @@ function idbOpen(){return new Promise((res,rej)=>{const rq=indexedDB.open('mealp
   rq.onsuccess=()=>res(rq.result); rq.onerror=()=>rej(rq.error);});}
 async function photoAll(){if(!idb)return {};return new Promise(res=>{const o={};const c=idb.transaction('photos').objectStore('photos').openCursor();
   c.onsuccess=e=>{const cur=e.target.result;if(cur){o[cur.value.id]=cur.value.data;cur.continue();}else res(o);};c.onerror=()=>res(o);});}
-async function photoPut(id,data){if(!idb)return;PHOTOS[id]=data;return new Promise(res=>{const t=idb.transaction('photos','readwrite').objectStore('photos').put({id,data,ts:Date.now()});t.onsuccess=res;t.onerror=res;});}
+async function photoPut(id,data,sync=true){
+  if(!idb)throw new Error('Photo storage is unavailable.');
+  await new Promise((resolve,reject)=>{const tx=idb.transaction('photos','readwrite');
+    tx.objectStore('photos').put({id,data,ts:Date.now()});tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});
+  PHOTOS[id]=data;if(sync)Household.track('photo::'+id);
+}
 const imgFor=r=>r?(PHOTOS[r.id]||r.image||null):null;
 
 const FR={'¼':.25,'½':.5,'¾':.75,'⅓':1/3,'⅔':2/3,'⅕':.2,'⅖':.4,'⅗':.6,'⅘':.8,'⅙':1/6,'⅚':5/6,'⅛':.125,'⅜':.375,'⅝':.625,'⅞':.875};
@@ -350,6 +365,7 @@ function viewLibrary(){
     .sort((a,b)=>a.name.localeCompare(b.name));
   let h=`<div class="mast"><div class="wk">Library</div><div class="sub">${RECIPES.length} recipes</div>
     <button class="dots" data-sheet="menu">···</button></div>
+  <div class="rowacts library-tools"><button class="act" data-new-recipe>Add recipe</button><button class="act" data-import-recipe>Import URL</button><button class="act" data-household data-sync-status>${esc(Household.status())}</button></div>
   <div class="section" style="margin-top:20px">
     <input class="search" id="q" type="search" placeholder="Search…" value="${esc(filt.q)}" autocomplete="off">
     <div class="secs">${SECTIONS.map(([k,label])=>{
@@ -372,7 +388,7 @@ function viewPrep(){
   if(!PLAN||PLAN.empty)return `<div class="mast"><div class="wk">Prep</div><div class="sub">no plan yet</div><button class="dots" data-sheet="menu">···</button></div><div class="empty" style="margin-top:24px">Generate a week first — the prep map builds from it.</div>`;
   const done=lsGet(K.prep(PLAN.week),{});
   const grp=(title,items,pre)=>`<div class="section"><span class="label">${title}</span>`+
-    items.map((t,i)=>{const k=pre+i;return `<button class="check-row ${done[k]?'on':''}" data-prep="${k}"><span class="ck"></span><span class="t">${esc(t)}</span></button>`;}).join('')+'</div>';
+    items.map((t,i)=>{const k=t.key||pre+i;return `<button class="check-row ${done[k]?'on':''}" data-prep="${k}"><span class="ck"></span><span class="t">${esc(t)}</span></button>`;}).join('')+'</div>';
   let h=`<div class="mast"><div class="wk">Prep</div><div class="sub">${esc(PLAN.week)}</div><button class="dots" data-sheet="menu">···</button></div>`;
   h+=grp('Prep ahead',(PLAN.prep&&(PLAN.prep.ahead||PLAN.prep.sunday))||[],'s');
   h+=grp('Day of',(PLAN.prep&&PLAN.prep.dayof)||[],'d');
@@ -380,16 +396,19 @@ function viewPrep(){
 }
 function viewShopping(){
   if(!PLAN||PLAN.empty)return `<div class="mast"><div class="wk">Shopping</div><div class="sub">no plan yet</div><button class="dots" data-sheet="menu">···</button></div><div class="empty" style="margin-top:24px">Generate a week first to build the list.</div>`;
-  const buckets=MP.shopping(PLAN,RECIPES);
+  const buckets=Shopping.build(PLAN,Object.values(BYID),{batchScale:setup().batch_scale});
   const checked=lsGet(K.shop(PLAN.week),{});
   const cat=(title,items,skip,pre)=>{if(!items.length)return '';
     return `<div class="shop-cat"><span class="label">${title}${skip?' <span class="sk">— skip if stocked</span>':''}</span>`+
-      items.map((t,i)=>{const k=pre+i;return `<button class="check-row ${checked[k]?'on':''}" data-shop="${k}"><span class="ck"></span><span class="t">${esc(t)}</span></button>`;}).join('')+'</div>';};
+      items.map((t,i)=>{const k=t.key||pre+i;return `<button class="check-row ${checked[k]?'on':''}" data-shop="${esc(k)}"><span class="ck"></span><span class="t">${esc(t.label||t)}</span></button>`;}).join('')+'</div>';};
   let h=`<div class="mast"><div class="wk">Shopping</div><div class="sub">${esc(PLAN.week)} · batch ×${setup().batch_scale}</div><button class="dots" data-sheet="menu">···</button></div>`;
   h+=cat('Costco',buckets.costco,false,'c');
   h+=cat('Other grocery',buckets.other,false,'o');
   h+=cat('Pantry check',buckets.pantry,true,'p');
-  h+=cat('Freezer',buckets.freezer,true,'f');
+  h+=cat('Meat & fish',buckets.freezer,true,'f');
+  h+=cat('Check amounts',buckets.check,false,'x');
+  const sides=[...new Set([['batch',PLAN.batch],...PLAN.dinners.map((d,i)=>['d'+i,d]),['we',PLAN.weekend]].filter(([,slot])=>slot).flatMap(([key,slot])=>curSides(slot,key).map(o=>o.name)))];
+  h+=cat('Side dishes — check ingredients',sides.map(name=>({key:'side:'+name,label:name})),false,'sd');
   return h;
 }
 function fmtChat(t){let h=esc(t);
@@ -406,8 +425,6 @@ function chatSystem(){
       PLAN.dinners.map((d,i)=>dish(d,'DINNER '+(i+1))).join('')+dish(PLAN.weekend,'WEEKEND LUNCH');}
   return `You are Vik's kitchen and meal-planning operating system — a hands-on cooking companion he talks to while cooking. Concise, confident, no padding, no basic-technique lectures unless asked. Experienced NYC home cook; apartment kit: sous vide, wok, air fryer, standard oven, full pots/pans; no BBQ/smoker.
 
-PREGNANCY MODE ACTIVE (wife due Sept). Every answer respects: proteins fully cooked (no rare, no jammy yolks); no raw egg in dressings; no unpasteurized/blue/raw-milk cheese; no high-mercury fish (no swordfish/king mackerel/tuna steak — salmon/shrimp/cod/halibut fine); NO alcohol in cooking → sub stock + a splash of vinegar/citrus; deli meat only if heated to steaming; bias folate (leafy greens), iron (legumes), omega-3 (salmon/sardines), calcium (full-fat dairy), choline (pastured eggs). Her portions ~25–30g more protein than his.
-
 Recomp: per-dinner target ~80g protein / 40g fat / 120g carbs; clean hits ~2×/week, other nights flexible.
 
 Recipes are frameworks — offer smart swaps/improvements briefly. For NYT recipes, surface useful top-comment tweaks. If he says he liked a variation, tell him you'll note it (he keeps the master library file himself). Answer for someone standing at the counter: fast, specific, actionable.
@@ -420,6 +437,7 @@ ${idx}`;
 }
 async function sendChat(text){
   text=(text||'').trim(); if(!text||chatLoading)return;
+  if(!Household.signedIn()){Household.open();return;}
   CHAT.push({role:'user',text}); chatLoading=true; saveChat(); renderChat();
   try{
     const msgs=CHAT.slice(-20).map(m=>({role:m.role,content:m.text}));
@@ -428,17 +446,17 @@ async function sendChat(text){
     const data=await res.json().catch(()=>({}));
     CHAT.push({role:'assistant',text:data.text||data.error||'Something went wrong — try again.'});
   }catch(e){
-    CHAT.push({role:'assistant',text:'Can’t reach the assistant. Check your connection — and if this is a fresh deploy, confirm ANTHROPIC_API_KEY is set in Netlify → Site settings → Environment variables.'});
+    CHAT.push({role:'assistant',text:'Can’t reach the assistant. Check your connection — and if this is a fresh deploy, try again in a moment.'});
   }
   chatLoading=false; saveChat(); renderChat();
 }
-function saveChat(){lsSet('mp.chat',CHAT.slice(-60));}
+function saveChat(){lsSet('mp.chat.v2',CHAT.slice(-60));}
 const CHIPS=["What's my highest-protein dinner this week?","Scale tonight's batch to 6 servings","I'm out of an ingredient — suggest a sub","What can I prep tonight for tomorrow?"];
 function viewChat(){
-  let h=`<div class="mast"><div class="wk">Kitchen</div><div class="sub">ask anything — cooking, subs, timing</div>
+  let h=`<div class="mast"><div class="wk">Kitchen</div><div class="sub">ChatGPT · cooking, subs, timing</div>
     <button class="dots" data-sheet="menu">···</button></div><div class="chat-wrap" id="chatWrap">`;
   if(!CHAT.length){
-    h+=`<div class="empty" style="margin-top:20px">Your cooking companion — it knows this week's plan, your whole library, macros, and the pregnancy rules. Ask away.</div>
+    h+=`<div class="empty" style="margin-top:20px">Your cooking companion — it knows this week's plan, your whole library, and macros. Ask away.</div>
     <div class="chip-row">${CHIPS.map(c=>`<button class="pchip" data-ask="${esc(c)}">${esc(c)}</button>`).join('')}</div>`;
   } else {
     h+=CHAT.map(m=>`<div class="msg ${m.role}"><div class="who">${m.role==='user'?'You':'Kitchen'}</div><div class="bub">${fmtChat(m.text)}</div></div>`).join('');
@@ -449,9 +467,7 @@ function viewChat(){
 function renderChat(){if(tab!=='chef')return;$('#view').innerHTML=viewChat();
   const w=$('#chatWrap');if(w)window.scrollTo(0,document.body.scrollHeight);}
 function render(){
-  $('#view').innerHTML = tab==='week'?viewWeek():tab==='library'?viewLibrary():tab==='fz'?viewFreezer():tab==='prep'?viewPrep():tab==='chef'?viewChat():viewShopping();
-  const fzb=document.querySelector('#tabs button[data-tab="fz"]');
-  if(fzb) fzb.hidden=!freezerLive();
+  $('#view').innerHTML = tab==='week'?viewWeek():tab==='library'?viewLibrary():tab==='prep'?viewPrep():tab==='chef'?viewChat():viewShopping();
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
   $('#chatbar').hidden = tab!=='chef';
   if(tab==='library'){const q=$('#q');q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList();});}
@@ -464,9 +480,11 @@ function renderLibList(){const sc=window.scrollY,val=filt.q;$('#view').innerHTML
 
 function generateWeek(inventory){
   const hist=lsGet(K.hist,[]);
-  const plan=MP.generate(RECIPES,{history:hist,inventory:inventory||[]});
+  let plan;
+  try{plan=MP.generate(RECIPES,{history:hist,inventory:inventory||[]});}
+  catch(err){alert('Not enough suitable recipes to fill a week. Restore deleted recipes from the menu and try again.');return;}
   PLAN=plan;
-  ['sides','prep','shop'].forEach(x=>localStorage.removeItem(K[x](PLAN.week)));
+  ['sides','prep','shop'].forEach(x=>lsRemove(K[x](PLAN.week)));
   savePlan();
   const ids=[plan.batch.recipeId,...plan.dinners.map(d=>d.recipeId),plan.weekend.recipeId];
   lsSet(K.hist,[...new Set([...ids,...hist])].slice(0,16));
@@ -490,7 +508,11 @@ function openRecipe(id){
       <h1 class="rname">${esc(r.name)}</h1><div class="rmeta">${meta}</div>
       ${r.tags.length?`<div class="rtags">${esc(r.tags.join(' · '))}</div>`:''}
       ${r.macros?`<div class="rmac">${r.macros.p??'–'} / ${r.macros.f??'–'} / ${r.macros.c??'–'} · per serving</div>`:''}
-      <button class="photo-btn" data-photo>${custom?'Replace photo':'Add photo'}</button>
+      <div class="rowacts" style="flex-wrap:wrap;gap:12px 24px">
+        <button class="photo-btn" data-photo>${custom?'Replace photo':'Add photo'}</button>
+        <button class="photo-btn" data-edit-recipe>Edit recipe</button>
+        <button class="photo-btn" data-delete-recipe>${DELETED.has(id)?'Restore recipe':'Delete recipe'}</button>
+      </div>
       <div class="section"><span class="label">Servings</span>
         <div class="scaler">${opts.map(n=>`<button class="opt ${n===servSel?'on':''}" data-serv="${n}">${n}</button>`).join('')}</div></div>
       <button class="cook-btn" data-cook>▶ Cook</button>
@@ -500,12 +522,50 @@ function openRecipe(id){
         ${r.directions.map((x,i)=>`<button class="step ${strikes['s'+i]?'done':''}" data-strike="s${i}"><span class="n">${i+1}</span>${annotateStep(x,r,f())}</button>`).join('')}</div>
       ${r.notes.length?`<div class="section notes"><span class="label">Notes</span>${r.notes.map(n=>`<p>${esc(n)}</p>`).join('')}</div>`:''}</div>`;};
   draw();REDRAW=draw;
-  ov.onclick=e=>{const t=e.target.closest('[data-close],[data-serv],[data-strike],[data-photo],[data-cook]');if(!t)return;
+  ov.onclick=e=>{const t=e.target.closest('[data-close],[data-serv],[data-strike],[data-photo],[data-cook],[data-delete-recipe],[data-edit-recipe]');if(!t)return;
+    if(t.dataset.editRecipe!==undefined){openRecipeEditor(r);return;}
+    if(t.dataset.deleteRecipe!==undefined){
+      if(DELETED.has(id)){if(setRecipeDeleted(id,false)){draw();render();}}
+      else confirmDeleteRecipe(id);
+      return;}
     if(t.dataset.cook!==undefined){openCook();return;}
     if(t.dataset.close!==undefined){closeRecipe();return;}
     if(t.dataset.serv){servSel=+t.dataset.serv;draw();return;}
     if(t.dataset.strike){strikes[t.dataset.strike]=!strikes[t.dataset.strike];t.classList.toggle('done');return;}
     if(t.dataset.photo!==undefined){$('#photoIn').click();return;}};
+}
+function confirmDeleteRecipe(id){
+  const r=BYID[id];if(!r)return;
+  const sh=$('#sheet');sh.classList.add('open');
+  sh.innerHTML=`<div class="sheet-inner" role="dialog" aria-modal="true" aria-labelledby="deleteTitle">
+    <h2 id="deleteTitle" class="rname">Delete recipe?</h2>
+    <p>Remove “${esc(r.name)}” from your library and future plans?</p>
+    <p class="sheet-note">Your current week and photos are kept. You can restore this recipe from Menu → Deleted recipes.</p>
+    <div class="save-row"><button data-cancel-delete>Cancel</button><button class="primary" data-confirm-delete>Delete recipe</button></div>
+  </div>`;
+  const close=()=>{sh.classList.remove('open');sh.onkeydown=null;$('#overlay [data-delete-recipe]')?.focus();};
+  sh.onclick=e=>{
+    if(e.target===sh||e.target.closest('[data-cancel-delete]')){close();return;}
+    if(!e.target.closest('[data-confirm-delete]'))return;
+    if(!setRecipeDeleted(id,true))return;
+    close();closeRecipe();tab='library';filt.sec=secOf(r);render();$('#q')?.focus();
+  };
+  sh.onkeydown=e=>{if(e.key==='Escape'){e.preventDefault();close();}};
+  sh.querySelector('[data-cancel-delete]').focus();
+}
+function openDeletedRecipes(){
+  const sh=$('#sheet');sh.classList.add('open');
+  const deleted=Object.values(BYID).filter(r=>DELETED.has(r.id)).sort((a,b)=>a.name.localeCompare(b.name));
+  sh.innerHTML=`<div class="sheet-inner" role="dialog" aria-modal="true" aria-labelledby="deletedTitle">
+    <h2 id="deletedTitle" class="rname">Deleted recipes</h2>
+    <p class="sheet-note">Select a recipe to restore it to your library. Changes sync when your household is connected.</p>
+    ${deleted.map(r=>`<button class="sheet-btn" data-restore-recipe="${esc(r.id)}">${esc(r.name)}<small>Restore recipe</small></button>`).join('')||'<p class="empty">No deleted recipes.</p>'}
+    <button class="sheet-btn" data-close-deleted>Done</button></div>`;
+  sh.onclick=e=>{
+    if(e.target===sh||e.target.closest('[data-close-deleted]')){sh.classList.remove('open');return;}
+    const t=e.target.closest('[data-restore-recipe]');
+    if(t&&setRecipeDeleted(t.dataset.restoreRecipe,false)){render();openDeletedRecipes();}
+  };
 }
 function closeRecipe(){REDRAW=null;$('#overlay').classList.remove('open');document.body.style.overflow='';openId=null;}
 $('#photoIn').addEventListener('change',async e=>{const file=e.target.files[0];e.target.value='';if(!file||!openId)return;
@@ -540,9 +600,11 @@ function applyDishSwap(key,id){
 function openMenu(){
   const sh=$('#sheet');sh.classList.add('open');
   sh.innerHTML=`<div class="sheet-inner"><span class="label">Meal Planner</span>
+    <button class="sheet-btn" data-a="household">Household sync <small data-sync-status>${esc(Household.status())}</small></button>
+    <button class="sheet-btn" data-a="deleted">Deleted recipes <small>restore removed recipes</small></button>
     <button class="sheet-btn" data-a="setup">Setup <small>macro targets, household, batch scale</small></button>
     <button class="sheet-btn" data-a="regen">Generate a new week <small>fresh plan from the library</small></button>
-    <button class="sheet-btn" data-a="import">Import a plan <small>paste a week from Claude</small></button>
+    <button class="sheet-btn" data-a="import">Import a plan <small>paste a week from ChatGPT</small></button>
     <button class="sheet-btn" data-a="expphotos">Export photos <small>backup of recipe photos</small></button>
     <button class="sheet-btn" data-a="impphotos">Import photos <small>restore from a backup</small></button>
     <button class="sheet-btn" data-a="reset">Reset this week's checkmarks</button>
@@ -550,6 +612,8 @@ function openMenu(){
     <div id="menuBox"></div></div>`;
   sh.onclick=async e=>{if(e.target===sh){sh.classList.remove('open');return;}
     const t=e.target.closest('[data-a]');if(!t)return;const a=t.dataset.a;
+    if(a==='household'){Household.open();return;}
+    if(a==='deleted'){openDeletedRecipes();return;}
     if(a==='setup')renderSetup();
     if(a==='regen')renderRegen();
     if(a==='import'){$('#menuBox').innerHTML=`<textarea class="sheet-area" id="planPaste" placeholder="Paste plan JSON…"></textarea>
@@ -559,7 +623,7 @@ function openMenu(){
     if(a==='expphotos'){const all=await photoAll();const b=new Blob([JSON.stringify(all)],{type:'application/json'});
       const el=document.createElement('a');el.href=URL.createObjectURL(b);el.download='mealplanner-photos.json';el.click();}
     if(a==='impphotos')$('#photoImportIn').click();
-    if(a==='reset'){if(PLAN&&!PLAN.empty)['prep','shop','sides'].forEach(x=>localStorage.removeItem(K[x](PLAN.week)));sh.classList.remove('open');render();}};
+    if(a==='reset'){if(PLAN&&!PLAN.empty)['prep','shop','sides'].forEach(x=>lsRemove(K[x](PLAN.week)));sh.classList.remove('open');render();}};
 }
 function renderRegen(){
   $('#menuBox').innerHTML=`<div class="field"><label>Use up first (optional)</label>
@@ -574,7 +638,6 @@ function renderSetup(){
     <div class="field"><label>Protein target (g)</label><input id="su_p" type="number" value="${s.target_p}"></div>
     <div class="field"><label>Fat target (g)</label><input id="su_f" type="number" value="${s.target_f}"></div>
     <div class="field"><label>Carb target (g)</label><input id="su_c" type="number" value="${s.target_c}"></div>
-    <div class="field"><label>Jessica's extra protein (g)</label><input id="su_j" type="number" value="${s.jess_extra}"></div>
     <div class="field"><label>Batch scale (×)</label><input id="su_b" type="number" value="${s.batch_scale}"></div>
     <div class="save-row"><button class="primary" data-setupsave="1">Save</button><button data-setupclose="1">Cancel</button></div>
     <div class="sheet-note">Targets drive the ★ clean-hit flags on the week.</div>`;
@@ -585,6 +648,9 @@ $('#photoImportIn').addEventListener('change',async e=>{const file=e.target.file
     $('#sheet').classList.remove('open');render();}catch(err){}});
 
 document.body.addEventListener('click',e=>{
+  if(e.target.closest('[data-new-recipe]')){openRecipeEditor();return;}
+  if(e.target.closest('[data-import-recipe]')){openRecipeImport();return;}
+  if(e.target.closest('[data-household]')){Household.open();return;}
   const ask=e.target.closest('[data-ask]');
   if(ask){$('#chatIn').value='';sendChat(ask.dataset.ask);return;}
   const tb=e.target.closest('#tabs button');if(tb){tab=tb.dataset.tab;render();return;}
@@ -595,9 +661,9 @@ document.body.addEventListener('click',e=>{
   const ss=e.target.closest('[data-setupsave],[data-setupclose]');
   if(ss){if(ss.dataset.setupsave){const n={household:$('#su_h').value.trim()||'—',
       target_p:+$('#su_p').value||80,target_f:+$('#su_f').value||40,target_c:+$('#su_c').value||120,
-      jess_extra:+$('#su_j').value||28,batch_scale:+$('#su_b').value||2};lsSet(K.setup,n);}
+      batch_scale:+$('#su_b').value||2};lsSet(K.setup,n);}
     $('#sheet').classList.remove('open');render();return;}
-  const t=e.target.closest('[data-open],[data-swap],[data-swapdish],[data-swapx],[data-prep],[data-fz],[data-shop],[data-sheet],[data-chip],[data-sec],[data-regen]');
+  const t=e.target.closest('[data-open],[data-swap],[data-swapdish],[data-swapx],[data-prep],[data-shop],[data-sheet],[data-chip],[data-sec],[data-regen]');
   if(!t)return;
   if(t.dataset.open){openRecipe(t.dataset.open);return;}
   if(t.dataset.sec){filt.sec=t.dataset.sec;window.scrollTo(0,0);renderLibList();return;}
@@ -605,7 +671,6 @@ document.body.addEventListener('click',e=>{
   if(t.dataset.swapdish){openDishSwap(t.dataset.swapdish);return;}
   if(t.dataset.swapx!==undefined){swapTransform();return;}
   if(t.dataset.prep!==undefined){const d=lsGet(K.prep(PLAN.week),{});d[t.dataset.prep]=!d[t.dataset.prep];lsSet(K.prep(PLAN.week),d);t.classList.toggle('on');return;}
-  if(t.dataset.fz!==undefined){const d=lsGet('mp.freezer',{});d[t.dataset.fz]=!d[t.dataset.fz];lsSet('mp.freezer',d);t.classList.toggle('on');render();return;}
   if(t.dataset.shop!==undefined){const d=lsGet(K.shop(PLAN.week),{});d[t.dataset.shop]=!d[t.dataset.shop];lsSet(K.shop(PLAN.week),d);t.classList.toggle('on');return;}
   if(t.dataset.regen!==undefined){openMenu();setTimeout(renderRegen,0);return;}
   if(t.dataset.sheet==='menu'){openMenu();return;}
@@ -635,80 +700,33 @@ function fire(){const v=chatIn.value;if(!v.trim())return;chatIn.value='';grow();
     if('serviceWorker' in navigator){const rs=await navigator.serviceWorker.getRegistrations();rs.forEach(r=>r.unregister());}
     return;
   }
-  BYID=Object.fromEntries(RECIPES.map(r=>[r.id,r]));
+  BASE_RECIPES=RECIPES;
+  applyRecipeOverrides();
+  const deleted=lsGet(DELETED_KEY,[]);
+  DELETED=new Set(Array.isArray(deleted)?deleted:[]);
+  refreshLibrary();
   PLAN=lsGet(K.plan,null)||{empty:true};
-  CHAT=lsGet('mp.chat',[]);
+  CHAT=lsGet('mp.chat.v2',[]);
   render();
+  Household.start({
+    escape:esc,
+    canSync:()=>!$('#overlay').classList.contains('open')&&!$('#recipeForm')&&!COOK,
+    keys:async()=>[...Object.keys(localStorage),...Object.keys(PHOTOS).map(id=>'photo::'+id)],
+    get:async key=>key.startsWith('photo::')?(PHOTOS[key.slice(7)]||null):lsGet(key,null),
+    set:async(key,value)=>{
+      if(key.startsWith('photo::')){await photoPut(key.slice(7),value,false);return;}
+      if(value===null)localStorage.removeItem(key);else localStorage.setItem(key,JSON.stringify(value));
+    },
+    refresh:()=>{
+      applyRecipeOverrides();const deleted=lsGet(DELETED_KEY,[]);DELETED=new Set(Array.isArray(deleted)?deleted:[]);refreshLibrary();
+      PLAN=lsGet(K.plan,null)||{empty:true};
+      // Keep open recipe/editor/cooking controls stable while data refreshes.
+      if(!$('#overlay').classList.contains('open')&&!$('#sheet').classList.contains('open')&&!COOK)render();
+    }
+  });
   if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 })();
 
-
-/* ===================== POSTPARTUM FREEZER BANK =====================
-   TEMPORARY SECTION — DELETE ON 1 JANUARY 2027.
-   Remove: FREEZER_EXPIRY, FREEZER, viewFreezer(), the [data-fz] handler,
-   the 'fz' branch in render(), and the Freezer button in #tabs.
-   The tab hides itself automatically after the expiry date, so a missed
-   cleanup degrades quietly rather than leaving a stale section on screen. */
-const FREEZER_EXPIRY = new Date('2027-01-01T00:00:00');
-const freezerLive = () => new Date() < FREEZER_EXPIRY;
-const FREEZER = [
-  ['Meals', 'Big pot, portioned, frozen flat. Most are better reheated anyway.', [
-    ["Shepherd's pie",'freeze unbaked in foil trays'],
-    ['The best chili ever',''],
-    ['Chipotle beef tacos','filling only'],
-    ['Beef bourguignon','stock + red wine vinegar, no wine'],
-    ['Chicken cacciatore',''],
-    ['Homestyle chicken curry',''],
-    ['Tarka dal','highest volume — the daily driver'],
-    ['Miyeok-guk','iodine — the single highest-value item here'],
-    ['Creole jambalaya','leave the shrimp out, add fresh on reheat'],
-    ['Chicken biryani','laborious, so good freezer value'],
-    ['Bolognese',''],
-    ['Spinach & ricotta rotolo','freeze unbaked'],
-    ['Coriander chutney','ice cube tray'],
-  ]],
-  ['Hand pies', 'Filling thick to the point of paste, cold, diced small, no free liquid.', [
-    ['Chicken pot pie','chicken, leek, mushroom, bacon, cream sauce'],
-    ['Potato, cheese & onion','potato, mature cheddar, onion'],
-    ['Spinach, feta & dill','spinach, feta, dill, spring onion'],
-    ['Chorizo & potato','chorizo, potato, onion, egg'],
-    ['Butter chicken','chicken, tomato, cream, garam masala'],
-    ['Mexican chicken','chicken, cheddar, jalapeño, tomato'],
-    ['Chicken curry bake','chicken, curry sauce, potato, peas'],
-  ]],
-  ['Egg bites', '', [
-    ['Bacon & gruyère',''],['Spinach & feta',''],['Chorizo & manchego',''],
-    ['Mushroom & thyme',''],['Red pepper & cheddar',''],['Broccoli & cheddar',''],
-  ]],
-  ['Breakfast burritos', '', [
-    ['Chorizo, potato & egg',''],['Bacon, egg & cheddar',''],['Black bean & sweet potato',''],
-    ['Green chile & cheese',''],['Masala scramble',''],
-  ]],
-  ['Undecided', 'Raised but never confirmed — decide or drop.', [
-    ['Carnitas','shreds into tacos, bowls, eggs; freezes better than almost anything'],
-    ['Chicken tinga','same deployment logic, lighter than the beef'],
-    ['Enchiladas','freeze unbaked'],
-    ['Japanese curry sauce','freeze the sauce, fry a cutlet whenever'],
-  ]],
-];
-function viewFreezer(){
-  const done=lsGet('mp.freezer',{});
-  const all=FREEZER.filter(s=>s[0]!=='Undecided').reduce((n,s)=>n+s[2].length,0);
-  const hit=FREEZER.filter(s=>s[0]!=='Undecided')
-    .reduce((n,s)=>n+s[2].filter(x=>done[s[0]+'|'+x[0]]).length,0);
-  const wk=Math.max(0,Math.ceil((new Date('2026-09-01')-new Date())/6048e5));
-  let h=`<div class="mast"><div class="wk">Freezer</div><div class="sub">${hit}/${all} banked · ${wk} week${wk===1?'':'s'} to Sept 1</div><button class="dots" data-sheet="menu">···</button></div>`;
-  for(const [title,blurb,items] of FREEZER){
-    h+=`<div class="section"><span class="label">${esc(title)}</span>`;
-    if(blurb) h+=`<div class="empty" style="margin:-2px 0 6px">${esc(blurb)}</div>`;
-    h+=items.map(([name,note])=>{
-      const k=title+'|'+name;
-      return `<button class="check-row ${done[k]?'on':''}" data-fz="${esc(k)}"><span class="ck"></span><span class="t">${esc(name)}${note?` <span class="sk">— ${esc(note)}</span>`:''}</span></button>`;
-    }).join('')+'</div>';
-  }
-  h+=`<div class="section"><span class="label">Housekeeping</span><div class="empty">Temporary section — delete after 1 January 2027. It hides itself on that date.</div></div>`;
-  return h;
-}
 
 /* ================= inline ingredient amounts in steps ================= */
 /* Detects dry goods & spices named in a direction step and injects the
