@@ -1,5 +1,5 @@
-const V='mp-v8';
-const SHELL=['./','./index.html','./engine.js','./manifest.webmanifest'];
+const V='mp-v10';
+const SHELL=['./','./index.html','./engine.js','./shopping.js','./sync.js','./recipes-ui.js','./manifest.webmanifest'];
 self.addEventListener('install',e=>{e.waitUntil((async()=>{
   const c=await caches.open(V);
   // cache individually — one bad file must not abort the whole install
@@ -15,7 +15,7 @@ self.addEventListener('fetch',e=>{
   const u=new URL(e.request.url);
   if(e.request.method!=='GET'||u.pathname.includes('/.netlify/'))return;
   // network-first for the data and the shell, so a stale cache can never mask a good deploy
-  const fresh=/recipes\.json$|index\.html$|\/$|engine\.js$/.test(u.pathname);
+  const fresh=/recipes\.json$|index\.html$|\/$|(?:engine|shopping|sync|recipes-ui)\.js$/.test(u.pathname);
   e.respondWith((async()=>{
     const c=await caches.open(V);
     if(fresh){
