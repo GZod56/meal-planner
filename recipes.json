@@ -10196,7 +10196,7 @@
    "url": null,
    "name": null
   },
-  "image": null,
+  "image": "https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/salt_and_pepper_spare_ribs.jpg",
   "ingredients": [
    "Pork Spare Ribs (cut into individual pieces) - 1kg",
    "Water  Enough to cover the ribs",
@@ -10804,7 +10804,7 @@
    "url": null,
    "name": "Vik's recipe"
   },
-  "image": null,
+  "image": "https://static.wixstatic.com/media/9d9f1d_daa74001ed814b54bc438e8bd13a9418~mv2.jpg/v1/fill/w_980%2Ch_1307%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/9d9f1d_daa74001ed814b54bc438e8bd13a9418~mv2.jpg",
   "ingredients": [
    "2 salmon fillets (7–8 oz each)",
    "12 oz small waxy potatoes, halved",
@@ -11564,7 +11564,7 @@
    "url": null,
    "name": null
   },
-  "image": null,
+  "image": "https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/thai_pork_curry.jpg",
   "ingredients": [
    "10oz ground pork",
    "1/2 cup jasmine rice",
@@ -12059,7 +12059,7 @@
    "url": null,
    "name": "Vik & Claude"
   },
-  "image": null,
+  "image": "https://images.squarespace-cdn.com/content/v1/5d61d3f00e63140001d16a85/be8cc412-80b7-45a5-8da9-e7c8350f9777/image00004%2Bcopie.jpeg?format=500w",
   "ingredients": [
    "1/2 cup tahini, well stirred",
    "1/4 cup lemon juice, from about 2 lemons",
@@ -12170,7 +12170,8 @@
    "Salt after the lentils collapse, never before.",
    "A second small tarka poured over just before serving is the restaurant trick — worth it when serving as-cooked, skip for the freezer portions.",
    "Reheated dal wants thinning and re-seasoning; it dulls in the fridge. Lemon and salt bring it straight back."
-  ]
+  ],
+  "image": "https://cdn.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D1440%2Ch%3D756%2Cfit%3Dcrop%2Cf%3Djpeg/cdn-ecommerce/store_01HXVMKKS251RQKVA8W9FRAGHD%2Fassets%2F1730790961137-DALTADKA.jpg"
  },
  {
   "name": "Taverna Salad",
@@ -12667,7 +12668,7 @@
    "url": null,
    "name": null
   },
-  "image": null,
+  "image": "https://www.pelago.com/img/products/JP-Japan/gyudon-japanese-beef-rice-bowl-cooking-experience/de47a835-bb26-4118-abe0-12350dc32240_gyudon-japanese-beef-rice-bowl-cooking-experience-xlarge.jpg",
   "ingredients": [
    "10oz diced beef",
    "1 cup sushi rice",
@@ -13298,7 +13299,7 @@
    "url": null,
    "name": "Taverna standard / house version"
   },
-  "image": null,
+  "image": "https://www.recipetineats.com/uploads/2018/09/Greek-Lemon-Potatoes_1.jpg",
   "ingredients": [
    "2 lb Yukon Gold or russet potatoes, peeled, cut into thick wedges",
    "⅓ cup olive oil",
@@ -13366,7 +13367,7 @@
    "url": "https://www.tiktok.com/@eatlikeanadult/video/7500142132263521558",
    "name": "Eat Like an Adult (@eatlikeanadult)"
   },
-  "image": null,
+  "image": "https://i.pinimg.com/originals/68/7c/a1/687ca1113521c4e35a85c7e8224e76a2.webp",
   "ingredients": [
    "2 thick cod loin portions, about 6 oz each",
    "Salt",
