@@ -202,7 +202,7 @@
    "url": null,
    "name": "Vik & Claude — pollo a la brasa style"
   },
-  "image": null,
+  "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2025/02/14/FNK_High-Protein-Peruvian-Chicken-Breasts-Pinto-Beans_s4x3.jpg.rend.hgtvcom.1280.960.85.suffix/1739568908938.webp",
   "ingredients": [
    "1 whole chicken, about 4 lb, spatchcocked",
    "3 tablespoons aji amarillo paste",
@@ -662,7 +662,7 @@
    "url": null,
    "name": "Vik & Claude"
   },
-  "image": null,
+  "image": "https://wkefbybaeklskadsmwlu.supabase.co/storage/v1/object/public/Recipe%20Images/62346_pan-grilled-chicken-bowl.webp",
   "ingredients": [
    "A rendering protein: whole bird spatchcocked, or bone-in skin-on thighs",
    "THE BED — pick one:",
@@ -2092,7 +2092,7 @@
    "url": null,
    "name": null
   },
-  "image": null,
+  "image": "https://b.zmtcdn.com/data/dish_photos/959/1d64e757f3d23faa2a7f25dc819d0959.png",
   "ingredients": [
    "600g basmati rice",
    "4 tsp sea salt",
@@ -2574,7 +2574,7 @@
    "url": null,
    "name": null
   },
-  "image": null,
+  "image": "https://jernejkitchen.com/sites/default/files/styles/text_verticalbreakpoints_theme_jernejkitchenr_screen-md-max_1x/public/chicken-pot-pie-03-jernejkitchen_1.jpg?itok=zZ9gTPYI",
   "ingredients": [
    "2 chicken breast + 3 drumsticks",
    "400ml milk",
@@ -3316,7 +3316,7 @@
    "url": "https://cooking.nytimes.com/recipes/1021291-coconut-fish-and-tomato-bake",
    "name": "Yewande Komolafe — NYT Cooking"
   },
-  "image": null,
+  "image": "https://art.whisk.com/image/upload/fl_progressive%2Ch_560%2Cw_560%2Cc_fill%2Cdpr_2/v1761787465381/recipe/2553346a5c919d7672bb1129dca440d7.jpg",
   "ingredients": [
    "¾ cup unsweetened coconut milk",
    "1 (1-inch) piece fresh ginger, finely grated",
@@ -5796,7 +5796,8 @@
    "No grill needed. Cast iron over medium-high beats the broiler for crust; the broiler is easier for cooking all 3 lb at once.",
    "Fat-heavy for a macro night: roughly 46P/44F/19C per serving before sides. Adding rice pushes carbs to target but fat still overshoots — treat this as a flexible day rather than one of the clean two.",
    "Vik's verdict: absolute favourite. The orange juice version is the house standard — don't revert to water."
-  ]
+  ],
+  "image": "https://www.sandravalvassori.com/wp-content/uploads/2024/05/Korean-Short-Ribs-2064.jpg"
  },
  {
   "name": "Halal Cart-Style Chicken and Rice with White Sauce",
@@ -8371,7 +8372,7 @@
    "url": null,
    "name": null
   },
-  "image": null,
+  "image": "https://grantourismotravels.com/wp-content/uploads/2022/01/Akuri-Recipe-Parsi-Style-Scrambled-Eggs-with-Tomato-and-Coriander-Copyright-2022-Terence-Carter-Grantourismo-T-500x500.jpg",
   "ingredients": [
    "4 large eggs",
    "2 tbsp butter",
