@@ -9568,25 +9568,33 @@
   "ingredients": [
    "3 tablespoons olive oil, plus more for drizzling",
    "1 large onion, chopped",
-   "2 garlic cloves, minced",
-   "1 tomato",
+   "1 tablespoon ginger-garlic paste",
+   "1 medium tomato, chopped",
    "1 teaspoon ground cumin",
+   "1 teaspoon ground coriander",
+   "1/2 teaspoon ground turmeric",
+   "Pinch of ground cinnamon (optional)",
    "Salt and black pepper",
    "Pinch of chili powder or ground cayenne, plus more to taste",
    "1 quart chicken or vegetable broth",
    "1 cup red lentils",
    "1 large carrot, peeled and diced",
    "Juice of ½ lemon, more to taste",
-   "3 tablespoons chopped fresh cilantro"
+   "3 tablespoons chopped fresh cilantro",
+   "1/2 cup plain yogurt",
+   "1 small green chile",
+   "1/4 cup cilantro leaves and tender stems"
   ],
   "directions": [
-   "In a large pot, heat 3 tablespoons oil over high until hot and shimmering. Add onion and ginger and garlic, and sauté until golden, about 4 minutes.",
-   "Stir in fresh chopped tomatoes, cumin, coriander 1/4 teaspoons each salt and black pepper and the chili powder, and sauté for 2 minutes longer.",
+   "Heat the oil over medium-high. Cook the onion until golden, then add the ginger-garlic paste and cook briefly until fragrant.",
+   "Add the tomato, cumin, coriander, turmeric, chili, optional cinnamon, salt and pepper. Cook until the tomato softens and the spices are fragrant.",
    "Add broth, 2 cups water, lentils and carrot. Bring to a simmer, then partly cover pot and turn heat to medium-low. Simmer until lentils are soft, about 30 minutes. Taste and add salt if necessary.",
    "Using an immersion or regular blender or a food processor, purée half the soup, then add it back to pot. The soup should be somewhat chunky.",
-   "Reheat soup if necessary, then stir in lemon juice and cilantro. Serve soup drizzled with good olive oil and dusted lightly with chili powder, if desired."
+   "Stir lemon juice and chopped cilantro into the soup. Blend the yogurt, green chile and remaining cilantro into a spoonable chutney; serve over the soup with olive oil and extra chili if desired."
   ],
-  "notes": [],
+  "notes": [
+   "Top-comment variation: ginger-garlic, fresh tomato, extra spices and yogurt-green chile-cilantro chutney."
+  ],
   "macros": {
    "p": 13,
    "f": 0,
@@ -14380,6 +14388,75 @@
   "avoid": false,
   "cuisine": "korean",
   "batchable": true,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Chicken with Black Bean Sauce",
+  "rating": 0,
+  "tags": [
+   "Asian",
+   "Weeknights",
+   "Untested"
+  ],
+  "time": {
+   "prep": "35 mins",
+   "cook": "5 mins",
+   "total": "40 min"
+  },
+  "serves": {
+   "text": "4 servings",
+   "n": 4
+  },
+  "source": {
+   "url": "https://thewoksoflife.com/chicken-black-beans/",
+   "name": "thewoksoflife.com"
+  },
+  "image": null,
+  "ingredients": [
+   "2 chicken breasts (about 12 oz/340 g), thinly sliced",
+   "3 tablespoons water",
+   "3 teaspoons cornstarch",
+   "1 teaspoon oil",
+   "2 teaspoons light soy sauce",
+   "3 tablespoons oil, divided",
+   "3 slices ginger, julienned",
+   "3 cloves garlic, smashed and chopped",
+   "3 scallions, chopped; whites and greens separated",
+   "3 tablespoons fermented black beans, rinsed and drained",
+   "1 green bell pepper, bite-size pieces",
+   "1 red bell pepper, bite-size pieces",
+   "1/2 teaspoon sugar",
+   "1 tablespoon Shaoxing wine",
+   "1/4 teaspoon salt, or to taste",
+   "2 tablespoons water"
+  ],
+  "directions": [
+   "Mix the chicken with its water, cornstarch, oil and light soy until absorbed; marinate 30 minutes.",
+   "Heat a wok until smoking. Add 2 tablespoons oil, spread the chicken in one layer and sear briefly on each side until just opaque. Remove.",
+   "Lower to medium and add the remaining oil. Fry ginger briefly, then add garlic, scallion whites and fermented black beans; stir until aromatic.",
+   "Raise the heat. Stir-fry the peppers for about a minute, then return the chicken with sugar, Shaoxing wine, salt and 2 tablespoons water. Add scallion greens and toss quickly until everything is coated and hot."
+  ],
+  "notes": [
+   "Use whole fermented black beans if possible. If substituting jarred black bean sauce, reduce or omit the salt."
+  ],
+  "macros": {
+   "p": 28,
+   "f": 16,
+   "c": 9,
+   "kcal": 293,
+   "per": "serving"
+  },
+  "minutes": 40,
+  "id": "chicken-with-black-bean-sauce",
+  "protein": "Chicken",
+  "archetype": "protein",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "chinese",
+  "batchable": false,
   "isMain": true,
   "section": "main"
  }
