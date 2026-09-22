@@ -14461,5 +14461,181 @@
   "batchable": false,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "id": "sweet-potato-fries-nyt",
+  "name": "Sweet Potato Fries",
+  "rating": 0,
+  "tags": [
+   "Sides",
+   "Untested",
+   "Veggie"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "25 mins",
+   "total": "35 min"
+  },
+  "minutes": 35,
+  "serves": {
+   "text": "4 to 6 servings",
+   "n": 5
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1014647-sweet-potato-fries",
+   "name": "NYT Cooking — Mark Bittman"
+  },
+  "image": null,
+  "ingredients": [
+   "2 lb sweet potatoes, peeled",
+   "2 tbsp olive oil",
+   "1 tsp garlic powder",
+   "1 tsp paprika",
+   "1 tsp salt",
+   "0.5 tsp black pepper"
+  ],
+  "directions": [
+   "Heat oven to 400°F.",
+   "Cut sweet potatoes into sticks about 1/4 to 1/2 inch wide and 3 inches long; toss with oil.",
+   "Combine garlic powder, paprika, salt and pepper, then toss with the potatoes. Spread across two rimmed baking sheets.",
+   "Bake until browned underneath, about 15 minutes. Flip and bake about 10 minutes more, until crisp at the edges. Serve hot."
+  ],
+  "notes": [],
+  "macros": null,
+  "protein": "Veg",
+  "archetype": "side",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "american",
+  "batchable": false,
+  "isMain": false,
+  "section": "side"
+ },
+ {
+  "id": "gochujang-buttered-noodles",
+  "name": "Gochujang Buttered Noodles",
+  "rating": 0,
+  "tags": [
+   "Asian",
+   "Untested",
+   "Veggie",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "5 mins",
+   "cook": "20 mins",
+   "total": "25 min"
+  },
+  "minutes": 25,
+  "serves": {
+   "text": "4 servings",
+   "n": 4
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1024066-gochujang-buttered-noodles",
+   "name": "NYT Cooking — Eric Kim"
+  },
+  "image": null,
+  "ingredients": [
+   "1 lb spaghetti or other long pasta",
+   "6 tbsp unsalted butter",
+   "12 garlic cloves, finely chopped",
+   "Salt and black pepper",
+   "1/4 cup gochujang paste",
+   "1/4 cup honey",
+   "1/4 cup sherry vinegar or rice vinegar",
+   "Cilantro or sliced scallions, optional"
+  ],
+  "directions": [
+   "Cook pasta until done, reserving 1 cup pasta water; drain and return pasta to the pot.",
+   "Melt 4 tbsp butter over medium-low. Add garlic, season with salt and pepper, and cook 1 to 3 minutes until softened but not browned.",
+   "Stir in gochujang, honey and vinegar. Simmer over medium-high, stirring, until thick and reduced, about 3 to 4 minutes.",
+   "Add sauce and remaining 2 tbsp butter to the pasta. Stir vigorously, loosening with pasta water until glossy. Season and finish with cilantro or scallions if using."
+  ],
+  "notes": [
+   "Use gochujang paste rather than pre-seasoned gochujang sauce."
+  ],
+  "macros": {
+   "p": 18,
+   "f": 20,
+   "c": 111,
+   "kcal": 693,
+   "per": "serving"
+  },
+  "protein": "Veg",
+  "archetype": "complete",
+  "under30": true,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "korean",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "id": "caramelized-shallot-pasta",
+  "name": "Caramelized Shallot Pasta",
+  "rating": 0,
+  "tags": [
+   "Untested",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": null,
+   "cook": null,
+   "total": "40 min"
+  },
+  "minutes": 40,
+  "serves": {
+   "text": "4 servings",
+   "n": 4
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1020830-caramelized-shallot-pasta",
+   "name": "NYT Cooking — Alison Roman"
+  },
+  "image": null,
+  "ingredients": [
+   "1/4 cup olive oil",
+   "6 large shallots, very thinly sliced",
+   "5 garlic cloves, divided",
+   "Kosher salt and black pepper",
+   "1 tsp red-pepper flakes, plus more to taste",
+   "2 oz anchovy fillets, drained",
+   "1/2 to 3/4 cup tomato paste",
+   "10 oz pasta",
+   "1 cup parsley, finely chopped",
+   "Flaky sea salt"
+  ],
+  "directions": [
+   "Cook shallots and most of the garlic in olive oil over medium-high, seasoning with salt and pepper, until very soft and deeply caramelized, 15 to 20 minutes.",
+   "Add red-pepper flakes and anchovies and stir until the anchovies dissolve, about 2 minutes.",
+   "Add tomato paste and cook, stirring, until it darkens to brick red, about 2 minutes. Reserve half the shallot mixture for another use.",
+   "Cook pasta very al dente. Add it to the remaining shallot mixture with about 1 cup pasta water and toss over medium-high until the sauce becomes thick and clings to the pasta, 3 to 5 minutes.",
+   "Mix parsley with the remaining finely chopped garlic, flaky salt and pepper. Spoon over the pasta and add extra red-pepper flakes if desired."
+  ],
+  "notes": [
+   "The shallot mixture intentionally makes enough for two batches; refrigerate the reserved half for another pasta or to use with eggs, chicken or roasted vegetables."
+  ],
+  "macros": {
+   "p": 19,
+   "f": 16,
+   "c": 84,
+   "kcal": 546,
+   "per": "serving"
+  },
+  "protein": "Fish",
+  "archetype": "complete",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "italian",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
  }
 ]
