@@ -303,7 +303,7 @@ function scaleIng(line,f){
   const scaledRange=(q,range)=>{
     const lo=parseQty(q);if(lo===null)return q+(range||'');
     let out=fmtQty(lo*f);
-    if(range){const hi=parseQty(range.replace(/^\\s*[–—-]\\s*/,''));if(hi!==null)out+='–'+fmtQty(hi*f);}
+    if(range){const hi=parseQty(range.replace(/^\s*[–—-]\s*/,''));if(hi!==null)out+='–'+fmtQty(hi*f);}
     return out;
   };
   const lead=new RegExp('^'+QT+'(\\s*[–—-]\\s*'+QT+')?','i');
@@ -801,7 +801,7 @@ function amtIndex(r){
   const trail=new RegExp('^(.{2,60}?)\\s+('+QTN+')(?:\\s*(?:to|–|—|-)\\s*('+QTN+'))?\\s*('+MN+')\\b\\.?\\s*(.*)$','i');
   const entries=[];
   for(const raw of r.ingredients){
-    const line=String(raw).replace(/\\(([^)]*)\\)/g,' ').replace(/\\s+/g,' ').trim();
+    const line=String(raw).replace(/\(([^)]*)\)/g,' ').replace(/\s+/g,' ').trim();
     let m=line.match(lead),qty,qtyHi,unit,name;
     if(m){
       qty=parseQty(m[1]);qtyHi=m[2]?parseQty(m[2]):null;unit=m[3];
@@ -818,9 +818,9 @@ function amtIndex(r){
     if(unit==='gram')unit='g'; if(unit==='kilogram')unit='kg';
     if(unit==='ounce')unit='oz'; if(unit==='pound')unit='lb';
     if(unit==='milliliter')unit='ml'; if(unit==='liter')unit='l';
-    name=String(name).replace(/,.*$/,'').replace(STRIP,' ').replace(/\\s+/g,' ').trim().toLowerCase();
+    name=String(name).replace(/,.*$/,'').replace(STRIP,' ').replace(/\s+/g,' ').trim().toLowerCase();
     if(!name||!AMT_LEX.test(name)) continue;
-    const divided=/\\b(divided|plus more)\\b/i.test(String(raw));
+    const divided=/\b(divided|plus more)\b/i.test(String(raw));
     entries.push({qty,qtyHi,unit,name,divided,raw:String(raw)});
   }
   const map=new Map();
