@@ -313,9 +313,9 @@ function scaleIng(line,f){
     const after=raw.slice(m[0].length);
     const um=after.match(new RegExp('^\\s*'+UN+'\\b','i'));primaryUnit=um?.[1]||'';
     src=mark(scaledRange(m[1],m[2]))+src.slice(m[0].length);
-    const alt=new RegExp('(\\/\\s*)'+QT+'(?=\\s*'+UN+'\\b)','i');
+    const alt=new RegExp('(\\/\\s*)'+QT+'(\\s*[–—-]\\s*'+QT+')?(?=\\s*'+UN+'\\b)','i');
     const a=src.match(alt);
-    if(a)src=src.slice(0,a.index)+a[1]+mark(scaledRange(a[2],null))+src.slice(a.index+a[0].length);
+    if(a)src=src.slice(0,a.index)+a[1]+mark(scaledRange(a[2],a[3]))+src.slice(a.index+a[0].length);
     if(!COUNT_UNIT.test(primaryUnit)){
       const par=new RegExp('(\\(\\s*~?\\s*)'+QT+'(?=\\s*'+UN+'\\b)','i');
       const p=src.match(par);
