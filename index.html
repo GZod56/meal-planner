@@ -796,24 +796,33 @@ const RXESC=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
 function amtIndex(r){
   if(r.__amt) return r.__amt;
-  const re=new RegExp('^'+QT+'(?:\\s*(?:to|–|—|-)\\s*'+QT+')?\\s*'+MEASURE+'\\b\\.?\\s*(.+)$','i');
+  const QTN='(?:'+QT.slice(1,-1)+')', MN='(?:'+MEASURE.slice(1,-1)+')';
+  const lead=new RegExp('^('+QTN+')(?:\\s*(?:to|–|—|-)\\s*('+QTN+'))?\\s*('+MN+')\\b\\.?\\s*(.*)$','i');
+  const trail=new RegExp('^(.{2,60}?)\\s+('+QTN+')(?:\\s*(?:to|–|—|-)\\s*('+QTN+'))?\\s*('+MN+')\\b\\.?\\s*(.*)$','i');
   const entries=[];
   for(const raw of r.ingredients){
-    const line=String(raw).replace(/\(([^)]*)\)/g,' ').trim();
-    const m=line.match(re); if(!m) continue;
-    const qty=parseQty(m[1]); if(qty===null) continue;
-    const qtyHi=m[2]?parseQty(m[2]):null;
-    let unit=m[3].toLowerCase().replace(/s$/,'');
+    const line=String(raw).replace(/\\(([^)]*)\\)/g,' ').replace(/\\s+/g,' ').trim();
+    let m=line.match(lead),qty,qtyHi,unit,name;
+    if(m){
+      qty=parseQty(m[1]);qtyHi=m[2]?parseQty(m[2]):null;unit=m[3];
+      let rest=m[4]||'';
+      rest=rest.replace(new RegExp('^\\s*\\/\\s*'+QTN+'\\s*'+MN+'\\b\\s*','i'),'');
+      name=rest;
+    }else{
+      m=line.match(trail);if(!m)continue;
+      qty=parseQty(m[2]);qtyHi=m[3]?parseQty(m[3]):null;unit=m[4];name=m[1];
+    }
+    if(qty===null)continue;
+    unit=String(unit).toLowerCase().replace(/s$/,'');
     if(unit==='tablespoon')unit='tbsp'; if(unit==='teaspoon')unit='tsp';
     if(unit==='gram')unit='g'; if(unit==='kilogram')unit='kg';
     if(unit==='ounce')unit='oz'; if(unit==='pound')unit='lb';
     if(unit==='milliliter')unit='ml'; if(unit==='liter')unit='l';
-    let name=m[4].replace(/,.*$/,'').replace(STRIP,' ').replace(/\s+/g,' ').trim().toLowerCase();
+    name=String(name).replace(/,.*$/,'').replace(STRIP,' ').replace(/\\s+/g,' ').trim().toLowerCase();
     if(!name||!AMT_LEX.test(name)) continue;
-    const divided=/\b(divided|plus more)\b/i.test(String(raw));
+    const divided=/\\b(divided|plus more)\\b/i.test(String(raw));
     entries.push({qty,qtyHi,unit,name,divided,raw:String(raw)});
   }
-  /* candidate phrases: the cleaned name, and the lexicon head inside it */
   const map=new Map();
   entries.forEach((e,i)=>{
     const keys=new Set([e.name]);
@@ -821,13 +830,10 @@ function amtIndex(r){
     for(const k of keys){ if(k.length<3) continue;
       if(!map.has(k)) map.set(k,new Set()); map.get(k).add(i); }
   });
-  /* ambiguous phrase -> drop it entirely rather than guess */
   const phrases=[];
   for(const [k,set] of map) if(set.size===1) phrases.push([k,[...set][0]]);
   phrases.sort((a,b)=>b[0].length-a[0].length);
   const blob=r.ingredients.join(' | ').toLowerCase();
-  /* an ingredient named in several steps is being used across them: show the
-     amount as a recipe total so a single step can't read as "add all of this" */
   const dirs=(r.directions||[]).map(d=>String(d).toLowerCase());
   for(const [k,ei] of phrases){
     const rx=new RegExp('\\b'+RXESC(k).replace(/ /g,'\\s+')+'\\b','i');
