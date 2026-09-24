@@ -44,7 +44,7 @@ function openRecipeEditor(recipe={}){
  sh.querySelector('#recipeIngredients').required=true;sh.querySelector('#recipeDirections').required=true;
  const close=()=>{sh.classList.remove('open');};
  sh.onclick=e=>{if(e.target.closest('[data-editor-cancel]'))close();};
- sh.querySelector('form').onsubmit=e=>{
+ sh.querySelector('form').onsubmit=async e=>{
    e.preventDefault();
    const val=id=>sh.querySelector('#'+id).value.trim();
    const lines=id=>val(id).split('\n').map(s=>s.trim()).filter(Boolean);
@@ -54,10 +54,17 @@ function openRecipeEditor(recipe={}){
    }
    const id=r.id||'recipe-'+crypto.randomUUID();
    const sourceURL=safeRecipeURL(val('recipeURL'));
+   let sourceImage=safeRecipeURL(r.image);
+   if(sourceURL&&(!sourceImage||safeRecipeURL(r.source?.url)!==sourceURL)){
+     try{
+       const imported=await Household.api('import-recipe',{method:'POST',body:JSON.stringify({url:sourceURL})});
+       sourceImage=safeRecipeURL(imported?.recipe?.image)||sourceImage;
+     }catch(_err){/* A manual recipe can still be saved when a source blocks imports. */}
+   }
    const saved=normalizeRecipe({...r,id,name:val('recipeName'),minutes:+val('recipeMinutes'),serves:{n:+val('recipeServes')},
      section:val('recipeSection'),protein:val('recipeProtein'),cuisine:val('recipeCuisine'),archetype:val('recipeType'),
      ingredients,directions,notes:lines('recipeNotes'),batchable:sh.querySelector('#recipeBatch').checked,
-     favourite:sh.querySelector('#recipeFavourite').checked,source:{url:sourceURL,name:sourceURL?new URL(sourceURL).hostname:''}});
+     favourite:sh.querySelector('#recipeFavourite').checked,image:sourceImage,source:{url:sourceURL,name:sourceURL?new URL(sourceURL).hostname:''}});
    const overrides=lsGet('mp.recipes',{});overrides[id]=saved;
    if(!lsSet('mp.recipes',overrides)){sh.querySelector('#recipeError').textContent='Could not save. Free up browser storage and try again.';return;}
    applyRecipeOverrides();close();closeRecipe();tab='library';filt.sec=saved.section;filt.q='';render();openRecipe(id);
