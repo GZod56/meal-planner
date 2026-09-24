@@ -294,12 +294,41 @@ function fmtQty(x){if(x<=0)return '0';const w=Math.floor(x+1e-6);let f=x-w;
   for(const[v,g]of FROUT){const d=Math.abs(f-v);if(d<bd){bd=d;best=g;}}
   if(bd>.07)return String(Math.round(x*4)/4);return (w?w:'')+best;}
 const QT='(\\d+\\s\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?\\s?[¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]|[¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]|\\d+(?:\\.\\d+)?|half|quarter|one|two|three|four|six|eight)';
-function scaleIng(line,f){if(f===1)return esc(line);
-  const re=new RegExp('^'+QT+'(\\s*[–-]\\s*'+QT+')?');const m=line.match(re);if(!m)return esc(line);
-  let out=fmtQty((parseQty(m[1])??0)*f);
-  if(m[2]){const hi=m[2].replace(/^\s*[–-]\s*/,'');out+='–'+fmtQty((parseQty(hi)??0)*f);}
-  return '<span class="qty">'+esc(out)+'</span>'+esc(line.slice(m[0].length));}
-const UN='(tablespoons?|tbsp|teaspoons?|tsp|cups?|milliliters?|ml|liters?|grams?|g|kilograms?|kg|ounces?|oz|pounds?|lbs?|lb|pints?|quarts?|cans?|cloves?)';
+const UN='(tablespoons?|tbsp|teaspoons?|tsp|cups?|milliliters?|ml|liters?|l|centiliters?|cl|grams?|g|kilograms?|kg|ounces?|oz|pounds?|lbs?|lb|pints?|quarts?|cans?|cloves?|packets?|sachets?|blocks?|jars?|bottles?)';
+const COUNT_UNIT=/^(?:cans?|packets?|sachets?|blocks?|jars?|bottles?)$/i;
+function scaleIng(line,f){
+  const raw=String(line);if(f===1)return esc(raw);
+  let src=raw;const vals=[];
+  const mark=v=>{vals.push(v);return '\u0001'+String.fromCharCode(0xE000+vals.length-1)+'\u0002';};
+  const scaledRange=(q,range)=>{
+    const lo=parseQty(q);if(lo===null)return q+(range||'');
+    let out=fmtQty(lo*f);
+    if(range){const hi=parseQty(range.replace(/^\\s*[–—-]\\s*/,''));if(hi!==null)out+='–'+fmtQty(hi*f);}
+    return out;
+  };
+  const lead=new RegExp('^'+QT+'(\\s*[–—-]\\s*'+QT+')?','i');
+  const m=src.match(lead);
+  let primaryUnit='';
+  if(m){
+    const after=raw.slice(m[0].length);
+    const um=after.match(new RegExp('^\\s*'+UN+'\\b','i'));primaryUnit=um?.[1]||'';
+    src=mark(scaledRange(m[1],m[2]))+src.slice(m[0].length);
+    const alt=new RegExp('(\\/\\s*)'+QT+'(?=\\s*'+UN+'\\b)','i');
+    const a=src.match(alt);
+    if(a)src=src.slice(0,a.index)+a[1]+mark(scaledRange(a[2],null))+src.slice(a.index+a[0].length);
+    if(!COUNT_UNIT.test(primaryUnit)){
+      const par=new RegExp('(\\(\\s*~?\\s*)'+QT+'(?=\\s*'+UN+'\\b)','i');
+      const p=src.match(par);
+      if(p)src=src.slice(0,p.index)+p[1]+mark(scaledRange(p[2],null))+src.slice(p.index+p[0].length);
+    }
+  }else{
+    const any=new RegExp(QT+'(?=\\s*'+UN+'\\b)','i');
+    const a=src.match(any);
+    if(a&&a.index<60)src=src.slice(0,a.index)+mark(scaledRange(a[1],null))+src.slice(a.index+a[0].length);
+  }
+  return esc(src).replace(/\u0001([\uE000-\uF8FF])\u0002/g,
+    (_a,ch)=>'<span class="qty">'+esc(vals[ch.charCodeAt(0)-0xE000])+'</span>');
+}
 function scaleStep(t,f){const safe=esc(t);const re=new RegExp(QT+'(\\s?)'+UN+'\\b','gi');
   return safe.replace(re,(all,q,sp,u)=>{if(f===1)return '<span class="qty">'+q+sp+u+'</span>';
     const v=parseQty(q);if(v===null)return all;return '<span class="qty">'+fmtQty(v*f)+sp+u+'</span>';});}
