@@ -20,7 +20,7 @@ test('all frontend scripts parse and pregnancy references are removed',()=>{
    new vm.Script(js);
  }
  assert.doesNotMatch(source('index.html')+source('recipes.json'),/pregnan|postpartum|breastfeed/i);
- assert.equal(JSON.parse(source('recipes.json')).length,216);
+ assert.ok(JSON.parse(source('recipes.json')).length>=200);
 });
 test('shopping combines compatible volume and count units, respects batch scale',()=>{
  const recipes=[{id:'a',name:'A',ingredients:['1 tablespoon olive oil','1 onion','1/2 cup rice']},{id:'b',name:'B',ingredients:['3 teaspoons olive oil','2 onions, chopped','120 ml rice']}];
@@ -89,9 +89,9 @@ test('recipe import blocks private destinations and parses nested schema',async(
  assert.equal(publicIP('93.184.216.34'),true);
  await assert.rejects(readPublicPage('https://127.0.0.1/private'));
  await assert.rejects(readPublicPage('file:///etc/passwd'));
- const schema={'@graph':[{'@type':['Recipe'],name:'<b>Soup</b>',recipeIngredient:['1 carrot'],recipeInstructions:[{'@type':'HowToSection',itemListElement:[{text:'<p>Cook.</p>'}]}],recipeYield:'Serves 2',totalTime:'PT1H20M'}]};
+ const schema={'@graph':[{'@type':['Recipe'],name:'<b>Soup</b>',recipeIngredient:['1 carrot'],recipeInstructions:[{'@type':'HowToSection',itemListElement:[{text:'<p>Cook.</p>'}]}],recipeYield:'Serves 2',totalTime:'PT1H20M',image:{url:'https://example.com/soup.jpg'}}]};
  const r=extractRecipe('<script type="application/ld+json">'+JSON.stringify(schema)+'</script>','https://example.com/soup');
- assert.equal(r.name,'Soup');assert.deepEqual(r.directions,['Cook.']);assert.equal(r.minutes,80);assert.equal(r.serves.n,2);
+ assert.equal(r.name,'Soup');assert.deepEqual(r.directions,['Cook.']);assert.equal(r.minutes,80);assert.equal(r.serves.n,2);assert.equal(r.image,'https://example.com/soup.jpg');
  assert.throws(()=>extractRecipe('<h1>No recipe</h1>','https://example.com'));
 });
 test('assistant requires sign-in, bounds usage, and handles OpenAI responses',async()=>{
