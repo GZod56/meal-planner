@@ -21,8 +21,7 @@
   },
   "image": "https://thewoksoflife.com/wp-content/uploads/2023/07/air-fryer-char-siu-6-110x154.jpg",
   "ingredients": [
-   "3 pounds boneless pork shoulder/pork butt",
-   "(select a piece with some good fat on it)",
+   "3 pounds boneless pork shoulder/pork butt (select a piece with some good fat on it)",
    "¼ cup granulated white sugar",
    "2 teaspoons salt",
    "½ teaspoon five spice powder",
@@ -44,11 +43,11 @@
    "Add ¼ cup of hot water to the air fryer basket, with the rack on top. Place the pork on the rack in the basket so the pieces are not touching.",
    "Air fryers usually have to warm up before placing food inside, but for this recipe, just insert the basket, set the temperature to 375°F, and turn it on. If your air fryer has a notification to place the food, just leave it alone, and it will continue to cook at the set temperature. All that said, air fryers do vary, so you may have to adjust the cooking time.",
    "The recommended cooking time for 9 to 10 ounce pieces is a total of 15 to 18 minutes. You can use 3 cooking intervals for 5 to 6 minutes each, but if you reduce the size to 6 to 7 ounces, you may only need 3 minutes for the last interval for a total of 13 to 15 minutes. Combine the reserved marinade with the remaining 1 tablespoon hot water and the maltose. At each 5-6 min interval, brush the pork lightly with the reserved marinade mixture, flip, and brush the other side. Then reset the timer at the same temperature, 375°F. If the water has evaporated, add more hot water (make sure it’s HOT, or it’ll cool down the air fryer).",
-   "Slice, serve, and enjoy!",
-   "TIPS & NOTES:",
-   "Note: Prep time does not include overnight marinating time!"
+   "Slice, serve, and enjoy!"
   ],
-  "notes": [],
+  "notes": [
+   "Prep time does not include overnight marinating time."
+  ],
   "macros": {
    "p": 32,
    "f": 10,
@@ -421,23 +420,25 @@
   },
   "image": "https://greengoddess.dk/cdn/shop/articles/proteinmuffins-banan_fb4821b1-7c6c-4546-b706-32d89dc6f243.png?v=1769767903&width=2048",
   "ingredients": [
-   "-3 bananas (I used 4 mini ones from our tree lol)",
-   "-2 eggs",
-   "-3/4 cup greek yogurt",
-   "-1/4 cup maple syrup",
-   "-1 tsp vanilla",
-   "-2 cups oat (or oat flour)",
-   "- 1 cup flour",
-   "-1 scoop vanilla protein powder",
-   "-2 tsp baking powder",
-   "-1 tsp baking soda",
-   "-dash of cinnamon",
-   "-pinch of salt",
+   "3 bananas (I used 4 mini ones from our tree lol)",
+   "2 eggs",
+   "3/4 cup greek yogurt",
+   "1/4 cup maple syrup",
+   "1 tsp vanilla",
+   "2 cups oat (or oat flour)",
+   "1 cup flour",
+   "1 scoop vanilla protein powder",
+   "2 tsp baking powder",
+   "1 tsp baking soda",
+   "dash of cinnamon",
+   "pinch of salt",
    "flaxseeds / wheatgerm",
-   "-chocolate chips"
+   "chocolate chips"
   ],
   "directions": [
-   "1. Preheat oven to 350F. Mash bananas in a bowl and add all wet ingredients. Mix, but don’t over mix, until combined.2. Add your oats to a blender and blend to make oat flour. Pour into the banana mix along with all the other dry ingredients. Mix (again don’t over mix!) until just combined. Add chocolate chips and fold into batter.3. Scoop batter into a prepared muffin tin and top with more chocolate chips. Pop into the oven for 25 minutes until baked through. Enjoy!"
+   "Preheat oven to 350°F. Mash the bananas, then mix in the eggs, Greek yogurt, maple syrup and vanilla until combined; do not overmix.",
+   "Blend the oats into oat flour if needed. Add the oat flour, flour, protein powder, baking powder, baking soda, cinnamon and salt to the wet mixture and mix just until combined. Fold in chocolate chips plus flaxseed or wheat germ if using.",
+   "Divide into a prepared muffin tin, top with more chocolate chips if you like, and bake for about 25 minutes until cooked through."
   ],
   "notes": [],
   "macros": null,
@@ -817,7 +818,7 @@
    "total": null
   },
   "serves": {
-   "text": "4 + author",
+   "text": "Serves: 4",
    "n": 4
   },
   "source": {
@@ -826,52 +827,29 @@
   },
   "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/02/black-eyed-peas-curry.webp",
   "ingredients": [
+   "1 cup dry black eyed peas (lobia or 2¾ cups soaked or 2½ cups canned or precooked)",
+   "1 cup water for pressure cooker (4 cups to cook in pot)",
    "1 cup fine chopped onions (1 large)",
    "1½ cup chopped tomatoes or 1¼ cup fresh pureed sweet tomatoes",
+   "1 large potato, optional",
    "1 tablespoon ginger garlic (grated/ paste/ crushed, half tbsp each)",
-   "¾ to 1½ teaspoon Kashmiri red chili powder (adjust to taste, I use 1½)",
-   "1 to 1½ teaspoon garam masala (or meat masala, adjust to taste)",
-   "1 to 1½ teaspoon coriander powder (adjust to taste)",
-   "½ to ¾ teaspoon cumin powder (adjust to taste)",
-   "¼ teaspoon turmeric",
-   "1 teaspoon salt (adjust to taste)",
+   "2 to 3 tablespoons oil",
    "1 bay leaf (or 1 sprig curry leaves)",
-   "1 inch cinnamon piece ( optional)",
-   "To cook the beans",
-   "1 cup dry black eyed peas (lobia or 2¾ cups soaked or 2½ cups canned or precooked)",
-   "1 cup water for pressure cooker (4 cups to cook in pot)"
+   "1 inch cinnamon piece, optional",
+   "¾ to 1½ teaspoon Kashmiri red chili powder",
+   "1 to 1½ teaspoon garam masala",
+   "1 to 1½ teaspoon coriander powder",
+   "½ to ¾ teaspoon cumin powder",
+   "¼ teaspoon turmeric",
+   "1 teaspoon salt",
+   "1 to 2 cups hot water, as required",
+   "2 tablespoons chopped coriander leaves"
   ],
   "directions": [
-   "1. Rinse 1 cup black eyed peas at least thrice and soak them in 4 cups water for at least 4 to 8 hours. I prefer soaking them overnight. Do not cover the bowl completely when you soak. Cover it with a cloth or a mesh basket so air circulates. The next morning rinse them well.",
-   "2. Add them to a bowl and pour 1 cup water. I do not add salt to my beans while cooking, if you want you may add. Pressure cook for 2 to 3 whistles on a medium heat. If using instant pot, pressure for 8 mins. If you soak them for fewer hours (less than 8 hours), increase the cook time. 2 to 3 whistles and 8 mins of IP time is for overnight soaked beans. The cooked beans should be soft, yet hold shape and when you squeeze, it should be get mashed easily.",
-   "3. While your beans cook, chop and prepare:",
-   "I also prefer to use half teaspoon fennel seeds powder.",
-   "5. Peel and dice potato to 1.5 inch cubes and keep them immersed in water until used. You may skip the potatoes in the recipe and save 10 minutes cook time.",
-   "Make the curry",
-   "6. Pour 2 to 3 tablespoons oil to a hot pan. Add cinnamon and a bay leaf.",
-   "7. Add the onions and begin to saute them on a medium high heat until golden.",
-   "8. After 6 to 7 mins, stir in the ginger garlic and sauce for a minute.",
-   "9. Lower the heat. Stir in all the ground spices and salt.",
-   "10. Pour the tomatoes puree or chopped tomatoes. (If using canned tomatoes or passata, add it later after cooking the potatoes.)",
-   "11. Mix and cook on a medium high heat until the raw tomato flavor is gone.",
-   "12. Add the potatoes along with 1 cup hot water. Mix well. Bring it to a rolling boil and reduce the heat to medium. Cook until the potatoes are fork tender.",
-   "13. Don’t overcook the potatoes, they should be almost cooked yet firm.",
-   "14. Add the cooked black eyed peas along with the stock (beans cooked water). (If using canned beans, add them to a colander, rinse thoroughly under running water. Make sure they are tender yet hold shape.)",
-   "15. Pour 1 cup additional water and give a stir. If using canned peas, you will need more water. Bring this to a rolling boil and reduce the heat to medium. Cover and cook for 7 to 10 mins until the cowpeas are flavorful. The peas should not get mushy at this stage.",
-   "16. When it is done, take a few tablespoons of the black eyed peas and mash well to smooth. Stir that back into the curry, so it thickens.",
-   "17. Taste test and add more salt or garam masala if you want. Add chopped coriander leaves.",
-   "Serve black eyed peas over rice, quinoa, millets or steel cut oats. Roti, chapati, naan, paratha and artisan breads also go well.",
-   "Expert Tips",
-   "Cook beans in Pot: Soak the dried black eyed peas overnight with 4 cups water and half teaspoon baking soda. Rinse them well later and bring 3 cups water to a rolling boil and add the beans. Reduce the heat to medium and cook until tender for about 1 hour or more. They should be soft yet hold shape.",
-   "Soaking: Black eyed peas actually do not need a long soak. They are ready to cook after 3 to 4 hours but for convenience I prefer to soak them overnight. The pressure cook time will be slightly longer if you soak them for fewer hours (less than overnight).",
-   "Instant Soak: If you forgot to soak them and want to cook instantly, bring 3 cups water to a rolling boil and add the black eyed peas. Cover and rest them for an hour. Pressure cook for longer than mentioned in the recipe.",
-   "Meat Masala: My Mom always used a stronger masala for this recipe. I however do not have that spice blend so I prefer to use this biryani masala in combination with garam masala. The recipe works with a good garam masala or a meat masala. You just need to adjust the quantity.",
-   "Preparation (Skip to use canned beans)",
    "Rinse the dry black eyed peas well thrice and soak them for at least 4 to 8 hours. Cover the bowl with a mesh basket/ lid or cloth if you want. Avoid covering it completely.",
    "Later rinse them well with fresh water twice and add them to a cooker or bowl along with water.",
    "Place the bowl in your pressure cooker and secure the lid. Pressure cook until you hear 2 to 3 whistles on the stovetop pressure cooker. If using Instant pot, pressure cook for 8 to 10 mins. (read notes) If you do not have a cooker, please read pro tips section in the post to cook them in a pot.",
    "Once the pressure drops naturally, open the lid and check, black eyed peas should be soft yet hold shape. They should get mashed easily when you squeeze.",
-   "How to make Black Eyed Peas Curry",
    "While the beans cooks, chop onions, grate ginger garlic and puree tomatoes. Peel and dice the potatoes if using.",
    "Pour oil to a pan and heat it. Add bay leaf and cinnamon if using.",
    "When they begin to sizzle, add the onions and stir fry on a medium high heat for 6 to 7 minutes, until golden.",
@@ -6043,7 +6021,12 @@
    "Fresh coriander, to garnish"
   ],
   "directions": [
-   "1. Warm the ghee in a heavy pan over medium heat.2. Add the whole spices and cook for a minute until aromatic.3. Now add the onions with the hit of salt. Once they sweat, add the ginger and garlic and cook for 2 to 3 minutes until everything is likely brown and doesn't smell raw.4. Add the powdered spices and cook them for a minute. Then add the chicken and cook until it's fully coated in the spices and lightly brown.5. At the tomatoes along with a splash of water and keep simmering on a low heat till the chicken is fully cooked, about 10-12 minutes.6. Finish with some fresh coriander leaves."
+   "Warm the ghee in a heavy pan over medium heat.",
+   "Add the whole spices and cook for about 1 minute until aromatic.",
+   "Add the onion with a hit of salt. Once softened, add the ginger and garlic and cook for 2 to 3 minutes until lightly browned and no longer raw-smelling.",
+   "Add the powdered spices and cook for 1 minute. Add the chicken and cook until coated in the spices and lightly browned.",
+   "Add the tomatoes with a splash of water and simmer over low heat until the chicken is fully cooked, about 10 to 12 minutes.",
+   "Finish with fresh coriander leaves."
   ],
   "notes": [],
   "macros": null,
@@ -6945,7 +6928,7 @@
    "total": null
   },
   "serves": {
-   "text": "2 +",
+   "text": "Serves: 2",
    "n": 2
   },
   "source": {
@@ -6954,29 +6937,25 @@
   },
   "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/05/indian-masala-chai-tea.webp",
   "ingredients": [
-   "2 to 3 cloves (2 for milder flavor)",
-   "½ to ¾ cinnamon",
    "4 green cardamoms",
-   "4 pepper corn",
-   "½ teaspoon ginger",
-   "2½ to 3 teaspoons CTC loose leaf black Tea or 1¼ to 1½ teaspoon powder (dust), depending on the brand. You can use more or less depending on the kind of tea you are using. Or You can also use 3 to 4 tea bags. (Start with lower tea and if required add more after adding milk)",
-   "To make Tea",
+   "2 cloves",
+   "½ to ¾ inch cinnamon piece",
+   "2 peppercorns",
    "1½ cups water",
-   "1 cup full fat milk (adjust to taste, Refer notes)",
-   "2½ to 3 teaspoons black tea leaves or 1¼ to 1½ teaspoon tea powder (dust) (or 3 to 4 tea bags, Refer notes)",
+   "1 cup full fat milk",
+   "2½ to 3 teaspoons black tea leaves or 1¼ to 1½ teaspoon tea powder (or 3 to 4 tea bags)",
    "2 to 3 teaspoons sugar or as needed",
-   "½ teaspoon (½ inch) ginger chopped or crushed (optional)",
-   "Method 2 – Makes 3 tsp masala chai powder",
-   "1 teaspoon green cardamoms (5 grams skinned) (elaichi)",
+   "½ teaspoon (½ inch) ginger, chopped or crushed, optional",
+   "FOR CHAI MASALA POWDER:",
+   "1 teaspoon green cardamoms (5 grams skinned)",
    "½ teaspoon cloves (2 grams)",
-   "2½ to 3 grams cinnamon (cassia or Ceylon)",
+   "2½ to 3 grams cinnamon",
    "¼ teaspoon fennel seeds (1½ grams)",
-   "¼ to ½ teaspoon black pepper corn (½ tsp ground pepper)",
-   "½ teaspoon nutmeg grated or ⅓ of large nutmeg",
-   "2 petals star flower (star anise) (chakri phool)"
+   "¼ to ½ teaspoon black peppercorns",
+   "½ teaspoon grated nutmeg",
+   "2 petals star anise"
   ],
   "directions": [
-   "How to make Masala Chai",
    "Add cloves, cardamom, cinnamon stick & black pepper to a mortar pestle or a spice grinder. Crush or grind them to a powder.",
    "Heat water in a pot. Add the ground spices, crushed/chopped ginger and tea. (Start with lower amount of tea and if required you may add more after adding milk)",
    "Bring this to a rolling boil and reduce the heat to medium. Boil for 3 mins until the decoction turns dark.",
@@ -6986,16 +6965,15 @@
    "Optionally aerate or pull your masala chai for the same Chaiwallah taste. Take a soup ladle and aerate the masala chai or simply pour some chai to a measuring cup. Pour the hot tea in a slow stream, back to the chai pot from a height of 1 to 1½ feet.",
    "Repeat this step of pulling hot masala chai from the pot to the cup, a few times (4 to 5 times). This breaks down the layer of cream and incorporates it back to the masala chai making it more tasty and thick.",
    "Strain the masala chai to serving cups & serve with any breakfast, snack or biscuits.",
-   "Method 2 – Making masala chai powder or chai masala",
    "Clean all the spices and add to a blender jar. Powder finely. Store it in an airtight glass jar.",
-   "Use about ½ to ¾ tsp or more to make 2 servings of tea. For stronger tea you can use about ¾ tsp.",
-   "Milk: Some like tea to be more milky and some less. Also adjust the quantity of milk if needed. I have tested this recipe with various kinds of full fat milk – fresh, homogenized and toned. Fresh homogenized and toned work well with the same quantities mentioned in the recipe.",
-   "Low fat milk: If you are using low fat milk or non-homogenized cow milk, use milk and water in 1:1 proportions."
+   "Use about ½ to ¾ tsp or more to make 2 servings of tea. For stronger tea you can use about ¾ tsp."
   ],
   "notes": [
    "Avoid overboiling the tea: If you boil too long, the tea turns bitter and becomes too heavy. Turn off when you begin to smell the sweet flavor in your tea.",
    "Tea powder/ leaves: The strength of tea depends on the kind of tea used like tea powder, tea leaves etc. It also depends on the brand of tea powder or leaves. Do adjust the quantities as desired. You won’t really know the right amount that works well unless you experiment a few times.",
-   "Tea bags: boiling your chai with tea bags for too long can make it too strong or even bitter. So remove them at the time of adding milk."
+   "Tea bags: boiling your chai with tea bags for too long can make it too strong or even bitter. So remove them at the time of adding milk.",
+   "Milk: Some like tea to be more milky and some less. Also adjust the quantity of milk if needed. I have tested this recipe with various kinds of full fat milk – fresh, homogenized and toned. Fresh homogenized and toned work well with the same quantities mentioned in the recipe.",
+   "Low fat milk: If you are using low fat milk or non-homogenized cow milk, use milk and water in 1:1 proportions."
   ],
   "macros": null,
   "minutes": 10,
@@ -14485,7 +14463,7 @@
    "url": "https://cooking.nytimes.com/recipes/1014647-sweet-potato-fries",
    "name": "NYT Cooking — Mark Bittman"
   },
-  "image": null,
+  "image": "https://cookieandkate.com/images/2010/12/crispy-baked-sweet-potato-fries-with-ketchup-1.jpg",
   "ingredients": [
    "2 lb sweet potatoes, peeled",
    "2 tbsp olive oil",
@@ -14537,7 +14515,7 @@
    "url": "https://cooking.nytimes.com/recipes/1024066-gochujang-buttered-noodles",
    "name": "NYT Cooking — Eric Kim"
   },
-  "image": null,
+  "image": "https://art.whisk.com/image/upload/fl_progressive%2Ch_560%2Cw_560%2Cc_fill%2Cdpr_2.0/v1712083870/v3/user-recipes/8d4bdb13a813ac54660f971d678804ee.jpg",
   "ingredients": [
    "1 lb spaghetti or other long pasta",
    "6 tbsp unsalted butter",
@@ -14597,7 +14575,7 @@
    "url": "https://cooking.nytimes.com/recipes/1020830-caramelized-shallot-pasta",
    "name": "NYT Cooking — Alison Roman"
   },
-  "image": null,
+  "image": "https://art.whisk.com/image/upload/fl_progressive%2Ch_560%2Cw_560%2Cc_fill%2Cdpr_2.0/v1750535739/v3/user-recipes/5eb5d7da9aeab594655b245a591c7113.jpg",
   "ingredients": [
    "1/4 cup olive oil",
    "6 large shallots, very thinly sliced",
@@ -14661,7 +14639,7 @@
    "url": "https://cooking.nytimes.com/recipes/1024503-marry-me-chicken",
    "name": "NYT Cooking — Naz Deravian"
   },
-  "image": null,
+  "image": "https://mojo.generalmills.com/api/public/content/6_ovMgMMT-CdrONj2ZfL7Q_gmi_hi_res_jpeg.jpeg?v=a759c024&t=4c5a749111ad462d9f0355ce09ad5134",
   "ingredients": [
    "3 large boneless, skinless chicken breasts, or 6 chicken cutlets (about 2 1/4 lb total)",
    "Kosher salt and black pepper",
@@ -14725,7 +14703,7 @@
    "url": "https://cooking.nytimes.com/recipes/1026287-one-pot-roman-chicken-cacciatore-with-potatoes?art=100000010543877",
    "name": "NYT Cooking — Cybelle Tondu"
   },
-  "image": null,
+  "image": "https://www.donnasdailydish.com/storage/10954/a128fe32-4858-4f3e-bde4-76b305c4fa7c/one-pot-chicken-cacciatore-with-potatoes_orig.jpeg?w=800",
   "ingredients": [
    "2 lb bone-in, skin-on chicken thighs",
    "Kosher salt",

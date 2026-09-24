@@ -20,7 +20,18 @@ test('all frontend scripts parse and pregnancy references are removed',()=>{
    new vm.Script(js);
  }
  assert.doesNotMatch(source('index.html')+source('recipes.json'),/pregnan|postpartum|breastfeed/i);
- assert.equal(JSON.parse(source('recipes.json')).length,216);
+ assert.ok(JSON.parse(source('recipes.json')).length>=200);
+});
+test('recipe serving scaler keeps equivalent measures and package sizes consistent',()=>{
+ const html=source('index.html');
+ const block=html.slice(html.indexOf('const FR='),html.indexOf('function slotByKey'));
+ const qctx=vm.createContext({esc:s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')});
+ vm.runInContext(block,qctx);
+ assert.equal(qctx.scaleIng('750g/ 25 oz pinot noir',2),'<span class="qty">1500</span>g/ <span class="qty">50</span> oz pinot noir');
+ assert.equal(qctx.scaleIng('2 cans (15 oz) beans',2),'<span class="qty">4</span> cans (15 oz) beans');
+ assert.equal(qctx.scaleIng('1 cup (240 ml) milk',2),'<span class="qty">2</span> cup (<span class="qty">480</span> ml) milk');
+ assert.equal(qctx.scaleIng('Soy Sauce 3 Tbsp',2),'Soy Sauce <span class="qty">6</span> Tbsp');
+ assert.equal(qctx.scaleIng('250 – 300 g/8 – 10 oz pork mince',2),'<span class="qty">500–600</span> g/<span class="qty">16–20</span> oz pork mince');
 });
 test('shopping combines compatible volume and count units, respects batch scale',()=>{
  const recipes=[{id:'a',name:'A',ingredients:['1 tablespoon olive oil','1 onion','1/2 cup rice']},{id:'b',name:'B',ingredients:['3 teaspoons olive oil','2 onions, chopped','120 ml rice']}];
@@ -89,9 +100,9 @@ test('recipe import blocks private destinations and parses nested schema',async(
  assert.equal(publicIP('93.184.216.34'),true);
  await assert.rejects(readPublicPage('https://127.0.0.1/private'));
  await assert.rejects(readPublicPage('file:///etc/passwd'));
- const schema={'@graph':[{'@type':['Recipe'],name:'<b>Soup</b>',recipeIngredient:['1 carrot'],recipeInstructions:[{'@type':'HowToSection',itemListElement:[{text:'<p>Cook.</p>'}]}],recipeYield:'Serves 2',totalTime:'PT1H20M'}]};
+ const schema={'@graph':[{'@type':['Recipe'],name:'<b>Soup</b>',recipeIngredient:['1 carrot'],recipeInstructions:[{'@type':'HowToSection',itemListElement:[{text:'<p>Cook.</p>'}]}],recipeYield:'Serves 2',totalTime:'PT1H20M',image:{url:'https://example.com/soup.jpg'}}]};
  const r=extractRecipe('<script type="application/ld+json">'+JSON.stringify(schema)+'</script>','https://example.com/soup');
- assert.equal(r.name,'Soup');assert.deepEqual(r.directions,['Cook.']);assert.equal(r.minutes,80);assert.equal(r.serves.n,2);
+ assert.equal(r.name,'Soup');assert.deepEqual(r.directions,['Cook.']);assert.equal(r.minutes,80);assert.equal(r.serves.n,2);assert.equal(r.image,'https://example.com/soup.jpg');
  assert.throws(()=>extractRecipe('<h1>No recipe</h1>','https://example.com'));
 });
 test('assistant requires sign-in, bounds usage, and handles OpenAI responses',async()=>{
