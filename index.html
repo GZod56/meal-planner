@@ -437,7 +437,7 @@ function viewLibrary(){
     const favourites=RECIPES.filter(r=>r.favourite).sort((a,b)=>a.name.localeCompare(b.name));
     h+=`<div class="lib-intro"><span class="title">What sounds good?</span></div>
       <div class="lib-collections">
-        <button class="lib-collection" data-collection="quick"><span class="label">Quick ideas</span><span><strong>Weeknight<br>dinners →</strong><span class="n">${quick} under 30 min</span></span></button>
+        <button class="lib-collection" data-collection="quick"><span class="label">Quick ideas</span><span><strong>30-minute<br>recipes →</strong><span class="n">${quick} to explore</span></span></button>
         <button class="lib-collection" data-collection="batch"><span class="label">Set aside time</span><span><strong>Sunday<br>batch cook →</strong><span class="n">${batch} recipes</span></span></button>
       </div>
       <div class="lib-intro"><span class="title">From your library</span><button class="act" data-browse="all">See all →</button></div>
@@ -451,7 +451,7 @@ function viewLibrary(){
       const n=RECIPES.filter(r=>secOf(r)===k).length;
       return `<button class="sec ${filt.sec===k?'on':''}" data-sec="${k}">${label}<i>${n}</i></button>`;}).join('')}</div>`;
     h+=`<div class="chips">
-      <button class="chip ${filt.u30?'on':''}" data-chip="u30" aria-pressed="${filt.u30}">Under 30</button>
+      <button class="chip ${filt.u30?'on':''}" data-chip="u30" aria-pressed="${filt.u30}">30 min or less</button>
       <button class="chip ${filt.batch?'on':''}" data-chip="batch" aria-pressed="${filt.batch}">Batch cook</button>
       <button class="chip ${filt.fav?'on':''}" data-chip="fav" aria-pressed="${filt.fav}">Favourites</button></div>
       <div class="count">${list.length} ${list.length===1?'recipe':'recipes'}</div>
