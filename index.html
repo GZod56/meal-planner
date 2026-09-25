@@ -208,6 +208,33 @@ input,textarea{font:inherit; border-radius:0}
 .field select{width:100%;font:inherit;padding:9px;background:var(--paper);color:var(--ink);border:1px solid var(--hair)}
 .field input[type="checkbox"]{width:auto;margin-right:8px}
 .sheet-inner p[role="alert"]{color:var(--ox);font-size:14px}
+/* ---- library discovery ---- */
+.lib-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.lib-head .dots{position:static;margin-top:-4px;flex:none}
+.lib-search{margin-top:19px;background:var(--raise);border:1px solid var(--hair);border-radius:3px;padding:12px 13px;font-size:16px}
+.lib-search:focus{outline:1.5px solid var(--ox);outline-offset:2px}
+.lib-intro{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:27px 0 12px}
+.lib-intro .title{font-size:19px;line-height:1.2}
+.lib-intro .act{flex:none}
+.lib-collections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.lib-collection{min-height:106px;background:var(--thumb);padding:13px;display:flex;flex-direction:column;justify-content:space-between;border-radius:3px;width:100%}
+.lib-collection:nth-child(2){background:#E5D9C8}
+.lib-collection .label{font-size:9.5px;color:var(--ox)}
+.lib-collection strong{display:block;font-size:19px;font-weight:500;line-height:1.15}
+.lib-collection .n{display:block;font-size:11px;color:var(--soft);font-style:italic;margin-top:4px}
+.lib-list .lib-item{border-bottom:1px solid var(--hair);min-height:56px}
+.lib-list .lib-item .dish{display:block;line-height:1.25}
+.lib-list .lib-item .detail{display:block;font-size:11.5px;margin-top:3px}
+.lib-list .lib-item .min{align-self:center}
+.lib-back{margin-top:18px;display:inline-block}
+.lib-actions{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:23px}
+.lib-actions .act{padding:8px 0}
+.lib-browse .secs{overflow-x:auto;white-space:nowrap;gap:20px}
+.lib-browse .sec{flex:none}
+.lib-browse .chips{flex-wrap:wrap;gap:10px;margin-top:15px}
+.lib-browse .chip{border:1px solid var(--hair);border-radius:20px;background:var(--raise);padding:7px 10px;letter-spacing:.08em}
+.lib-browse .chip.on{background:var(--ox);color:var(--raise);border-color:var(--ox)}
+@media(max-width:380px){.lib-collection strong{font-size:17px}.lib-browse .secs{gap:15px}}
 </style>
 </head>
 <body>
@@ -251,7 +278,7 @@ function setRecipeDeleted(id,deleted){
   DELETED=next;refreshLibrary();return true;
 }
 let tab='library';
-let filt={q:'', sec:'main', u30:false, batch:false, fav:false};
+let filt={q:'', sec:'main', u30:false, batch:false, fav:false, browse:false};
 const SECTIONS=[['main','Mains'],['side','Sides'],['sauce','Sauces'],['baking','Baking']];
 const secOf=r=>r.section||'main';
 let CHAT=[], chatLoading=false;
@@ -387,31 +414,52 @@ function viewGenerate(){
       <div class="inv-note">Dishes using these get pulled toward the top.</div></div>
     <button class="gen-btn primary" data-gen="main">Generate week</button></div>`;
 }
+function libRecipeRow(r){
+  const im=imgFor(r);
+  const t=im?`<span class="thumb" style="background-image:url('${esc(im)}')"></span>`:`<span class="thumb ph">◍</span>`;
+  const detail=[r.minutes?`${r.minutes} min`:null,r.batch?'Batch cook':null,r.favourite?'Favourite':null].filter(Boolean).join(' · ');
+  return `<button class="lib-item" data-open="${esc(r.id)}">${t}
+    <span class="body"><span class="dish">${esc(r.name)}</span>${detail?`<span class="detail">${esc(detail)}</span>`:''}</span>
+    <span class="min" aria-hidden="true">›</span></button>`;
+}
 function viewLibrary(){
   const q=filt.q.trim().toLowerCase();
-  let list=RECIPES.filter(r=>secOf(r)===filt.sec&&(!filt.u30||r.under30)&&(!filt.batch||r.batch)&&(!filt.fav||r.favourite)&&
+  const browsing=filt.browse||!!q;
+  const list=RECIPES.filter(r=>(q||secOf(r)===filt.sec)&&(!filt.u30||r.under30)&&(!filt.batch||r.batch)&&(!filt.fav||r.favourite)&&
     (!q||r.name.toLowerCase().includes(q)||r.ingredients.some(x=>x.toLowerCase().includes(q))))
     .sort((a,b)=>a.name.localeCompare(b.name));
-  let h=`<div class="mast"><div class="wk">Library</div><div class="sub">${RECIPES.length} recipes</div>
-    <button class="dots" data-sheet="menu">···</button></div>
-  <div class="rowacts library-tools"><button class="act" data-new-recipe>Add recipe</button><button class="act" data-import-recipe>Import URL</button><button class="act" data-household data-sync-status>${esc(Household.status())}</button></div>
-  <div class="section" style="margin-top:20px">
-    <input class="search" id="q" type="search" placeholder="Search…" value="${esc(filt.q)}" autocomplete="off">
-    <div class="secs">${SECTIONS.map(([k,label])=>{
-        const n=RECIPES.filter(r=>secOf(r)===k).length;
-        return `<button class="sec ${filt.sec===k?'on':''}" data-sec="${k}">${label}<i>${n}</i></button>`;}).join('')}</div>
-    <div class="chips">
-      <button class="chip ${filt.u30?'on':''}" data-chip="u30">Under 30</button>
-      <button class="chip ${filt.batch?'on':''}" data-chip="batch">Batch cook</button>
-      <button class="chip ${filt.fav?'on':''}" data-chip="fav">Favourites</button></div>
-    <div class="count">${list.length} ${list.length===1?'recipe':'recipes'}</div>`;
-  h+=list.map(r=>{const im=imgFor(r);
-    const t=im?`<span class="thumb" style="background-image:url('${esc(im)}')"></span>`:`<span class="thumb ph">◍</span>`;
-    return `<button class="lib-item" data-open="${esc(r.id)}">${t}
-      <span class="dish" style="flex:1">${esc(r.name)}</span>
-      <span class="min">${r.minutes?r.minutes+'′':''}</span></button>`;}).join('');
-  if(!list.length)h+='<div class="empty">Nothing matches — clear a filter or try another word.</div>';
-  return h+'</div>';
+  let h=`<div class="lib-head"><div class="mast"><div class="wk">Library</div><div class="sub">${RECIPES.length} recipes · your kitchen</div></div>
+    <button class="dots" data-sheet="menu" aria-label="Menu">···</button></div>
+    <input class="search lib-search" id="q" type="search" aria-label="Search recipes or ingredients" placeholder="Search recipes or ingredients…" value="${esc(filt.q)}" autocomplete="off">`;
+  if(!browsing){
+    const quick=RECIPES.filter(r=>secOf(r)==='main'&&r.under30).length;
+    const batch=RECIPES.filter(r=>secOf(r)==='main'&&r.batch).length;
+    const favourites=RECIPES.filter(r=>r.favourite).sort((a,b)=>a.name.localeCompare(b.name));
+    h+=`<div class="lib-intro"><span class="title">What sounds good?</span></div>
+      <div class="lib-collections">
+        <button class="lib-collection" data-collection="quick"><span class="label">Quick ideas</span><span><strong>Weeknight<br>dinners →</strong><span class="n">${quick} under 30 min</span></span></button>
+        <button class="lib-collection" data-collection="batch"><span class="label">Set aside time</span><span><strong>Sunday<br>batch cook →</strong><span class="n">${batch} recipes</span></span></button>
+      </div>
+      <div class="lib-intro"><span class="title">From your library</span><button class="act" data-browse="all">See all →</button></div>
+      <button class="chip on" data-browse="fav">Favourites</button>
+      <div class="lib-list">${favourites.slice(0,4).map(libRecipeRow).join('')}
+        ${favourites.length?'':'<div class="empty">Save a favourite to see it here.</div>'}</div>
+      <div class="lib-actions"><button class="act" data-new-recipe>＋ Add recipe</button><button class="act" data-import-recipe>Import URL</button></div>`;
+  }else{
+    h+=`<div class="lib-browse"><button class="act lib-back" data-discover="1">← Discover</button>`;
+    if(!q)h+=`<div class="secs">${SECTIONS.map(([k,label])=>{
+      const n=RECIPES.filter(r=>secOf(r)===k).length;
+      return `<button class="sec ${filt.sec===k?'on':''}" data-sec="${k}">${label}<i>${n}</i></button>`;}).join('')}</div>`;
+    h+=`<div class="chips">
+      <button class="chip ${filt.u30?'on':''}" data-chip="u30" aria-pressed="${filt.u30}">Under 30</button>
+      <button class="chip ${filt.batch?'on':''}" data-chip="batch" aria-pressed="${filt.batch}">Batch cook</button>
+      <button class="chip ${filt.fav?'on':''}" data-chip="fav" aria-pressed="${filt.fav}">Favourites</button></div>
+      <div class="count">${list.length} ${list.length===1?'recipe':'recipes'}</div>
+      <div class="lib-list">${list.map(libRecipeRow).join('')}`;
+    if(!list.length)h+='<div class="empty">Nothing matches — clear a filter or try another word.</div>';
+    h+='</div><div class="lib-actions"><button class="act" data-new-recipe>＋ Add recipe</button><button class="act" data-import-recipe>Import URL</button></div></div>';
+  }
+  return h;
 }
 function viewPrep(){
   if(!PLAN||PLAN.empty)return `<div class="mast"><div class="wk">Prep</div><div class="sub">no plan yet</div><button class="dots" data-sheet="menu">···</button></div><div class="empty" style="margin-top:24px">Generate a week first — the prep map builds from it.</div>`;
@@ -499,13 +547,17 @@ function render(){
   $('#view').innerHTML = tab==='week'?viewWeek():tab==='library'?viewLibrary():tab==='prep'?viewPrep():tab==='chef'?viewChat():viewShopping();
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
   $('#chatbar').hidden = tab!=='chef';
-  if(tab==='library'){const q=$('#q');q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList();});}
+  if(tab==='library'){const q=$('#q');q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList(true);});}
   if(tab==='chef'){const w=$('#chatWrap');if(w&&CHAT.length)window.scrollTo(0,document.body.scrollHeight);}
   else window.scrollTo(0,0);
 }
-function renderLibList(){const sc=window.scrollY,val=filt.q;$('#view').innerHTML=viewLibrary();
-  const q=$('#q');q.value=val;q.focus();q.setSelectionRange(val.length,val.length);
-  q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList();});window.scrollTo(0,sc);}
+function renderLibList(focusSearch=false){const sc=window.scrollY,val=filt.q;$('#view').innerHTML=viewLibrary();
+  const q=$('#q');q.value=val;
+  q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList(true);});
+  if(focusSearch){q.focus();q.setSelectionRange(val.length,val.length);window.scrollTo(0,sc);}
+  else window.scrollTo(0,0);
+}
+function resetLibraryView(){filt={q:'',sec:'main',u30:false,batch:false,fav:false,browse:false};}
 
 function generateWeek(inventory){
   const hist=lsGet(K.hist,[]);
@@ -680,9 +732,14 @@ document.body.addEventListener('click',e=>{
   if(e.target.closest('[data-new-recipe]')){openRecipeEditor();return;}
   if(e.target.closest('[data-import-recipe]')){openRecipeImport();return;}
   if(e.target.closest('[data-household]')){Household.open();return;}
+  if(e.target.closest('[data-discover]')){resetLibraryView();renderLibList();return;}
+  const collection=e.target.closest('[data-collection]');
+  if(collection){resetLibraryView();filt.browse=true;filt[collection.dataset.collection==='quick'?'u30':'batch']=true;renderLibList();return;}
+  const browse=e.target.closest('[data-browse]');
+  if(browse){resetLibraryView();filt.browse=true;filt.fav=browse.dataset.browse==='fav';renderLibList();return;}
   const ask=e.target.closest('[data-ask]');
   if(ask){$('#chatIn').value='';sendChat(ask.dataset.ask);return;}
-  const tb=e.target.closest('#tabs button');if(tb){tab=tb.dataset.tab;render();return;}
+  const tb=e.target.closest('#tabs button');if(tb){tab=tb.dataset.tab;if(tab==='library')resetLibraryView();render();return;}
   const g=e.target.closest('[data-gen]');
   if(g){const sheet=g.dataset.gen==='sheet';const box=sheet?$('#invBox2'):$('#invBox');
     const inv=box?box.value.split(/[,\n]/).map(x=>x.trim()).filter(Boolean):[];
