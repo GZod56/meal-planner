@@ -234,7 +234,17 @@ input,textarea{font:inherit; border-radius:0}
 .lib-browse .chips{flex-wrap:wrap;gap:10px;margin-top:15px}
 .lib-browse .chip{border:1px solid var(--hair);border-radius:20px;background:var(--raise);padding:7px 10px;letter-spacing:.08em}
 .lib-browse .chip.on{background:var(--ox);color:var(--raise);border-color:var(--ox)}
+.lib-facets{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin-top:17px;padding:11px 0}
+.lib-facets summary{cursor:pointer;color:var(--ox);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;list-style:none}
+.lib-facets summary::-webkit-details-marker{display:none}
+.lib-facets summary::after{content:'＋';float:right;font-size:14px;line-height:1}
+.lib-facets[open] summary::after{content:'−'}
+.facet-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 8px}
+.facet-grid label{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--soft)}
+.facet-grid select{display:block;width:100%;min-width:0;background:var(--raise);border:1px solid var(--hair);border-radius:2px;padding:10px 8px;margin-top:5px;color:var(--ink);font-size:14px;letter-spacing:0;text-transform:none}
+.facet-clear{padding:9px 0}
 @media(max-width:380px){.lib-collection strong{font-size:17px}.lib-browse .secs{gap:15px}}
+@media(max-width:340px){.facet-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -278,9 +288,17 @@ function setRecipeDeleted(id,deleted){
   DELETED=next;refreshLibrary();return true;
 }
 let tab='library';
-let filt={q:'', sec:'main', u30:false, batch:false, fav:false, browse:false};
+let filt={q:'', sec:'main', u30:false, batch:false, fav:false, browse:false,
+  occasion:'',cuisine:'',dish:'',protein:'',detail:'',filtersOpen:false};
 const SECTIONS=[['main','Mains'],['side','Sides'],['sauce','Sauces'],['baking','Baking']];
 const secOf=r=>r.section||'main';
+const LIB_FACETS={
+  occasion:[['Weeknights','Weeknights'],['Lunches','Lunches'],['Breakfast','Breakfast'],['Sunday Treats','Sunday treats'],['Dinner Party','Dinner party']],
+  cuisine:[['indian','Indian'],['chinese','Chinese'],['japanese','Japanese'],['korean','Korean'],['se_asian','Southeast Asian'],['italian','Italian'],['french','French'],['greek_med','Mediterranean'],['mexican','Mexican'],['american','American'],['other','Other']],
+  dish:[['soup','Soups'],['salad','Salads'],['curry','Curries'],['stew','Stews'],['traybake','Traybakes'],['protein','Protein with sides'],['complete','Complete meals'],['side','Sides'],['breakfast','Breakfast dishes'],['dessert','Desserts']],
+  protein:[['Veg','Veg-based'],['Eggs','Eggs'],['Chicken','Chicken'],['Beef','Beef'],['Pork','Pork'],['Lamb','Lamb'],['Fish','Fish'],['Seafood','Seafood']],
+  detail:[['Freezable','Freezable'],['Healthy','Healthy'],['Jessica','Jessica'],['Untested','Untested']]
+};
 let CHAT=[], chatLoading=false;
 const CHAT_EP='/.netlify/functions/chat';
 const $=s=>document.querySelector(s);
@@ -422,12 +440,24 @@ function libRecipeRow(r){
     <span class="body"><span class="dish">${esc(r.name)}</span>${detail?`<span class="detail">${esc(detail)}</span>`:''}</span>
     <span class="min" aria-hidden="true">›</span></button>`;
 }
+function matchesLibrary(r,f){
+  const q=f.q.trim().toLowerCase();
+  return (q||secOf(r)===f.sec)&&(!f.u30||r.under30)&&(!f.batch||r.batch)&&(!f.fav||r.favourite)&&
+    (!q||r.name.toLowerCase().includes(q)||r.ingredients.some(x=>x.toLowerCase().includes(q)))&&
+    (!f.occasion||r.tags.includes(f.occasion))&&(!f.cuisine||r.cuisine===f.cuisine)&&
+    (!f.dish||r.archetype===f.dish)&&(!f.protein||r.protein===f.protein)&&
+    (!f.detail||r.tags.includes(f.detail));
+}
+function facetSelect(key,label,options){
+  const available=options.filter(([value])=>RECIPES.some(r=>key==='occasion'||key==='detail'?r.tags.includes(value):
+    key==='cuisine'?r.cuisine===value:key==='dish'?r.archetype===value:r.protein===value));
+  return `<label>${label}<select data-facet="${key}" aria-label="${label}"><option value="">All ${label.toLowerCase()}</option>
+    ${available.map(([value,name])=>`<option value="${esc(value)}" ${filt[key]===value?'selected':''}>${esc(name)}</option>`).join('')}</select></label>`;
+}
 function viewLibrary(){
-  const q=filt.q.trim().toLowerCase();
+  const q=filt.q.trim();
   const browsing=filt.browse||!!q;
-  const list=RECIPES.filter(r=>(q||secOf(r)===filt.sec)&&(!filt.u30||r.under30)&&(!filt.batch||r.batch)&&(!filt.fav||r.favourite)&&
-    (!q||r.name.toLowerCase().includes(q)||r.ingredients.some(x=>x.toLowerCase().includes(q))))
-    .sort((a,b)=>a.name.localeCompare(b.name));
+  const list=RECIPES.filter(r=>matchesLibrary(r,filt)).sort((a,b)=>a.name.localeCompare(b.name));
   let h=`<div class="lib-head"><div class="mast"><div class="wk">Library</div><div class="sub">${RECIPES.length} recipes · your kitchen</div></div>
     <button class="dots" data-sheet="menu" aria-label="Menu">···</button></div>
     <input class="search lib-search" id="q" type="search" aria-label="Search recipes or ingredients" placeholder="Search recipes or ingredients…" value="${esc(filt.q)}" autocomplete="off">`;
@@ -454,6 +484,14 @@ function viewLibrary(){
       <button class="chip ${filt.u30?'on':''}" data-chip="u30" aria-pressed="${filt.u30}">30 min or less</button>
       <button class="chip ${filt.batch?'on':''}" data-chip="batch" aria-pressed="${filt.batch}">Batch cook</button>
       <button class="chip ${filt.fav?'on':''}" data-chip="fav" aria-pressed="${filt.fav}">Favourites</button></div>
+      <details class="lib-facets" ${filt.filtersOpen?'open':''}><summary>More filters${['occasion','cuisine','dish','protein','detail'].filter(k=>filt[k]).length?` · ${['occasion','cuisine','dish','protein','detail'].filter(k=>filt[k]).length} active`:''}</summary>
+        <div class="facet-grid">
+          ${facetSelect('occasion','Occasion',LIB_FACETS.occasion)}
+          ${facetSelect('cuisine','Cuisine',LIB_FACETS.cuisine)}
+          ${facetSelect('dish','Dish type',LIB_FACETS.dish)}
+          ${facetSelect('protein','Main ingredient',LIB_FACETS.protein)}
+          ${facetSelect('detail','Other labels',LIB_FACETS.detail)}
+        </div><button class="act facet-clear" data-clearfilters="1">Clear filters</button></details>
       <div class="count">${list.length} ${list.length===1?'recipe':'recipes'}</div>
       <div class="lib-list">${list.map(libRecipeRow).join('')}`;
     if(!list.length)h+='<div class="empty">Nothing matches — clear a filter or try another word.</div>';
@@ -547,17 +585,20 @@ function render(){
   $('#view').innerHTML = tab==='week'?viewWeek():tab==='library'?viewLibrary():tab==='prep'?viewPrep():tab==='chef'?viewChat():viewShopping();
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
   $('#chatbar').hidden = tab!=='chef';
-  if(tab==='library'){const q=$('#q');q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList(true);});}
+  if(tab==='library'){const q=$('#q');q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList(true);});
+    const details=$('.lib-facets');if(details)details.addEventListener('toggle',()=>{filt.filtersOpen=details.open;});}
   if(tab==='chef'){const w=$('#chatWrap');if(w&&CHAT.length)window.scrollTo(0,document.body.scrollHeight);}
   else window.scrollTo(0,0);
 }
 function renderLibList(focusSearch=false){const sc=window.scrollY,val=filt.q;$('#view').innerHTML=viewLibrary();
   const q=$('#q');q.value=val;
   q.addEventListener('input',e=>{filt.q=e.target.value;renderLibList(true);});
+  const details=$('.lib-facets');if(details)details.addEventListener('toggle',()=>{filt.filtersOpen=details.open;});
   if(focusSearch){q.focus();q.setSelectionRange(val.length,val.length);window.scrollTo(0,sc);}
   else window.scrollTo(0,0);
 }
-function resetLibraryView(){filt={q:'',sec:'main',u30:false,batch:false,fav:false,browse:false};}
+function resetLibraryView(){filt={q:'',sec:'main',u30:false,batch:false,fav:false,browse:false,
+  occasion:'',cuisine:'',dish:'',protein:'',detail:'',filtersOpen:false};}
 
 function generateWeek(inventory){
   const hist=lsGet(K.hist,[]);
@@ -733,6 +774,8 @@ document.body.addEventListener('click',e=>{
   if(e.target.closest('[data-import-recipe]')){openRecipeImport();return;}
   if(e.target.closest('[data-household]')){Household.open();return;}
   if(e.target.closest('[data-discover]')){resetLibraryView();renderLibList();return;}
+  if(e.target.closest('[data-clearfilters]')){for(const key of ['occasion','cuisine','dish','protein','detail'])filt[key]='';
+    filt.u30=filt.batch=filt.fav=false;filt.filtersOpen=true;renderLibList();return;}
   const collection=e.target.closest('[data-collection]');
   if(collection){resetLibraryView();filt.browse=true;filt[collection.dataset.collection==='quick'?'u30':'batch']=true;renderLibList();return;}
   const browse=e.target.closest('[data-browse]');
@@ -761,6 +804,10 @@ document.body.addEventListener('click',e=>{
   if(t.dataset.regen!==undefined){openMenu();setTimeout(renderRegen,0);return;}
   if(t.dataset.sheet==='menu'){openMenu();return;}
   if(t.dataset.chip){filt[t.dataset.chip]=!filt[t.dataset.chip];renderLibList();return;}
+});
+document.body.addEventListener('change',e=>{
+  const facet=e.target.closest('select[data-facet]');if(!facet)return;
+  filt[facet.dataset.facet]=facet.value;filt.filtersOpen=true;renderLibList();
 });
 
 const chatIn=$('#chatIn');
