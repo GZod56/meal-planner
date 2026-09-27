@@ -150,3 +150,22 @@ test('two sync clients preserve offline edits and surface conflicts',async()=>{
  assert.equal(a.values.get('mp.recipes').one,'offline edit');
  assert.equal((await store.getWithMetadata('mp.recipes')).data.one,'other device edit');
 });
+
+test('voice session requires sign-in, validates input, and keeps API key on server',async()=>{
+ const {default:voice}=await import('../netlify/functions/voice.mjs');
+ assert.equal((await voice(request('voice','POST',{sdp:'x',context:'test'},false))).status,401);
+ process.env.OPENAI_API_KEY='test-only-fake-key';
+ const previous=globalThis.fetch;let upstream;
+ globalThis.fetch=async(url,options)=>{upstream={url,options};return new Response('v=0 answer',{status:201});};
+ try{
+  assert.equal((await voice(request('voice','POST',{sdp:'x',context:'test'}))).status,400);
+  const res=await voice(request('voice','POST',{sdp:'v=0\\n'.repeat(30),context:'Recipe and steps'}));
+  assert.equal(res.status,200);assert.equal(await res.text(),'v=0 answer');
+  assert.equal(upstream.url,'https://api.openai.com/v1/realtime/calls');
+  assert.match(upstream.options.headers.authorization,/test-only-fake-key/);
+  const session=JSON.parse(upstream.options.body.get('session'));
+  assert.equal(session.model,'gpt-realtime-2.1');
+  assert.equal(session.tools.find(t=>t.name==='set_timer').type,'function');
+  assert.equal(allowedKey('mp.cookNotes'),true);
+ }finally{globalThis.fetch=previous;delete process.env.OPENAI_API_KEY;}
+});
