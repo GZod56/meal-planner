@@ -1,6 +1,6 @@
 import {getStore} from '@netlify/blobs';
 import {authorize,json,readJSON} from '../../server/security.mjs';
-export const allowedKey=key=>typeof key==='string'&&/^(mp\.(plan|history|deletedRecipes|recipes)|mp\.(sides|prep|shop)::.{1,100}|photo::[a-zA-Z0-9_-]{1,150})$/.test(key);
+export const allowedKey=key=>typeof key==='string'&&/^(mp\.(plan|history|deletedRecipes|recipes|cookNotes)|mp\.(sides|prep|shop)::.{1,100}|photo::[a-zA-Z0-9_-]{1,150})$/.test(key);
 export function makeHandler(storeFactory=()=>getStore({name:'meal-planner-household',consistency:'strong'})){
  return async req=>{
   const denied=authorize(req);if(denied)return denied;
