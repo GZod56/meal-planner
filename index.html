@@ -127,7 +127,7 @@ input,textarea{font:inherit; border-radius:0}
 .shop-cat{margin-top:22px}
 .shop-cat .label{display:block; padding-bottom:6px; border-bottom:1px solid var(--hair); margin-bottom:6px}
 .shop-cat .sk{font-size:12px; color:var(--soft); font-style:italic; text-transform:none; letter-spacing:0; font-weight:400}
-#sheet{position:fixed; inset:0; background:rgba(34,29,23,.30); z-index:70; display:none}
+#sheet{position:fixed; inset:0; background:rgba(34,29,23,.30); z-index:90; display:none}
 #sheet.open{display:block}
 .sheet-inner{position:absolute; left:0; right:0; bottom:0; background:var(--raise); border-top:1px solid var(--hair); padding:20px 22px calc(26px + env(safe-area-inset-bottom)); max-width:640px; margin:0 auto; max-height:82vh; overflow-y:auto}
 .sheet-inner .label{display:block; margin-bottom:12px}
@@ -1067,9 +1067,10 @@ function tickTimers(){if(!COOK)return;let changed=false;for(const t of COOK.time
 function voicePrompt(text){const dc=COOK?.voice?.dc;if(dc?.readyState!=='open')return;dc.send(JSON.stringify({type:'conversation.item.create',item:{type:'message',role:'user',content:[{type:'input_text',text}]}}));dc.send(JSON.stringify({type:'response.create'}));}
 function voiceStatus(text){if(!COOK)return;COOK.voiceStatus=text;const el=document.getElementById('voiceStatus');if(el)el.textContent=text;}
 function stopVoice(){if(!COOK?.voice)return;const v=COOK.voice;COOK.voice=null;try{v.dc?.send(JSON.stringify({type:'session.close'}));}catch{}v.stream?.getTracks().forEach(t=>t.stop());v.pc?.close();voiceStatus('Voice off');drawCook();}
-async function startVoice(){if(!COOK||COOK.voice)return;if(!Household.signedIn()){Household.open();return;}
+async function startVoice(){if(!COOK||COOK.voice)return;if(!Household.signedIn()){voiceStatus('Sign in to start voice');Household.open();return;}
  const v={};COOK.voice=v;voiceStatus('Connecting…');drawCook();
- try{v.stream=await navigator.mediaDevices.getUserMedia({audio:true});if(COOK?.voice!==v){v.stream.getTracks().forEach(t=>t.stop());return;}
+ try{const setup=await fetch('/.netlify/functions/session').then(r=>r.json());if(!setup.signedIn)throw new Error('Sign in to start voice');if(!setup.voiceConfigured)throw new Error('Voice is not configured for this preview');if(!navigator.mediaDevices?.getUserMedia)throw new Error('Microphone is unavailable in this browser');
+ v.stream=await navigator.mediaDevices.getUserMedia({audio:true});if(COOK?.voice!==v){v.stream.getTracks().forEach(t=>t.stop());return;}
  v.pc=new RTCPeerConnection();v.audio=new Audio();v.audio.autoplay=true;v.pc.ontrack=e=>{v.audio.srcObject=e.streams[0];v.audio.play().catch(()=>voiceStatus('Tap voice to allow audio'));};
  v.pc.addTrack(v.stream.getAudioTracks()[0],v.stream);v.dc=v.pc.createDataChannel('oai-events');v.dc.onopen=()=>{voiceStatus('Listening');drawCook();voicePrompt('We are starting this recipe. Tell me the first step briefly.');};
  v.dc.onmessage=e=>{let event;try{event=JSON.parse(e.data);}catch{return;}if(event.type==='response.done'){const calls=event.response?.output?.filter(x=>x.type==='function_call')||[];if(calls.length)handleVoiceCalls(calls,v);}if(event.type==='error')voiceStatus(event.error?.message||'Voice error');};
