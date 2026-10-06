@@ -14739,5 +14739,265 @@
   "batchable": false,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "name": "Sheet-Pan Chicken Shawarma",
+  "rating": 0,
+  "tags": [
+   "Traybakes",
+   "Untested",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": "35 mins",
+   "total": "45 min plus marinating"
+  },
+  "serves": {
+   "text": "Serves: 4 to 6",
+   "n": 6
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1017161-oven-roasted-chicken-shawarma",
+   "name": "NYT Cooking — Sam Sifton"
+  },
+  "image": "https://www.cookingclassy.com/wp-content/uploads/2017/12/oven-roasted-chicken-shawarma-6.jpg",
+  "ingredients": [
+   "2 lemons, juiced",
+   "1/2 cup plus 1 tbsp olive oil",
+   "6 garlic cloves, minced",
+   "1 tsp kosher salt",
+   "2 tsp freshly ground black pepper",
+   "2 tsp ground cumin",
+   "2 tsp paprika",
+   "1/2 tsp turmeric",
+   "Pinch ground cinnamon",
+   "Crushed red pepper, to taste",
+   "2 lb boneless skinless chicken thighs",
+   "1 large red onion, quartered",
+   "2 tbsp chopped fresh parsley",
+   "TO SERVE: warm pita or laffa, shredded red cabbage, lettuce/cucumber, feta, tzatziki or garlic-yogurt white sauce"
+  ],
+  "directions": [
+   "Whisk the lemon juice, 1/2 cup olive oil, garlic, salt, pepper, cumin, paprika, turmeric, cinnamon and crushed red pepper. Coat the chicken and refrigerate for 1 to 12 hours.",
+   "Heat oven to 425°F. Grease a large rimmed sheet pan with the remaining oil. Toss the onion with the marinated chicken, then arrange chicken and onion in a single layer.",
+   "Roast until browned at the edges and cooked through, about 30 to 40 minutes. Rest briefly, then slice. For extra char, broil the sliced chicken for 2 to 3 minutes.",
+   "Scatter with parsley and serve family-style with warm bread, crunchy salad and sauce."
+  ],
+  "notes": [
+   "NYT rating: 5/5 (31k+ ratings), so it clears the 4.5+ cutoff.",
+   "Top NYT comment #1: Make a garlicky yogurt-mayo white sauce; roasting peppers/onions with the chicken and finishing under the broiler adds a lot. Serve with cucumber, tomato and feta.",
+   "Top NYT comment #2: Increase the onion; carrots tossed in the marinade and roasted on the tray are an excellent way to make the meal more vegetable-heavy.",
+   "Top NYT comment #3: Fried eggplant is a particularly good side with the shawarma.",
+   "House serving setup: put the tray in the middle with warm laffa/pita, kebab-shop red cabbage, lettuce/cucumber and sauce so everyone can tear and scoop."
+  ],
+  "macros": null,
+  "minutes": 45,
+  "id": "sheet-pan-chicken-shawarma",
+  "protein": "Chicken",
+  "archetype": "traybake",
+  "under30": false,
+  "batch": true,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": true,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Sheet-Pan Chicken Souvlaki",
+  "rating": 0,
+  "tags": [
+   "Traybakes",
+   "Untested",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": "25 mins",
+   "total": "40 min plus marinating"
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1024489-souvlaki",
+   "name": "NYT Cooking — Lidey Heuck"
+  },
+  "image": "https://static01.nyt.com/images/2023/10/18/multimedia/LH-Souvlaki-kmhz/LH-Souvlaki-kmhz-videoSixteenByNineJumbo1600.jpg",
+  "ingredients": [
+   "3/4 cup plain Greek yogurt (2% or full-fat)",
+   "1/4 cup olive oil, plus a little more for the vegetables",
+   "1 tbsp grated or minced garlic (about 3 cloves)",
+   "1 tsp chopped fresh rosemary or thyme (or 1/2 tsp dried)",
+   "1 tsp dried oregano",
+   "1/2 tsp ground cumin",
+   "Kosher salt and black pepper",
+   "1 lemon, zested; juice reserved for finishing",
+   "2 lb boneless skinless chicken thighs, cut into large chunks",
+   "1 red onion, cut into thick wedges",
+   "2 bell peppers, cut into large pieces",
+   "Chopped parsley, for finishing",
+   "TO SERVE: warm pita or laffa, tzatziki, shredded red cabbage, lettuce and cucumber"
+  ],
+  "directions": [
+   "Whisk yogurt, olive oil, garlic, herbs, cumin, salt, pepper and lemon zest. Add the chicken and marinate for about 2 to 4 hours.",
+   "Heat oven to 425°F. Toss onion and peppers with a little olive oil, salt and pepper on a large rimmed sheet pan. Add the chicken in a single layer, letting excess marinade drip off.",
+   "Roast for about 18 to 22 minutes, turning once, until the chicken is cooked through and the vegetables have browned. Broil for 2 to 3 minutes at the end for more char.",
+   "Finish with lemon juice and parsley. Serve from the middle of the table with warm bread, tzatziki and crunchy salad."
+  ],
+  "notes": [
+   "Sheet-pan adaptation of the NYT Souvlaki. NYT rating is 5/5 (1.8k+ ratings), so it clears the 4.5+ cutoff.",
+   "Top NYT comment #1: Avoid a very long yogurt marinade; a couple of hours is enough and helps prevent the chicken from becoming too soft.",
+   "Top NYT comment #2: Readers specifically wanted an oven/air-fryer alternative to the grill; this version is written for the sheet pan.",
+   "Top NYT comment #3: For stronger browning without a grill, roast until cooked and then give the chicken a very hot final sear or broil.",
+   "House serving setup: warm laffa/pita + tzatziki + red cabbage + lettuce/cucumber."
+  ],
+  "macros": null,
+  "minutes": 40,
+  "id": "sheet-pan-chicken-souvlaki",
+  "protein": "Chicken",
+  "archetype": "traybake",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "greek_med",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Sheet-Pan Tandoori Chicken",
+  "rating": 0,
+  "tags": [
+   "Indian",
+   "Traybakes",
+   "Untested",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "15 mins",
+   "cook": "25 mins",
+   "total": "40 min plus marinating"
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": "https://www.recipetineats.com/oven-baked-tandoori-chicken/",
+   "name": "RecipeTin Eats — Nagi Maehashi"
+  },
+  "image": "https://www.recipetineats.com/tachyon/2015/09/Tandoori-Chicken__2.jpg",
+  "ingredients": [
+   "2 lb boneless skinless chicken thighs, cut into large chunks",
+   "3/4 cup full-fat plain yogurt",
+   "1 tbsp neutral oil",
+   "1 tbsp lemon juice",
+   "2 tsp finely grated ginger",
+   "4 garlic cloves, grated or minced",
+   "2 tsp garam masala",
+   "2 tsp Kashmiri chilli powder (or paprika plus a small pinch of cayenne)",
+   "1/2 tsp turmeric",
+   "1 1/2 tsp ground cumin",
+   "2 tsp ground coriander",
+   "1 tsp kosher salt",
+   "1 red onion, cut into thick wedges",
+   "2 bell peppers, cut into large pieces",
+   "TO SERVE: warm naan or laffa, mint yogurt/raita, shredded red cabbage, lettuce and cucumber"
+  ],
+  "directions": [
+   "Mix the yogurt, oil, lemon, ginger, garlic and spices. Coat the chicken and marinate for at least 2 hours, ideally several hours.",
+   "Heat oven to 425°F. Toss onion and peppers with a little oil and salt on a large rimmed sheet pan, then add the chicken in a single layer.",
+   "Roast for about 20 to 25 minutes, turning once, until cooked through. Broil for 2 to 3 minutes at the end to get the characteristic charred edges.",
+   "Serve hot with warm bread, raita and crunchy cabbage salad."
+  ],
+  "notes": [
+   "Sheet-pan/boneless-thigh adaptation of RecipeTin Eats' oven-baked tandoori chicken.",
+   "The NYT tandoori option was not used because its rating was below the requested 4.5 cutoff. RecipeTin Eats is the source for this version.",
+   "For the communal bread dinner, naan or laffa works better than a tortilla here."
+  ],
+  "macros": null,
+  "minutes": 40,
+  "id": "sheet-pan-tandoori-chicken",
+  "protein": "Chicken",
+  "archetype": "traybake",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "indian",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
+ },
+ {
+  "name": "Sheet-Pan Chicken Tikka Thighs",
+  "rating": 0,
+  "tags": [
+   "Indian",
+   "Traybakes",
+   "Untested",
+   "Weeknights"
+  ],
+  "time": {
+   "prep": "10 mins",
+   "cook": "20 mins",
+   "total": "50 min including marinating"
+  },
+  "serves": {
+   "text": "Serves: 4",
+   "n": 4
+  },
+  "source": {
+   "url": "https://cooking.nytimes.com/recipes/1025554-sheet-pan-chicken-tikka-thighs",
+   "name": "NYT Cooking — Zainab Shah"
+  },
+  "image": "https://hips.hearstapps.com/hmg-prod/images/chicken-tikka-sheet-pan-dinner-1545171469.png?crop=1xw%3A0.8006535947712419xh%3Bcenter%2Ctop&resize=640%3A%2A",
+  "ingredients": [
+   "2 tbsp full-fat Greek or Indian yogurt",
+   "1 tsp grated ginger",
+   "1 tsp grated garlic",
+   "1 1/2 tsp Kashmiri red chile powder",
+   "1 1/2 tsp garam masala",
+   "1 1/2 tsp ground cumin",
+   "1/2 tsp turmeric",
+   "Kosher salt",
+   "2 tbsp vegetable oil",
+   "1 lb boneless skinless chicken thighs",
+   "2 large bell peppers, cut into 1-inch pieces",
+   "1 red onion, cut into 1-inch pieces",
+   "1 tsp cumin seeds",
+   "TO SERVE: warm naan or laffa, raita, shredded red cabbage, lettuce and cucumber"
+  ],
+  "directions": [
+   "Mix yogurt, ginger, garlic, Kashmiri chile, garam masala, ground cumin, turmeric, salt and 1 tbsp oil. Coat the chicken and marinate for at least 30 minutes.",
+   "Toss peppers and onion with the remaining oil, cumin seeds and salt on a rimmed sheet pan. Arrange the chicken over and among the vegetables.",
+   "Broil close to the heat until browned, turn the chicken and continue broiling until deeply colored and cooked through, roughly 7 to 10 minutes per side depending on thickness.",
+   "Rest briefly, slice if desired, and serve with warm bread, raita and crunchy salad."
+  ],
+  "notes": [
+   "NYT rating: 5/5 (3.6k+ ratings), so it clears the 4.5+ cutoff.",
+   "Top NYT comment #1: Kashmiri chile is mild and fruity rather than very hot; paprika plus a very small pinch of cayenne is a practical substitute.",
+   "Top NYT comment #2: Several readers prefer chicken thighs taken beyond breast-style doneness for a more tender texture; cook to texture as well as safe temperature.",
+   "Top NYT comment #3: A popular variation doubles the spices, uses a little more yogurt, and separates some of the vegetable cooking from the final broil for deeper browning.",
+   "House serving setup: warm naan/laffa + raita + red cabbage + lettuce/cucumber."
+  ],
+  "macros": null,
+  "minutes": 50,
+  "id": "sheet-pan-chicken-tikka-thighs",
+  "protein": "Chicken",
+  "archetype": "traybake",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "indian",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
  }
 ]
