@@ -127,7 +127,7 @@ input,textarea{font:inherit; border-radius:0}
 .shop-cat{margin-top:22px}
 .shop-cat .label{display:block; padding-bottom:6px; border-bottom:1px solid var(--hair); margin-bottom:6px}
 .shop-cat .sk{font-size:12px; color:var(--soft); font-style:italic; text-transform:none; letter-spacing:0; font-weight:400}
-#sheet{position:fixed; inset:0; background:rgba(34,29,23,.30); z-index:70; display:none}
+#sheet{position:fixed; inset:0; background:rgba(34,29,23,.30); z-index:90; display:none}
 #sheet.open{display:block}
 .sheet-inner{position:absolute; left:0; right:0; bottom:0; background:var(--raise); border-top:1px solid var(--hair); padding:20px 22px calc(26px + env(safe-area-inset-bottom)); max-width:640px; margin:0 auto; max-height:82vh; overflow-y:auto}
 .sheet-inner .label{display:block; margin-bottom:12px}
@@ -195,6 +195,13 @@ input,textarea{font:inherit; border-radius:0}
 @media(max-width:380px){ .c-step{font-size:23px} }
 @media(min-height:820px){ .c-step{font-size:30px} }
 
+.c-voice{display:flex;gap:9px;align-items:center;justify-content:center;padding:9px 18px;border-top:1px solid var(--hair);background:var(--raise);flex-wrap:wrap}
+.c-voice button{border:1px solid var(--hair);padding:8px 12px;border-radius:20px;font-size:12px}
+.c-voice button.active{background:var(--ox);color:white;border-color:var(--ox)}
+.c-voice .status{font-size:12px;color:var(--soft);flex:1;min-width:120px}
+.c-timers{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;padding:0 18px}
+.c-timers button{border:1px solid var(--hair);padding:7px 10px;font-size:12px;border-radius:16px}
+.c-timers button.done{color:var(--ox);border-color:var(--ox)}
 /* ---- library sections ---- */
 .secs{display:flex; gap:22px; margin:16px 0 0; border-bottom:1px solid var(--hair); padding-bottom:10px}
 .sec{font-size:15px; color:var(--soft); padding-bottom:9px; margin-bottom:-11px;
@@ -542,7 +549,10 @@ function chatSystem(){
 
 Recomp: per-dinner target ~80g protein / 40g fat / 120g carbs; clean hits ~2×/week, other nights flexible.
 
-Recipes are frameworks — offer smart swaps/improvements briefly. For NYT recipes, surface useful top-comment tweaks. If he says he liked a variation, tell him you'll note it (he keeps the master library file himself). Answer for someone standing at the counter: fast, specific, actionable.
+Recipes are frameworks — offer smart swaps/improvements briefly. For NYT recipes, surface useful top-comment tweaks. If he likes a tested variation, suggest saving a note during Cook Mode. Do not claim a note was saved unless the app confirms it. Answer for someone standing at the counter: fast, specific, actionable.
+
+SAVED RECIPE NOTES:
+${Object.entries(cookNotes()).map(([id,notes])=>`${BYID[id]?.name||id}: ${notes.join('; ')}`).join('\n').slice(0,3000)}
 
 CURRENT WEEK PLAN:
 ${planText}
@@ -1028,95 +1038,75 @@ const mmss=s=>{const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;
   return (h?h+':'+String(m).padStart(2,'0'):String(m))+':'+String(x).padStart(2,'0');};
 
 async function wakeOn(){
-  try{ if('wakeLock' in navigator && (!COOK.lock||COOK.lock.released))
-    COOK.lock=await navigator.wakeLock.request('screen'); }catch(e){}
+  try{ if('wakeLock' in navigator && (!COOK.lock||COOK.lock.released)) COOK.lock=await navigator.wakeLock.request('screen'); }catch(e){}
 }
-function wakeOff(){ try{ COOK&&COOK.lock&&COOK.lock.release(); }catch(e){} if(COOK)COOK.lock=null; }
-document.addEventListener('visibilitychange',()=>{ if(COOK&&document.visibilityState==='visible')wakeOn(); });
-
+function wakeOff(){try{COOK?.lock?.release();}catch(e){} if(COOK)COOK.lock=null;}
+document.addEventListener('visibilitychange',()=>{if(COOK&&document.visibilityState==='visible')wakeOn();});
+const cookNotes=()=>lsGet('mp.cookNotes',{});
+function cookContext(){
+ const {r,i,timers}=COOK,notes=cookNotes()[r.id]||[];
+ const related=RECIPES.filter(x=>x.id!==r.id&&x.section==='sauce').slice(0,35).map(x=>x.name+' [ingredients: '+x.ingredients.join('; ')+']').join('\n');
+ return `You are Vik's concise, conversational cooking partner. Speak in short practical answers. Follow the current recipe while allowing improvisation. Use tools to change the on-screen cook, navigate steps, set actual timers, inspect state and save a tested note. Never claim you changed a recipe or set a timer before a tool succeeds. Ask before overwriting the master recipe. For tonight's variation use change_cook. Speak up when a timer finishes only if prompted by a new event.\nRecipe: ${r.name}; serves ${servSel}; step ${i+1}/${r.directions.length}.\nIngredients: ${r.ingredients.join('; ').slice(0,4000)}\nSteps: ${r.directions.map((d,j)=>`${j+1}. ${d}`).join(' ').slice(0,8000)}\nNotes: ${notes.join('; ').slice(0,1500)}\nSauces in the library: ${related.slice(0,2500)}\nCurrent timers: ${timers.map(t=>t.label).join(', ')||'none'}.`;
+}
 function openCook(){
-  const r=BYID[openId]; if(!r||!r.directions.length) return;
-  COOK={r,i:0,lock:null,timer:null,left:0,total:0,ing:false};
-  const el=document.createElement('div'); el.id='cook'; document.body.appendChild(el);
-  drawCook(); wakeOn();
+  const source=BYID[openId]; if(!source||!source.directions.length)return;
+  COOK={r:{...source,directions:[...source.directions],ingredients:[...source.ingredients]},i:0,lock:null,timers:[],ing:false,voice:null,voiceStatus:'Voice off'};
+  const el=document.createElement('div');el.id='cook';document.body.appendChild(el);
+  COOK.clock=setInterval(tickTimers,1000);drawCook();wakeOn();
   el.addEventListener('touchstart',e=>{COOK.x=e.changedTouches[0].clientX;COOK.y=e.changedTouches[0].clientY;},{passive:true});
-  el.addEventListener('touchend',e=>{
-    if(COOK.ing) return;
-    const dx=e.changedTouches[0].clientX-COOK.x, dy=e.changedTouches[0].clientY-COOK.y;
-    if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.6) stepBy(dx<0?1:-1);
-  },{passive:true});
+  el.addEventListener('touchend',e=>{if(COOK.ing)return;const dx=e.changedTouches[0].clientX-COOK.x,dy=e.changedTouches[0].clientY-COOK.y;if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.6)stepBy(dx<0?1:-1);},{passive:true});
   document.addEventListener('keydown',cookKeys);
 }
-function cookKeys(e){ if(!COOK)return;
-  if(e.key==='ArrowRight'||e.key===' ')  {e.preventDefault();stepBy(1);}
-  if(e.key==='ArrowLeft')  stepBy(-1);
-  if(e.key==='Escape') closeCook();
+function cookKeys(e){if(!COOK)return;if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();stepBy(1);}if(e.key==='ArrowLeft')stepBy(-1);if(e.key==='Escape')closeCook();}
+function closeCook(){if(!COOK)return;stopVoice();clearInterval(COOK.clock);wakeOff();document.removeEventListener('keydown',cookKeys);document.getElementById('cook')?.remove();COOK=null;if(typeof REDRAW==='function')REDRAW();}
+function stepBy(d){if(!COOK)return;const n=COOK.i+d;if(n<0)return;if(n>=COOK.r.directions.length){if(COOK.voice){voiceStatus('Recipe complete · end cook when ready');return;}closeCook();return;}COOK.i=n;COOK.ing=false;drawCook();}
+function setCookTimer(seconds,label){seconds=Math.floor(Number(seconds));if(!Number.isFinite(seconds)||seconds<1||seconds>14400)return {error:'Choose a timer from 1 second to 4 hours.'};
+ const t={id:crypto.randomUUID(),label:String(label||'Timer').slice(0,60),ends:Date.now()+seconds,seconds,done:false};COOK.timers.push(t);drawCook();return {ok:true,label:t.label,seconds};}
+function tickTimers(){if(!COOK)return;let changed=false;for(const t of COOK.timers){if(!t.done&&Date.now()>=t.ends){t.done=true;changed=true;try{navigator.vibrate?.([250,120,250,120,400]);}catch{}if(COOK.voice?.dc?.readyState==='open')voicePrompt(`${t.label} timer is done. Tell me briefly, then continue listening.`);else try{const utter=new SpeechSynthesisUtterance(t.label+' timer done');speechSynthesis.speak(utter);}catch{}}}
+ if(changed)drawCook();else document.querySelectorAll('[data-clock]').forEach(el=>{const t=COOK.timers.find(x=>x.id===el.dataset.clock);if(t)el.textContent=t.done?'Done':mmss(Math.max(0,Math.ceil((t.ends-Date.now())/1000)));});}
+function voicePrompt(text){const dc=COOK?.voice?.dc;if(dc?.readyState!=='open')return;dc.send(JSON.stringify({type:'conversation.item.create',item:{type:'message',role:'user',content:[{type:'input_text',text}]}}));dc.send(JSON.stringify({type:'response.create'}));}
+function voiceStatus(text){if(!COOK)return;COOK.voiceStatus=text;const el=document.getElementById('voiceStatus');if(el)el.textContent=text;}
+function stopVoice(){if(!COOK?.voice)return;const v=COOK.voice;COOK.voice=null;try{v.dc?.send(JSON.stringify({type:'session.close'}));}catch{}v.stream?.getTracks().forEach(t=>t.stop());v.pc?.close();voiceStatus('Voice off');drawCook();}
+async function startVoice(){if(!COOK||COOK.voice)return;if(!Household.signedIn()){voiceStatus('Sign in to start voice');Household.open();return;}
+ const v={};COOK.voice=v;voiceStatus('Connecting…');drawCook();
+ try{const setup=await fetch('/.netlify/functions/session').then(r=>r.json());if(!setup.signedIn)throw new Error('Sign in to start voice');if(!setup.voiceConfigured)throw new Error('Voice is not configured for this preview');if(!navigator.mediaDevices?.getUserMedia)throw new Error('Microphone is unavailable in this browser');
+ v.stream=await navigator.mediaDevices.getUserMedia({audio:true});if(COOK?.voice!==v){v.stream.getTracks().forEach(t=>t.stop());return;}
+ v.pc=new RTCPeerConnection();v.audio=new Audio();v.audio.autoplay=true;v.pc.ontrack=e=>{v.audio.srcObject=e.streams[0];v.audio.play().catch(()=>voiceStatus('Tap voice to allow audio'));};
+ v.pc.addTrack(v.stream.getAudioTracks()[0],v.stream);v.dc=v.pc.createDataChannel('oai-events');v.dc.onopen=()=>{voiceStatus('Listening');drawCook();voicePrompt('We are starting this recipe. Tell me the first step briefly.');};
+ v.dc.onmessage=e=>{let event;try{event=JSON.parse(e.data);}catch{return;}if(event.type==='response.done'){const calls=event.response?.output?.filter(x=>x.type==='function_call')||[];if(calls.length)handleVoiceCalls(calls,v);}if(event.type==='error')voiceStatus(event.error?.message||'Voice error');};
+ v.pc.onconnectionstatechange=()=>{if(COOK?.voice===v&&['failed','closed'].includes(v.pc.connectionState))stopVoice();};
+ await v.pc.setLocalDescription(await v.pc.createOffer());
+ const res=await fetch('/.netlify/functions/voice',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sdp:v.pc.localDescription.sdp,context:cookContext()})});
+ if(!res.ok)throw new Error((await res.json().catch(()=>({}))).error||'Voice unavailable');
+ if(COOK?.voice!==v)return;await v.pc.setRemoteDescription({type:'answer',sdp:await res.text()});
+ }catch(err){if(COOK?.voice===v){stopVoice();voiceStatus(err.message||'Could not start voice');}}
 }
-function closeCook(){
-  if(!COOK)return; clearInterval(COOK.timer); wakeOff();
-  document.removeEventListener('keydown',cookKeys);
-  const el=document.getElementById('cook'); if(el)el.remove();
-  COOK=null; if(typeof REDRAW==='function')REDRAW();
-}
-function stepBy(d){
-  if(!COOK)return; const n=COOK.i+d;
-  if(n<0) return; if(n>=COOK.r.directions.length){ closeCook(); return; }
-  clearInterval(COOK.timer); COOK.timer=null; COOK.left=0; COOK.i=n; COOK.ing=false; drawCook();
-}
-function tickTimer(){
-  COOK.left--;
-  const t=document.getElementById('ctime'); if(t)t.textContent=mmss(Math.max(0,COOK.left));
-  const ring=document.getElementById('cring');
-  if(ring&&COOK.total)ring.style.width=(100-COOK.left/COOK.total*100).toFixed(1)+'%';
-  if(COOK.left<=0){
-    clearInterval(COOK.timer); COOK.timer=null;
-    try{navigator.vibrate&&navigator.vibrate([250,120,250,120,400]);}catch(e){}
-    const b=document.getElementById('ctimer'); if(b)b.classList.add('done');
-    if(t)t.textContent='done';
-  }
-}
-function drawCook(){
-  const {r,i}=COOK, f=servSel/r.serves.n, n=r.directions.length;
-  const secs=stepSeconds(r.directions[i]);
-  const el=document.getElementById('cook');
-  el.className=COOK.ing?'ing-open':'';
-  el.innerHTML=`
-    <div class="c-top">
-      <button class="c-x" data-cx>✕</button>
-      <div class="c-name">${esc(r.name)}</div>
-      <div class="c-count">${i+1}<span>/${n}</span></div>
-    </div>
-    <div class="c-bar"><i style="width:${((i+1)/n*100).toFixed(1)}%"></i></div>
-    <div class="c-body">
-      <div class="c-step">${annotateStep(r.directions[i],r,f)}</div>
-      ${secs?`<button class="c-timer" id="ctimer" data-timer="${secs}">
-        <i id="cring"></i><span id="ctime">${mmss(COOK.left||secs)}</span>
-        <em>${COOK.timer?'tap to stop':'start timer'}</em></button>`:''}
-    </div>
-    <div class="c-nav">
-      <button data-go="-1" ${i===0?'disabled':''}>←</button>
-      <button class="c-ings" data-ings>Ingredients</button>
-      <button data-go="1">${i===n-1?'Done':'→'}</button>
-    </div>
-    <div class="c-tray">
-      <button class="c-grab" data-ings></button>
-      <div class="c-tray-in"><span class="label">Ingredients · serves ${servSel}</span>
-        ${r.ingredients.map((x,k)=>`<button class="ing ${strikes['i'+k]?'done':''}" data-cstrike="i${k}">${scaleIng(x,f)}</button>`).join('')}
-      </div>
-    </div>`;
-  el.onclick=e=>{
-    const t=e.target.closest('[data-cx],[data-go],[data-ings],[data-timer],[data-cstrike]');
-    if(!t)return;
-    if(t.dataset.cx!==undefined){closeCook();return;}
-    if(t.dataset.go){stepBy(+t.dataset.go);return;}
-    if(t.dataset.ings!==undefined){COOK.ing=!COOK.ing;el.className=COOK.ing?'ing-open':'';return;}
-    if(t.dataset.cstrike){const k=t.dataset.cstrike;strikes[k]=!strikes[k];t.classList.toggle('done');return;}
-    if(t.dataset.timer){
-      if(COOK.timer){clearInterval(COOK.timer);COOK.timer=null;COOK.left=0;drawCook();return;}
-      COOK.total=+t.dataset.timer;COOK.left=COOK.total;
-      COOK.timer=setInterval(tickTimer,1000);drawCook();return;}
-  };
-}
+function handleVoiceCalls(calls,v){if(!COOK||COOK.voice!==v)return;for(const call of calls){let result;try{const a=JSON.parse(call.arguments||'{}');switch(call.name){
+ case 'navigate_step':stepBy(a.direction==='back'?-1:1);result=COOK?{step:COOK.i+1,text:COOK.r.directions[COOK.i]}:{finished:true};break;
+ case 'set_timer':result=setCookTimer(a.seconds,a.label);break;
+ case 'get_cook_state':result={step:COOK.i+1,text:COOK.r.directions[COOK.i],ingredients:COOK.r.ingredients.map(x=>scaleIng(x,servSel/COOK.r.serves.n)),timers:COOK.timers.map(t=>({label:t.label,remaining:Math.max(0,Math.ceil((t.ends-Date.now())/1000)),done:t.done}))};break;
+ case 'change_cook':if(!Array.isArray(a.directions)||!a.directions.length||a.directions.length>30||!Array.isArray(a.ingredients)||a.ingredients.length>80||![...a.directions,...a.ingredients].every(x=>typeof x==='string'&&x.length<1000))throw Error('Invalid recipe change');COOK.r.directions=[...a.directions];COOK.r.ingredients=[...a.ingredients];COOK.i=0;drawCook();result={ok:true,summary:a.summary,step:1};break;
+ case 'save_cook_note':if(typeof a.note!=='string'||!a.note.trim()||a.note.length>500)throw Error('Invalid note');{const notes=cookNotes();notes[COOK.r.id]=[...new Set([...(notes[COOK.r.id]||[]),a.note.trim()])].slice(-25);if(!lsSet('mp.cookNotes',notes))throw Error('Could not save note');result={ok:true};}break;
+ default:result={error:'Unknown action'};
+ }}catch(err){result={error:err.message};}
+ if(v.dc.readyState==='open')v.dc.send(JSON.stringify({type:'conversation.item.create',item:{type:'function_call_output',call_id:call.call_id,output:JSON.stringify(result)}}));}
+ if(v.dc.readyState==='open')v.dc.send(JSON.stringify({type:'response.create'}));}
+function drawCook(){if(!COOK)return;const {r,i}=COOK,f=servSel/r.serves.n,n=r.directions.length,secs=stepSeconds(r.directions[i]);const el=document.getElementById('cook');if(!el)return;
+ el.className=COOK.ing?'ing-open':'';
+ el.innerHTML=`<div class="c-top"><button class="c-x" data-cx>✕</button><div class="c-name">${esc(r.name)}</div><div class="c-count">${i+1}<span>/${n}</span></div></div>
+ <div class="c-bar"><i style="width:${((i+1)/n*100).toFixed(1)}%"></i></div>
+ <div class="c-body"><div class="c-step">${annotateStep(r.directions[i],r,f)}</div>${secs?`<button class="c-timer" data-timer="${secs}"><span>${mmss(secs)}</span><em>Start step timer</em></button>`:''}<div class="c-timers">${COOK.timers.map(t=>`<button data-stop-timer="${t.id}" class="${t.done?'done':''}" title="Tap to dismiss"><strong>${esc(t.label)}</strong> · <span data-clock="${t.id}">${t.done?'Done':mmss(Math.max(0,Math.ceil((t.ends-Date.now())/1000)))}</span> ×</button>`).join('')}</div></div>
+ <div class="c-voice"><button data-voice class="${COOK.voice?'active':''}">${COOK.voice?'■ End voice':'🎙 Start voice'}</button><span class="status" id="voiceStatus" role="status">${esc(COOK.voiceStatus)}</span>${COOK.voice?'<button data-mute>Mute mic</button>':''}</div>
+ <div class="c-nav"><button data-go="-1" ${i===0?'disabled':''}>←</button><button class="c-ings" data-ings>Ingredients</button><button data-go="1">${i===n-1?'Done':'→'}</button></div>
+ <div class="c-tray"><button class="c-grab" data-ings></button><div class="c-tray-in"><span class="label">Ingredients · serves ${servSel}</span>${r.ingredients.map((x,k)=>`<button class="ing ${strikes['i'+k]?'done':''}" data-cstrike="i${k}">${scaleIng(x,f)}</button>`).join('')}</div></div>`;
+ el.onclick=e=>{const t=e.target.closest('[data-cx],[data-go],[data-ings],[data-timer],[data-cstrike],[data-voice],[data-mute],[data-stop-timer]');if(!t)return;
+ if(t.hasAttribute('data-cx')){closeCook();return;}if(t.dataset.go){stepBy(+t.dataset.go);return;}if(t.hasAttribute('data-ings')){COOK.ing=!COOK.ing;el.className=COOK.ing?'ing-open':'';return;}
+ if(t.dataset.cstrike){const k=t.dataset.cstrike;strikes[k]=!strikes[k];t.classList.toggle('done');return;}
+ if(t.dataset.timer){setCookTimer(+t.dataset.timer,'Step '+(COOK.i+1));return;}
+ if(t.hasAttribute('data-voice')){COOK.voice?stopVoice():startVoice();return;}
+ if(t.hasAttribute('data-mute')){const track=COOK.voice?.stream?.getAudioTracks()[0];if(track){track.enabled=!track.enabled;t.textContent=track.enabled?'Mute mic':'Unmute mic';voiceStatus(track.enabled?'Listening':'Mic muted');}return;}
+ if(t.dataset.stopTimer){COOK.timers=COOK.timers.filter(x=>x.id!==t.dataset.stopTimer);drawCook();}
+ };}
 
 </script>
 </body>

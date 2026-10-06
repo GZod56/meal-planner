@@ -6,7 +6,7 @@ window.Household=(()=>{
  const meta=parse('mp.syncMeta',{versions:{},pending:{}});
  meta.versions||={};meta.pending||={};
  const save=()=>localStorage.setItem('mp.syncMeta',JSON.stringify(meta));
- const allowed=k=>/^(mp\.(plan|history|deletedRecipes|recipes)|mp\.(sides|prep|shop)::.+|photo::.+)$/.test(k);
+ const allowed=k=>/^(mp\.(plan|history|deletedRecipes|recipes|cookNotes)|mp\.(sides|prep|shop)::.+|photo::.+)$/.test(k);
  let status='Connect household';
  const notify=()=>document.querySelectorAll('[data-sync-status]').forEach(el=>el.textContent=status);
  const state=s=>{status=s;notify();};

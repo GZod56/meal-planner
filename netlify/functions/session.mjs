@@ -1,6 +1,6 @@
 import {ready,same,token,cookie,authenticated,json,readJSON} from '../../server/security.mjs';
 export default async req=>{
-  if(req.method==='GET')return json({configured:ready(),signedIn:authenticated(req)});
+  if(req.method==='GET')return json({configured:ready(),signedIn:authenticated(req),voiceConfigured:Boolean(process.env.OPENAI_API_KEY)});
   const origin=req.headers.get('origin');
   if(origin&&origin!==new URL(req.url).origin)return json({error:'Request origin not allowed.'},403);
   if(req.method==='DELETE')return json({signedIn:false},200,{'set-cookie':cookie(req,'',0)});
