@@ -2243,70 +2243,63 @@
  },
  {
   "name": "Chicken Fajitas",
-  "rating": 4,
+  "rating": 5,
   "tags": [
    "Batch Cook",
    "Jessica",
    "Traybakes",
-   "Weeknights"
+   "Weeknights",
+   "Favourites"
   ],
   "time": {
    "prep": null,
    "cook": null,
-   "total": null
+   "total": "40 minutes"
   },
   "serves": {
-   "text": "4",
+   "text": "Serves: 4",
    "n": 4
   },
   "source": {
-   "url": null,
-   "name": null
+   "url": "https://cooking.nytimes.com/recipes/1020092-chicken-fajitas",
+   "name": "NYT Cooking — Ali Slagle"
   },
   "image": "https://i0.wp.com/kristineskitchenblog.com/wp-content/uploads/2023/05/chicken-fajitas-recipe-36-2.jpg?ssl=1&w=1400",
   "ingredients": [
-   "2 large chicken breasts (or 3 thighs) – sliced into thin strips",
-   "2 tbsp olive oil",
-   "1 lime – juiced",
-   "1 tsp soy sauce (optional, for umami)",
-   "2 bell peppers – sliced (red, yellow, or green)",
-   "1 onion – sliced",
-   "2 cloves garlic – minced",
-   "1 jalapeño (optional) – sliced",
-   "1/4 cup fresh cilantro – chopped",
-   "Tortillas – warm",
-   "Spice Mix",
-   "1 tsp chili powder",
-   "1/2 tsp paprika (or smoked paprika)",
-   "1/2 tsp cumin",
-   "1/2 tsp garlic powder",
-   "1/2 tsp oregano",
-   "1/2 tsp salt",
-   "1/4 tsp black pepper"
+   "6 tablespoons olive oil, divided",
+   "1 lime, zest and juice (about 2 teaspoons zest and 2 tablespoons juice)",
+   "1 whole (7-ounce) can chipotle chiles in adobo, chiles coarsely chopped, including all adobo sauce",
+   "2 teaspoons ground cumin (or crushed cumin seeds)",
+   "1 teaspoon smoked paprika",
+   "2 teaspoons kosher salt, divided (adjust if the full can of adobo is salty)",
+   "1/2 teaspoon black pepper, divided",
+   "1 1/2 pounds boneless, skinless chicken breasts or thighs, cut into 1/2-inch strips",
+   "3 bell peppers, any colors, sliced into 1/4-inch strips",
+   "1 large red onion, thinly sliced",
+   "8 flour tortillas, plus more as needed",
+   "Optional: cilantro, avocado, salsa, sour cream or lime wedges for serving"
   ],
   "directions": [
-   "Marinate Chicken: In a bowl, mix chicken, 1 tbsp oil, lime juice, soy sauce, garlic, and spice mix. Let sit for 15-30 min.",
-   "Sear Chicken: Heat a skillet on high heat. Add 1 tbsp oil and sear chicken for 4-5 min per side until golden. Remove.",
-   "Sauté Veggies: In the same skillet, add onions and peppers. Cook on high heat for 3-4 min until slightly charred but still crisp.",
-   "Combine & Serve: Add chicken back, toss with cilantro, and serve with warm tortillas and toppings.",
-   "Pro Tip: For extra char, use cast iron and avoid overcrowding the pan.",
-   "Oven-Baked Chicken Fajitas (Easy & Hands-Free)This version is less work and great for meal prep.",
-   "Preheat oven to 425°F (220°C).",
-   "Mix everything: Toss whole chicken, veggies, oil, and spice mix on a large baking sheet.",
-   "Roast for 20-25 min (or until chicken reaches 165°F).",
-   "Slice & Serve: Rest chicken for 5 min, slice thinly, and mix with veggies.",
-   "🔥 Pro Tip: Broil for the last 2 min for some char!"
+   "Preheat the oven to 425°F. Combine 4 tablespoons olive oil with the lime zest and juice, the entire chopped can of chipotles and its adobo sauce, cumin, smoked paprika, 1 1/2 teaspoons kosher salt and 1/4 teaspoon black pepper. Toss the chicken strips in this marinade while you slice the vegetables.",
+   "Slice the bell peppers and red onion about 1/4 inch thick. Spread on one large sheet pan, coat with the remaining 2 tablespoons olive oil, 1/2 teaspoon kosher salt and 1/4 teaspoon black pepper, and arrange in an even layer.",
+   "Lift the chicken out of the marinade, allowing surplus sauce to drip away, and spread it across a second sheet pan without crowding. Roast both pans for 15–20 minutes, until the chicken reaches 165°F and the vegetables have softened.",
+   "Remove the chicken. Shift the vegetable pan to a rack near the broiler and broil for 2–5 minutes, watching closely, until the peppers and onion develop dark edges.",
+   "Warm the tortillas in the oven for about 1 minute, turning once. Wrap them in a clean towel or foil to retain the heat.",
+   "Fill warm tortillas with the roasted chicken and charred peppers and onion. Add any toppings you like and serve."
   ],
-  "notes": [],
+  "notes": [
+   "TESTED AND LOVED (October 2026): Use one entire standard 7-ounce can of chipotle chiles in adobo, including all the sauce, instead of the NYT recipe's 1–2 chiles. This full-can version was great.",
+   "Ali Slagle's NYT sheet-pan method; keep the chicken and vegetables on separate trays, then broil the vegetables for extra char. With the full can, let excess marinade drip off before roasting."
+  ],
   "macros": null,
-  "time_estimated": true,
-  "minutes": 51,
+  "time_estimated": false,
+  "minutes": 40,
   "id": "chicken-fajitas",
   "protein": "Chicken",
   "archetype": "traybake",
   "under30": false,
   "batch": true,
-  "favourite": false,
+  "favourite": true,
   "avoid": false,
   "cuisine": "mexican",
   "batchable": true,
