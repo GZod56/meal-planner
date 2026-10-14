@@ -2,7 +2,7 @@ import { createHmac, timingSafeEqual } from 'node:crypto';
 const COOKIE='mp_session';
 const lifetime=30*24*60*60;
 const secret=()=>process.env.APP_PASSWORD||'';
-export const ready=()=>secret().length>=16;
+export const ready=()=>secret().length>0;
 const sign=s=>createHmac('sha256',secret()).update(s).digest('base64url');
 export function same(a,b){
   const aa=Buffer.from(String(a)),bb=Buffer.from(String(b));
