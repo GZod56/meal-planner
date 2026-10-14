@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
-import {token,authenticated,authorize} from '../server/security.mjs';
+import {ready,token,authenticated,authorize} from '../server/security.mjs';
 import session from '../netlify/functions/session.mjs';
 import {makeHandler,allowedKey} from '../netlify/functions/sync.mjs';
 import chat,{config as chatConfig} from '../netlify/functions/chat.mjs';
@@ -68,6 +68,22 @@ test('login protects credentials and uses secure HttpOnly cookie',async()=>{
  const res=await session(request('session','POST',{password:process.env.APP_PASSWORD},false));
  assert.equal(res.status,200);assert.match(res.headers.get('set-cookie'),/HttpOnly; SameSite=Strict/);assert.match(res.headers.get('set-cookie'),/Secure/);
  assert.equal((await session(request('session','DELETE'))).status,200);
+});
+test('short household passwords work while empty configuration stays blocked',async()=>{
+ const prior=process.env.APP_PASSWORD;
+ try{
+  process.env.APP_PASSWORD='short';
+  assert.equal(ready(),true);
+  const res=await session(request('session','POST',{password:'short'},false));
+  assert.equal(res.status,200);
+  const cookieHeader=res.headers.get('set-cookie').split(';')[0];
+  assert.equal(authenticated(new Request('https://meal.example',{headers:{cookie:cookieHeader}})),true);
+  assert.equal((await session(request('session','POST',{password:'wrong'},false))).status,401);
+  process.env.APP_PASSWORD='';
+  assert.equal(ready(),false);
+  assert.equal((await session(request('session','POST',{password:'short'},false))).status,503);
+  assert.doesNotMatch(source('sync.js'),/minlength="16"/);
+ }finally{if(prior===undefined)delete process.env.APP_PASSWORD;else process.env.APP_PASSWORD=prior;}
 });
 function memoryStore(){
  const data=new Map();let seq=0;
