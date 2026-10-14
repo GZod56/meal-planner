@@ -76,7 +76,7 @@ window.Household=(()=>{
      <p class="sheet-note">Use the same household password on each device to share recipes, deletions, plans, checkmarks, and photos. Assistant chat stays on this device.</p>
      <p role="status" data-sync-status>${escape(status)}</p>
      ${signedIn?`<div class="save-row"><button data-sync-now>Sync now</button><button data-signout>Sign out</button></div>`:
-     '<form id="householdLogin"><div class="field"><label for="householdPassword">Household password</label><input id="householdPassword" type="password" autocomplete="current-password" required minlength="16"></div><div class="save-row"><button class="primary" type="submit">Connect household</button></div></form>'}
+     '<form id="householdLogin"><div class="field"><label for="householdPassword">Household password</label><input id="householdPassword" type="password" autocomplete="current-password" required></div><div class="save-row"><button class="primary" type="submit">Connect household</button></div></form>'}
      ${conflicts.length?`<p>Some items changed on both devices: ${conflicts.map(c=>escape(c.key.replace('mp.','').replace('photo::','Photo: '))).join(', ')}.</p><div class="save-row"><button data-resolve="local">Keep this device’s versions</button><button data-resolve="cloud">Use synced versions</button></div>`:''}
      <p id="syncError" role="alert"></p><button class="sheet-btn" data-sync-close>Done</button>
      </div>`;
