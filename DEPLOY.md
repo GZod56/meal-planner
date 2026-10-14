@@ -9,7 +9,7 @@ Set these directly in Netlify, with **Functions** scope and the
 **Production** context (also Deploy Previews if you want to test there):
 
 - `OPENAI_API_KEY`: your OpenAI API key.
-- `APP_PASSWORD`: a unique household password of at least 16 characters.
+- `APP_PASSWORD`: a non-empty household password. A long, unique password is recommended.
   Use this same password in the app on each device. Changing it invalidates
   existing signed-in sessions.
 
