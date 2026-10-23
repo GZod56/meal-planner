@@ -14989,5 +14989,76 @@
   "batchable": false,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "name": "Fallow's Chicken Tenders",
+  "rating": 0,
+  "tags": [
+   "Chicken",
+   "Sunday Treats",
+   "Untested"
+  ],
+  "time": {
+   "prep": "30 minutes (plus overnight marinating)",
+   "cook": "20 minutes",
+   "total": "50 minutes active (plus overnight marinating)"
+  },
+  "serves": {
+   "text": "4 servings",
+   "n": 4
+  },
+  "source": {
+   "url": "https://www.youtube.com/watch?v=FAae20DMp8E",
+   "name": "Fallow"
+  },
+  "image": "",
+  "ingredients": [
+   "12 boneless, skinless chicken thighs",
+   "240 g sriracha (marinade)",
+   "120 g water (marinade)",
+   "14 g fine salt (marinade)",
+   "100 g sparkling water (wet dredge)",
+   "100 g buttermilk (wet dredge)",
+   "25 g cornflour / cornstarch (wet dredge)",
+   "400 g plain / all-purpose flour (dry dredge)",
+   "160 g potato starch (dry dredge)",
+   "17 g baking powder (dry dredge)",
+   "12 g fine sea salt (dry dredge)",
+   "20 g MSG (dry dredge)",
+   "20 g white pepper (dry dredge)",
+   "5 g black pepper (dry dredge)",
+   "5 g onion powder (dry dredge)",
+   "5 g garlic powder (dry dredge)",
+   "5 g cayenne pepper (dry dredge)",
+   "Neutral oil for deep-frying, as needed"
+  ],
+  "directions": [
+   "Open out the chicken thighs and cut each lengthways into two tender-sized strips. Lightly score both sides to create ridges that grab the coating.",
+   "Mix the sriracha, 120 g water and 14 g salt. Submerge the chicken, cover and refrigerate overnight.",
+   "Whisk together the flour, potato starch, baking powder, 12 g sea salt, MSG, white and black pepper, onion powder, garlic powder and cayenne for the dry dredge.",
+   "In a separate bowl whisk the sparkling water, buttermilk and 25 g cornflour until smooth to make the wet dredge.",
+   "Allow excess marinade to drip from the chicken. Dust with a little dry dredge and rub into the scored surface, then toss and press each piece in the dry mixture about 60 times for plenty of craggy edges.",
+   "Dip each coated strip into the wet dredge, then return to the dry dredge. Toss and press about 60 more times until thickly, unevenly coated.",
+   "Heat neutral frying oil to 190°C / 375°F. Fry the chicken in batches without crowding, until deeply golden, crisp and the thickest part reaches 74°C / 165°F.",
+   "Drain on a wire rack, season lightly while hot and serve immediately."
+  ],
+  "notes": [
+   "Adapted from Fallow's October 2026 chicken tenders video. Hot honey sauce deliberately omitted.",
+   "The 50-minute active-time estimate excludes the overnight marinade.",
+   "The recipe uses boneless chicken thighs rather than breast tenderloins, for extra juiciness."
+  ],
+  "macros": null,
+  "minutes": 50,
+  "id": "fallow-chicken-tenders",
+  "protein": "Chicken",
+  "archetype": "protein",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "american",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
  }
 ]
