@@ -13949,47 +13949,41 @@
    "Veggie"
   ],
   "source": {
-   "url": null,
-   "name": "House"
+   "url": "https://www.maangchi.com/recipe/oi-muchim",
+   "name": "Maangchi"
   },
   "time": {
-   "prep": "20 mins",
+   "prep": "10 mins (estimated)",
    "cook": null,
-   "total": "20 min"
+   "total": "10 mins (estimated)"
   },
-  "minutes": 20,
+  "minutes": 10,
   "serves": {
-   "text": "4 to 6 as a side",
+   "text": "Serves 4 as a side",
    "n": 4
   },
-  "macros": {
-   "p": 2,
-   "f": 3,
-   "c": 8,
-   "kcal": 65,
-   "per": "serving"
-  },
+  "macros": null,
   "ingredients": [
-   "2 lb Persian or Kirby cucumbers",
-   "1 tsp kosher salt",
-   "1.5 tbsp gochugaru",
-   "1 tbsp rice vinegar",
-   "2 tsp sugar",
-   "2 tsp fish sauce (or 1 tbsp light soy)",
-   "1 tsp toasted sesame oil",
-   "2 garlic cloves, grated",
-   "2 spring onions, sliced",
-   "1 tbsp toasted sesame seeds"
+   "1 English cucumber (or 2 to 3 Kirby cucumbers), washed",
+   "1/4 cup onion, thinly sliced",
+   "1 green onion, chopped",
+   "2 garlic cloves, minced",
+   "2 tablespoons soy sauce",
+   "2 teaspoons gochugaru (Korean hot pepper flakes)",
+   "2 teaspoons toasted sesame oil",
+   "2 teaspoons toasted sesame seeds",
+   "1 teaspoon sugar (optional)"
   ],
   "directions": [
-   "Slice the cucumbers 1/4 inch thick on a slight angle, or smash and tear them.",
-   "Toss with the salt and leave 15 minutes in a colander. Drain and press out the liquid — skipping this gives a watery dressing every time.",
-   "Whisk everything else together, toss through, and rest 10 minutes before serving."
+   "Halve the cucumber lengthways, then slice it thinly on the diagonal.",
+   "Place in a large bowl with the onion, green onion, garlic, soy sauce, gochugaru, sesame oil, sesame seeds and optional sugar.",
+   "Stir thoroughly, dissolving any sugar and coating the cucumber evenly.",
+   "Serve immediately alongside rice, noodles or Korean BBQ."
   ],
   "notes": [
-   "This is the cucumber we serve with LA Galbi — not the RecipeTin smashed cucumber salad, which is the Chinese sesame/soy/ginger version.",
-   "Persian cucumbers are a Costco/Instacart gap; buy at regular grocery.",
-   "Best within a few hours. It weeps if held overnight."
+   "Maangchi recommends tossing this salad just before eating so the cucumber stays crisp and releases less water.",
+   "No salting, draining or marinating step is needed.",
+   "Preparation time is an app estimate; the source does not specify a time."
   ],
   "image": "https://cupofyum.com/uploads/images/000/155/284/155284-korean-cucumber-salad-oi-muchim-e07b3ae0c3362247138e217334745809.jpg",
   "protein": "Veg",
@@ -14002,7 +13996,8 @@
   "favourite": false,
   "avoid": false,
   "id": "oi-muchim-korean-cucumber-salad",
-  "name": "Oi Muchim (Korean Cucumber Salad)"
+  "name": "Oi Muchim (Korean Cucumber Salad)",
+  "time_estimated": true
  },
  {
   "section": "main",
