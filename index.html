@@ -110,9 +110,10 @@ input,textarea{font:inherit; border-radius:0}
 .rtags{font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--soft); margin-top:8px}
 .rmac{font-size:13px; color:var(--soft); font-variant-numeric:lining-nums; margin-top:8px}
 .photo-btn{font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; font-weight:600; color:var(--ox); margin-top:12px; display:inline-block}
-.scaler{display:flex; gap:18px; margin-top:6px}
+.scaler{display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin-top:6px}
 .scaler .opt{font-size:14.5px; color:var(--soft); padding-bottom:2px; border-bottom:1px solid transparent; font-variant-numeric:lining-nums}
 .scaler .opt.on{color:var(--ink); border-bottom-color:var(--ox)}
+.servings-input{width:5rem; min-height:44px; padding:6px 8px; font-size:16px; color:var(--ink); background:var(--raise); border:1px solid var(--hair); font-variant-numeric:lining-nums}
 .ing,.step{display:block; width:100%; font-size:15.5px}
 .ing{padding:5px 0}
 .step{padding:7px 0}
@@ -635,8 +636,9 @@ function openRecipe(id){
         <button class="photo-btn" data-edit-recipe>Edit recipe</button>
         <button class="photo-btn" data-delete-recipe>${DELETED.has(id)?'Restore recipe':'Delete recipe'}</button>
       </div>
-      <div class="section"><span class="label">Servings</span>
-        <div class="scaler">${opts.map(n=>`<button class="opt ${n===servSel?'on':''}" data-serv="${n}">${n}</button>`).join('')}</div></div>
+      <div class="section"><label class="label" for="recipeServings">Servings</label>
+        <div class="scaler">${opts.map(n=>`<button class="opt ${n===servSel?'on':''}" data-serv="${n}" aria-pressed="${n===servSel}">${n}</button>`).join('')}
+          <input class="servings-input" id="recipeServings" type="number" inputmode="numeric" min="1" step="1" required value="${servSel}"></div></div>
       <button class="cook-btn" data-cook>▶ Cook</button>
       <div class="section"><span class="label">Ingredients</span>
         ${r.ingredients.map((x,i)=>`<button class="ing ${strikes['i'+i]?'done':''}" data-strike="i${i}">${scaleIng(x,f())}</button>`).join('')}</div>
@@ -644,6 +646,18 @@ function openRecipe(id){
         ${r.directions.map((x,i)=>`<button class="step ${strikes['s'+i]?'done':''}" data-strike="s${i}"><span class="n">${i+1}</span>${annotateStep(x,r,f())}</button>`).join('')}</div>
       ${r.notes.length?`<div class="section notes"><span class="label">Notes</span>${r.notes.map(n=>`<p>${esc(n)}</p>`).join('')}</div>`:''}</div>`;};
   draw();REDRAW=draw;
+  const setServings=n=>{
+    servSel=n;ov.querySelector('#recipeServings').value=n;
+    ov.querySelectorAll('[data-serv]').forEach(b=>{const selected=+b.dataset.serv===n;b.classList.toggle('on',selected);b.setAttribute('aria-pressed',selected);});
+    ov.querySelectorAll('.ing').forEach((b,i)=>{b.innerHTML=scaleIng(r.ingredients[i],f());});
+    ov.querySelectorAll('.step').forEach((b,i)=>{b.innerHTML=`<span class="n">${i+1}</span>${annotateStep(r.directions[i],r,f())}`;});
+  };
+  ov.onchange=e=>{
+    const input=e.target;if(input.id!=='recipeServings')return;
+    if(!input.checkValidity()){input.value=servSel;return;}
+    setServings(input.valueAsNumber);
+  };
+  ov.onkeydown=e=>{if(e.target.id==='recipeServings'&&e.key==='Enter'){e.preventDefault();e.target.blur();}};
   ov.onclick=e=>{const t=e.target.closest('[data-close],[data-serv],[data-strike],[data-photo],[data-cook],[data-delete-recipe],[data-edit-recipe]');if(!t)return;
     if(t.dataset.editRecipe!==undefined){openRecipeEditor(r);return;}
     if(t.dataset.deleteRecipe!==undefined){
@@ -652,7 +666,7 @@ function openRecipe(id){
       return;}
     if(t.dataset.cook!==undefined){openCook();return;}
     if(t.dataset.close!==undefined){closeRecipe();return;}
-    if(t.dataset.serv){servSel=+t.dataset.serv;draw();return;}
+    if(t.dataset.serv){setServings(+t.dataset.serv);return;}
     if(t.dataset.strike){strikes[t.dataset.strike]=!strikes[t.dataset.strike];t.classList.toggle('done');return;}
     if(t.dataset.photo!==undefined){$('#photoIn').click();return;}};
 }
