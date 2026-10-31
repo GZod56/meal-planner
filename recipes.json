@@ -15055,5 +15055,83 @@
   "batchable": false,
   "isMain": true,
   "section": "main"
+ },
+ {
+  "name": "Fallow's 40 Clove Garlic Chicken",
+  "rating": 0,
+  "tags": [
+   "Chicken",
+   "French",
+   "Untested"
+  ],
+  "time": {
+   "prep": "30 minutes (estimated)",
+   "cook": "60 minutes (estimated; several steps overlap)",
+   "total": "90 minutes (estimated)"
+  },
+  "time_estimated": true,
+  "serves": {
+   "text": "4 servings (estimated)",
+   "n": 4
+  },
+  "source": {
+   "url": "https://www.youtube.com/watch?v=PghM3UavVjc",
+   "name": "Fallow"
+  },
+  "image": "https://i.ytimg.com/vi/PghM3UavVjc/hqdefault.jpg",
+  "ingredients": [
+   "1 whole chicken, jointed; reserve the carcass, wing tips and other bones for the stock",
+   "40 whole garlic cloves, skins on to start",
+   "1 white onion, diced; reserve clean outer trimmings for the stock",
+   "2 celery stalks, diced; reserve clean trimmings for the stock",
+   "1 leek, white part diced; reserve washed green tops for the stock",
+   "200 g mushrooms, diced",
+   "1 litre chicken stock, approximately; use enough enriched stock to reach halfway up the chicken",
+   "1 sprig fresh thyme (for the stock)",
+   "2 bay leaves (for the stock)",
+   "150 ml dry vermouth",
+   "50 g butter, divided between browning the garlic and softening the vegetables",
+   "3 tablespoons neutral oil, divided between the stock, chicken and bread",
+   "100 g crème fraîche",
+   "1 tablespoon fresh parsley, roughly chopped",
+   "1 tablespoon fresh tarragon, chopped",
+   "Fine salt, to taste",
+   "Black pepper, to taste",
+   "4 thick slices sourdough bread, to serve"
+  ],
+  "directions": [
+   "Joint the chicken into breasts and leg pieces, keeping the skin intact. Fallow removes the breasts from the bone and leaves bones in the legs. Dry the pieces skin-side down on kitchen paper while you prepare the vegetables; chop the reserved carcass and bones into smaller pieces.",
+   "For the enriched stock, heat a little oil in a saucepan and brown the chopped chicken bones thoroughly. Add the clean onion and celery trimmings, washed leek tops, thyme and bay leaves; soften briefly in the rendered fat. Add the chicken stock and boil to extract flavour and reduce while you prepare the remaining components. Strain before using.",
+   "Cover the unpeeled garlic cloves with boiling water and leave for 10–15 minutes, until the skins loosen. Drain, trim the root ends and peel, keeping the cloves whole.",
+   "Simmer the peeled cloves in a fresh pan of boiling water for 15–20 minutes, until a knife enters with only a little resistance at the centre. Drain and spread out on a tray to dry.",
+   "Season the chicken with fine salt. Heat a little oil in a wide sauté pan, add the pieces skin-side down and press gently for good contact. Brown the skin well, then turn and lightly colour the other side. Transfer to a tray; the chicken will finish cooking in the sauce.",
+   "Add the drained garlic to the chicken fat in the same pan. Brown over a fairly high heat, adding some of the butter, until the cloves have caramelised edges. Lift out and reserve.",
+   "Add the diced onion, celery and leek to the pan. Soften with the remaining butter and a little salt, scraping up the browned chicken juices. Add the mushrooms once the vegetables release their moisture. Continue until softened, keeping the vegetables fairly pale.",
+   "Pour in the vermouth and reduce its volume by about half. Scatter roughly half the garlic over the vegetables, arrange the chicken skin-side up on top, then add the remaining cloves around it. Pour in strained enriched stock around the chicken to reach halfway up the pieces; keep the skin above the liquid.",
+   "Bring to a gentle simmer and cover with a circle of baking parchment (a cartouche). Cook gently until the chicken is cooked through; Fallow checks after about 16 minutes. Check each piece individually and remove breasts earlier if ready. As an added home-cooking check, use a thermometer and ensure the thickest part reaches 74°C / 165°F.",
+   "Lift out the cooked chicken and reserve several whole garlic cloves for serving. Season the sauce with black pepper and reduce a little if needed. Add the crème fraîche, blend the sauce with the remaining garlic and vegetables until smooth, then strain it and return to the pan.",
+   "Briefly recrisp the chicken skin under a hot grill / broiler, watching closely. Meanwhile, pan-toast the sourdough in a little oil until crisp outside but still soft in the centre.",
+   "Return the chicken and reserved garlic to the warm sauce, keeping the skin exposed. Stir in the parsley and tarragon. Serve with the toasted sourdough, spreading the soft whole garlic cloves onto the bread and using it to soak up the sauce."
+  ],
+  "notes": [
+   "Adapted from Fallow's video 'Why 40 Cloves of Garlic Makes Chicken Incredible' (28 October 2026), inspired by James Beard. The video is the recipe source; this is a practical transcription, not the separate written Substack recipe.",
+   "The video specifies 1 chicken and 40 garlic cloves but does not give a weighed ingredient list. Vegetable, stock, vermouth, butter, oil, crème fraîche, garnish and bread quantities above are home-cooking estimates; adjust to your pan and taste. Servings and overall preparation/cooking times are also estimated.",
+   "Video timings and cues: soak garlic 10–15 minutes; simmer peeled cloves 15–20 minutes; halve the vermouth; add stock to halfway up the chicken; check the gentle chicken braise after about 16 minutes. Cooking time varies with the size and cut of the chicken.",
+   "Keep the garlic whole for blanching and brown it separately before softening the vegetables. Save a few cloves before blending the sauce so they can be spread on the sourdough.",
+   "Use the cartouche to cover the gentle braise, then recrisp the skin under the broiler before returning the chicken to the sauce. The thermometer check is an added home-cooking instruction."
+  ],
+  "macros": null,
+  "minutes": 90,
+  "id": "fallow-40-clove-garlic-chicken",
+  "protein": "Chicken",
+  "archetype": "protein",
+  "under30": false,
+  "batch": false,
+  "favourite": false,
+  "avoid": false,
+  "cuisine": "french",
+  "batchable": false,
+  "isMain": true,
+  "section": "main"
  }
 ]
